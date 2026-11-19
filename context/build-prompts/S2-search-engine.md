@@ -2,6 +2,8 @@
 
 ## Build prompt
 
+**Carried over from Session 1 (do first):** add the SFDX scaffold (`sfdx-project.json` at `sourceApiVersion` 68.0, `force-app/main/default`, ignore files) and `CRA_Contact_Read_Agent_User` in source (Contact Read and FLS on the contract fields; class access is added in S3). Deploying the permission set waits for approval. For record-level tests, use `CRA-TEST` Contacts without an Account, owned by another user. Under Contact Controlled by Parent they are private (see session-1-environment-gate.md).
+
 Read CONTEXT.md, context/requirements-status.md and context/technical-design.md. Create branch `feature/scgoe-95-s2-search-engine`.
 
 Implement `CRA_ContactSearchCriteria` and `CRA_ContactSearchService`: validation, bound dynamic queries in USER_MODE, capped count, paging (size 5), phone normalisation and exact digit verification, duplicate detection and the outcome classifier, following the search rules and outcome precedence in technical-design.md. No invocable annotation yet. Write `CRA_TestDataFactory` and `CRA_ContactSearchTest`. Bulkify; no queries in loops; no DML in production classes.

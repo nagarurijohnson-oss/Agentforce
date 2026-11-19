@@ -2,24 +2,26 @@
 
 Status: proposed, for review. Full narrative, evidence table and risks are in the design document delivered with the design session.
 
+**Environment (corrected 2026-11-19):** personal Developer Edition org `MAX` (00DjV000003BVbRUAW), API 68.0, production-type, not a sandbox. Every deploy runs Apex tests: use `RunSpecifiedTests` on the `CRA_` test classes. Session 1 gate results: [session-1-environment-gate.md](session-1-environment-gate.md).
+
 ## Architecture
 
 Agent Script (conversation, state) → `apex://CRA_ContactSearchAction` (search, validation, duplicates, classification) → prompt template `CRA_Contact_Result_Presentation` via `generatePromptResponse://` (presentation only). Native Agentforce panel. No LWC, no DML.
 
-The template target and `Input:` naming are from public recipes, not confirmed against the official reference. Session 5 confirms them.
+Session 1 confirmed with the org's Agent Script compiler (2026-11-19): block keyword `subagent`, `agent_type: "AgentforceEmployeeAgent"` without `default_agent_user`, `target: "apex://CRA_ContactSearchAction"` (class name only), and `target: "generatePromptResponse://CRA_Contact_Result_Presentation"` with quoted `"Input:<apiName>"` inputs and a `promptResponse` output. The compiler does not check that the class or template exists; publishing in Session 5 does.
 
 ## Decisions
 
 | ID | Decision | Status |
 |---|---|---|
-| D-A | Agent type is Employee agent, because it runs as the chatting user. Session 1 confirms Agent Script supports it here | Assumed |
+| D-A | Agent type is Employee agent, because it runs as the chatting user. Agent Script compiles an Employee agent in this org (Session 1). Run-as-user is confirmed at runtime in Session 5 | Verified (compile) |
 | D-B | Duplicate rule applies only when the search used an exact name, email or phone | Assumed |
 | D-C | 11–100 matches: first five and filter suggestions, no "show more" | Assumed |
 | D-D | Missing and unreadable values both read "Not available" | Assumed |
-| D-E | Contact internal sharing is Public Read/Write. Keep it; prove sharing by code review and tests. A temporary Private setting for UAT is optional | Open |
+| D-E | Contact OWD is Controlled by Parent, and Account OWD is Public Read/Write (corrected in Session 1). Keep both. Prove record-level security with Contacts that have no Account: they are private to their owner. Use them in `System.runAs` tests and in UAT. No temporary Private setting is needed | Proposed (Session 1) |
 | D-F | Phone matching: digit-normalised pre-filter, exact digit check in Apex | Assumed |
 | D-G | More than 100 test data created in session 6 only, with approval | Assumed |
-| D-H | New `CRA_` classes. `ESA_RecordSearchAction` (cross-object SOSL, no counts) is not extended | Assumed |
+| D-H | New `CRA_` classes. `ESA_RecordSearchAction` (cross-object SOSL, no counts, capped at 20) is not extended or changed. It is referenced only by its test and the unlinked `ESA_Record_Search` function (Session 1) | Verified |
 
 ## Outcome precedence
 
@@ -35,7 +37,7 @@ Outputs: `outcomeCode`, `totalMatchesLabel`, `shownCount`, `remainingCount`, `su
 
 ## Search rules
 
-At least one filter required. Name words match the start of first or last name. Email exact when it contains `@`, else contains. Phone digit-normalised. Account name and title contains. Location matches mailing city, state or country. `%`, `_`, `\` escaped. Bind variables only, whitelisted fields, order `Name, Id`. Count is USER_MODE and capped at 101. Page size 5.
+At least one filter required. Name words match the start of first or last name. Email exact when it contains `@`, else contains. Phone digit-normalised. Account name and title contains. Location matches mailing city, state or country (the text fields; state and country picklists appear to be on, so `MailingStateCode`/`MailingCountryCode` also exist). `%`, `_`, `\` escaped. Bind variables only, whitelisted fields, order `Name, Id`. Count is USER_MODE and capped at 101. Page size 5.
 
 ## Common build rules
 

@@ -17,6 +17,6 @@
 
 ## Environment and scope
 
-Personal Salesforce sandbox. Contact search and retrieval on standard objects and fields only.
+Personal Salesforce Developer Edition org (amended 2026-11-19, see 2026-11-19-environment-is-developer-edition-org.md; first recorded as a sandbox). Contact search and retrieval on standard objects and fields only.
 
 Design choices made on top of these decisions are in technical-design.md.

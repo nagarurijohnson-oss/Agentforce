@@ -4,7 +4,7 @@
 
 ## Requirement
 
-Build a Contact Read Agent in the personal Salesforce sandbox using the new Agentforce Builder and Agent Script. Users search Contacts with natural-language questions, without navigating Salesforce manually.
+Build a Contact Read Agent in the personal Salesforce Developer Edition org (corrected 2026-11-19; first recorded as a sandbox) using the new Agentforce Builder and Agent Script. Users search Contacts with natural-language questions, without navigating Salesforce manually.
 
 ## Search criteria (R1–R3)
 
@@ -49,6 +49,6 @@ Reason for the Prompt Template: it separates data retrieval from presentation an
 
 ## Design session expectations
 
-Verify context files and update them; verify the sandbox, Agent Script availability, Prompt Builder and Contact metadata read-only; prepare the technical design, components, integration and dependencies; split the build into sessions with a prompt and acceptance criteria each. Nothing is implemented, deployed, activated or merged in the design session.
+Verify context files and update them; verify the org, Agent Script availability, Prompt Builder and Contact metadata read-only; prepare the technical design, components, integration and dependencies; split the build into sessions with a prompt and acceptance criteria each. Nothing is implemented, deployed, activated or merged in the design session.
 
 Technical design: [technical-design.md](technical-design.md). Build prompts: [build-prompts/](build-prompts/).

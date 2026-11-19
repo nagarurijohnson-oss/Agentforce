@@ -2,6 +2,8 @@
 
 ## Build prompt
 
+**From Session 1:** the syntax is confirmed by the org compiler (`subagent`, `agent_type: "AgentforceEmployeeAgent"`, `apex://CRA_ContactSearchAction`, `generatePromptResponse://CRA_Contact_Result_Presentation` with `"Input:<name>"`). The compiler does not resolve targets, so check them at publish. `sf agent preview --authoring-bundle` may crash for Employee agents without `default_agent_user` (forcedotcom/cli #3676): preview by API name after publishing. Grant agent access through `CRA_Contact_Read_Agent_User`, and confirm the licence and permission needs of a non-admin user.
+
 Read CONTEXT.md, context/requirements-status.md and context/technical-design.md. Create branch `feature/scgoe-95-s5-agent`.
 
 Confirm the Agent Script and template-target syntax against the official reference. Generate authoring bundle `Contact_Read_Agent` (Employee type unless S1 decided otherwise) and write the script: variables (`criteria_*`, `selected_contact_id`, `last_result_ids`, `last_outcome`, `remaining_available`), subagents (search, follow-up, read-only guard, clarify), the two actions only, refinement merge, ordinal selection from stored ids, read-only refusal and clarification. Validate, deploy and publish inactive. Preview in simulated mode, then live as a non-admin user. Do not activate.
