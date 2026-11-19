@@ -9,7 +9,7 @@
 3. Use a Prompt Builder template to manage response presentation.
 4. Use the native Agentforce UI, with no custom LWC.
 5. Include Salesforce record hyperlinks in responses.
-6. Follow the functional requirements and search outcome decisions (see requirements-status.md; not yet attached).
+6. Follow the functional requirements and search outcome decisions recorded in requirements-status.md (supplied in the design session, no attachment).
 7. Enforce sharing, CRUD, FLS and USER_MODE.
 8. Use synthetic test data only.
 9. No business-record DML through the Read Agent.
@@ -18,3 +18,5 @@
 ## Environment and scope
 
 Personal Salesforce sandbox. Contact search and retrieval on standard objects and fields only.
+
+Design choices made on top of these decisions are in technical-design.md.
