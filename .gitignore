@@ -1,0 +1,9 @@
+# Salesforce CLI local state
+.sf/
+.sfdx/
+.localdevserver/
+# Tooling
+node_modules/
+coverage/
+*.log
+.DS_Store

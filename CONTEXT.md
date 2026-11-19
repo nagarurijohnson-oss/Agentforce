@@ -10,6 +10,8 @@ Environment: personal Salesforce **Developer Edition org** (`MAX`, org id 00DjV0
 - [context/build-prompts/](context/build-prompts/) — one build prompt with acceptance criteria per build session (S1–S6)
 - [context/progress.md](context/progress.md) — implementation progress tracker
 - [context/session-1-environment-gate.md](context/session-1-environment-gate.md) — Session 1 environment gate report: checks, commands and results (2026-11-19)
+- [context/session-2-search-engine.md](context/session-2-search-engine.md) — Session 2 report: search engine build, validation results, real vs simulated security tests, deviations (2026-11-19)
+- [force-app/main/default/](force-app/main/default/) — SFDX source (API 68.0): `CRA_` Apex classes and the `CRA_Contact_Read_Agent_User` permission set
 - [context/decisions/2026-11-19-environment-is-developer-edition-org.md](context/decisions/2026-11-19-environment-is-developer-edition-org.md) — the environment is a Developer Edition org, not a sandbox
 
 Every build session must keep the requirements, decisions and progress files up to date. Nothing is activated or merged without explicit approval.

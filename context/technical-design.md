@@ -15,17 +15,19 @@ Session 1 confirmed with the org's Agent Script compiler (2026-11-19): block key
 | ID | Decision | Status |
 |---|---|---|
 | D-A | Agent type is Employee agent, because it runs as the chatting user. Agent Script compiles an Employee agent in this org (Session 1). Run-as-user is confirmed at runtime in Session 5 | Verified (compile) |
-| D-B | Duplicate rule applies only when the search used an exact name, email or phone | Assumed |
-| D-C | 11–100 matches: first five and filter suggestions, no "show more" | Assumed |
-| D-D | Missing and unreadable values both read "Not available" | Assumed |
+| D-B | Duplicate rule applies only when the search used an exact name, email or phone. S2: exact email (with @) or phone matching 2 or more; a name of 2 or more words when every match has that full name | Assumed, implemented (S2) |
+| D-C | 11–100 matches: first five and filter suggestions, no "show more" | Assumed, implemented (S2) |
+| D-D | Missing and unreadable values both read "Not available" | Assumed, implemented (S2) |
 | D-E | Contact OWD is Controlled by Parent, and Account OWD is Public Read/Write (corrected in Session 1). Keep both. Prove record-level security with Contacts that have no Account: they are private to their owner. Use them in `System.runAs` tests and in UAT. No temporary Private setting is needed | Proposed (Session 1) |
-| D-F | Phone matching: digit-normalised pre-filter, exact digit check in Apex | Assumed |
+| D-F | Phone matching: digit-normalised pre-filter, exact digit check in Apex. S2: equal digits, or a suffix match of 10 or more digits in either direction (country code optional). Scan cap 2,000, then TOO_MANY | Assumed, implemented (S2) |
 | D-G | More than 100 test data created in session 6 only, with approval | Assumed |
 | D-H | New `CRA_` classes. `ESA_RecordSearchAction` (cross-object SOSL, no counts, capped at 20) is not extended or changed. It is referenced only by its test and the unlinked `ESA_Record_Search` function (Session 1) | Verified |
 
 ## Outcome precedence
 
 ERROR, NEEDS_CLARIFICATION, FILTER_UNAVAILABLE, NO_MATCH, TOO_MANY (>100), DUPLICATE_IDENTIFIER, SINGLE_MATCH / FIELD_ANSWER, LIST_2_TO_5, LIST_6_TO_10, LIST_11_TO_100. REMAINING_PAGE follows LIST_6_TO_10 when the user asks for the rest.
+
+Session 2 refinement: a user with no Contact Read gets NO_MATCH before FILTER_UNAVAILABLE is considered, so the answer stays neutral.
 
 ## Action contract
 
@@ -38,6 +40,8 @@ Outputs: `outcomeCode`, `totalMatchesLabel`, `shownCount`, `remainingCount`, `su
 ## Search rules
 
 At least one filter required. Name words match the start of first or last name. Email exact when it contains `@`, else contains. Phone digit-normalised. Account name and title contains. Location matches mailing city, state or country (the text fields; state and country picklists appear to be on, so `MailingStateCode`/`MailingCountryCode` also exist). `%`, `_`, `\` escaped. Bind variables only, whitelisted fields, order `Name, Id`. Count is USER_MODE and capped at 101. Page size 5.
+
+Session 2 implementation details (proposed, see session-2-search-engine.md): city, state and country are starts-with on the text field, and state and country also equal the ISO code. Values longer than the field are rejected, never truncated. More than 5 name words, a malformed `contactId` or an unknown `requestedField` return NEEDS_CLARIFICATION. `with sharing` and USER_MODE both apply to every query, and only readable fields are selected. At most 3 queries per request and at most 10 requests per call.
 
 ## Common build rules
 
