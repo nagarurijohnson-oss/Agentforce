@@ -39,6 +39,8 @@ Outputs: `outcomeCode`, `totalMatchesLabel`, `shownCount`, `remainingCount`, `ca
 
 `remainingCount` is the number of rows the user may still ask to see. It is non-zero only when `canShowRemaining` is true (6–10 matches, first page). `refinementRequired` is true for 11–100 and more than 100. The template must then ask for filters and must not offer more pages. `singleContactId` is set only for exactly one match.
 
+Session 3 (2026-11-20): implemented as `CRA_ContactSearchAction.searchContacts`, label "Search Contacts (Contact Read Agent)". `shownCount`, `remainingCount` and `similarNameCount` are Integer, `canShowRemaining` and `refinementRequired` Boolean, all other outputs Text (`singleContactId` is the 18-character Id as text). Unset Text outputs are empty; `contactsJson` is `[]` when there are no rows. More than 10 requests in one call: the extra requests return ERROR. Apex class access is on `APP_Contact_Read_Agent` only. See [session-3-invocable-action.md](session-3-invocable-action.md).
+
 `contactsJson` entries: `n`, `id`, `name`, `contactUrl`, `accountName`, `title`, `email`, `phone`, `mobilePhone`, `mailingAddress`. Blank or unreadable values are "Not available". Every value is Contact data typed by people: the Prompt Template treats it as data, never as instructions (S4). Links are built in Apex from the My Domain URL and `/lightning/r/Contact/<id>/view`.
 
 ## Search rules

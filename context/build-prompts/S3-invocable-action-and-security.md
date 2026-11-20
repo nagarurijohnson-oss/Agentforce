@@ -1,5 +1,7 @@
 # S3. Invocable action and security hardening
 
+**Status (2026-11-20):** built and validated check-only (0AfjV000006e70xSAA), not deployed. Results against these criteria: [session-3-invocable-action.md](../session-3-invocable-action.md). Custom Labels deferred (service unchanged).
+
 ## Build prompt
 
 **From the Session 2 review fixes (2026-11-20):** the contract gained `canShowRemaining`, `refinementRequired`, `similarNameCount`, `mobilePhone` and the `MobilePhone` requested field (see technical-design.md). Map them in the invocable outputs. Keep `searchAll`'s 10-request cap and query-budget check.
