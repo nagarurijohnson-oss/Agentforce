@@ -8,6 +8,8 @@ Can start once the action contract in technical-design.md is agreed.
 
 **From Session 3 (2026-11-20):** the action is `CRA_ContactSearchAction` (label "Search Contacts (Contact Read Agent)"). Template inputs take the 15 outputs by these exact names. `shownCount`, `remainingCount`, `similarNameCount` are numbers, `canShowRemaining`, `refinementRequired` true/false, the rest text. `contactsJson` is `[]` for ERROR, NEEDS_CLARIFICATION, NO_MATCH, FILTER_UNAVAILABLE and TOO_MANY; unset text outputs are empty. Build preview payloads from real action output (the action tests show each shape).
 
+**Session 4 outcome (2026-11-20):** built and check-only validated, not deployed. Flex templates take at most 5 text inputs, so the template has one input, `searchResultJson` (decision D-K). Results and open items: [../session-4-prompt-template.md](../session-4-prompt-template.md). Remaining for S4/S5: deploy the template (approval), read it back by name (criterion 7), and decide the template-run permission instead of "template access on APP_Contact_Read_Agent".
+
 ## Build prompt
 
 Read CONTEXT.md, context/requirements-status.md and context/technical-design.md. Create branch `feature/scgoe-95-s4-template`.

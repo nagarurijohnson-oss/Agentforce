@@ -73,3 +73,12 @@ Deployed to the Developer Edition org `00DjV000003BVbRUAW`: fresh check-only val
 Not done, as instructed: no assignment, no sharing change, no agent change, no merge, Session 4 not started.
 Pending: PR #3 review; relax the zero-assignment assertion before S6 assignment (L2); runtime class-access proof (S5/S6).
 Full report: [session-3-review-and-deploy.md](session-3-review-and-deploy.md).
+
+## Session 4 (2026-11-20)
+
+Platform: a Flex template takes at most 5 inputs, text only (check-only probes). Decision D-K (Nagaruri Johnson): one Apex-built JSON input.
+Built in source: `searchResultJson` output on `CRA_ContactSearchAction` (+3 tests, 6 extended), template `CRA_Contact_Result_Presentation` (one input), test harness under `scripts/scgoe-95/s4-template-tests/`.
+Verified: check-only validations 0AfjV000006eL2HSAU (Apex, 75/75, 100% coverage) and 0AfjV000006eMETSA2 (12/12 with the template, 75/75). Template behaviour on 20 synthetic payloads covering all 12 outcome codes: round 2 60/60, stability 7/9 (L1: HTML closing tags occasionally lose characters).
+Not done, as instructed: no deploy, no activation, no agent, no permission assignment, no sharing change, no merge. The command capturing real Contact output was not run; only synthetic data was used.
+Pending: deploy and read back the template (approval), real merge and Agent Script hand-off, chat rendering, the permission a non-admin needs to run the template (S5).
+Full report: [session-4-prompt-template.md](session-4-prompt-template.md).

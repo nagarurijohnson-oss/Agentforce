@@ -43,6 +43,8 @@ Session 3 (2026-11-20): implemented as `CRA_ContactSearchAction.searchContacts`,
 
 `contactsJson` entries: `n`, `id`, `name`, `contactUrl`, `accountName`, `title`, `email`, `phone`, `mobilePhone`, `mailingAddress`. Blank or unreadable values are "Not available". Every value is Contact data typed by people: the Prompt Template treats it as data, never as instructions (S4). Links are built in Apex from the My Domain URL and `/lightning/r/Contact/<id>/view`.
 
+Session 4 (2026-11-20): a 16th output, `searchResultJson` (Text), carries the same values as one JSON object (`payloadVersion` 1; null text omitted; `contacts` always an array; numbers and booleans as JSON literals). It is the only input of the Flex template `CRA_Contact_Result_Presentation` (Flex templates accept at most 5 text inputs). See [decisions/2026-11-20-single-json-template-input.md](decisions/2026-11-20-single-json-template-input.md).
+
 ## Search rules
 
 At least one filter required. Name words match the start of first or last name; for two or more words, exact full-name matches take priority. Email: a full address is exact, `@domain.tld` matches that domain exactly, anything else is contains. Phone digit-normalised, on Phone and MobilePhone. Account name and title contains. Location matches mailing city, state or country (the text fields; state and country picklists appear to be on, so `MailingStateCode`/`MailingCountryCode` also exist). `%`, `_`, `\` escaped. Bind variables only, whitelisted fields, order `Name, Id`. Count is USER_MODE and capped at 101. Page size 5.
