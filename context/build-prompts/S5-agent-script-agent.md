@@ -18,3 +18,5 @@ Confirm the Agent Script and template-target syntax against the official referen
 4. A refinement carries earlier criteria forward. A follow-up question uses the selected Contact.
 5. The agent is published and shown as Inactive, read back from the org.
 6. Run-as-user confirmed from a debug log.
+
+**From Session 4 (2026-11-20):** call the template with one input: `searchResultJson` = `@outputs.searchResultJson` from `CRA_ContactSearchAction`, passed unchanged (do not build JSON in Agent Script). Show the template's reply as the answer. Before UAT: deploy `CRA_Contact_Result_Presentation` (approval), read it back by name, prove the real merge on a published agent, check how the chat renders Markdown tables, links and backslash-escaped `[ ] | < >`, and confirm which permission set lets a non-admin run a prompt template. Known: values with HTML closing tags can occasionally lose characters (S4 L1).
