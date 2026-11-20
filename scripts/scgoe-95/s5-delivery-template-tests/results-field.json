@@ -1,0 +1,194 @@
+{
+ "04_field_email": [
+  {
+   "text": "Here is the email for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000004AAA/view)  \n**Email:** priya.synthwell@synthetic.example  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Email\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the email for this Contact.\",\"singleContactId\":\"003SYN000000004AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000004AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000004AAA/view\",\"email\":\"priya.synthwell@synthetic.example\",\"contactPath\":\"/lightning/r/Contact/003SYN000000004AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"email\":\"priya.synthwell@synthetic.example\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the email for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000004AAA/view)  \n**Email:** priya.synthwell@synthetic.example  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Email\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the email for this Contact.\",\"singleContactId\":\"003SYN000000004AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000004AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000004AAA/view\",\"email\":\"priya.synthwell@synthetic.example\",\"contactPath\":\"/lightning/r/Contact/003SYN000000004AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"email\":\"priya.synthwell@synthetic.example\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the email for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000004AAA/view)  \n**Email:** priya.synthwell@synthetic.example  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Email\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the email for this Contact.\",\"singleContactId\":\"003SYN000000004AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000004AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000004AAA/view\",\"email\":\"priya.synthwell@synthetic.example\",\"contactPath\":\"/lightning/r/Contact/003SYN000000004AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"email\":\"priya.synthwell@synthetic.example\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the email for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000004AAA/view)  \n**Email:** priya.synthwell@synthetic.example  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Email\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the email for this Contact.\",\"singleContactId\":\"003SYN000000004AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000004AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000004AAA/view\",\"email\":\"priya.synthwell@synthetic.example\",\"contactPath\":\"/lightning/r/Contact/003SYN000000004AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"email\":\"priya.synthwell@synthetic.example\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the email for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000004AAA/view)  \n**Email:** priya.synthwell@synthetic.example  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Email\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the email for this Contact.\",\"singleContactId\":\"003SYN000000004AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000004AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000004AAA/view\",\"email\":\"priya.synthwell@synthetic.example\",\"contactPath\":\"/lightning/r/Contact/003SYN000000004AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"email\":\"priya.synthwell@synthetic.example\"}}]}\n",
+   "findings": []
+  }
+ ],
+ "05_field_phone_mobile_na": [
+  {
+   "text": "Here is the phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000005AAA/view)  \n**Phone:** +1 555 0101  \n**Mobile:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the phone for this Contact.\",\"singleContactId\":\"003SYN000000005AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000005AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000005AAA/view\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000005AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000005AAA/view)  \n**Phone:** +1 555 0101  \n**Mobile:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the phone for this Contact.\",\"singleContactId\":\"003SYN000000005AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000005AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000005AAA/view\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000005AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000005AAA/view)  \n**Phone:** +1 555 0101  \n**Mobile:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the phone for this Contact.\",\"singleContactId\":\"003SYN000000005AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000005AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000005AAA/view\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000005AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000005AAA/view)  \n**Phone:** +1 555 0101  \n**Mobile:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the phone for this Contact.\",\"singleContactId\":\"003SYN000000005AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000005AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000005AAA/view\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000005AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the phone for this Contact.\n\n- **Name:** Priya Synthwell  \n- **Record:** [Open record](/lightning/r/Contact/003SYN000000005AAA/view)  \n- **Phone:** +1 555 0101  \n- **Mobile:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the phone for this Contact.\",\"singleContactId\":\"003SYN000000005AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000005AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000005AAA/view\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000005AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"phone\":\"+1 555 0101\",\"mobilePhone\":\"Not available\"}}]}\n",
+   "findings": []
+  }
+ ],
+ "21_field_title": [
+  {
+   "text": "Here is the title for this Contact.\n\n- **Name:** Priya Synthwell  \n- **Record:** [Open record](/lightning/r/Contact/003SYN000000021AAA/view)  \n- **Title:** Director of Finance  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Title\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the title for this Contact.\",\"singleContactId\":\"003SYN000000021AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000021AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000021AAA/view\",\"title\":\"Director of Finance\",\"contactPath\":\"/lightning/r/Contact/003SYN000000021AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"title\":\"Director of Finance\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the title for this Contact.\n\n- **Name:** Priya Synthwell  \n- **Record:** [Open record](/lightning/r/Contact/003SYN000000021AAA/view)  \n- **Title:** Director of Finance  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Title\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the title for this Contact.\",\"singleContactId\":\"003SYN000000021AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000021AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000021AAA/view\",\"title\":\"Director of Finance\",\"contactPath\":\"/lightning/r/Contact/003SYN000000021AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"title\":\"Director of Finance\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the title for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000021AAA/view)  \n**Title:** Director of Finance  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Title\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the title for this Contact.\",\"singleContactId\":\"003SYN000000021AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000021AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000021AAA/view\",\"title\":\"Director of Finance\",\"contactPath\":\"/lightning/r/Contact/003SYN000000021AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"title\":\"Director of Finance\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the title for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000021AAA/view)  \n**Title:** Director of Finance  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Title\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the title for this Contact.\",\"singleContactId\":\"003SYN000000021AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000021AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000021AAA/view\",\"title\":\"Director of Finance\",\"contactPath\":\"/lightning/r/Contact/003SYN000000021AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"title\":\"Director of Finance\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the title for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000021AAA/view)  \n**Title:** Director of Finance  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Title\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the title for this Contact.\",\"singleContactId\":\"003SYN000000021AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000021AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000021AAA/view\",\"title\":\"Director of Finance\",\"contactPath\":\"/lightning/r/Contact/003SYN000000021AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"title\":\"Director of Finance\"}}]}\n",
+   "findings": []
+  }
+ ],
+ "22_field_account_special": [
+  {
+   "text": "Here is the account for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000022AAA/view)  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Account\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the account for this Contact.\",\"singleContactId\":\"003SYN000000022AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000022AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000022AAA/view\",\"accountName\":\"Smith | Jones & Co <b>LLC</b>\",\"contactPath\":\"/lightning/r/Contact/003SYN000000022AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"accountName\":\"Smith \\\\| Jones \\\\& Co \\\\<b\\\\>LLC\\\\</b\\\\>\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the account for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000022AAA/view)  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Account\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the account for this Contact.\",\"singleContactId\":\"003SYN000000022AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000022AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000022AAA/view\",\"accountName\":\"Smith | Jones & Co <b>LLC</b>\",\"contactPath\":\"/lightning/r/Contact/003SYN000000022AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"accountName\":\"Smith \\\\| Jones \\\\& Co \\\\<b\\\\>LLC\\\\</b\\\\>\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the account for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000022AAA/view)  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Account\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the account for this Contact.\",\"singleContactId\":\"003SYN000000022AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000022AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000022AAA/view\",\"accountName\":\"Smith | Jones & Co <b>LLC</b>\",\"contactPath\":\"/lightning/r/Contact/003SYN000000022AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"accountName\":\"Smith \\\\| Jones \\\\& Co \\\\<b\\\\>LLC\\\\</b\\\\>\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the account for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000022AAA/view)  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Account\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the account for this Contact.\",\"singleContactId\":\"003SYN000000022AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000022AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000022AAA/view\",\"accountName\":\"Smith | Jones & Co <b>LLC</b>\",\"contactPath\":\"/lightning/r/Contact/003SYN000000022AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"accountName\":\"Smith \\\\| Jones \\\\& Co \\\\<b\\\\>LLC\\\\</b\\\\>\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the account for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000022AAA/view)  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Account\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the account for this Contact.\",\"singleContactId\":\"003SYN000000022AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000022AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000022AAA/view\",\"accountName\":\"Smith | Jones & Co <b>LLC</b>\",\"contactPath\":\"/lightning/r/Contact/003SYN000000022AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"accountName\":\"Smith \\\\| Jones \\\\& Co \\\\<b\\\\>LLC\\\\</b\\\\>\"}}]}\n",
+   "findings": []
+  }
+ ],
+ "23_field_mobile": [
+  {
+   "text": "Here is the mobile phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000023AAA/view)  \n**Mobile phone:** +44 7700 900023  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mobile phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mobile phone for this Contact.\",\"singleContactId\":\"003SYN000000023AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000023AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000023AAA/view\",\"mobilePhone\":\"+44 7700 900023\",\"contactPath\":\"/lightning/r/Contact/003SYN000000023AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mobilePhone\":\"+44 7700 900023\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mobile phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000023AAA/view)  \n**Mobile phone:** +44 7700 900023  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mobile phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mobile phone for this Contact.\",\"singleContactId\":\"003SYN000000023AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000023AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000023AAA/view\",\"mobilePhone\":\"+44 7700 900023\",\"contactPath\":\"/lightning/r/Contact/003SYN000000023AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mobilePhone\":\"+44 7700 900023\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mobile phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000023AAA/view)  \n**Mobile phone:** +44 7700 900023  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mobile phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mobile phone for this Contact.\",\"singleContactId\":\"003SYN000000023AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000023AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000023AAA/view\",\"mobilePhone\":\"+44 7700 900023\",\"contactPath\":\"/lightning/r/Contact/003SYN000000023AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mobilePhone\":\"+44 7700 900023\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mobile phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000023AAA/view)  \n**Mobile phone:** +44 7700 900023  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mobile phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mobile phone for this Contact.\",\"singleContactId\":\"003SYN000000023AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000023AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000023AAA/view\",\"mobilePhone\":\"+44 7700 900023\",\"contactPath\":\"/lightning/r/Contact/003SYN000000023AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mobilePhone\":\"+44 7700 900023\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mobile phone for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000023AAA/view)  \n**Mobile phone:** +44 7700 900023  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mobile phone\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mobile phone for this Contact.\",\"singleContactId\":\"003SYN000000023AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000023AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000023AAA/view\",\"mobilePhone\":\"+44 7700 900023\",\"contactPath\":\"/lightning/r/Contact/003SYN000000023AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mobilePhone\":\"+44 7700 900023\"}}]}\n",
+   "findings": []
+  }
+ ],
+ "24_field_address_na": [
+  {
+   "text": "Here is the mailing address for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000024AAA/view)  \n**Mailing address:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mailing address\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mailing address for this Contact.\",\"singleContactId\":\"003SYN000000024AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000024AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000024AAA/view\",\"mailingAddress\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000024AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mailingAddress\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mailing address for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000024AAA/view)  \n**Mailing address:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mailing address\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mailing address for this Contact.\",\"singleContactId\":\"003SYN000000024AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000024AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000024AAA/view\",\"mailingAddress\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000024AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mailingAddress\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mailing address for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000024AAA/view)  \n**Mailing address:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mailing address\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mailing address for this Contact.\",\"singleContactId\":\"003SYN000000024AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000024AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000024AAA/view\",\"mailingAddress\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000024AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mailingAddress\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mailing address for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000024AAA/view)  \n**Mailing address:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mailing address\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mailing address for this Contact.\",\"singleContactId\":\"003SYN000000024AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000024AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000024AAA/view\",\"mailingAddress\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000024AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mailingAddress\":\"Not available\"}}]}\n",
+   "findings": []
+  },
+  {
+   "text": "Here is the mailing address for this Contact.\n\n**Name:** Priya Synthwell  \n**Record:** [Open record](/lightning/r/Contact/003SYN000000024AAA/view)  \n**Mailing address:** Not available  ",
+   "error": null,
+   "mergedPayloadSeen": "\n{\"payloadVersion\":3,\"outcomeCode\":\"FIELD_ANSWER\",\"totalMatchesLabel\":\"1\",\"shownCount\":1,\"remainingCount\":0,\"canShowRemaining\":false,\"refinementRequired\":false,\"similarNameCount\":0,\"requestedFieldLabel\":\"Mailing address\",\"criteriaSummary\":\"Name: Priya Synthwell\",\"userMessage\":\"Here is the mailing address for this Contact.\",\"singleContactId\":\"003SYN000000024AAA\",\"contacts\":[{\"n\":1,\"id\":\"003SYN000000024AAA\",\"name\":\"Priya Synthwell\",\"contactUrl\":\"https://cra-synthetic-test.my.salesforce.com/lightning/r/Contact/003SYN000000024AAA/view\",\"mailingAddress\":\"Not available\",\"contactPath\":\"/lightning/r/Contact/003SYN000000024AAA/view\",\"display\":{\"name\":\"Priya Synthwell\",\"mailingAddress\":\"Not available\"}}]}\n",
+   "findings": []
+  }
+ ]
+}
