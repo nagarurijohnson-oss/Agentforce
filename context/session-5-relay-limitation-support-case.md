@@ -2,6 +2,7 @@
 
 - **Limitation L-1 (High): open. Not resolved.** The agent's final reasoning step can change the escaped Prompt Template reply before it reaches the user. When it does, HTML in a Contact value is applied in the chat.
 - **Decision (Nagaruri Johnson, 2026-11-20):** raise it with Salesforce. No further escaping changes until Salesforce answers. Session 5 stays open; Session 6 is on hold.
+- **2026-11-20:** also reproduced in the Lightning Experience Agentforce panel with the published, active agent (5 of 5 turns). See `session-6-activation-and-lightning-panel.md`.
 - **Case:** not yet filed. The draft below is ready to paste into Salesforce Help. Filing needs a person with a Salesforce Help login for this org.
 - Apex (`CRA_ContactSearchAction`, payload v3), the search service and the agent draft are unchanged by this work. The template's field-answer rule fix was deployed separately (see `progress.md`); it does not affect this limitation.
 
@@ -57,6 +58,7 @@ Observed frequency on the hostile Contact:
 |---|---|---|
 | CLI preview, live actions | 2 | 2 of 2 |
 | Builder Live Test Mode | 3 | 3 of 3 |
+| Lightning Experience Agentforce panel, published v1 (2026-11-20) | 5 | 5 of 5 ("LLC" rendered bold) |
 
 Control: in the same regression, a table reply containing the same Account value (24 backslashes) and four other escaped replies came through unchanged. 5 of 7 escaped replies were kept exactly; the 2 that changed are both the single-Contact reply for this Contact.
 

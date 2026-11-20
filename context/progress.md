@@ -14,7 +14,8 @@ Update this file at the end of every build session. A status here is a dated cla
 | Session 5: Agent Script agent | Draft deployed and previewed 2026-11-20. **Not published, not activated.** Not merged | Branch `feature/scgoe-95-s5-agent`. Template + action deploy 0AfjV000006eLjqSAE; agent draft final deploy 0AfjV000006eU0jSAE. Template tests 78/78; 11 preview scenarios / 21 turns pass except links (H1: `URL_Redacted`) and HTML rendering (M1). See session-5-agent-preview.md |
 | Session 5 fixes: payload v3 and Option A | v3 action and template **deployed 2026-11-20** (0AfjV000006ehUDSAY). **Validation not passed:** agent relay drops escapes for the hostile Contact (L-1, High). Not published, not merged | Branch `feature/scgoe-95-s5-fixes`, draft PR #5. Template tests 83/84; 11 scenarios: 39/39 links correct; Builder: "LLC" bold in 3 turns. See session-5-v3-deployment-validation.md |
 | Session 5 delivery review | Done 2026-11-20 (local probes, no metadata change). **Direct template delivery not supported** in the CLI preview or the Builder Live Test: `__supports_result_display__: false`; render rules / `show_and_return` need a connection surface; `say` is workflow-only. Field-answer template rule corrected and validated check-only (0AfjV000006ektVSAQ), **not deployed** | Branch `feature/scgoe-95-s5-fixes`, draft PR #5. Template tests 84/84 (field answers 45/45). See session-5-delivery-review.md |
-| Session 6: Evaluation, UAT and handover | Not started | Activation and merge need explicit approval |
+| Session 6: Activation and Lightning panel test | **Published v1 and Active** 2026-11-20 (demo and controlled testing). Panel access via `APP_Contact_Read_Agent_Panel_Access` (agent access only), assigned to the admin user only. Panel tests 10 of 11 turns pass; **L-1 reproduced in the panel (5 of 5 hostile turns), open**. Not merged | See session-6-activation-and-lightning-panel.md. Employee_Leave_Assistant, existing permission sets and sharing unchanged. CRA tests 81/81 (707jV00000C2pQx) |
+| Session 6: Evaluation, UAT and handover | Not started | Restricted-user UAT, L-1 resolution, merge: need approval |
 
 ## Design session findings (2026-11-19, read-only; corrected by Session 1)
 
@@ -131,3 +132,13 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - L-2 (field answer drops the Open record line): fixed in the template.
 - L-1 (agent relay drops escaping): **open, High.** Support case pack with reproduction steps, expected and actual behavior, screenshots and a case draft: [session-5-relay-limitation-support-case.md](session-5-relay-limitation-support-case.md). Case not yet filed; case number: _pending_.
 - Session 5 stays open. Session 6 on hold until Salesforce answers. Nothing published, activated or merged.
+
+## Session 6 part 1: activation and Lightning panel (2026-11-20)
+
+- Published `Contact_Read_Agent` version 1 and activated it (BotVersion v1 Active). Employee_Leave_Assistant unchanged (v1 Active, last modified 2026-09-28).
+- Decision (Nagaruri Johnson): access-only permission set `APP_Contact_Read_Agent_Panel_Access` (agent access to Contact_Read_Agent only; 0 object, 0 field, no system permissions), assigned to the current admin user only. `APP_Contact_Read_Agent` still has 0 assignments.
+- Path: Lightning header → **Agentforce** → (first use) Got It → Contact Read Agent is selected in the panel's agent selector.
+- Panel tests, 5 conversations / 11 turns: single match, duplicates, 6–10, 11–100, read-only guard, field follow-up, "Not available" values, injection text all pass; record navigation opens the right Contact; 19 of 19 links correct.
+- **L-1: open (High).** Reproduced in the Lightning panel: "LLC" rendered bold for the hostile Contact in 5 of 5 turns; shown literally for other Contacts with the same Account.
+- Not done, as instructed: no sharing change, no other users, no business record changed, no merge.
+- Full report: [session-6-activation-and-lightning-panel.md](session-6-activation-and-lightning-panel.md).
