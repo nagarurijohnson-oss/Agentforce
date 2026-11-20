@@ -9,8 +9,8 @@ Update this file at the end of every build session. A status here is a dated cla
 | Technical design and build prompts | Ready for review | technical-design.md and build-prompts/ on this branch |
 | Session 1: Foundation and environment gate | Gate done 2026-11-19 (read-only). No blocker | See session-1-environment-gate.md. Scaffold and permission sets deferred to S2/S3 on instruction (no metadata changes) |
 | Session 2: Search engine (Apex service, tests) | Built 2026-11-19; review fixes 2026-11-20, validated check-only. **Not deployed**, PR #2 not merged | Branch `feature/scgoe-95-s2-search-engine`. Validation 0AfjV000006e22sSAA: 9 components, 48 of 48 tests, 100% coverage on all 4 classes. Permission sets `DATA_Contact_Read_Only` and `APP_Contact_Read_Agent` in source only, not assigned. See session-2-review-fixes.md |
-| Session 3: Invocable action and security hardening | Built 2026-11-20, validated check-only. **Not deployed** (first deploy needs approval), not merged | Branch `feature/scgoe-95-s3-action`. `CRA_ContactSearchAction` + 24 tests; Apex class access on `APP_Contact_Read_Agent`. Validation 0AfjV000006e70xSAA: 11 components, 72 of 72 tests, 100% coverage on all 5 production classes. See session-3-invocable-action.md |
-| Session 4: Prompt Builder template | Not started | Can start once the action contract is agreed |
+| Session 3: Invocable action and security hardening | Reviewed and **deployed 2026-11-20** to the Developer Edition org. Not merged; permission sets not assigned | Branch `feature/scgoe-95-s3-action`, draft PR #3. Fresh validation 0AfjV000006e5IUSAY then deploy 0AfjV000006eF6XSAU: 11/11 components; 72/72 tests passed on the deployed code (run 707jV00000C0w5U), 100% coverage on all 5 production classes. Review: 0 Critical, 0 High, 2 Medium, 3 Low. See session-3-review-and-deploy.md |
+| Session 4: Prompt Builder template | Not started | Action deployed and contract confirmed. Confirm integer/boolean template inputs (review M2) |
 | Session 5: Agent Script agent | Not started | Published inactive. Not activated |
 | Session 6: Evaluation, UAT and handover | Not started | Activation and merge need explicit approval |
 
@@ -61,3 +61,15 @@ Unchanged: the search service, criteria, result, field access, test data factory
 Not done, as instructed: no deploy, no assignment, no sharing change, no agent, no merge.
 Pending: review and approval of the branch, the first deploy (needs approval), class-access enforcement at runtime (S5/S6).
 Full report: [session-3-invocable-action.md](session-3-invocable-action.md).
+
+## Session 3 review and first deploy (2026-11-20)
+
+Review of `7e094a8`: 0 Critical, 0 High, 2 Medium, 3 Low.
+- Class access on `APP_Contact_Read_Agent` for `CRA_ContactSearchAction` confirmed in source and in the org (`SetupEntityAccess` to `01pjV000005FisIQAS`). The automated "not wired" warning did not match the commit.
+- Contract (12 inputs, 15 outputs) read back from the deployed action and matches the design.
+- The 10-request cap returns an explicit ERROR per extra request, in position, with no truncation. M1: its wording is the general error text.
+
+Deployed to the Developer Edition org `00DjV000003BVbRUAW`: fresh check-only validation 0AfjV000006e5IUSAY (11/11, 72/72), then quick deploy 0AfjV000006eF6XSAU (11/11, 0 errors). Verified: 9 classes Active and valid, both permission sets with the expected grants, 0 assignments, action registered, 72/72 tests passed on the deployed code (run 707jV00000C0w5U).
+Not done, as instructed: no assignment, no sharing change, no agent change, no merge, Session 4 not started.
+Pending: PR #3 review; relax the zero-assignment assertion before S6 assignment (L2); runtime class-access proof (S5/S6).
+Full report: [session-3-review-and-deploy.md](session-3-review-and-deploy.md).
