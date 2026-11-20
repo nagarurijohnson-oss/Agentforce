@@ -51,3 +51,18 @@ def mdx(v):
     return v
 FIX['E3_table_extended'] = 'Here are the test values.\n\n' + table(mdx)
 json.dump({'values': VALUES, 'fixtures': FIX}, open('fixtures.json', 'w'), indent=1, ensure_ascii=False)
+
+# Option A: the Contact value is never inside link text; a fixed label links to the record path.
+def single_a(f):
+    return ('I found one matching Contact.  \n**Name:** %s ([Open record](%s))  \n**Account:** %s  \n**Title:** %s  \n**Email:** %s'
+            % (f('Zoë "Zed" O\'Brien <b>VIP</b> [x](https://evil.example)'), P, f('Smith | Jones & Co <b>LLC</b>'),
+               f('<script>alert(1)</script> CFO'), f('zed.obrien@synthetic.example')))
+def table_a(f):
+    rows = ['| # | Name | Record |', '|---|---|---|']
+    for i, (lab, v) in enumerate(VALUES, 1): rows.append('| %d | %s | [Open record](%s) |' % (i, f(v), P))
+    return '\n'.join(rows)
+FIX['A1_single_v2raw'] = single_a(lambda v: v)
+FIX['A2_single_v3esc'] = single_a(md)
+FIX['A3_table_v2raw'] = 'Here are the test values.\n\n' + table_a(lambda v: v)
+FIX['A4_table_v3esc'] = 'Here are the test values.\n\n' + table_a(md)
+json.dump({'values': VALUES, 'fixtures': FIX}, open('fixtures.json', 'w'), indent=1, ensure_ascii=False)

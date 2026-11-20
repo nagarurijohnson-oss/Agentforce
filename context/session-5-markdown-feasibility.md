@@ -50,3 +50,21 @@ The renderer does not follow standard Markdown escaping inside link text, so any
 Apex (`CRA_ContactSearchAction` still payload v2), the search service, the 15 original outputs, the template, the agent draft, sharing, permissions, synthetic records (2 Accounts, 30 Contacts retained). Session 6 not started.
 
 Evidence: `scripts/scgoe-95/s5-fix-markdown-feasibility/` (test replies, harness, backslash probe, `evidence.json`) and `context/screenshots/s5-markdown-feasibility/`.
+
+## Addendum: Option A rendering check (2026-11-20)
+
+Nagaruri Johnson chose Option A (separate record link). Before building it, it was tested in the real Builder Live Test Mode with the same harness and synthetic values. The Contact value is shown as text and a fixed **Open record** label links to `contactPath`. Each layout was tested twice: with the value as Apex v2 delivers it (the runtime decodes the character references, so the template receives raw text), and with the v3 backslash escaping.
+
+| Test reply | Disguised links (link text ≠ real address) | HTML applied | External image loaded | Values exact | Open record links |
+|---|---|---|---|---|---|
+| A1 single, v2 raw | **Yes**: "x" → evil.example | Yes (`<b>`) | No | No | Correct |
+| A3 table, v2 raw | **Yes**: "click here", "Pay here" | Yes | **Yes** (`evil.example/x.png`) | 5 of 18 | 18 of 18 correct |
+| A2 single, v3 escaped | **None** | No | No | Yes | Correct |
+| A4 table, v3 escaped | **None** | No | No | 16 of 18 (stray `\>` on 2 auto-linked values) | 18 of 18 correct |
+
+Findings:
+1. **Option A as worded ("template change only, Apex stays at v2") does not work.** With v2, values reach the template already decoded, so disguised links, HTML formatting and external image loading all remain. That wording in the options table was wrong.
+2. **Option A works with the v3 backslash escaping in Apex.** With names out of the link text, no value produced a disguised link in either layout, no HTML was applied and nothing loaded from the test domain. Every Open record link pointed to the record path.
+3. Remaining, as Option A stated: web addresses, `www.` hosts and emails inside values are still auto-linked, showing their real address; 2 of 18 values show a stray `\>`.
+
+Evidence: `scripts/scgoe-95/s5-fix-markdown-feasibility/evidence-option-a.json`, screenshots `A1`–`A4` in `context/screenshots/s5-markdown-feasibility/`. Nothing in the org changed. Implementation waits for a decision on the Apex v3 change.
