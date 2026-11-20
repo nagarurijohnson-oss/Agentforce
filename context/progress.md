@@ -90,3 +90,8 @@ Verified: Apex outcome codes and counts drive every reply; duplicates never auto
 Open: **H1** record links render as `URL_Redacted` (agent runtime masks absolute URLs; relative paths pass): needs an approved Apex + template change. **M1** HTML in field values renders as HTML. M2 relay depends on the model (add agent tests). Restricted-user run, publish and activation: Session 6, with approval.
 Retained: 30 synthetic Contacts and 2 Accounts (`CRA-TEST`) for Session 6.
 Full report: [session-5-agent-preview.md](session-5-agent-preview.md).
+
+## Session 5 fixes (2026-11-20)
+
+Deployed (not published or activated): payload v2 with `contactPath` and `display` values, template v2, agent relay rule. Committed `843da07` on `feature/scgoe-95-s5-fixes` after checking that the org copies are identical. Verified: H1 links fixed (relative paths, correct Contact Ids); the Builder reads 0 errors and 0 warnings.
+Open: **M1 not resolved.** Root cause: the Agentforce runtime decodes HTML character references in the Apex action's output before the template sees it. Recommended fix: Markdown backslash escapes in Apex (approval needed). See [session-5-fix-diagnosis.md](session-5-fix-diagnosis.md). Session 6 waits for this fix.
