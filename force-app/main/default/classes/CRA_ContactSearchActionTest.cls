@@ -1205,40 +1205,83 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals(null, fromUrl, 'URL: no path');
     }
 
+    // Characters payload v3 escapes with one Markdown backslash.
+    private static final Set<String> MARKDOWN_SPECIALS = new Set<String>{
+        '\\', '<', '>', '[', ']', '|', '*', '_', '`', '~', '#', '&'
+    };
+
     /*****************************************************************
-    Tests:     escapeForDisplay: each special character becomes its
-               character reference, '&' is escaped first so an existing
-               reference is escaped exactly once, line breaks become
-               spaces, and ordinary values, "Not available" and null are
-               unchanged.
+    Purpose:   Reads a display value left to right and proves it is
+               escaped completely and exactly once: every special
+               character carries one backslash, no backslash stands
+               alone, there is no line break, and removing the escape
+               backslashes gives back the expected original text.
+    Parameters: display — the display value; original — the value it
+               was made from (line breaks already turned into spaces)
+    *****************************************************************/
+    private static void assertEscapedOnce(String display, String original) {
+        String restored = '';
+        Integer index = 0;
+        while (index < display.length()) {
+            String character = display.substring(index, index + 1);
+            if (character == '\\') {
+                System.assert(index + 1 < display.length(), 'Lone backslash at the end: ' + display);
+                String escaped = display.substring(index + 1, index + 2);
+                System.assert(MARKDOWN_SPECIALS.contains(escaped),
+                    'Backslash before an ordinary character: ' + display);
+                restored += escaped;
+                index += 2;
+            } else {
+                System.assert(!MARKDOWN_SPECIALS.contains(character),
+                    'Unescaped ' + character + ' in display value: ' + display);
+                System.assert(character != '\n' && character != '\r', 'Line break in display value: ' + display);
+                restored += character;
+                index += 1;
+            }
+        }
+        System.assertEquals(original, restored, 'Removing the escapes gives back the original');
+    }
+
+    /*****************************************************************
+    Tests:     escapeForDisplay (payload v3): each special character
+               gets one Markdown backslash, the backslash is escaped
+               first so nothing is escaped twice, text that already
+               looks escaped keeps its own characters, line breaks
+               become spaces, and ordinary values, "Not available" and
+               null are unchanged.
     *****************************************************************/
     @isTest
     static void displayEscapingIsCompleteAndSingle() {
         Test.startTest();
         String tags = CRA_ContactSearchAction.escapeForDisplay('Smith | Jones & Co <b>LLC</b>');
         String link = CRA_ContactSearchAction.escapeForDisplay('[click](https://evil.example)');
-        String marks = CRA_ContactSearchAction.escapeForDisplay('a\\b *c* `d` ~e~');
-        String reference = CRA_ContactSearchAction.escapeForDisplay('&lt;b&gt; &amp;');
+        String marks = CRA_ContactSearchAction.escapeForDisplay('a\\b *c* `d` ~e~ _f_ # g');
+        String reference = CRA_ContactSearchAction.escapeForDisplay('&lt;b&gt; &amp; &#91;');
+        String escapedAlready = CRA_ContactSearchAction.escapeForDisplay('\\<b\\> \\\\');
         String lines = CRA_ContactSearchAction.escapeForDisplay('1 Road\r\nSuite 2\nTown\rState');
         String plain = CRA_ContactSearchAction.escapeForDisplay('Zoë "Zed" O\'Brien-Núñez +1 (555) 010');
         String notAvailable = CRA_ContactSearchAction.escapeForDisplay(CRA_ContactSearchResult.NOT_AVAILABLE);
         String nothing = CRA_ContactSearchAction.escapeForDisplay(null);
         Test.stopTest();
 
-        System.assertEquals('Smith &#124; Jones &amp; Co &lt;b&gt;LLC&lt;/b&gt;', tags);
-        System.assertEquals('&#91;click&#93;(https://evil.example)', link);
-        System.assertEquals('a&#92;b &#42;c&#42; &#96;d&#96; &#126;e&#126;', marks);
-        System.assertEquals('&amp;lt;b&amp;gt; &amp;amp;', reference,
-            'Text that already looks escaped is escaped once, so it still shows as typed');
+        System.assertEquals('Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>', tags);
+        System.assertEquals('\\[click\\](https://evil.example)', link);
+        System.assertEquals('a\\\\b \\*c\\* \\`d\\` \\~e\\~ \\_f\\_ \\# g', marks);
+        System.assertEquals('\\&lt;b\\&gt; \\&amp; \\&\\#91;', reference,
+            'Text that looks like a character reference keeps its characters, escaped once');
+        System.assertEquals('\\\\\\<b\\\\\\> \\\\\\\\', escapedAlready,
+            'Existing backslashes are escaped too, so they show as typed');
         System.assertEquals('1 Road Suite 2 Town State', lines);
         System.assertEquals('Zoë "Zed" O\'Brien-Núñez +1 (555) 010', plain, 'Ordinary characters unchanged');
         System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, notAvailable);
         System.assertEquals(null, nothing);
-        for (String display : new List<String>{ tags, link, marks, reference, lines }) {
-            for (String unsafe : new List<String>{ '<', '>', '[', ']', '|', '*', '`', '~', '\\', '\n' }) {
-                System.assert(!display.contains(unsafe), 'Display value contains ' + unsafe + ': ' + display);
-            }
-        }
+        assertEscapedOnce(tags, 'Smith | Jones & Co <b>LLC</b>');
+        assertEscapedOnce(link, '[click](https://evil.example)');
+        assertEscapedOnce(marks, 'a\\b *c* `d` ~e~ _f_ # g');
+        assertEscapedOnce(reference, '&lt;b&gt; &amp; &#91;');
+        assertEscapedOnce(escapedAlready, '\\<b\\> \\\\');
+        assertEscapedOnce(lines, '1 Road Suite 2 Town State');
+        assertEscapedOnce(plain, 'Zoë "Zed" O\'Brien-Núñez +1 (555) 010');
     }
 
     /*****************************************************************
@@ -1246,7 +1289,8 @@ private class CRA_ContactSearchActionTest {
                Account and Title hold link syntax, HTML, pipes and a
                script tag: contactsJson and the payload keep the
                original values exactly (backward compatible), the
-               payload adds a relative path and escaped display values,
+               payload adds a relative path and backslash-escaped display
+               values (payload v3),
                and nothing in the display values can form a tag, link
                or table cell. The contract outputs are unchanged.
     *****************************************************************/
@@ -1279,18 +1323,17 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals('/lightning/r/Contact/' + special.Id + '/view', payloadRow.get('contactPath'));
         System.assertEquals(String.valueOf(flatRow.get('contactUrl')), payloadRow.get('contactUrl'));
         Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
-        System.assertEquals('CRA-TEST CRAQ Smith &#124; Jones &amp; Co &lt;b&gt;LLC&lt;/b&gt;', display.get('accountName'));
-        System.assertEquals('Zoë &#91;VIP&#93; O\'Brien-Núñez', display.get('name'));
-        System.assertEquals('&#91;click here&#93;(https://evil.example/phish) &lt;script&gt;alert(1)&lt;/script&gt; &#42;now&#42;',
+        System.assertEquals('CRA-TEST CRAQ Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>', display.get('accountName'));
+        System.assertEquals('Zoë \\[VIP\\] O\'Brien-Núñez', display.get('name'));
+        System.assertEquals('\\[click here\\](https://evil.example/phish) \\<script\\>alert(1)\\</script\\> \\*now\\*',
             display.get('title'));
-        for (Object value : display.values()) {
-            String text = (String) value;
-            System.assert(!text.contains('<') && !text.contains('[') && !text.contains('|'),
-                'Display value can form no tag, link or cell: ' + text);
+        // Every display value is escaped exactly once from its original payload value.
+        for (String key : display.keySet()) {
+            assertEscapedOnce((String) display.get(key), (String) payloadRow.get(key));
         }
         // Backward compatibility: the 16 contract outputs are still exactly the contract.
         Map<String, Object> flat = (Map<String, Object>) JSON.deserializeUntyped(JSON.serialize(response));
         System.assertEquals(CONTRACT_OUTPUTS, flat.keySet());
-        System.assertEquals(2, payload(response).get('payloadVersion'));
+        System.assertEquals(3, payload(response).get('payloadVersion'));
     }
 }

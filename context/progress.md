@@ -97,3 +97,10 @@ Deployed (not published or activated): payload v2 with `contactPath` and `displa
 Open: **M1 not resolved.** Root cause: the Agentforce runtime decodes HTML character references in the Apex action's output before the template sees it. Recommended fix: Markdown backslash escapes in Apex (approval needed). See [session-5-fix-diagnosis.md](session-5-fix-diagnosis.md). Session 6 waits for this fix.
 Markdown escaping feasibility (2026-11-20): **failed the gate, not implemented.** Backslashes survive the runtime, but the Builder renderer ignores escapes inside link text (an escaped Contact name produced a separate disguised link) and auto-links any address. Decision needed between the options in [session-5-markdown-feasibility.md](session-5-markdown-feasibility.md). Session 6 still waits.
 Option A check (2026-11-20): Nagaruri Johnson chose Option A (separate "Open record" link). Builder test: **template-only (Apex v2) still produces disguised links, HTML and an external image load; Option A with v3 backslash escaping in Apex removes all three** (auto-linked addresses remain, as stated). Decision needed on the Apex v3 change. See the addendum in [session-5-markdown-feasibility.md](session-5-markdown-feasibility.md).
+Payload v3 and Option A (2026-11-20): **built and validated check-only, not deployed.**
+- Apex `escapeForDisplay` now uses backslash escaping (payload v3). The template shows the name as text plus a fixed "Open record" link.
+- Validation `0AfjV000006eaEESAY`: 3 of 3 components, 78 of 78 tests, the action at 135 of 135 lines.
+- Template tests: 84 of 84 (28 cases × 3), with the template's own model named explicitly.
+- Builder rendering of real replies: 149 of 154 values exact, 26 of 26 record links correct, no HTML or disguised links.
+- Remaining platform limitations: auto-linked addresses and emails, and stray backslashes next to them (5 of 154).
+- Deploy waits for approval. See [session-5-fix-v3-option-a.md](session-5-fix-v3-option-a.md).

@@ -1,6 +1,6 @@
 # Separate record link for Contact results (Option A)
 
-- **Status:** Accepted (implementation form pending, see below)
+- **Status:** Accepted. Implementation form decided: with Apex payload v3, see `2026-11-20-payload-v3-backslash-escaping.md`
 - **Date:** 2026-11-20
 - **Deciders:** Nagaruri Johnson
 
