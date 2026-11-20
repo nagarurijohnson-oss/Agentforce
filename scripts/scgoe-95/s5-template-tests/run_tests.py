@@ -1,8 +1,10 @@
-"""Send the merged template text for each synthetic payload to the org's Einstein generation
-endpoint (no records, no metadata), REPEAT times, and score each reply. Synthetic data only."""
+"""Session 5: run each synthetic payload through the DEPLOYED Prompt Template by name
+(/einstein/prompt-templates/CRA_Contact_Result_Presentation/generations), so the org performs the
+merge of Input:searchResultJson and uses the template's configured model. REPEAT runs per case;
+every reply is scored. Synthetic data only; no records or metadata are changed."""
 import json, os, re, subprocess, sys, time
 W = os.environ.get('S4_DIR', os.path.dirname(os.path.abspath(__file__)) + '/')
-REPEAT = 3
+REPEAT = int(os.environ.get("REPEAT", "3"))
 ORG = 'orgfarm-232477b490-dev-ed'
 CODES = ['ERROR', 'NEEDS_CLARIFICATION', 'FILTER_UNAVAILABLE', 'NO_MATCH', 'TOO_MANY', 'DUPLICATE_IDENTIFIER',
          'SINGLE_MATCH', 'FIELD_ANSWER', 'LIST_2_TO_5', 'LIST_6_TO_10', 'LIST_11_TO_100', 'REMAINING_PAGE']
@@ -17,11 +19,13 @@ MORE_PAT = re.compile(r'\b(see|show|view|display)\b[^.?\n]{0,40}\b(more|other|re
 
 template = open(W + 'template-content.txt').read().rstrip('\n')
 cases = json.load(open(W + 'payloads.json'))
-URL = '/services/data/v68.0/einstein/llm/prompt/generations'
+PROMPTS = []
+URL = '/services/data/v68.0/einstein/prompt-templates/CRA_Contact_Result_Presentation/generations'
 
-def generate(prompt):
-    """POST through the Salesforce CLI, which holds this session's org sign-in."""
-    body = {'promptTextorId': prompt, 'additionalConfig': {'applicationName': 'PromptTemplateGenerationsInvocable'}}
+def generate(payload_text):
+    """POST through the Salesforce CLI, which holds this session's org sign-in. The org merges the input."""
+    body = {'isPreview': False, 'inputParams': {'valueMap': {'Input:searchResultJson': {'value': payload_text}}},
+            'additionalConfig': {'numGenerations': 1, 'applicationName': 'PromptBuilderPreview'}}
     open(W + 'req-body.json', 'w').write(json.dumps(body, ensure_ascii=False))
     err = None
     for attempt in range(4):
@@ -33,12 +37,13 @@ def generate(prompt):
         except Exception:
             out = None
         if isinstance(out, dict) and out.get('generations'):
-            return out['generations'][0].get('text'), None
+            PROMPTS.append(out.get('prompt') or '')
+            return out['generations'][0].get('text'), None, out.get('prompt') or ''
         err = (raw or proc.stderr)[:400]
         if any(x in err for x in ('429', 'REQUEST_LIMIT', '503', 'UNKNOWN_EXCEPTION', 'timed out')) and attempt < 3:
             time.sleep(5 * (attempt + 1)); continue
-        return None, err
-    return None, err
+        return None, err, None
+    return None, err, None
 
 PUNCT = re.escape('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
 def unescape(t):
@@ -149,20 +154,22 @@ if '--rescore' in sys.argv:
     print('TOTAL', sum(1 for v in R.values() for r in v if not r['findings']), 'of', sum(len(v) for v in R.values()))
     sys.exit(0)
 
+OUT = next((a.split('=',1)[1] for a in sys.argv[1:] if a.startswith('--out=')), None)
 results = {}
 only = [a for a in sys.argv[1:] if not a.startswith('--')]
 for name, c in cases.items():
     if only and name not in only: continue
     p = c['payload']
-    prompt = template.replace('{!$Input:searchResultJson}', json.dumps(p, ensure_ascii=False, separators=(',', ':')))
+    prompt = c.get('raw') or json.dumps(p, ensure_ascii=False, separators=(',', ':'))
     runs = []
     for i in range(REPEAT):
-        text, err = generate(prompt)
-        runs.append({'text': text, 'error': err, 'findings': score(p, text) if text else ['no reply: %s' % err]})
+        text, err, merged = generate(prompt)
+        # Record the merged prompt from THIS call only (a failed call has none), never an earlier one.
+        runs.append({'text': text, 'error': err, 'mergedPayloadSeen': (merged.split('SEARCH_RESULT_DATA')[-2] if merged and merged.count('SEARCH_RESULT_DATA') >= 3 else None), 'findings': score(p, text) if text else ['no reply: %s' % err]})
         if err and i == 0 and name == list(cases)[0] and not only:
             print('FIRST CALL FAILED:', err); json.dump({name: runs}, open(W + 'results.json', 'w'), indent=1); sys.exit(1)
     results[name] = runs
     print('%-30s %s' % (name, ' | '.join('PASS' if not r['findings'] else 'FAIL(%d)' % len(r['findings']) for r in runs)), flush=True)
-json.dump(results, open(W + ('results.json' if not only else 'results-rerun.json'), 'w'), indent=1, ensure_ascii=False)
+json.dump(results, open(W + (OUT if OUT else ('results.json' if not only else 'results-rerun.json')), 'w'), indent=1, ensure_ascii=False)
 tot = sum(len(v) for v in results.values()); ok = sum(1 for v in results.values() for r in v if not r['findings'])
 print('TOTAL', ok, 'of', tot, 'replies passed every check')

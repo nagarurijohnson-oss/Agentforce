@@ -50,8 +50,8 @@ Each case was sent 3 times. Every reply was scored automatically (links only fro
 | Round | Template | Result |
 |---|---|---|
 | 1 | first version | 59 of 60 passed. Defect: once, `Smith \| Jones & Co <b>LLC</b>` lost `</b`. Also, for 6–10 the model sometimes repeated the offer the opening message already makes. |
-| 2 | final version (explicit rule for HTML-like values, no repeated questions) | 60 of 60 passed |
-| Stability | final, cases 03, 11, 20 three more times | 7 of 9 passed; both failures are the same `</b` loss in case 03 |
+| 2 | final version (explicit rule for HTML-like values, no repeated questions) | 60 of 60 passed by the Session 4 scorer. **Corrected in Session 5:** that scorer did not check repeated offers or the duplicate filter line; case 11 repeated its offer in 6 of 6 runs, so the true result was below 60 of 60 |
+| Stability | final, cases 03, 11, 20 three more times | 7 of 9 passed; both failures are the same `</b` loss in case 03 (2 of 6 runs of case 03 on the final template) |
 
 Previews (one per case, with payload and scores): [session-4-template-previews.md](session-4-template-previews.md).
 
@@ -71,7 +71,7 @@ Previews (one per case, with payload and scores): [session-4-template-previews.m
 
 ## Findings and limitations
 
-- **L1 (Low):** a value containing HTML closing tags (`</b>`) lost characters in 3 of 9 runs on the final template; other special characters, the `<script>` text and hostile instructions were always copied exactly. Real Account names with HTML tags are unlikely. Fixing it fully would mean escaping in Apex (not approved) or accepting it.
+- **L1 (Low):** a value containing HTML closing tags (`</b>`) lost characters in 2 of 6 runs of case 03 on the final template (**corrected in Session 5**; the earlier "3 of 9" counted both template versions); other special characters, the `<script>` text and hostile instructions were always copied exactly. Real Account names with HTML tags are unlikely. Fixing it fully would mean escaping in Apex (not approved) or accepting it.
 - **L2 (Low):** names containing Markdown link syntax (`Eve ](https://evil.example/phish) Linkbreaker`) are shown with escaped brackets, so the only link target is the real record link; how the Agentforce chat renders this must be checked in Session 5.
 - **L3 (Low):** for 6–10 matches the reply sometimes repeats "Would you like to see the other N?" once more. Readability only.
 - **Pending (Session 5):** deploy the template (needs approval); read it back by name; prove the real merge field and the Agent Script hand-off; confirm how the chat renders Markdown tables, links and escaped characters; confirm which permission set lets a non-admin run the template.

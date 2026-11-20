@@ -10,8 +10,8 @@ Update this file at the end of every build session. A status here is a dated cla
 | Session 1: Foundation and environment gate | Gate done 2026-11-19 (read-only). No blocker | See session-1-environment-gate.md. Scaffold and permission sets deferred to S2/S3 on instruction (no metadata changes) |
 | Session 2: Search engine (Apex service, tests) | Built 2026-11-19; review fixes 2026-11-20, validated check-only. **Not deployed**, PR #2 not merged | Branch `feature/scgoe-95-s2-search-engine`. Validation 0AfjV000006e22sSAA: 9 components, 48 of 48 tests, 100% coverage on all 4 classes. Permission sets `DATA_Contact_Read_Only` and `APP_Contact_Read_Agent` in source only, not assigned. See session-2-review-fixes.md |
 | Session 3: Invocable action and security hardening | Reviewed and **deployed 2026-11-20** to the Developer Edition org. Not merged; permission sets not assigned | Branch `feature/scgoe-95-s3-action`, draft PR #3. Fresh validation 0AfjV000006e5IUSAY then deploy 0AfjV000006eF6XSAU: 11/11 components; 72/72 tests passed on the deployed code (run 707jV00000C0w5U), 100% coverage on all 5 production classes. Review: 0 Critical, 0 High, 2 Medium, 3 Low. See session-3-review-and-deploy.md |
-| Session 4: Prompt Builder template | Not started | Action deployed and contract confirmed. Confirm integer/boolean template inputs (review M2) |
-| Session 5: Agent Script agent | Not started | Published inactive. Not activated |
+| Session 4: Prompt Builder template | Built and reviewed 2026-11-20; template and `searchResultJson` action **deployed in Session 5**. Not merged | Branch `feature/scgoe-95-s4-template`, draft PR #4. One text input `Input:searchResultJson` (Flex templates allow 5 text inputs). Report figures corrected in Session 5 (see session-4-prompt-template.md) |
+| Session 5: Agent Script agent | Draft deployed and previewed 2026-11-20. **Not published, not activated.** Not merged | Branch `feature/scgoe-95-s5-agent`. Template + action deploy 0AfjV000006eLjqSAE; agent draft final deploy 0AfjV000006eU0jSAE. Template tests 78/78; 11 preview scenarios / 21 turns pass except links (H1: `URL_Redacted`) and HTML rendering (M1). See session-5-agent-preview.md |
 | Session 6: Evaluation, UAT and handover | Not started | Activation and merge need explicit approval |
 
 ## Design session findings (2026-11-19, read-only; corrected by Session 1)
@@ -82,3 +82,11 @@ Verified: check-only validations 0AfjV000006eL2HSAU (Apex, 75/75, 100% coverage)
 Not done, as instructed: no deploy, no activation, no agent, no permission assignment, no sharing change, no merge. The command capturing real Contact output was not run; only synthetic data was used.
 Pending: deploy and read back the template (approval), real merge and Agent Script hand-off, chat rendering, the permission a non-admin needs to run the template (S5).
 Full report: [session-4-prompt-template.md](session-4-prompt-template.md).
+
+## Session 5 (2026-11-20)
+
+Done: pending template tests resolved (lost CLI sign-in; 78 of 78 on the deployed template). Template and the `searchResultJson` action deployed (0AfjV000006eLjqSAE). `Contact_Read_Agent` deployed as an unpublished draft (final 0AfjV000006eU0jSAE), read back identical. Seven Agent Script defects found in the preview traces and fixed in the script. 11 scenarios / 21 turns through the preview API and 4 conversations in the Builder's Live Test Mode, with screenshots.
+Verified: Apex outcome codes and counts drive every reply; duplicates never auto-select; 6–10 offers the rest; 11–100 refines without paging; field questions return only that field; follow-ups run a new search; hostile field text is shown as data; the read-only guard declines changes.
+Open: **H1** record links render as `URL_Redacted` (agent runtime masks absolute URLs; relative paths pass): needs an approved Apex + template change. **M1** HTML in field values renders as HTML. M2 relay depends on the model (add agent tests). Restricted-user run, publish and activation: Session 6, with approval.
+Retained: 30 synthetic Contacts and 2 Accounts (`CRA-TEST`) for Session 6.
+Full report: [session-5-agent-preview.md](session-5-agent-preview.md).
