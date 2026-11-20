@@ -1,0 +1,345 @@
+{
+ "E1_table_escaped": {
+  "text": "Here are the test values.\n\n#\tCase\tValue\n1\tV01 bold tag\tSmith | Jones & Co <b>LLC</b>\n2\tV02 script tag\tAnn <script>alert(1)</script> Lee\n3\tV03 img onerror\t<img src=x onerror=alert(1)>Img\n4\tV04 md link\t[click here](https://evil.example/phish)\n5\tV05 js link\t[open](javascript:alert(1))\n6\tV06 autolink angle\t<https://evil.example/auto\\>\n7\tV07 bare url\tVisit https://evil.example/bare now\n8\tV08 www\tsee www.evil.example today\n9\tV09 html anchor\t<a href=\"https://evil.example/a\"\\>Pay here</a>\n10\tV10 pipe\tSales | EMEA\n11\tV11 backslash\tC:\\Temp\\new and \\* star\n12\tV12 entity amp\tR&amp;D literal\n13\tV13 entity lt\tTag &lt;b&gt; literal &#124; code\n14\tV14 emphasis\t*bold* _ital_ ~~strike~~ `code`\n15\tV15 heading\t# Heading text\n16\tV16 image\t![x](https://evil.example/x.png)\n17\tV17 email\tzed.obrien@synthetic.example\n18\tV18 quotes\tZoë \"Zed\" O'Brien-Núñez [VIP]",
+  "links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "https://evil.example/auto\\>",
+    "https://evil.example/auto%5C%3E"
+   ],
+   [
+    "https://evil.example/bare",
+    "https://evil.example/bare"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "https://evil.example/a\"\\>Pay",
+    "https://evil.example/a%22%5C%3EPay"
+   ],
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ]
+  ],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [
+   "1",
+   "V01 bold tag",
+   "Smith | Jones & Co <b>LLC</b>",
+   "2",
+   "V02 script tag",
+   "Ann <script>alert(1)</script> Lee",
+   "3",
+   "V03 img onerror",
+   "<img src=x onerror=alert(1)>Img",
+   "4",
+   "V04 md link",
+   "[click here](https://evil.example/phish)",
+   "5",
+   "V05 js link",
+   "[open](javascript:alert(1))",
+   "6",
+   "V06 autolink angle",
+   "<https://evil.example/auto\\>",
+   "7",
+   "V07 bare url",
+   "Visit https://evil.example/bare now",
+   "8",
+   "V08 www",
+   "see www.evil.example today",
+   "9",
+   "V09 html anchor",
+   "<a href=\"https://evil.example/a\"\\>Pay here</a>",
+   "10",
+   "V10 pipe",
+   "Sales | EMEA",
+   "11",
+   "V11 backslash",
+   "C:\\Temp\\new and \\* star",
+   "12",
+   "V12 entity amp",
+   "R&amp;D literal",
+   "13",
+   "V13 entity lt",
+   "Tag &lt;b&gt; literal &#124; code",
+   "14",
+   "V14 emphasis",
+   "*bold* _ital_ ~~strike~~ `code`",
+   "15",
+   "V15 heading",
+   "# Heading text",
+   "16",
+   "V16 image",
+   "![x](https://evil.example/x.png)",
+   "17",
+   "V17 email",
+   "zed.obrien@synthetic.example",
+   "18",
+   "V18 quotes",
+   "Zoë \"Zed\" O'Brien-Núñez [VIP]"
+  ],
+  "dialogs": [],
+  "evil_requests": []
+ },
+ "C1_table_raw": {
+  "text": "Here are the test values.\n\n#\tCase\tValue\n1\tV01 bold tag\tSmith\n2\tV02 script tag\tAnn Lee\n3\tV03 img onerror\tImg\n4\tV04 md link\tclick here\n5\tV05 js link\topen\n6\tV06 autolink angle\thttps://evil.example/auto\n7\tV07 bare url\tVisit https://evil.example/bare now\n8\tV08 www\tsee www.evil.example today\n9\tV09 html anchor\tPay here\n10\tV10 pipe\tSales\n11\tV11 backslash\tC:\\Temp\\new and * star\n12\tV12 entity amp\tR&D literal\n13\tV13 entity lt\tTag <b> literal | code\n14\tV14 emphasis\tbold ital strike code\n15\tV15 heading\t# Heading text\n16\tV16 image\t\n17\tV17 email\tzed.obrien@synthetic.example\n18\tV18 quotes\tZoë \"Zed\" O'Brien-Núñez [VIP]",
+  "links": [
+   [
+    "click here",
+    "https://evil.example/phish"
+   ],
+   [
+    "open",
+    null
+   ],
+   [
+    "https://evil.example/auto",
+    "https://evil.example/auto"
+   ],
+   [
+    "https://evil.example/bare",
+    "https://evil.example/bare"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "Pay here",
+    "https://evil.example/a"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ]
+  ],
+  "imgs": [
+   "x",
+   "https://evil.example/x.png"
+  ],
+  "scripts": 0,
+  "bold": [],
+  "em": [
+   "bold",
+   "ital"
+  ],
+  "code": [
+   "code"
+  ],
+  "del": [
+   "strike"
+  ],
+  "cells": [
+   "1",
+   "V01 bold tag",
+   "Smith",
+   "2",
+   "V02 script tag",
+   "Ann Lee",
+   "3",
+   "V03 img onerror",
+   "Img",
+   "4",
+   "V04 md link",
+   "click here",
+   "5",
+   "V05 js link",
+   "open",
+   "6",
+   "V06 autolink angle",
+   "https://evil.example/auto",
+   "7",
+   "V07 bare url",
+   "Visit https://evil.example/bare now",
+   "8",
+   "V08 www",
+   "see www.evil.example today",
+   "9",
+   "V09 html anchor",
+   "Pay here",
+   "10",
+   "V10 pipe",
+   "Sales",
+   "11",
+   "V11 backslash",
+   "C:\\Temp\\new and * star",
+   "12",
+   "V12 entity amp",
+   "R&D literal",
+   "13",
+   "V13 entity lt",
+   "Tag <b> literal | code",
+   "14",
+   "V14 emphasis",
+   "bold ital strike code",
+   "15",
+   "V15 heading",
+   "# Heading text",
+   "16",
+   "V16 image",
+   "",
+   "17",
+   "V17 email",
+   "zed.obrien@synthetic.example",
+   "18",
+   "V18 quotes",
+   "Zoë \"Zed\" O'Brien-Núñez [VIP]"
+  ],
+  "dialogs": [],
+  "evil_requests": [
+   "https://evil.example/x.png"
+  ]
+ },
+ "E2_single_escaped": {
+  "text": "I found one matching Contact.\nName: Zoë \"Zed\" O'Brien <b>VIP</b> x\nAccount: Smith | Jones & Co <b>LLC</b>\nTitle: <script>alert(1)</script> CFO\nEmail: zed.obrien@synthetic.example",
+  "links": [
+   [
+    "Zoë \"Zed\" O'Brien <b>VIP</b> ",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "x",
+    "https://evil.example"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ]
+  ],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [
+   "Name:",
+   "Account:",
+   "Title:",
+   "Email:"
+  ],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [],
+  "dialogs": [],
+  "evil_requests": [],
+  "html": "<p>I found one matching Contact.<br><strong>Name:</strong> <a href=\"/lightning/r/Contact/003jV00000GrntVQAR/view\">Zoë \"Zed\" O'Brien &lt;b&gt;VIP&lt;/b&gt; </a><a href=\"https://evil.example\">x</a><br><strong>Account:</strong> Smith | Jones &amp; Co &lt;b&gt;LLC&lt;/b&gt;<br><strong>Title:</strong> &lt;script&gt;alert(1)&lt;/script&gt; CFO<br><strong>Email:</strong> <a href=\"mailto:zed.obrien@synthetic.example\">zed.obrien@synthetic.example</a></p>"
+ },
+ "E3_table_extended": {
+  "text": "Here are the test values.\n\n#\tCase\tValue\n1\tV01 bold tag\tSmith | Jones & Co <b>LLC</b>\n2\tV02 script tag\tAnn <script>alert(1)</script> Lee\n3\tV03 img onerror\t<img src=x onerror=alert(1)>Img\n4\tV04 md link\t[click here](https://evil.example/phish)\n5\tV05 js link\t[open](javascript:alert(1))\n6\tV06 autolink angle\t<https://evil.example/auto>\n7\tV07 bare url\tVisit https://evil.example/bare now\n8\tV08 www\tsee www.evil.example today\n9\tV09 html anchor\t<a href=\"https://evil.example/a\">Pay here</a>\n10\tV10 pipe\tSales | EMEA\n11\tV11 backslash\tC:\\Temp\\new and \\* star\n12\tV12 entity amp\tR&amp;D literal\n13\tV13 entity lt\tTag &lt;b&gt; literal &#124; code\n14\tV14 emphasis\t*bold* _ital_ ~~strike~~ `code`\n15\tV15 heading\t# Heading text\n16\tV16 image\t![x](https://evil.example/x.png)\n17\tV17 email\tzed.obrien@synthetic.example\n18\tV18 quotes\tZoë \"Zed\" O'Brien-Núñez [VIP]",
+  "links": [],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [
+   "1",
+   "V01 bold tag",
+   "Smith | Jones & Co <b>LLC</b>",
+   "2",
+   "V02 script tag",
+   "Ann <script>alert(1)</script> Lee",
+   "3",
+   "V03 img onerror",
+   "<img src=x onerror=alert(1)>Img",
+   "4",
+   "V04 md link",
+   "[click here](https://evil.example/phish)",
+   "5",
+   "V05 js link",
+   "[open](javascript:alert(1))",
+   "6",
+   "V06 autolink angle",
+   "<https://evil.example/auto>",
+   "7",
+   "V07 bare url",
+   "Visit https://evil.example/bare now",
+   "8",
+   "V08 www",
+   "see www.evil.example today",
+   "9",
+   "V09 html anchor",
+   "<a href=\"https://evil.example/a\">Pay here</a>",
+   "10",
+   "V10 pipe",
+   "Sales | EMEA",
+   "11",
+   "V11 backslash",
+   "C:\\Temp\\new and \\* star",
+   "12",
+   "V12 entity amp",
+   "R&amp;D literal",
+   "13",
+   "V13 entity lt",
+   "Tag &lt;b&gt; literal &#124; code",
+   "14",
+   "V14 emphasis",
+   "*bold* _ital_ ~~strike~~ `code`",
+   "15",
+   "V15 heading",
+   "# Heading text",
+   "16",
+   "V16 image",
+   "![x](https://evil.example/x.png)",
+   "17",
+   "V17 email",
+   "zed.obrien@synthetic.example",
+   "18",
+   "V18 quotes",
+   "Zoë \"Zed\" O'Brien-Núñez [VIP]"
+  ],
+  "dialogs": [],
+  "evil_requests": []
+ },
+ "C2_single_raw": {
+  "text": "I found one matching Contact.\nName: Zoë \"Zed\" O'Brien VIP x\nAccount: Smith | Jones & Co LLC\nTitle: CFO\nEmail: zed.obrien@synthetic.example",
+  "links": [
+   [
+    "Zoë \"Zed\" O'Brien VIP ",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "x",
+    "https://evil.example"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ]
+  ],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [
+   "Name:",
+   "VIP",
+   "Account:",
+   "LLC",
+   "Title:",
+   "Email:"
+  ],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [],
+  "dialogs": [],
+  "evil_requests": []
+ },
+ "backslash_probe": {
+  "step": "FunctionStep 23 (action output)",
+  "criteriaSummary": "\"criteriaSummary\": \"Name: Zqprobe\\\\Back \\\\<b\\\\>Zq\\\\</b\\\\> \\\\| Pipe\", \""
+ }
+}

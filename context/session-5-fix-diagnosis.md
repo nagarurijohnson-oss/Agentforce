@@ -58,3 +58,6 @@ Alternatives not recommended:
 - Having the model escape values: unreliable in Session 4.
 - Code spans around values: changes the look of every value and needs its own backtick handling.
 - Relying on the chat's HTML sanitiser: it would still render permitted tags such as `<b>`, which changes the information shown.
+
+
+> **Update 2026-11-20:** the recommended Markdown backslash fix failed the feasibility check and was not made. The statement that backslashes pass through intact was untested here (they were JSON escaping); it was later confirmed by a probe, but the Builder renderer does not honour the escapes inside link text. See [session-5-markdown-feasibility.md](session-5-markdown-feasibility.md).
