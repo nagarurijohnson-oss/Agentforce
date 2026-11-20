@@ -1,0 +1,104 @@
+[
+ {
+  "user": "Find Priya Synthwell",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Priya Synthwell\n\nI found one matching Contact.\n\nName: Priya Synthwell\nRecord: Open record\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States\n\nAgentforce Avatar responded I found one matching Contact.\n\nName: Priya Synthwell\nRecord: Open record\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrpMXQAZ/view"
+    ],
+    [
+     "priya.synthwell@synthetic.example",
+     "mailto:priya.synthwell@synthetic.example"
+    ],
+    [
+     "Show 17 hidden",
+     "#"
+    ]
+   ],
+   "bold": [
+    "Name:",
+    "Record:",
+    "Account:",
+    "Title:",
+    "Email:",
+    "Phone:",
+    "Mobile:",
+    "Mailing address:"
+   ],
+   "html": 1
+  }
+ },
+ {
+  "user": "What is her mobile number?",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Priya Synthwell\n\nI found one matching Contact.\n\nName: Priya Synthwell\nRecord: Open record\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States\n\nWhat is her mobile number?\n\nHere is the mobile phone for this Contact.\n\nName: Priya Synthwell\nRecord: Open record\nMobile phone: +1 555 0201\n\nAgentforce Avatar responded Here is the mobile phone for this Contact.\n\nName: Priya Synthwell\nRecord: Open record\nMobile phone: +1 555 0201\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrpMXQAZ/view"
+    ],
+    [
+     "priya.synthwell@synthetic.example",
+     "mailto:priya.synthwell@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrpMXQAZ/view"
+    ],
+    [
+     "Show 32 hidden",
+     "#"
+    ]
+   ],
+   "bold": [
+    "Name:",
+    "Record:",
+    "Account:",
+    "Title:",
+    "Email:",
+    "Phone:",
+    "Mobile:",
+    "Mailing address:",
+    "Name:",
+    "Record:",
+    "Mobile phone:"
+   ],
+   "html": 2
+  }
+ },
+ {
+  "link_click": {
+   "clicked": [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrpMXQAZ/view"
+   ],
+   "landed_url_path": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+   "title": "Priya Synthwell | Contact | Salesforce",
+   "record_name_visible": [
+    "Agentforce Studio",
+    "Contact",
+    "Priya Synthwell",
+    "Priya Synthwell",
+    "Priya Synthwell"
+   ]
+  }
+ }
+]

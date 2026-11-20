@@ -1,0 +1,87 @@
+{
+ "values": [
+  [
+   "V01 bold tag",
+   "Smith | Jones & Co <b>LLC</b>"
+  ],
+  [
+   "V02 script tag",
+   "Ann <script>alert(1)</script> Lee"
+  ],
+  [
+   "V03 img onerror",
+   "<img src=x onerror=alert(1)>Img"
+  ],
+  [
+   "V04 md link",
+   "[click here](https://evil.example/phish)"
+  ],
+  [
+   "V05 js link",
+   "[open](javascript:alert(1))"
+  ],
+  [
+   "V06 autolink angle",
+   "<https://evil.example/auto>"
+  ],
+  [
+   "V07 bare url",
+   "Visit https://evil.example/bare now"
+  ],
+  [
+   "V08 www",
+   "see www.evil.example today"
+  ],
+  [
+   "V09 html anchor",
+   "<a href=\"https://evil.example/a\">Pay here</a>"
+  ],
+  [
+   "V10 pipe",
+   "Sales | EMEA"
+  ],
+  [
+   "V11 backslash",
+   "C:\\Temp\\new and \\* star"
+  ],
+  [
+   "V12 entity amp",
+   "R&amp;D literal"
+  ],
+  [
+   "V13 entity lt",
+   "Tag &lt;b&gt; literal &#124; code"
+  ],
+  [
+   "V14 emphasis",
+   "*bold* _ital_ ~~strike~~ `code`"
+  ],
+  [
+   "V15 heading",
+   "# Heading text"
+  ],
+  [
+   "V16 image",
+   "![x](https://evil.example/x.png)"
+  ],
+  [
+   "V17 email",
+   "zed.obrien@synthetic.example"
+  ],
+  [
+   "V18 quotes",
+   "Zoë \"Zed\" O'Brien-Núñez [VIP]"
+  ]
+ ],
+ "fixtures": {
+  "E1_table_escaped": "Here are the test values.\n\n| # | Case | Value |\n|---|---|---|\n| 1 | V01 bold tag | Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\> |\n| 2 | V02 script tag | Ann \\<script\\>alert(1)\\</script\\> Lee |\n| 3 | V03 img onerror | \\<img src=x onerror=alert(1)\\>Img |\n| 4 | V04 md link | \\[click here\\](https://evil.example/phish) |\n| 5 | V05 js link | \\[open\\](javascript:alert(1)) |\n| 6 | V06 autolink angle | \\<https://evil.example/auto\\> |\n| 7 | V07 bare url | Visit https://evil.example/bare now |\n| 8 | V08 www | see www.evil.example today |\n| 9 | V09 html anchor | \\<a href=\"https://evil.example/a\"\\>Pay here\\</a\\> |\n| 10 | V10 pipe | Sales \\| EMEA |\n| 11 | V11 backslash | C:\\\\Temp\\\\new and \\\\\\* star |\n| 12 | V12 entity amp | R\\&amp;D literal |\n| 13 | V13 entity lt | Tag \\&lt;b\\&gt; literal \\&\\#124; code |\n| 14 | V14 emphasis | \\*bold\\* \\_ital\\_ \\~\\~strike\\~\\~ \\`code\\` |\n| 15 | V15 heading | \\# Heading text |\n| 16 | V16 image | !\\[x\\](https://evil.example/x.png) |\n| 17 | V17 email | zed.obrien@synthetic.example |\n| 18 | V18 quotes | Zoë \"Zed\" O'Brien-Núñez \\[VIP\\] |",
+  "E2_single_escaped": "I found one matching Contact.  \n**Name:** [Zoë \"Zed\" O'Brien \\<b\\>VIP\\</b\\> \\[x\\](https://evil.example)](/lightning/r/Contact/003jV00000GrntVQAR/view)  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  \n**Title:** \\<script\\>alert(1)\\</script\\> CFO  \n**Email:** zed.obrien@synthetic.example",
+  "C1_table_raw": "Here are the test values.\n\n| # | Case | Value |\n|---|---|---|\n| 1 | V01 bold tag | Smith | Jones & Co <b>LLC</b> |\n| 2 | V02 script tag | Ann <script>alert(1)</script> Lee |\n| 3 | V03 img onerror | <img src=x onerror=alert(1)>Img |\n| 4 | V04 md link | [click here](https://evil.example/phish) |\n| 5 | V05 js link | [open](javascript:alert(1)) |\n| 6 | V06 autolink angle | <https://evil.example/auto> |\n| 7 | V07 bare url | Visit https://evil.example/bare now |\n| 8 | V08 www | see www.evil.example today |\n| 9 | V09 html anchor | <a href=\"https://evil.example/a\">Pay here</a> |\n| 10 | V10 pipe | Sales | EMEA |\n| 11 | V11 backslash | C:\\Temp\\new and \\* star |\n| 12 | V12 entity amp | R&amp;D literal |\n| 13 | V13 entity lt | Tag &lt;b&gt; literal &#124; code |\n| 14 | V14 emphasis | *bold* _ital_ ~~strike~~ `code` |\n| 15 | V15 heading | # Heading text |\n| 16 | V16 image | ![x](https://evil.example/x.png) |\n| 17 | V17 email | zed.obrien@synthetic.example |\n| 18 | V18 quotes | Zoë \"Zed\" O'Brien-Núñez [VIP] |",
+  "C2_single_raw": "I found one matching Contact.  \n**Name:** [Zoë \"Zed\" O'Brien <b>VIP</b> [x](https://evil.example)](/lightning/r/Contact/003jV00000GrntVQAR/view)  \n**Account:** Smith | Jones & Co <b>LLC</b>  \n**Title:** <script>alert(1)</script> CFO  \n**Email:** zed.obrien@synthetic.example",
+  "E3_table_extended": "Here are the test values.\n\n| # | Case | Value |\n|---|---|---|\n| 1 | V01 bold tag | Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\> |\n| 2 | V02 script tag | Ann \\<script\\>alert(1)\\</script\\> Lee |\n| 3 | V03 img onerror | \\<img src=x onerror=alert(1)\\>Img |\n| 4 | V04 md link | \\[click here\\](https\\://evil\\.example/phish) |\n| 5 | V05 js link | \\[open\\](javascript\\:alert(1)) |\n| 6 | V06 autolink angle | \\<https\\://evil\\.example/auto\\> |\n| 7 | V07 bare url | Visit https\\://evil\\.example/bare now |\n| 8 | V08 www | see www\\.evil\\.example today |\n| 9 | V09 html anchor | \\<a href=\"https\\://evil\\.example/a\"\\>Pay here\\</a\\> |\n| 10 | V10 pipe | Sales \\| EMEA |\n| 11 | V11 backslash | C\\:\\\\Temp\\\\new and \\\\\\* star |\n| 12 | V12 entity amp | R\\&amp;D literal |\n| 13 | V13 entity lt | Tag \\&lt;b\\&gt; literal \\&\\#124; code |\n| 14 | V14 emphasis | \\*bold\\* \\_ital\\_ \\~\\~strike\\~\\~ \\`code\\` |\n| 15 | V15 heading | \\# Heading text |\n| 16 | V16 image | !\\[x\\](https\\://evil\\.example/x\\.png) |\n| 17 | V17 email | zed\\.obrien\\@synthetic\\.example |\n| 18 | V18 quotes | Zoë \"Zed\" O'Brien-Núñez \\[VIP\\] |",
+  "A1_single_v2raw": "I found one matching Contact.  \n**Name:** Zoë \"Zed\" O'Brien <b>VIP</b> [x](https://evil.example) ([Open record](/lightning/r/Contact/003jV00000GrntVQAR/view))  \n**Account:** Smith | Jones & Co <b>LLC</b>  \n**Title:** <script>alert(1)</script> CFO  \n**Email:** zed.obrien@synthetic.example",
+  "A2_single_v3esc": "I found one matching Contact.  \n**Name:** Zoë \"Zed\" O'Brien \\<b\\>VIP\\</b\\> \\[x\\](https://evil.example) ([Open record](/lightning/r/Contact/003jV00000GrntVQAR/view))  \n**Account:** Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>  \n**Title:** \\<script\\>alert(1)\\</script\\> CFO  \n**Email:** zed.obrien@synthetic.example",
+  "A3_table_v2raw": "Here are the test values.\n\n| # | Name | Record |\n|---|---|---|\n| 1 | Smith | Jones & Co <b>LLC</b> | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 2 | Ann <script>alert(1)</script> Lee | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 3 | <img src=x onerror=alert(1)>Img | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 4 | [click here](https://evil.example/phish) | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 5 | [open](javascript:alert(1)) | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 6 | <https://evil.example/auto> | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 7 | Visit https://evil.example/bare now | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 8 | see www.evil.example today | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 9 | <a href=\"https://evil.example/a\">Pay here</a> | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 10 | Sales | EMEA | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 11 | C:\\Temp\\new and \\* star | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 12 | R&amp;D literal | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 13 | Tag &lt;b&gt; literal &#124; code | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 14 | *bold* _ital_ ~~strike~~ `code` | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 15 | # Heading text | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 16 | ![x](https://evil.example/x.png) | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 17 | zed.obrien@synthetic.example | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 18 | Zoë \"Zed\" O'Brien-Núñez [VIP] | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |",
+  "A4_table_v3esc": "Here are the test values.\n\n| # | Name | Record |\n|---|---|---|\n| 1 | Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\> | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 2 | Ann \\<script\\>alert(1)\\</script\\> Lee | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 3 | \\<img src=x onerror=alert(1)\\>Img | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 4 | \\[click here\\](https://evil.example/phish) | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 5 | \\[open\\](javascript:alert(1)) | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 6 | \\<https://evil.example/auto\\> | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 7 | Visit https://evil.example/bare now | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 8 | see www.evil.example today | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 9 | \\<a href=\"https://evil.example/a\"\\>Pay here\\</a\\> | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 10 | Sales \\| EMEA | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 11 | C:\\\\Temp\\\\new and \\\\\\* star | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 12 | R\\&amp;D literal | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 13 | Tag \\&lt;b\\&gt; literal \\&\\#124; code | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 14 | \\*bold\\* \\_ital\\_ \\~\\~strike\\~\\~ \\`code\\` | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 15 | \\# Heading text | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 16 | !\\[x\\](https://evil.example/x.png) | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 17 | zed.obrien@synthetic.example | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |\n| 18 | Zoë \"Zed\" O'Brien-Núñez \\[VIP\\] | [Open record](/lightning/r/Contact/003jV00000GrntVQAR/view) |"
+ }
+}
