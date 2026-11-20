@@ -1,0 +1,96 @@
+[
+ {
+  "user": "Find Jordan Samename",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Jordan Samename\n\n2 Contacts have this name. Which one do you mean?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tJordan Samename\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Partner\tjordan.samename.a@synthetic.example\t+1 555 0111\tNot available\n2\tJordan Samename\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Partner\tjordan.samename.b@synthetic.example\t+1 555 0112\tNot available\n\nYou can also tell me one of these details instead: Account name, job title, email, phone, city, state or region, country.\n\nAgentforce Avatar responded 2 Contacts have this name. Which one do you mean?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tJordan Samename\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Partner\tjordan.samename.a@synthetic.example\t+1 555 0111\tNot available\n2\tJordan Samename\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Partner\tjordan.samename.b@synthetic.example\t+1 555 0112\tNot available\n\nYou can also tell me one of these details instead: Account name, job title, email, phone, city, state or region, country.\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000Grnt4QAB/view"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000Grnt5QAB/view"
+    ],
+    [
+     "Show 17 hidden",
+     "#"
+    ]
+   ],
+   "bold": [],
+   "html": 1
+  }
+ },
+ {
+  "user": "The one in Mockton",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Jordan Samename\n\n2 Contacts have this name. Which one do you mean?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tJordan Samename\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Partner\tjordan.samename.a@synthetic.example\t+1 555 0111\tNot available\n2\tJordan Samename\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Partner\tjordan.samename.b@synthetic.example\t+1 555 0112\tNot available\n\nYou can also tell me one of these details instead: Account name, job title, email, phone, city, state or region, country.\n\nThe one in Mockton\n\nI found one matching Contact.\nName: Jordan Samename\nRecord: Open record\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Partner\nEmail: jordan.samename.b@synthetic.example\nPhone: +1 555 0112\nMobile: Not available\nMailing address: Mockton\n\nAgentforce Avatar responded I found one matching Contact.\nName: Jordan Samename\nRecord: Open record\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Partner\nEmail: jordan.samename.b@synthetic.example\nPhone: +1 555 0112\nMobile: Not available\nMailing address: Mockton\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000Grnt4QAB/view"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000Grnt5QAB/view"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000Grnt5QAB/view"
+    ],
+    [
+     "jordan.samename.b@synthetic.example",
+     "mailto:jordan.samename.b@synthetic.example"
+    ],
+    [
+     "Show 34 hidden",
+     "#"
+    ]
+   ],
+   "bold": [
+    "Name:",
+    "Record:",
+    "Account:",
+    "Title:",
+    "Email:",
+    "Phone:",
+    "Mobile:",
+    "Mailing address:"
+   ],
+   "html": 2
+  }
+ },
+ {
+  "link_click": {
+   "clicked": [
+    "Open record",
+    "/lightning/r/Contact/003jV00000Grnt4QAB/view"
+   ],
+   "landed_url_path": "/lightning/r/Contact/003jV00000Grnt4QAB/view",
+   "title": "Jordan Samename | Contact | Salesforce",
+   "record_name_visible": [
+    "Agentforce Studio",
+    "Contact",
+    "Jordan Samename",
+    "Jordan Samename",
+    "Jordan Samename"
+   ]
+  }
+ }
+]

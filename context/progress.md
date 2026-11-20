@@ -12,6 +12,7 @@ Update this file at the end of every build session. A status here is a dated cla
 | Session 3: Invocable action and security hardening | Reviewed and **deployed 2026-11-20** to the Developer Edition org. Not merged; permission sets not assigned | Branch `feature/scgoe-95-s3-action`, draft PR #3. Fresh validation 0AfjV000006e5IUSAY then deploy 0AfjV000006eF6XSAU: 11/11 components; 72/72 tests passed on the deployed code (run 707jV00000C0w5U), 100% coverage on all 5 production classes. Review: 0 Critical, 0 High, 2 Medium, 3 Low. See session-3-review-and-deploy.md |
 | Session 4: Prompt Builder template | Built and reviewed 2026-11-20; template and `searchResultJson` action **deployed in Session 5**. Not merged | Branch `feature/scgoe-95-s4-template`, draft PR #4. One text input `Input:searchResultJson` (Flex templates allow 5 text inputs). Report figures corrected in Session 5 (see session-4-prompt-template.md) |
 | Session 5: Agent Script agent | Draft deployed and previewed 2026-11-20. **Not published, not activated.** Not merged | Branch `feature/scgoe-95-s5-agent`. Template + action deploy 0AfjV000006eLjqSAE; agent draft final deploy 0AfjV000006eU0jSAE. Template tests 78/78; 11 preview scenarios / 21 turns pass except links (H1: `URL_Redacted`) and HTML rendering (M1). See session-5-agent-preview.md |
+| Session 5 fixes: payload v3 and Option A | v3 action and template **deployed 2026-11-20** (0AfjV000006ehUDSAY). **Validation not passed:** agent relay drops escapes for the hostile Contact (L-1, High). Not published, not merged | Branch `feature/scgoe-95-s5-fixes`, draft PR #5. Template tests 83/84; 11 scenarios: 39/39 links correct; Builder: "LLC" bold in 3 turns. See session-5-v3-deployment-validation.md |
 | Session 6: Evaluation, UAT and handover | Not started | Activation and merge need explicit approval |
 
 ## Design session findings (2026-11-19, read-only; corrected by Session 1)
@@ -104,3 +105,11 @@ Payload v3 and Option A (2026-11-20): **built and validated check-only, not depl
 - Builder rendering of real replies: 149 of 154 values exact, 26 of 26 record links correct, no HTML or disguised links.
 - Remaining platform limitations: auto-linked addresses and emails, and stray backslashes next to them (5 of 154).
 - Deploy waits for approval. See [session-5-fix-v3-option-a.md](session-5-fix-v3-option-a.md).
+Deployment and validation (2026-11-20): **deployed, Session 5 validation not passed.**
+- Quick deploy `0AfjV000006ehUDSAY` of validated job `0AfjV000006eaEESAY`, 3 of 3; read back identical to the repository.
+- Template tests through the deployed template: 83 of 84. The field-answer case with special characters drops the "Open record" line in 5 of 9 runs (L-2).
+- 11 scenarios, 21 turns: 39 of 39 links point to the right Contact. 17 of 19 template replies relayed exactly; both misses removed every backslash for the hostile Contact (L-1).
+- Builder Live Test, 6 conversations: record navigation correct in 3 of 3 clicks. "LLC" rendered bold in all 3 turns for the hostile Contact, shown literally elsewhere.
+- Literal entities: typed entities are decoded before the action. Stored entities not tested end to end (no records changed).
+- Next: approve an agent-script relay fix (L-1) and a template rule fix (L-2), then re-validate. Session 6 waits.
+- See [session-5-v3-deployment-validation.md](session-5-v3-deployment-validation.md).
