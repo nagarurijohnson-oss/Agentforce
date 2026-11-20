@@ -12,6 +12,10 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    19/11/2026   Created   SCGOE-95 Session 2
+1.1      Revecast Orchestrate    20/11/2026   Updated   SCGOE-95 S2 review:
+                                                      mobile helper, user
+                                                      with a named
+                                                      permission set
 *****************************************************************/
 @isTest
 public class CRA_TestDataFactory {
@@ -53,6 +57,14 @@ public class CRA_TestDataFactory {
         record.Title = title;
         record.Email = email;
         record.Phone = phone;
+        return record;
+    }
+
+    /*****************************************************************
+    Purpose:   Set the mobile number on a built Contact.
+    *****************************************************************/
+    public static Contact withMobile(Contact record, String mobilePhone) {
+        record.MobilePhone = mobilePhone;
         return record;
     }
 
@@ -127,6 +139,22 @@ public class CRA_TestDataFactory {
             if (!objectReads.isEmpty()) {
                 grantReads(restricted.Id, alias, objectReads, contactFields);
             }
+        }
+        return restricted;
+    }
+
+    /*****************************************************************
+    Purpose:   Create a Minimum Access user holding one EXISTING
+               permission set (e.g. DATA_Contact_Read_Only from this
+               deployment), to prove that permission set grants exactly
+               what the search needs. The assignment exists only inside
+               the test and is rolled back; nothing is assigned in the org.
+    *****************************************************************/
+    public static User createUserWithPermissionSet(String alias, String permissionSetName) {
+        User restricted = createRestrictedUser(alias, new List<String>(), new List<String>());
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            PermissionSet existing = [SELECT Id FROM PermissionSet WHERE Name = :permissionSetName LIMIT 1];
+            insert new PermissionSetAssignment(AssigneeId = restricted.Id, PermissionSetId = existing.Id);
         }
         return restricted;
     }

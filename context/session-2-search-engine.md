@@ -6,6 +6,8 @@
 
 A status here is a dated claim. Check it against the repository and the org before relying on it.
 
+> **Superseded in part on 2026-11-20.** The review fixes changed phone matching (Phone and MobilePhone), name duplicates (exact full-name priority), email (exact / domain / partial), the 11–100 output flags and the permission sets (`DATA_Contact_Read_Only`, `APP_Contact_Read_Agent` replace `CRA_Contact_Read_Agent_User`). The current state and the latest validation are in [session-2-review-fixes.md](session-2-review-fixes.md).
+
 ## What was built (source only)
 
 | Component | Type | Purpose |

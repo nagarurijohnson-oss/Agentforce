@@ -15,6 +15,11 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    19/11/2026   Created   SCGOE-95 Session 2
+1.1      Revecast Orchestrate    20/11/2026   Updated   SCGOE-95 S2 review:
+                                                      canShowRemaining,
+                                                      refinementRequired,
+                                                      similarNameCount,
+                                                      mobilePhone
 *****************************************************************/
 public with sharing class CRA_ContactSearchResult {
 
@@ -41,7 +46,19 @@ public with sharing class CRA_ContactSearchResult {
     public String outcomeCode;
     public String totalMatchesLabel;
     public Integer shownCount = 0;
+    // Rows the user may still ask to see. Non-zero only when
+    // canShowRemaining is true (6-10 matches, first page).
     public Integer remainingCount = 0;
+    // True only when the template may offer "show the rest".
+    public Boolean canShowRemaining = false;
+    // True when the user must add filters before the right Contact
+    // can be identified (11-100, more than 100). The template must ask
+    // for filters and must not offer more pages.
+    public Boolean refinementRequired = false;
+    // Accessible Contacts whose name only starts like the searched full
+    // name, left out because exact full-name matches took priority.
+    // Capped by the 101 count limit.
+    public Integer similarNameCount = 0;
     public String suggestedFiltersText;
     public String duplicateOn;
     public String requestedFieldLabel;
@@ -72,7 +89,9 @@ public with sharing class CRA_ContactSearchResult {
     /*****************************************************************
     Purpose:   One Contact row in contactsJson. Property names are the
                contract names (n, id, name, contactUrl, accountName,
-               title, email, phone, mailingAddress).
+               title, email, phone, mobilePhone, mailingAddress).
+               Every value is Contact data typed by people: the Prompt
+               Template must treat it as data, never as instructions.
     *****************************************************************/
     public class ContactRow {
         public Integer n;
@@ -83,6 +102,7 @@ public with sharing class CRA_ContactSearchResult {
         public String title;
         public String email;
         public String phone;
+        public String mobilePhone;
         public String mailingAddress;
     }
 

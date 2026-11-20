@@ -19,6 +19,12 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    19/11/2026   Created   SCGOE-95 Session 2
+1.1      Revecast Orchestrate    20/11/2026   Updated   SCGOE-95 S2 review:
+                                                      Phone + MobilePhone,
+                                                      exact full-name
+                                                      priority, email
+                                                      domain search,
+                                                      refinement flags
 *****************************************************************/
 public with sharing class CRA_ContactSearchService {
 
@@ -32,6 +38,15 @@ public with sharing class CRA_ContactSearchService {
     // Bounds on one call. Each request runs at most three queries.
     public static final Integer MAX_REQUESTS_PER_CALL = 10;
     public static final Integer QUERIES_PER_REQUEST = 3;
+
+    // Phone fields searched and returned (review H1: Phone and
+    // MobilePhone only). Each is used only when the user can read it.
+    public static final List<String> PHONE_FIELDS = new List<String>{ 'Phone', 'MobilePhone' };
+
+    // Query budget reserved per request; a test raises it to prove
+    // the budget branch in searchAll.
+    @TestVisible
+    private static Integer queriesPerRequest = QUERIES_PER_REQUEST;
 
     // Neutral messages. NO_MATCH wording is identical whether nothing
     // exists or nothing is accessible (SEC: never imply hidden records).
@@ -85,7 +100,7 @@ public with sharing class CRA_ContactSearchService {
         }
         for (Integer index = 0; index < requests.size(); index++) {
             Boolean withinBudget = index < MAX_REQUESTS_PER_CALL
-                && (Limits.getLimitQueries() - Limits.getQueries()) >= QUERIES_PER_REQUEST;
+                && (Limits.getLimitQueries() - Limits.getQueries()) >= queriesPerRequest;
             results.add(withinBudget ? search(requests[index]) : buildError());
         }
         return results;
@@ -140,14 +155,16 @@ public with sharing class CRA_ContactSearchService {
         }
         QueryPlan plan = buildPlan(criteria);
         MatchSet matches = String.isNotBlank(criteria.phone)
-            ? countByPhone(plan, criteria) : countByQuery(plan);
+            ? countByPhone(plan, criteria) : countByQuery(plan, criteria);
         classify(result, criteria, plan, matches);
         return result;
     }
 
     /*****************************************************************
     Purpose:   Classify the match count into an outcome and load the
-               page of rows that outcome shows.
+               page of rows that outcome shows. A single match is the
+               only case where a Contact is identified; two or more
+               matches are always listed, never picked for the user.
     *****************************************************************/
     private void classify(CRA_ContactSearchResult result, CRA_ContactSearchCriteria criteria,
             QueryPlan plan, MatchSet matches) {
@@ -159,32 +176,19 @@ public with sharing class CRA_ContactSearchService {
         if (total > TOO_MANY_THRESHOLD || matches.scanIncomplete) {
             result.outcomeCode = CRA_ContactSearchResult.TOO_MANY;
             result.totalMatchesLabel = 'more than ' + TOO_MANY_THRESHOLD;
+            result.refinementRequired = true;
             result.suggestedFiltersText = suggestFilters(criteria);
             result.userMessage = 'More than ' + TOO_MANY_THRESHOLD
                 + ' Contacts match. Please add more details to narrow the search.';
             return;
         }
         result.totalMatchesLabel = String.valueOf(total);
-        String duplicateOn = total >= 2 ? findDuplicateIdentifier(criteria, plan, total) : null;
+        result.similarNameCount = matches.similarNameCount;
         Integer offset = 0;
-        if (duplicateOn != null) {
-            result.outcomeCode = CRA_ContactSearchResult.DUPLICATE_IDENTIFIER;
-            result.duplicateOn = duplicateOn;
-            result.suggestedFiltersText = suggestFilters(criteria);
-            result.userMessage = 'More than one Contact has this ' + duplicateOn.toLowerCase()
-                + '. Which one do you mean?';
-        } else if (total == 1) {
+        if (total == 1) {
             classifySingle(result, criteria);
-        } else if (total <= LIST_SMALL_MAX) {
-            result.outcomeCode = CRA_ContactSearchResult.LIST_2_TO_5;
-            result.userMessage = 'I found ' + total + ' matching Contacts.';
-        } else if (total <= LIST_MEDIUM_MAX) {
-            offset = classifyMedium(result, criteria, total);
         } else {
-            result.outcomeCode = CRA_ContactSearchResult.LIST_11_TO_100;
-            result.suggestedFiltersText = suggestFilters(criteria);
-            result.userMessage = 'I found ' + total + ' matching Contacts. Here are the first '
-                + PAGE_SIZE + '. Add more details to narrow the search.';
+            offset = classifyMultiple(result, criteria, matches);
         }
         loadPage(result, criteria, plan, matches, offset);
     }
@@ -204,20 +208,52 @@ public with sharing class CRA_ContactSearchService {
     }
 
     /*****************************************************************
-    Purpose:   Six to ten matches: the first five, or the rest when
-               the user asked for them.
+    Purpose:   Two or more matches. The size bands apply to duplicates
+               too (review L1):
+               - 2-5   all rows
+               - 6-10  first five, the rest on request (REMAINING_PAGE)
+               - 11-100 first five, refinement required, no more pages
+               A shared identifier keeps DUPLICATE_IDENTIFIER (and
+               duplicateOn) so the user is asked which one they mean.
     Returns:   the row offset of the page to show.
     *****************************************************************/
-    private Integer classifyMedium(CRA_ContactSearchResult result, CRA_ContactSearchCriteria criteria,
-            Integer total) {
-        if (criteria.wantsRemaining()) {
-            result.outcomeCode = CRA_ContactSearchResult.REMAINING_PAGE;
-            result.userMessage = 'Here are the other ' + (total - PAGE_SIZE) + ' matching Contacts.';
-            return PAGE_SIZE;
+    private Integer classifyMultiple(CRA_ContactSearchResult result, CRA_ContactSearchCriteria criteria,
+            MatchSet matches) {
+        Integer total = matches.count;
+        String duplicateOn = findDuplicateIdentifier(criteria, matches);
+        Boolean isDuplicate = duplicateOn != null;
+        result.duplicateOn = duplicateOn;
+        if (isDuplicate || total > LIST_MEDIUM_MAX) {
+            result.suggestedFiltersText = suggestFilters(criteria);
         }
-        result.outcomeCode = CRA_ContactSearchResult.LIST_6_TO_10;
-        result.userMessage = 'I found ' + total + ' matching Contacts. Here are the first '
-            + PAGE_SIZE + '. Would you like to see the other ' + (total - PAGE_SIZE) + '?';
+        String opening = isDuplicate
+            ? total + ' Contacts have this ' + duplicateOn.toLowerCase() + '. Which one do you mean?'
+            : 'I found ' + total + ' matching Contacts.';
+        if (total <= LIST_SMALL_MAX) {
+            result.outcomeCode = isDuplicate
+                ? CRA_ContactSearchResult.DUPLICATE_IDENTIFIER : CRA_ContactSearchResult.LIST_2_TO_5;
+            result.userMessage = opening;
+            return 0;
+        }
+        if (total <= LIST_MEDIUM_MAX) {
+            if (criteria.wantsRemaining()) {
+                result.outcomeCode = CRA_ContactSearchResult.REMAINING_PAGE;
+                result.userMessage = 'Here are the other ' + (total - PAGE_SIZE) + ' matching Contacts.';
+                return PAGE_SIZE;
+            }
+            result.outcomeCode = isDuplicate
+                ? CRA_ContactSearchResult.DUPLICATE_IDENTIFIER : CRA_ContactSearchResult.LIST_6_TO_10;
+            result.canShowRemaining = true;
+            result.userMessage = opening + ' Here are the first ' + PAGE_SIZE
+                + '. Would you like to see the other ' + (total - PAGE_SIZE) + '?';
+            return 0;
+        }
+        // 11-100 (decision D-C): first five, ask for filters, no paging.
+        result.outcomeCode = isDuplicate
+            ? CRA_ContactSearchResult.DUPLICATE_IDENTIFIER : CRA_ContactSearchResult.LIST_11_TO_100;
+        result.refinementRequired = true;
+        result.userMessage = opening + ' Here are the first ' + PAGE_SIZE
+            + '. Please add more details to narrow the search.';
         return 0;
     }
 
@@ -263,20 +299,37 @@ public with sharing class CRA_ContactSearchService {
             plan.add('(FirstName LIKE :' + bindName + ' OR LastName LIKE :' + bindName + ')',
                 bindName, escapeLike(criteria.nameWords[index]) + '%');
         }
-        if (String.isNotBlank(criteria.email)) {
-            Boolean exact = criteria.isExactEmail;
-            plan.add(exact ? 'Email = :emailValue' : 'Email LIKE :emailValue', 'emailValue',
-                exact ? criteria.email : '%' + escapeLike(criteria.email) + '%');
-        }
+        addEmail(plan, criteria);
         if (String.isNotBlank(criteria.phone)) {
-            // Digit-subsequence pre-filter; the exact digit check runs in Apex.
-            plan.add('Phone LIKE :phonePattern', 'phonePattern',
+            // Digit-subsequence pre-filter on each readable phone field;
+            // the exact digit check runs in Apex (decision D-F).
+            List<String> phoneConditions = new List<String>();
+            for (String fieldName : readablePhoneFields()) {
+                phoneConditions.add(fieldName + ' LIKE :phonePattern');
+            }
+            plan.add('(' + String.join(phoneConditions, ' OR ') + ')', 'phonePattern',
                 digitPattern(criteria.phoneCoreDigits.right(PHONE_SUFFIX_DIGITS)));
         }
         addContains(plan, criteria.accountName, 'Account.Name', 'accountNameValue');
         addContains(plan, criteria.jobTitle, 'Title', 'jobTitleValue');
         addLocation(plan, criteria);
         return plan;
+    }
+
+    /*****************************************************************
+    Purpose:   Email condition by match type (review M2):
+               EXACT   Email = value (case-insensitive in SOQL)
+               DOMAIN  Email LIKE '%@domain' (that domain exactly)
+               PARTIAL Email LIKE '%value%'
+    *****************************************************************/
+    private void addEmail(QueryPlan plan, CRA_ContactSearchCriteria criteria) {
+        if (criteria.emailMatchType == CRA_ContactSearchCriteria.EMAIL_EXACT) {
+            plan.add('Email = :emailValue', 'emailValue', criteria.emailSearchValue);
+        } else if (criteria.emailMatchType == CRA_ContactSearchCriteria.EMAIL_DOMAIN) {
+            plan.add('Email LIKE :emailValue', 'emailValue', '%@' + escapeLike(criteria.emailSearchValue));
+        } else if (criteria.emailMatchType == CRA_ContactSearchCriteria.EMAIL_PARTIAL) {
+            plan.add('Email LIKE :emailValue', 'emailValue', '%' + escapeLike(criteria.emailSearchValue) + '%');
+        }
     }
 
     /*****************************************************************
@@ -364,37 +417,90 @@ public with sharing class CRA_ContactSearchService {
     // =================================================================
 
     /*****************************************************************
-    Purpose:   Count matches in USER_MODE, capped at 101.
+    Purpose:   Count matches in USER_MODE, capped at 101. For a full
+               name, exact full-name matches take priority (review M1):
+               when at least one accessible Contact has exactly that
+               name, the search is narrowed to those Contacts and the
+               near matches are only counted (similarNameCount).
+               At most two counts; with the page, three queries.
     *****************************************************************/
-    private MatchSet countByQuery(QueryPlan plan) {
+    private MatchSet countByQuery(QueryPlan plan, CRA_ContactSearchCriteria criteria) {
         MatchSet matches = new MatchSet();
-        matches.count = Database.countQueryWithBinds(
-            'SELECT COUNT() FROM Contact WHERE ' + plan.whereClause() + ' LIMIT ' + COUNT_CAP,
-            plan.binds, AccessLevel.USER_MODE);
+        if (criteria.hasFullName()) {
+            Map<String, Object> exactBinds = plan.binds.clone();
+            exactBinds.put('exactNameValue', criteria.normalisedName);
+            Integer exact = countWhere(plan.whereClause() + ' AND Name = :exactNameValue', exactBinds);
+            if (exact > 0) {
+                Integer allNameMatches = countWhere(plan.whereClause(), plan.binds);
+                plan.add('Name = :exactNameValue', 'exactNameValue', criteria.normalisedName);
+                matches.count = exact;
+                matches.exactNameMatch = true;
+                matches.similarNameCount = Math.max(0, allNameMatches - exact);
+                return matches;
+            }
+        }
+        matches.count = countWhere(plan.whereClause(), plan.binds);
         return matches;
     }
 
     /*****************************************************************
+    Purpose:   One USER_MODE COUNT() with the 101 cap.
+    *****************************************************************/
+    private Integer countWhere(String whereClause, Map<String, Object> binds) {
+        return Database.countQueryWithBinds(
+            'SELECT COUNT() FROM Contact WHERE ' + whereClause + ' LIMIT ' + COUNT_CAP,
+            binds, AccessLevel.USER_MODE);
+    }
+
+    /*****************************************************************
     Purpose:   Phone search: scan the pre-filtered candidates in
-               USER_MODE and keep those whose digits really match.
+               USER_MODE and keep those whose Phone or MobilePhone
+               digits really match (only the fields the user can read).
+               A full name is then narrowed to exact matches in Apex,
+               as in countByQuery, with no extra query.
                If the scan is full the count is uncertain, so the
                result is treated as too many (ask for more filters).
     *****************************************************************/
     private MatchSet countByPhone(QueryPlan plan, CRA_ContactSearchCriteria criteria) {
+        List<String> phoneFields = readablePhoneFields();
         List<Contact> candidates = Database.queryWithBinds(
-            'SELECT Id, Phone FROM Contact WHERE ' + plan.whereClause()
-                + ' ORDER BY Name, Id LIMIT ' + phoneScanLimit,
+            'SELECT Id, Name, ' + String.join(phoneFields, ', ') + ' FROM Contact WHERE '
+                + plan.whereClause() + ' ORDER BY Name, Id LIMIT ' + phoneScanLimit,
             plan.binds, AccessLevel.USER_MODE);
         MatchSet matches = new MatchSet();
-        matches.orderedIds = new List<Id>();
         matches.scanIncomplete = candidates.size() >= phoneScanLimit;
+        List<Contact> phoneMatchesFound = new List<Contact>();
         for (Contact candidate : candidates) {
-            if (phoneMatches(candidate.Phone, criteria)) {
-                matches.orderedIds.add(candidate.Id);
+            if (anyPhoneMatches(candidate, phoneFields, criteria)) {
+                phoneMatchesFound.add(candidate);
             }
         }
+        List<Id> exactNameIds = new List<Id>();
+        List<Id> allIds = new List<Id>();
+        for (Contact found : phoneMatchesFound) {
+            allIds.add(found.Id);
+            if (criteria.hasFullName() && criteria.normalisedName.equalsIgnoreCase(found.Name)) {
+                exactNameIds.add(found.Id);
+            }
+        }
+        matches.exactNameMatch = !exactNameIds.isEmpty();
+        matches.orderedIds = matches.exactNameMatch ? exactNameIds : allIds;
+        matches.similarNameCount = matches.exactNameMatch ? allIds.size() - exactNameIds.size() : 0;
         matches.count = Math.min(matches.orderedIds.size(), COUNT_CAP);
         return matches;
+    }
+
+    /*****************************************************************
+    Purpose:   True when any of the given phone fields matches.
+    *****************************************************************/
+    private static Boolean anyPhoneMatches(Contact candidate, List<String> phoneFields,
+            CRA_ContactSearchCriteria criteria) {
+        for (String fieldName : phoneFields) {
+            if (phoneMatches((String) candidate.get(fieldName), criteria)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /*****************************************************************
@@ -423,46 +529,30 @@ public with sharing class CRA_ContactSearchService {
     }
 
     // =================================================================
-    // Duplicates (decision D-B: only exact name, email or phone)
+    // Duplicates (decision D-B, revised after the S2 review)
     // =================================================================
 
     /*****************************************************************
-    Purpose:   Name the identifier the matches share, when the search
-               used an exact one: an email with "@", a phone number, or
-               a full name of two or more words that every match has.
-    Returns:   "Email", "Phone", "Email, Phone", "Name" or null.
+    Purpose:   Name the identifier that two or more matches share,
+               when the search used an exact one:
+               - Name   two or more exact full-name matches (priority
+                        narrowing in countByQuery / countByPhone)
+               - Email  an exact address (a domain search is a list)
+               - Phone  a phone number, on Phone or MobilePhone
+    Returns:   e.g. "Name", "Email", "Name, Phone", or null.
     *****************************************************************/
-    private String findDuplicateIdentifier(CRA_ContactSearchCriteria criteria, QueryPlan plan,
-            Integer total) {
+    private String findDuplicateIdentifier(CRA_ContactSearchCriteria criteria, MatchSet matches) {
         List<String> shared = new List<String>();
-        if (criteria.isExactEmail) {
+        if (matches.exactNameMatch) {
+            shared.add('Name');
+        }
+        if (criteria.isExactEmail()) {
             shared.add('Email');
         }
         if (String.isNotBlank(criteria.phone)) {
             shared.add('Phone');
         }
-        if (!shared.isEmpty()) {
-            return String.join(shared, ', ');
-        }
-        if (criteria.nameWords.size() >= 2 && allMatchesShareName(criteria, plan, total)) {
-            return 'Name';
-        }
-        return null;
-    }
-
-    /*****************************************************************
-    Purpose:   True when every accessible match has exactly the
-               searched full name (one USER_MODE count).
-    *****************************************************************/
-    private Boolean allMatchesShareName(CRA_ContactSearchCriteria criteria, QueryPlan plan,
-            Integer total) {
-        Map<String, Object> binds = plan.binds.clone();
-        binds.put('exactNameValue', criteria.normalisedName);
-        Integer exact = Database.countQueryWithBinds(
-            'SELECT COUNT() FROM Contact WHERE ' + plan.whereClause()
-                + ' AND Name = :exactNameValue LIMIT ' + COUNT_CAP,
-            binds, AccessLevel.USER_MODE);
-        return exact == total;
+        return shared.isEmpty() ? null : String.join(shared, ', ');
     }
 
     // =================================================================
@@ -484,7 +574,9 @@ public with sharing class CRA_ContactSearchService {
             result.contacts.add(row);
         }
         result.shownCount = result.contacts.size();
-        result.remainingCount = Math.max(0, matches.count - offset - result.shownCount);
+        // Only a 6-10 first page may offer the rest (review L2).
+        result.remainingCount = result.canShowRemaining
+            ? Math.max(0, matches.count - offset - result.shownCount) : 0;
         if (matches.count == 1 && !records.isEmpty()) {
             result.singleContactId = records[0].Id;
         }
@@ -521,8 +613,8 @@ public with sharing class CRA_ContactSearchService {
         if (access.isAccountNameReadable()) {
             fields.add('Account.Name');
         }
-        for (String fieldName : new List<String>{ 'Title', 'Email', 'Phone', 'MailingStreet',
-                'MailingCity', 'MailingState', 'MailingPostalCode', 'MailingCountry' }) {
+        for (String fieldName : new List<String>{ 'Title', 'Email', 'Phone', 'MobilePhone',
+                'MailingStreet', 'MailingCity', 'MailingState', 'MailingPostalCode', 'MailingCountry' }) {
             if (access.isContactFieldReadable(fieldName)) {
                 fields.add(fieldName);
             }
@@ -539,6 +631,7 @@ public with sharing class CRA_ContactSearchService {
         row.title = readField(record, 'Title');
         row.email = readField(record, 'Email');
         row.phone = readField(record, 'Phone');
+        row.mobilePhone = readField(record, 'MobilePhone');
         row.mailingAddress = readMailingAddress(record);
         return row;
     }
@@ -555,7 +648,12 @@ public with sharing class CRA_ContactSearchService {
         } else if (fieldKey == 'Email') {
             row.email = readField(record, 'Email');
         } else if (fieldKey == 'Phone') {
+            // "Phone" answers with both numbers, so a Contact with only
+            // a mobile is not reported as having no phone.
             row.phone = readField(record, 'Phone');
+            row.mobilePhone = readField(record, 'MobilePhone');
+        } else if (fieldKey == 'MobilePhone') {
+            row.mobilePhone = readField(record, 'MobilePhone');
         } else if (fieldKey == 'MailingAddress') {
             row.mailingAddress = readMailingAddress(record);
         }
@@ -619,7 +717,7 @@ public with sharing class CRA_ContactSearchService {
         if (String.isNotBlank(criteria.email) && !access.isContactFieldReadable('Email')) {
             unavailable.add('email');
         }
-        if (String.isNotBlank(criteria.phone) && !access.isContactFieldReadable('Phone')) {
+        if (String.isNotBlank(criteria.phone) && readablePhoneFields().isEmpty()) {
             unavailable.add('phone');
         }
         if (String.isNotBlank(criteria.accountName) && !access.isAccountNameReadable()) {
@@ -644,12 +742,26 @@ public with sharing class CRA_ContactSearchService {
         addSuggestion(suggestions, criteria.accountName, access.isAccountNameReadable(), 'Account name');
         addSuggestion(suggestions, criteria.jobTitle, access.isContactFieldReadable('Title'), 'job title');
         addSuggestion(suggestions, criteria.email, access.isContactFieldReadable('Email'), 'email');
-        addSuggestion(suggestions, criteria.phone, access.isContactFieldReadable('Phone'), 'phone');
+        addSuggestion(suggestions, criteria.phone, !readablePhoneFields().isEmpty(), 'phone');
         Boolean locationReadable = access.isContactFieldReadable('MailingCity');
         addSuggestion(suggestions, criteria.city, locationReadable, 'city');
         addSuggestion(suggestions, criteria.stateOrRegion, locationReadable, 'state or region');
         addSuggestion(suggestions, criteria.country, locationReadable, 'country');
         return String.join(suggestions, ', ');
+    }
+
+    /*****************************************************************
+    Purpose:   Phone fields the running user can read, in PHONE_FIELDS
+               order. Unreadable ones are never filtered or selected.
+    *****************************************************************/
+    private List<String> readablePhoneFields() {
+        List<String> readable = new List<String>();
+        for (String fieldName : PHONE_FIELDS) {
+            if (access.isContactFieldReadable(fieldName)) {
+                readable.add(fieldName);
+            }
+        }
+        return readable;
     }
 
     /*****************************************************************
@@ -668,7 +780,7 @@ public with sharing class CRA_ContactSearchService {
         List<String> parts = new List<String>();
         addSummary(parts, 'Selected Contact', criteria.contactRecordId == null ? null : 'yes');
         addSummary(parts, 'Name', criteria.name);
-        addSummary(parts, 'Email', criteria.email);
+        addSummary(parts, emailSummaryLabel(criteria), criteria.emailSearchValue);
         addSummary(parts, 'Phone', criteria.phone);
         addSummary(parts, 'Account name', criteria.accountName);
         addSummary(parts, 'Job title', criteria.jobTitle);
@@ -677,6 +789,16 @@ public with sharing class CRA_ContactSearchService {
         addSummary(parts, 'Country', criteria.country);
         addSummary(parts, 'Location', criteria.location);
         return String.join(parts, '; ');
+    }
+
+    /*****************************************************************
+    Purpose:   Summary label for the email search type.
+    *****************************************************************/
+    private static String emailSummaryLabel(CRA_ContactSearchCriteria criteria) {
+        if (criteria.emailMatchType == CRA_ContactSearchCriteria.EMAIL_DOMAIN) {
+            return 'Email domain';
+        }
+        return criteria.emailMatchType == CRA_ContactSearchCriteria.EMAIL_PARTIAL ? 'Email contains' : 'Email';
     }
 
     /*****************************************************************
@@ -695,7 +817,10 @@ public with sharing class CRA_ContactSearchService {
         if (fieldKey == null) {
             return null;
         }
-        return fieldKey == 'MailingAddress' ? 'Mailing address' : fieldKey;
+        if (fieldKey == 'MailingAddress') {
+            return 'Mailing address';
+        }
+        return fieldKey == 'MobilePhone' ? 'Mobile phone' : fieldKey;
     }
 
     // =================================================================
@@ -727,6 +852,8 @@ public with sharing class CRA_ContactSearchService {
         public Integer count = 0;
         public List<Id> orderedIds;
         public Boolean scanIncomplete = false;
+        public Boolean exactNameMatch = false;
+        public Integer similarNameCount = 0;
     }
 
     /*****************************************************************

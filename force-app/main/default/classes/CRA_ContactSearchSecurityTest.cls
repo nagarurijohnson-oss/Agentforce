@@ -22,13 +22,19 @@ Purpose:       Security tests for CRA_ContactSearchService, in two
                (FILTER_UNAVAILABLE, "Not available"), not that
                Salesforce enforces it.
 
-               Test users and permission sets are rolled back with
-               the test; nothing is created in the org.
+               Test users, test-only permission sets and every
+               permission set assignment (including the one to
+               DATA_Contact_Read_Only) are rolled back with the test;
+               nothing is created or assigned in the org.
 ============================================================
 History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    19/11/2026   Created   SCGOE-95 Session 2
+1.1      Revecast Orchestrate    20/11/2026   Updated   SCGOE-95 S2 review:
+                                                      per-field phone FLS,
+                                                      DATA / APP
+                                                      permission sets
 *****************************************************************/
 @isTest
 private class CRA_ContactSearchSecurityTest {
@@ -37,10 +43,18 @@ private class CRA_ContactSearchSecurityTest {
     private static final String HIDDEN_EMAIL = 'zed.hidden@hidden.example.com';
     private static final String ZANE_EMAIL = 'zane.visible@visible.example.com';
     private static final String SEC_TITLE = 'CRA-SEC Officer';
+    private static final String ZANE_PHONE = '(303) 555-0188';
+    private static final String ZANE_MOBILE = '(303) 555-0166';
+    private static final String DATA_PERMISSION_SET = 'DATA_Contact_Read_Only';
+    private static final String APP_PERMISSION_SET = 'APP_Contact_Read_Agent';
 
     private static final List<String> BOTH_OBJECTS = new List<String>{ 'Account', 'Contact' };
     private static final List<String> ALL_FIELDS = new List<String>{
+        'AccountId', 'Title', 'Email', 'Phone', 'MobilePhone', 'MailingAddress' };
+    private static final List<String> PHONE_NOT_MOBILE = new List<String>{
         'AccountId', 'Title', 'Email', 'Phone', 'MailingAddress' };
+    private static final List<String> MOBILE_NOT_PHONE = new List<String>{
+        'AccountId', 'Title', 'Email', 'MobilePhone', 'MailingAddress' };
     private static final List<String> NO_EMAIL_OR_PHONE = new List<String>{
         'AccountId', 'Title', 'MailingAddress' };
 
@@ -55,15 +69,18 @@ private class CRA_ContactSearchSecurityTest {
         Id visibleAccount = CRA_TestDataFactory.createAccounts(new List<String>{ 'Visible Co' })
             .get('Visible Co').Id;
         List<Contact> records = new List<Contact>{
-            CRA_TestDataFactory.withDetails(CRA_TestDataFactory.buildContact('Zara', 'Visible', visibleAccount),
-                SEC_TITLE, SHARED_EMAIL, '(303) 555-0199'),
-            CRA_TestDataFactory.withDetails(CRA_TestDataFactory.buildContact('Zane', 'Visible', visibleAccount),
-                SEC_TITLE, ZANE_EMAIL, '(303) 555-0188'),
+            CRA_TestDataFactory.withMobile(CRA_TestDataFactory.withDetails(
+                CRA_TestDataFactory.buildContact('Zara', 'Visible', visibleAccount),
+                SEC_TITLE, SHARED_EMAIL, '(303) 555-0199'), '(303) 555-0155'),
+            CRA_TestDataFactory.withMobile(CRA_TestDataFactory.withDetails(
+                CRA_TestDataFactory.buildContact('Zane', 'Visible', visibleAccount),
+                SEC_TITLE, ZANE_EMAIL, ZANE_PHONE), ZANE_MOBILE),
             CRA_TestDataFactory.withDetails(CRA_TestDataFactory.buildContact('Zoe', 'Visible', visibleAccount),
                 SEC_TITLE, null, null),
             // Private: no Account, so only the owner (admin) can see these.
-            CRA_TestDataFactory.withDetails(CRA_TestDataFactory.buildContact('Zara', 'Visible', null),
-                SEC_TITLE, SHARED_EMAIL, '303-555-0199'),
+            CRA_TestDataFactory.withMobile(CRA_TestDataFactory.withDetails(
+                CRA_TestDataFactory.buildContact('Zara', 'Visible', null),
+                SEC_TITLE, SHARED_EMAIL, '303-555-0199'), '303.555.0155'),
             CRA_TestDataFactory.withDetails(CRA_TestDataFactory.buildContact('Zed', 'Hidden', null),
                 SEC_TITLE, HIDDEN_EMAIL, '(303) 555-0177'),
             CRA_TestDataFactory.withDetails(CRA_TestDataFactory.buildContact('Zia', 'Hidden', null),
@@ -140,6 +157,7 @@ private class CRA_ContactSearchSecurityTest {
             results.put('name', run(CRA_TestDataFactory.byName('Zara Visible')));
             results.put('email', run(byEmail(SHARED_EMAIL)));
             results.put('phone', run(byPhone('303 555 0199')));
+            results.put('mobile', run(byPhone('303 555 0155')));
             results.put('title', run(byTitle('CRA-SEC')));
             results.put('hidden', run(CRA_TestDataFactory.byName('Zed Hidden')));
             results.put('hiddenEmail', run(byEmail(HIDDEN_EMAIL)));
@@ -149,7 +167,7 @@ private class CRA_ContactSearchSecurityTest {
         Test.stopTest();
 
         // Shared identifiers: the private twin is not counted, so no duplicate.
-        for (String key : new List<String>{ 'name', 'email', 'phone' }) {
+        for (String key : new List<String>{ 'name', 'email', 'phone', 'mobile' }) {
             System.assertEquals(CRA_ContactSearchResult.SINGLE_MATCH, results.get(key).outcomeCode, key);
             System.assertEquals('1', results.get(key).totalMatchesLabel, key);
             System.assertEquals(null, results.get(key).duplicateOn, key);
@@ -194,7 +212,7 @@ private class CRA_ContactSearchSecurityTest {
             titleReadable = Schema.SObjectType.Contact.fields.Title.isAccessible();
             byName = run(CRA_TestDataFactory.byName('Zane Visible'));
             emailFilter = run(byEmail(ZANE_EMAIL));
-            phoneFilter = run(byPhone('(303) 555-0188'));
+            phoneFilter = run(byPhone(ZANE_PHONE));
             CRA_ContactSearchCriteria ask = CRA_TestDataFactory.byName('Zane Visible');
             ask.requestedField = 'Email';
             emailAsk = run(ask);
@@ -209,10 +227,12 @@ private class CRA_ContactSearchSecurityTest {
         CRA_ContactSearchResult.ContactRow row = byName.contacts[0];
         System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, row.email);
         System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, row.phone);
+        System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, row.mobilePhone);
         System.assertEquals(SEC_TITLE, row.title);
         System.assertEquals('CRA-TEST Visible Co', row.accountName);
         String json = byName.getContactsJson();
-        System.assert(!json.contains(ZANE_EMAIL) && !json.contains('555-0188'), 'Unreadable value leaked');
+        System.assert(!json.contains(ZANE_EMAIL) && !json.contains('555-0188') && !json.contains('555-0166'),
+            'Unreadable value leaked');
         System.assert(!noneResult.suggestedFiltersText.contains('email')
             && !noneResult.suggestedFiltersText.contains('phone'), 'Unreadable field suggested');
 
@@ -221,6 +241,127 @@ private class CRA_ContactSearchSecurityTest {
         System.assert(emailFilter.contacts.isEmpty() && phoneFilter.contacts.isEmpty());
         System.assertEquals(CRA_ContactSearchResult.FIELD_ANSWER, emailAsk.outcomeCode);
         System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, emailAsk.contacts[0].email);
+    }
+
+    /*****************************************************************
+    Tests:     Phone and MobilePhone are secured separately. A user who
+               can read Phone but not MobilePhone cannot find a Contact
+               by its mobile and never sees it; the reverse user cannot
+               find by, or see, the Phone. Both answers stay neutral.
+    *****************************************************************/
+    @isTest
+    static void enforcedPhoneFieldSecurityIsPerField() {
+        User phoneOnly = CRA_TestDataFactory.createRestrictedUser('craphon', BOTH_OBJECTS, PHONE_NOT_MOBILE);
+        User mobileOnly = CRA_TestDataFactory.createRestrictedUser('cramobl', BOTH_OBJECTS, MOBILE_NOT_PHONE);
+        Map<String, CRA_ContactSearchResult> results = new Map<String, CRA_ContactSearchResult>();
+        Boolean phoneUserReadsMobile;
+        Boolean mobileUserReadsPhone;
+
+        Test.startTest();
+        System.runAs(phoneOnly) {
+            phoneUserReadsMobile = Schema.SObjectType.Contact.fields.MobilePhone.isAccessible();
+            results.put('phoneUser.byMobile', run(byPhone(ZANE_MOBILE)));
+            results.put('phoneUser.byPhone', run(byPhone(ZANE_PHONE)));
+            CRA_ContactSearchCriteria ask = CRA_TestDataFactory.byName('Zane Visible');
+            ask.requestedField = 'mobile';
+            results.put('phoneUser.askMobile', run(ask));
+        }
+        System.runAs(mobileOnly) {
+            mobileUserReadsPhone = Schema.SObjectType.Contact.fields.Phone.isAccessible();
+            results.put('mobileUser.byMobile', run(byPhone(ZANE_MOBILE)));
+            results.put('mobileUser.byPhone', run(byPhone(ZANE_PHONE)));
+        }
+        Test.stopTest();
+
+        System.assertEquals(false, phoneUserReadsMobile, 'Platform: MobilePhone unreadable');
+        System.assertEquals(false, mobileUserReadsPhone, 'Platform: Phone unreadable');
+
+        for (String key : new List<String>{ 'phoneUser.byMobile', 'mobileUser.byPhone' }) {
+            System.assertEquals(CRA_ContactSearchResult.NO_MATCH, results.get(key).outcomeCode, key);
+            System.assertEquals(CRA_ContactSearchService.NO_MATCH_MESSAGE, results.get(key).userMessage, key);
+            System.assert(results.get(key).contacts.isEmpty(), key);
+        }
+        CRA_ContactSearchResult viaPhone = results.get('phoneUser.byPhone');
+        System.assertEquals(CRA_ContactSearchResult.SINGLE_MATCH, viaPhone.outcomeCode);
+        System.assertEquals(ZANE_PHONE, viaPhone.contacts[0].phone);
+        System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, viaPhone.contacts[0].mobilePhone);
+        System.assert(!viaPhone.getContactsJson().contains('555-0166'), 'Mobile leaked');
+        System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE,
+            results.get('phoneUser.askMobile').contacts[0].mobilePhone);
+
+        CRA_ContactSearchResult viaMobile = results.get('mobileUser.byMobile');
+        System.assertEquals(CRA_ContactSearchResult.SINGLE_MATCH, viaMobile.outcomeCode);
+        System.assertEquals(ZANE_MOBILE, viaMobile.contacts[0].mobilePhone);
+        System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, viaMobile.contacts[0].phone);
+        System.assert(!viaMobile.getContactsJson().contains('555-0188'), 'Phone leaked');
+    }
+
+    // =================================================================
+    // ENFORCED — the shipped permission sets (review M4)
+    // =================================================================
+
+    /*****************************************************************
+    Tests:     DATA_Contact_Read_Only on its own (Minimum Access user,
+               assignment inside the test only) grants exactly what
+               the search needs: read on Contact and Account and on
+               every contract field, and no create, edit or delete.
+    *****************************************************************/
+    @isTest
+    static void enforcedDataPermissionSetGrantsReadOnly() {
+        User reader = CRA_TestDataFactory.createUserWithPermissionSet('cradata', DATA_PERMISSION_SET);
+        Map<String, Boolean> checks = new Map<String, Boolean>();
+        CRA_ContactSearchResult result;
+
+        Test.startTest();
+        System.runAs(reader) {
+            Schema.DescribeSObjectResult contactDescribe = Schema.SObjectType.Contact;
+            checks.put('Contact read', contactDescribe.isAccessible());
+            checks.put('Account read', Schema.SObjectType.Account.isAccessible());
+            checks.put('Contact create', contactDescribe.isCreateable());
+            checks.put('Contact edit', contactDescribe.isUpdateable());
+            checks.put('Contact delete', contactDescribe.isDeletable());
+            checks.put('Account edit', Schema.SObjectType.Account.isUpdateable());
+            Map<String, Schema.SObjectField> fields = contactDescribe.fields.getMap();
+            for (String fieldName : new List<String>{ 'AccountId', 'Title', 'Email', 'Phone', 'MobilePhone',
+                    'MailingCity' }) {
+                Schema.DescribeFieldResult field = fields.get(fieldName).getDescribe();
+                checks.put(fieldName + ' read', field.isAccessible());
+                checks.put(fieldName + ' edit', field.isUpdateable());
+            }
+            result = run(CRA_TestDataFactory.byName('Zane Visible'));
+        }
+        Test.stopTest();
+
+        for (String key : checks.keySet()) {
+            Boolean expected = key.endsWith(' read');
+            System.assertEquals(expected, checks.get(key), key);
+        }
+        System.assertEquals(CRA_ContactSearchResult.SINGLE_MATCH, result.outcomeCode);
+        System.assertEquals(ZANE_EMAIL, result.contacts[0].email);
+        System.assertEquals(ZANE_MOBILE, result.contacts[0].mobilePhone);
+        System.assertEquals('CRA-TEST Visible Co', result.contacts[0].accountName);
+    }
+
+    /*****************************************************************
+    Tests:     APP_Contact_Read_Agent carries application access only:
+               no object or field permissions. Neither permission set
+               is assigned to anyone in the org.
+    *****************************************************************/
+    @isTest
+    static void enforcedAppPermissionSetGrantsNoData() {
+        Test.startTest();
+        Integer appSets = [SELECT COUNT() FROM PermissionSet WHERE Name = :APP_PERMISSION_SET];
+        Integer appObjectGrants = [SELECT COUNT() FROM ObjectPermissions
+            WHERE Parent.Name = :APP_PERMISSION_SET];
+        Integer appFieldGrants = [SELECT COUNT() FROM FieldPermissions WHERE Parent.Name = :APP_PERMISSION_SET];
+        Integer assignments = [SELECT COUNT() FROM PermissionSetAssignment
+            WHERE PermissionSet.Name IN (:APP_PERMISSION_SET, :DATA_PERMISSION_SET)];
+        Test.stopTest();
+
+        System.assertEquals(1, appSets, 'APP permission set is in the deployment');
+        System.assertEquals(0, appObjectGrants, 'APP grants no object access');
+        System.assertEquals(0, appFieldGrants, 'APP grants no field access');
+        System.assertEquals(0, assignments, 'No automatic assignment');
     }
 
     // =================================================================

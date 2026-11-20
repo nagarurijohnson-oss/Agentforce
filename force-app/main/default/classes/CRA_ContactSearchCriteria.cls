@@ -9,6 +9,8 @@ Purpose:       Search criteria for the SCGOE-95 Contact Read Agent.
                - Over-long values are rejected, never truncated, so a
                  value can never be shortened into a wider search.
                - Phone numbers are reduced to digits.
+               - Email is classified as an exact address, a domain
+                 ("@acme.com") or a partial value.
                - requestedField is matched against a fixed whitelist.
                - contactId must be a well-formed Contact Id.
                This class runs no queries and performs no DML.
@@ -17,6 +19,9 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    19/11/2026   Created   SCGOE-95 Session 2
+1.1      Revecast Orchestrate    20/11/2026   Updated   SCGOE-95 S2 review:
+                                                      email domain search,
+                                                      mobile field alias
 *****************************************************************/
 public with sharing class CRA_ContactSearchCriteria {
 
@@ -46,6 +51,16 @@ public with sharing class CRA_ContactSearchCriteria {
     // Characters a phone number may contain before it is reduced to digits.
     private static final Pattern PHONE_CHARACTERS = Pattern.compile('^[0-9+()\\-. /]+$');
 
+    // Email match types (decision D-B / review M2).
+    public static final String EMAIL_EXACT = 'EXACT';
+    public static final String EMAIL_DOMAIN = 'DOMAIN';
+    public static final String EMAIL_PARTIAL = 'PARTIAL';
+
+    // A full address: one "@", text either side, a dot in the domain.
+    private static final Pattern FULL_EMAIL = Pattern.compile('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$');
+    // A domain search: starts with "@", a dot in the domain, no other "@".
+    private static final Pattern EMAIL_DOMAIN_SEARCH = Pattern.compile('^@[^@\\s]+\\.[^@\\s]+$');
+
     // Whitelist of requestable fields. Keys are lower-case letters only,
     // so "Phone number", "phone_number" and "PHONE NUMBER" all resolve.
     private static final Map<String, String> REQUESTED_FIELD_ALIASES = new Map<String, String>{
@@ -60,6 +75,12 @@ public with sharing class CRA_ContactSearchCriteria {
         'emailaddress' => 'Email',
         'phone' => 'Phone',
         'phonenumber' => 'Phone',
+        'phonenumbers' => 'Phone',
+        'mobile' => 'MobilePhone',
+        'mobilephone' => 'MobilePhone',
+        'mobilenumber' => 'MobilePhone',
+        'cell' => 'MobilePhone',
+        'cellphone' => 'MobilePhone',
         'mailingaddress' => 'MailingAddress',
         'address' => 'MailingAddress'
     };
@@ -87,7 +108,8 @@ public with sharing class CRA_ContactSearchCriteria {
     public String validationMessage { get; private set; }
     public List<String> nameWords { get; private set; }
     public String normalisedName { get; private set; }
-    public Boolean isExactEmail { get; private set; }
+    public String emailMatchType { get; private set; }
+    public String emailSearchValue { get; private set; }
     public String phoneDigits { get; private set; }
     public String phoneCoreDigits { get; private set; }
     public Id contactRecordId { get; private set; }
@@ -102,7 +124,8 @@ public with sharing class CRA_ContactSearchCriteria {
         System.debug(LoggingLevel.FINE, 'Entering CRA_ContactSearchCriteria.validate');
         isValid = false;
         nameWords = new List<String>();
-        isExactEmail = false;
+        emailMatchType = null;
+        emailSearchValue = null;
 
         // Clean every text input first; a rejected length stops here.
         if (!cleanAllInputs()) {
@@ -197,12 +220,49 @@ public with sharing class CRA_ContactSearchCriteria {
     }
 
     /*****************************************************************
-    Purpose:   An email containing "@" is matched exactly; anything
-               else is a partial (contains) match.
+    Purpose:   Classify the email search (review M2):
+               - EXACT   a full address, e.g. ava@acme.com
+               - DOMAIN  "@" then a domain, e.g. @acme.com; matches
+                         every address at exactly that domain
+               - PARTIAL anything else, e.g. "ava@" or "acme"; a
+                         contains match
+               A value made only of "@" signs would match every
+               address, so it asks for clarification instead.
     *****************************************************************/
     private Boolean validateEmail() {
-        isExactEmail = String.isNotBlank(email) && email.contains('@');
+        if (String.isBlank(email)) {
+            return true;
+        }
+        if (String.isBlank(email.replace('@', ''))) {
+            validationMessage = 'Please give the full email address, or a domain such as @example.com.';
+            return false;
+        }
+        if (FULL_EMAIL.matcher(email).matches()) {
+            emailMatchType = EMAIL_EXACT;
+            emailSearchValue = email;
+        } else if (EMAIL_DOMAIN_SEARCH.matcher(email).matches()) {
+            emailMatchType = EMAIL_DOMAIN;
+            emailSearchValue = email.substring(1);
+        } else {
+            emailMatchType = EMAIL_PARTIAL;
+            emailSearchValue = email;
+        }
         return true;
+    }
+
+    /*****************************************************************
+    Purpose:   True when the email search is a full, exact address.
+    *****************************************************************/
+    public Boolean isExactEmail() {
+        return emailMatchType == EMAIL_EXACT;
+    }
+
+    /*****************************************************************
+    Purpose:   True when the search names a full name of two or more
+               words, so exact full-name matches take priority.
+    *****************************************************************/
+    public Boolean hasFullName() {
+        return nameWords != null && nameWords.size() >= 2;
     }
 
     /*****************************************************************
@@ -263,7 +323,7 @@ public with sharing class CRA_ContactSearchCriteria {
         requestedFieldKey = REQUESTED_FIELD_ALIASES.get(aliasKey);
         if (requestedFieldKey == null) {
             validationMessage = 'I can tell you a Contact\'s name, Account, title, email, '
-                + 'phone or mailing address. Which one would you like?';
+                + 'phone, mobile or mailing address. Which one would you like?';
             return false;
         }
         return true;

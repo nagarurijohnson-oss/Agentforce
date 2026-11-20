@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>SCGOE-95 Contact Read Agent: read-only access to Contact and Account, and read FLS on Account, Title, Email, Phone and Mailing Address. No create, edit or delete. Apex class and agent access are added in Sessions 3 and 5.</description>
+    <description>SCGOE-95 Contact data, read only: Read on Contact and Account; read FLS on AccountId, Title, Email, Phone, MobilePhone, Mailing Address. No create, edit, delete, View All or Apex/app access. Not auto-assigned.</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.AccountId</field>
@@ -18,6 +18,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.MobilePhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.Phone</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -27,7 +32,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>CRA Contact Read Agent User</label>
+    <label>DATA – Contact – Read Only</label>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
