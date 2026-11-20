@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SCGOE-95 Contact Read Agent application access only: Apex class access (Session 3) and agent access (Session 5). Grants no object or field access; pair with DATA – Contact – Read Only. Not auto-assigned.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>APP – Contact Read Agent</label>
+</PermissionSet>
