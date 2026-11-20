@@ -122,3 +122,12 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Pending: the Lightning Experience panel (needs publish and activation) and Slack were not tested.
 - Template FIELD_ANSWER rule rewritten as numbered lines with a required Record line: 84/84 template tests, 45/45 field answers, check-only validation 0AfjV000006ektVSAQ. Not deployed; awaiting approval.
 - The agent relay limitation (L-1, High) stays open. Options are in session-5-delivery-review.md.
+
+## Session 5 template deploy and Salesforce case (2026-11-20)
+
+- Decision (Nagaruri Johnson): deploy the field-answer template fix only, and raise the relay limitation L-1 with Salesforce. See `decisions/2026-11-20-relay-limitation-raise-with-salesforce.md`.
+- Deployed: quick deploy `0AfjV000006eaB0SAI` of validated job `0AfjV000006ektVSAQ`, 1 of 1 (`CRA_Contact_Result_Presentation` only). Read back from the org: prompt text, model, status and input identical to the repository. Apex, payload v3 and the agent draft unchanged.
+- Template tests through the deployed template: **84 of 84** (28 cases × 3, org-side merge), plus case 22 (Account with special characters) 10 of 10. Every field answer had the Open record line: 28 of 28. Results: `scripts/scgoe-95/s5-delivery-template-tests/results-deployed*.json`.
+- L-2 (field answer drops the Open record line): fixed in the template.
+- L-1 (agent relay drops escaping): **open, High.** Support case pack with reproduction steps, expected and actual behavior, screenshots and a case draft: [session-5-relay-limitation-support-case.md](session-5-relay-limitation-support-case.md). Case not yet filed; case number: _pending_.
+- Session 5 stays open. Session 6 on hold until Salesforce answers. Nothing published, activated or merged.
