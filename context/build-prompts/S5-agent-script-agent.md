@@ -2,6 +2,8 @@
 
 ## Build prompt
 
+**From Session 3 (2026-11-20):** `apex://CRA_ContactSearchAction` exposes `searchContacts` with the 12 inputs and 15 outputs in technical-design.md. Class access is granted only by `APP_Contact_Read_Agent`; prove at runtime that a user without it cannot run the action and one with it can. Send one request per call.
+
 **From Session 1:** the syntax is confirmed by the org compiler (`subagent`, `agent_type: "AgentforceEmployeeAgent"`, `apex://CRA_ContactSearchAction`, `generatePromptResponse://CRA_Contact_Result_Presentation` with `"Input:<name>"`). The compiler does not resolve targets, so check them at publish. `sf agent preview --authoring-bundle` may crash for Employee agents without `default_agent_user` (forcedotcom/cli #3676): preview by API name after publishing. Grant agent access through `APP_Contact_Read_Agent` (Contact data comes from `DATA_Contact_Read_Only`; a non-admin needs both, assigned manually after approval, never automatically), and confirm the licence and permission needs of a non-admin user. Use `remaining_available` from `canShowRemaining` only, and never page when `refinementRequired` is true.
 
 Read CONTEXT.md, context/requirements-status.md and context/technical-design.md. Create branch `feature/scgoe-95-s5-agent`.

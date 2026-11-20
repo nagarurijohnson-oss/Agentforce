@@ -6,6 +6,8 @@ Can start once the action contract in technical-design.md is agreed.
 
 **Contract additions (2026-11-20):** when `refinementRequired` is true, ask for filters (`suggestedFiltersText`) and never offer more pages. Offer "the rest" only when `canShowRemaining` is true. When `similarNameCount` > 0, say that Contacts with similar names also exist. With `duplicateOn` set, ask which Contact the user means, and never choose one. Show `mobilePhone` alongside `phone`.
 
+**From Session 3 (2026-11-20):** the action is `CRA_ContactSearchAction` (label "Search Contacts (Contact Read Agent)"). Template inputs take the 15 outputs by these exact names. `shownCount`, `remainingCount`, `similarNameCount` are numbers, `canShowRemaining`, `refinementRequired` true/false, the rest text. `contactsJson` is `[]` for ERROR, NEEDS_CLARIFICATION, NO_MATCH, FILTER_UNAVAILABLE and TOO_MANY; unset text outputs are empty. Build preview payloads from real action output (the action tests show each shape).
+
 ## Build prompt
 
 Read CONTEXT.md, context/requirements-status.md and context/technical-design.md. Create branch `feature/scgoe-95-s4-template`.

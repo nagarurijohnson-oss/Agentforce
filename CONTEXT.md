@@ -12,7 +12,8 @@ Environment: personal Salesforce **Developer Edition org** (`MAX`, org id 00DjV0
 - [context/session-1-environment-gate.md](context/session-1-environment-gate.md) — Session 1 environment gate report: checks, commands and results (2026-11-19)
 - [context/session-2-search-engine.md](context/session-2-search-engine.md) — Session 2 report: search engine build, validation results, real vs simulated security tests, deviations (2026-11-19)
 - [context/session-2-review-fixes.md](context/session-2-review-fixes.md) — Session 2 review fixes: phone + mobile, exact-name priority, email domain, refinement flags, permission set split, selectivity, validation 0AfjV000006e22sSAA (2026-11-20)
-- [force-app/main/default/](force-app/main/default/) — SFDX source (API 68.0): `CRA_` Apex classes and the `DATA_Contact_Read_Only` and `APP_Contact_Read_Agent` permission sets (not deployed)
+- [context/session-3-invocable-action.md](context/session-3-invocable-action.md) — Session 3 report: invocable action, 24 tests, class access on APP, validation 0AfjV000006e70xSAA, acceptance criteria and limitations (2026-11-20)
+- [force-app/main/default/](force-app/main/default/) — SFDX source (API 68.0): `CRA_` Apex classes (including the `CRA_ContactSearchAction` invocable action) and the `DATA_Contact_Read_Only` and `APP_Contact_Read_Agent` permission sets (not deployed)
 - [context/decisions/](context/decisions/) — decision records, including D-B, D-C, D-D, D-F, the permission set split and query selectivity (2026-11-20)
 - [context/decisions/2026-11-19-environment-is-developer-edition-org.md](context/decisions/2026-11-19-environment-is-developer-edition-org.md) — the environment is a Developer Edition org, not a sandbox
 
