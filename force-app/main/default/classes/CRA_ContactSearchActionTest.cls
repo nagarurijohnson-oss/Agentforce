@@ -55,6 +55,10 @@ private class CRA_ContactSearchActionTest {
     private static final Set<String> CONTRACT_ROW_KEYS = new Set<String>{
         'n', 'id', 'name', 'contactUrl', 'accountName', 'title', 'email', 'phone', 'mobilePhone',
         'mailingAddress' };
+    // Payload version 2 rows: the contactsJson row plus these two keys.
+    private static final Set<String> PAYLOAD_ROW_EXTRA_KEYS = new Set<String>{ 'contactPath', 'display' };
+    private static final Set<String> DISPLAY_KEYS = new Set<String>{
+        'name', 'accountName', 'title', 'email', 'phone', 'mobilePhone', 'mailingAddress' };
 
     // CRA_ production classes that must never contain DML.
     private static final Set<String> PRODUCTION_CLASSES = new Set<String>{
@@ -152,8 +156,10 @@ private class CRA_ContactSearchActionTest {
     /*****************************************************************
     Purpose:   Assert that searchResultJson parses, carries only the
                payload keys, and holds exactly the flat outputs: every
-               scalar equal (absent = null) and contacts equal to the
-               rows in contactsJson.
+               scalar equal (absent = null) and each contacts row equal
+               to its contactsJson row, plus (payload version 2) the
+               relative contactPath built from that row's Id and the
+               display copy of each value it carries.
     *****************************************************************/
     private static void assertPayloadMirrors(CRA_ContactSearchAction.Response response, String label) {
         Map<String, Object> body = payload(response);
@@ -166,7 +172,26 @@ private class CRA_ContactSearchActionTest {
             }
             System.assertEquals(flat.get(key), body.get(key), label + ' ' + key);
         }
-        System.assertEquals(JSON.deserializeUntyped(response.contactsJson), body.get('contacts'), label + ' contacts');
+        List<Object> flatRows = (List<Object>) JSON.deserializeUntyped(response.contactsJson);
+        List<Object> payloadRows = (List<Object>) body.get('contacts');
+        System.assertEquals(flatRows.size(), payloadRows.size(), label + ' row count');
+        for (Integer index = 0; index < flatRows.size(); index++) {
+            Map<String, Object> flatRow = (Map<String, Object>) flatRows[index];
+            Map<String, Object> payloadRow = (Map<String, Object>) payloadRows[index];
+            Map<String, Object> withoutExtras = new Map<String, Object>(payloadRow);
+            withoutExtras.remove('contactPath');
+            withoutExtras.remove('display');
+            System.assertEquals(flatRow, withoutExtras, label + ' row ' + index + ' originals unchanged');
+            System.assertEquals('/lightning/r/Contact/' + flatRow.get('id') + '/view', payloadRow.get('contactPath'),
+                label + ' row ' + index + ' relative path from its own Id');
+            Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
+            System.assert(DISPLAY_KEYS.containsAll(display.keySet()), label + ' display keys: ' + display.keySet());
+            for (String key : DISPLAY_KEYS) {
+                Object original = flatRow.get(key);
+                System.assertEquals(original == null ? null : CRA_ContactSearchAction.escapeForDisplay((String) original),
+                    display.get(key), label + ' row ' + index + ' display ' + key);
+            }
+        }
     }
 
     // =================================================================
@@ -1057,7 +1082,10 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals(0, elevenPlus.get('remainingCount'));
         // Field answer: the row carries only the requested field, the name and the link.
         Map<String, Object> answerRow = (Map<String, Object>) ((List<Object>) payload(responses[8]).get('contacts'))[0];
-        System.assertEquals(new Set<String>{ 'n', 'id', 'name', 'contactUrl', 'mobilePhone' }, answerRow.keySet());
+        System.assertEquals(new Set<String>{ 'n', 'id', 'name', 'contactUrl', 'contactPath', 'mobilePhone', 'display' },
+            answerRow.keySet());
+        System.assertEquals(new Set<String>{ 'name', 'mobilePhone' },
+            ((Map<String, Object>) answerRow.get('display')).keySet(), 'Display carries only the answered field');
         // Single match: the link in the payload is the record's own link.
         Map<String, Object> singleRow = (Map<String, Object>) ((List<Object>) payload(responses[0]).get('contacts'))[0];
         System.assertEquals(responses[0].singleContactId, singleRow.get('id'));
@@ -1138,5 +1166,131 @@ private class CRA_ContactSearchActionTest {
         System.assert(queriesUsed <= requests.size() * CRA_ContactSearchService.QUERIES_PER_REQUEST,
             'Queries used: ' + queriesUsed);
         System.assertEquals(0, dmlUsed, 'No DML');
+    }
+
+    // =================================================================
+    // Payload version 2 — relative record paths and display values
+    // (Session 5 fixes for findings H1 and M1)
+    // =================================================================
+
+    /*****************************************************************
+    Tests:     contactPath is built only from a valid Contact Id: blank,
+               malformed and non-Contact Ids get no path, and a 15- or
+               18-character Contact Id gives the relative path with the
+               18-character Id.
+    *****************************************************************/
+    @isTest
+    static void contactPathOnlyForContactIds() {
+        Contact ava = [SELECT Id FROM Contact WHERE Email = :AVA_EMAIL LIMIT 1];
+        Id accountId = [SELECT Id FROM Account LIMIT 1].Id;
+        String expected = '/lightning/r/Contact/' + String.valueOf(ava.Id) + '/view';
+
+        Test.startTest();
+        String fromLongId = CRA_ContactSearchAction.toContactPath(String.valueOf(ava.Id));
+        String fromShortId = CRA_ContactSearchAction.toContactPath(String.valueOf(ava.Id).left(15));
+        String fromAccountId = CRA_ContactSearchAction.toContactPath(String.valueOf(accountId));
+        String fromBlank = CRA_ContactSearchAction.toContactPath('  ');
+        String fromNull = CRA_ContactSearchAction.toContactPath(null);
+        String fromText = CRA_ContactSearchAction.toContactPath('javascript:alert(1)');
+        String fromUrl = CRA_ContactSearchAction.toContactPath('https://evil.example/003');
+        Test.stopTest();
+
+        System.assertEquals(expected, fromLongId);
+        System.assertEquals(expected, fromShortId, 'A 15-character Id gives the 18-character path');
+        System.assert(!fromLongId.startsWith('http') && fromLongId.startsWith('/'), 'Relative path only');
+        System.assertEquals(null, fromAccountId, 'Not a Contact Id: no path');
+        System.assertEquals(null, fromBlank);
+        System.assertEquals(null, fromNull);
+        System.assertEquals(null, fromText, 'Malformed Id: no path');
+        System.assertEquals(null, fromUrl, 'URL: no path');
+    }
+
+    /*****************************************************************
+    Tests:     escapeForDisplay: each special character becomes its
+               character reference, '&' is escaped first so an existing
+               reference is escaped exactly once, line breaks become
+               spaces, and ordinary values, "Not available" and null are
+               unchanged.
+    *****************************************************************/
+    @isTest
+    static void displayEscapingIsCompleteAndSingle() {
+        Test.startTest();
+        String tags = CRA_ContactSearchAction.escapeForDisplay('Smith | Jones & Co <b>LLC</b>');
+        String link = CRA_ContactSearchAction.escapeForDisplay('[click](https://evil.example)');
+        String marks = CRA_ContactSearchAction.escapeForDisplay('a\\b *c* `d` ~e~');
+        String reference = CRA_ContactSearchAction.escapeForDisplay('&lt;b&gt; &amp;');
+        String lines = CRA_ContactSearchAction.escapeForDisplay('1 Road\r\nSuite 2\nTown\rState');
+        String plain = CRA_ContactSearchAction.escapeForDisplay('Zoë "Zed" O\'Brien-Núñez +1 (555) 010');
+        String notAvailable = CRA_ContactSearchAction.escapeForDisplay(CRA_ContactSearchResult.NOT_AVAILABLE);
+        String nothing = CRA_ContactSearchAction.escapeForDisplay(null);
+        Test.stopTest();
+
+        System.assertEquals('Smith &#124; Jones &amp; Co &lt;b&gt;LLC&lt;/b&gt;', tags);
+        System.assertEquals('&#91;click&#93;(https://evil.example)', link);
+        System.assertEquals('a&#92;b &#42;c&#42; &#96;d&#96; &#126;e&#126;', marks);
+        System.assertEquals('&amp;lt;b&amp;gt; &amp;amp;', reference,
+            'Text that already looks escaped is escaped once, so it still shows as typed');
+        System.assertEquals('1 Road Suite 2 Town State', lines);
+        System.assertEquals('Zoë "Zed" O\'Brien-Núñez +1 (555) 010', plain, 'Ordinary characters unchanged');
+        System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, notAvailable);
+        System.assertEquals(null, nothing);
+        for (String display : new List<String>{ tags, link, marks, reference, lines }) {
+            for (String unsafe : new List<String>{ '<', '>', '[', ']', '|', '*', '`', '~', '\\', '\n' }) {
+                System.assert(!display.contains(unsafe), 'Display value contains ' + unsafe + ': ' + display);
+            }
+        }
+    }
+
+    /*****************************************************************
+    Tests:     End to end through the action, with a Contact whose name,
+               Account and Title hold link syntax, HTML, pipes and a
+               script tag: contactsJson and the payload keep the
+               original values exactly (backward compatible), the
+               payload adds a relative path and escaped display values,
+               and nothing in the display values can form a tag, link
+               or table cell. The contract outputs are unchanged.
+    *****************************************************************/
+    @isTest
+    static void specialCharactersKeepOriginalsAndAddDisplayValues() {
+        String shortName = 'CRAQ Smith | Jones & Co <b>LLC</b>';
+        Id accountId = CRA_TestDataFactory.createAccounts(new List<String>{ shortName }).get(shortName).Id;
+        String accountName = 'CRA-TEST ' + shortName;
+        String hostileTitle = '[click here](https://evil.example/phish) <script>alert(1)</script> *now*';
+        Contact special = CRA_TestDataFactory.withDetails(
+            CRA_TestDataFactory.buildContact('Zoë [VIP]', 'O\'Brien-Núñez', accountId),
+            hostileTitle, 'zoe.special@action.example.com', null);
+        CRA_TestDataFactory.insertAllowingDuplicates(new List<Contact>{ special });
+
+        Test.startTest();
+        CRA_ContactSearchAction.Response response = runOne(byEmail('zoe.special@action.example.com'));
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.SINGLE_MATCH, response.outcomeCode);
+        assertPayloadMirrors(response, 'special characters');
+        // contactsJson: the Session 3 row, original values, no new keys.
+        Map<String, Object> flatRow = row(response, 0);
+        System.assert(CONTRACT_ROW_KEYS.containsAll(flatRow.keySet()), 'contactsJson keys unchanged: ' + flatRow.keySet());
+        System.assertEquals(accountName, flatRow.get('accountName'));
+        System.assertEquals(hostileTitle, flatRow.get('title'));
+        System.assertEquals('Zoë [VIP] O\'Brien-Núñez', flatRow.get('name'));
+        // Payload: originals, plus the relative path and display values.
+        Map<String, Object> payloadRow = (Map<String, Object>) ((List<Object>) payload(response).get('contacts'))[0];
+        System.assertEquals(accountName, payloadRow.get('accountName'), 'Original kept in the payload');
+        System.assertEquals('/lightning/r/Contact/' + special.Id + '/view', payloadRow.get('contactPath'));
+        System.assertEquals(String.valueOf(flatRow.get('contactUrl')), payloadRow.get('contactUrl'));
+        Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
+        System.assertEquals('CRA-TEST CRAQ Smith &#124; Jones &amp; Co &lt;b&gt;LLC&lt;/b&gt;', display.get('accountName'));
+        System.assertEquals('Zoë &#91;VIP&#93; O\'Brien-Núñez', display.get('name'));
+        System.assertEquals('&#91;click here&#93;(https://evil.example/phish) &lt;script&gt;alert(1)&lt;/script&gt; &#42;now&#42;',
+            display.get('title'));
+        for (Object value : display.values()) {
+            String text = (String) value;
+            System.assert(!text.contains('<') && !text.contains('[') && !text.contains('|'),
+                'Display value can form no tag, link or cell: ' + text);
+        }
+        // Backward compatibility: the 16 contract outputs are still exactly the contract.
+        Map<String, Object> flat = (Map<String, Object>) JSON.deserializeUntyped(JSON.serialize(response));
+        System.assertEquals(CONTRACT_OUTPUTS, flat.keySet());
+        System.assertEquals(2, payload(response).get('payloadVersion'));
     }
 }
