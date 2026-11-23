@@ -1,0 +1,559 @@
+{
+ "label": "email_v2_draft",
+ "mode": "bundle-sim",
+ "utterance": "Find the contact with email zed.obrien@synthetic.example",
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a2088a-b052-7665-ba81-fd8b186d1da3",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 1,
+   "session": "01a2088a-af51-7c6b-882a-4b41be88cc12",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 2,
+   "session": "01a2088a-b037-78b9-b2c9-896775604fcf",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 3,
+   "session": "01a2088b-4d71-7b4e-8565-caafa1621fe3",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 4,
+   "session": "01a2088b-4ca3-76c2-8dee-455c68826ba4",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 5,
+   "session": "01a2088b-5714-78d8-bd50-a8aadeacb62e",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 6,
+   "session": "01a2088b-f771-7e89-9edf-ae96859901a6",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 7,
+   "session": "01a2088b-fd2a-7698-9b76-13219b73af90",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 8,
+   "session": "01a2088b-f8ad-7b52-b812-50b8320928de",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 9,
+   "session": "01a2088c-8330-7372-939d-ed2972039958",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 10,
+   "session": "01a2088c-8d90-7fb4-b752-6d971a0a76dc",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 11,
+   "session": "01a2088c-a29d-7587-880d-72c1951a33b2",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  }
+ ]
+}

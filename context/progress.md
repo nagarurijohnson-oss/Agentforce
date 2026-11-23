@@ -168,3 +168,11 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - **L-1: open, High, release blocker.** Reproduced on v2 (2 of 3 hostile turns).
 - **D-2 (new, Medium):** email search sometimes reaches the action with empty criteria (2 of 3 runs). Open.
 - Report: [session-8-v2-activation.md](session-8-v2-activation.md).
+
+## Session 9: D-2 diagnosis (2026-11-23)
+
+- **Root cause:** on the published agent the planner sometimes sends `set_criteria` and `run_search` as parallel tool calls; `run_search`'s bound inputs are resolved before the `criteria_*` update lands, so `search_contacts` gets empty criteria. Published v2 email search: 10 of 30 parallel, 10 of 10 empty; 20 separate, all correct.
+- **Not caused by D-1:** compiled v1/v2 graphs differ only in bound constants the planner never sees; planner prompt identical; drafts 53/53 (v1) and 53/53 (v2) with no parallel calls.
+- **D-3 (new, High):** narrowing turn skipped the search in 6 of 12 runs and answered from history (no links, no true count).
+- **Proposed fix (agent script only):** `set_criteria` sets `search_pending`; the search runs deterministically in the instructions; `run_search` removed from planner tools. Scratch compile check passed. Needs publish of v3 to prove (R1–R13).
+- **L-1: open, High, release blocker.** Nothing changed, deployed or published. Report: [session-9-d2-diagnosis.md](session-9-d2-diagnosis.md).

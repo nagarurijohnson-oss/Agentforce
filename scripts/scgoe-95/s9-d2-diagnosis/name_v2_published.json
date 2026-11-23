@@ -1,0 +1,502 @@
+{
+ "label": "name_v2_published",
+ "mode": "published",
+ "turns": [
+  "Find Priya Synthwell"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a20895-e780-7100-92c6-391b7749356a",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a20895-df55-72bd-95ed-655367fb3282",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a20895-e0b3-754d-9652-1976953c5f74",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 3,
+   "session": "01a20896-6939-7d9c-a5ef-0bf1e910817e",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 4,
+   "session": "01a20896-8223-7cdc-b3e2-a2ab77b5128c",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 5,
+   "session": "01a20896-7d43-79a0-8557-0206f88f7f3f",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 6,
+   "session": "01a20897-0880-7068-a4ca-d5e54616a567",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 7,
+   "session": "01a20897-177d-729e-bf3a-3662c9ead5b8",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 8,
+   "session": "01a20897-1201-770d-b252-9b868c46eefd",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 9,
+   "session": "01a20897-90e8-7684-b992-4c688516f514",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 10,
+   "session": "01a20897-9cb1-742b-93f9-8d521f964ad9",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya\",\"criteria_account_name\":\"Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya",
+       "accountName": "Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "NO_MATCH",
+       "0"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 11,
+   "session": "01a20897-a607-7c55-bafb-03ce62baf640",
+   "turns": [
+    {
+     "user": "Find Priya Synthwell",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Priya Synthwell\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Priya Synthwell"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}
