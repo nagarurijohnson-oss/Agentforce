@@ -14,7 +14,7 @@ Purpose:       Tests for CRA_ContactSearchAction, the invocable
                  SIMULATED tests swap in a substitute access check and
                  prove only how the code reacts;
                - permission set metadata (Apex class access on APP,
-                 none on DATA, no assignments);
+                 none on DATA, no admin or write permissions);
                - a static scan that fails if DML appears in any CRA_
                  production class.
                All data is synthetic (CRA-TEST). Nothing is assigned
@@ -24,6 +24,10 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    20/11/2026   Created   SCGOE-95 Session 3
+1.1      Revecast Orchestrate    23/11/2026   Updated   SCGOE-95 Session 6:
+                                                      configuration checks
+                                                      replace the zero-
+                                                      assignment assertion
 *****************************************************************/
 @isTest
 private class CRA_ContactSearchActionTest {
@@ -859,7 +863,11 @@ private class CRA_ContactSearchActionTest {
     Tests:     APP_Contact_Read_Agent grants Apex class access to the
                action and nothing else (no object or field access, no
                other class). DATA_Contact_Read_Only grants no class
-               access. Neither is assigned to anyone.
+               access. Neither carries an admin or write permission,
+               so whoever holds them (for example the Session 6 UAT
+               user) gets read access and the action only.
+               Assignments are deliberately NOT counted: they change
+               with UAT and do not describe the configuration.
     *****************************************************************/
     @isTest
     static void appPermissionSetGrantsOnlyActionClassAccess() {
@@ -874,15 +882,31 @@ private class CRA_ContactSearchActionTest {
             WHERE Parent.Name = :DATA_PERMISSION_SET AND SetupEntityType = 'ApexClass'];
         Integer appObjectGrants = [SELECT COUNT() FROM ObjectPermissions WHERE Parent.Name = :APP_PERMISSION_SET];
         Integer appFieldGrants = [SELECT COUNT() FROM FieldPermissions WHERE Parent.Name = :APP_PERMISSION_SET];
-        Integer assignments = [SELECT COUNT() FROM PermissionSetAssignment
-            WHERE PermissionSet.Name IN (:APP_PERMISSION_SET, :DATA_PERMISSION_SET)];
+        Integer dataWriteGrants = [SELECT COUNT() FROM ObjectPermissions
+            WHERE Parent.Name = :DATA_PERMISSION_SET
+            AND (PermissionsCreate = true OR PermissionsEdit = true OR PermissionsDelete = true
+                 OR PermissionsViewAllRecords = true OR PermissionsModifyAllRecords = true)];
+        Integer dataFieldEdits = [SELECT COUNT() FROM FieldPermissions
+            WHERE Parent.Name = :DATA_PERMISSION_SET AND PermissionsEdit = true];
+        List<PermissionSet> craSets = [SELECT Name, IsOwnedByProfile, PermissionsViewAllData,
+                PermissionsModifyAllData, PermissionsViewSetup, PermissionsApiEnabled
+            FROM PermissionSet WHERE Name IN (:APP_PERMISSION_SET, :DATA_PERMISSION_SET)];
         Test.stopTest();
 
         System.assertEquals(new Set<Id>{ actionClassId }, appClassGrants, 'APP grants the action class only');
         System.assertEquals(0, dataClassGrants, 'DATA grants no Apex class access');
         System.assertEquals(0, appObjectGrants, 'APP grants no object access');
         System.assertEquals(0, appFieldGrants, 'APP grants no field access');
-        System.assertEquals(0, assignments, 'No automatic assignment');
+        System.assertEquals(0, dataWriteGrants, 'DATA grants no create, edit, delete, View All or Modify All');
+        System.assertEquals(0, dataFieldEdits, 'DATA grants no field edit');
+        System.assertEquals(2, craSets.size(), 'Both permission sets are in the deployment');
+        for (PermissionSet craSet : craSets) {
+            System.assert(!craSet.IsOwnedByProfile, craSet.Name + ' is a standalone permission set');
+            System.assert(!craSet.PermissionsViewAllData, craSet.Name + ': no View All Data');
+            System.assert(!craSet.PermissionsModifyAllData, craSet.Name + ': no Modify All Data');
+            System.assert(!craSet.PermissionsViewSetup, craSet.Name + ': no View Setup');
+            System.assert(!craSet.PermissionsApiEnabled, craSet.Name + ': no API Enabled');
+        }
     }
 
     // =================================================================

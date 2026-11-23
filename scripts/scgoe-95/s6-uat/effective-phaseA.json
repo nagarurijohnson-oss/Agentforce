@@ -1,0 +1,174 @@
+{
+ "label": "phaseA",
+ "permissionSets": [
+  "X00e1P000000J627QAC",
+  "APP_Contact_Read_Agent",
+  "DATA_Contact_Read_Only",
+  "APP_Contact_Read_Agent_Panel_Access"
+ ],
+ "effectiveFields": {
+  "Account.Number_Of_Contacts__c": {
+   "read": true,
+   "edit": true,
+   "from": [
+    "X00e1P000000J627QAC"
+   ]
+  },
+  "Contact.AccountId": {
+   "read": true,
+   "edit": false,
+   "from": [
+    "DATA_Contact_Read_Only"
+   ]
+  },
+  "Contact.Email": {
+   "read": true,
+   "edit": false,
+   "from": [
+    "DATA_Contact_Read_Only"
+   ]
+  },
+  "Contact.MailingAddress": {
+   "read": true,
+   "edit": false,
+   "from": [
+    "DATA_Contact_Read_Only"
+   ]
+  },
+  "Contact.MobilePhone": {
+   "read": true,
+   "edit": false,
+   "from": [
+    "DATA_Contact_Read_Only"
+   ]
+  },
+  "Contact.Phone": {
+   "read": true,
+   "edit": false,
+   "from": [
+    "DATA_Contact_Read_Only"
+   ]
+  },
+  "Contact.Title": {
+   "read": true,
+   "edit": false,
+   "from": [
+    "DATA_Contact_Read_Only"
+   ]
+  }
+ },
+ "effectiveObjects": {
+  "ContractLineItem": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  },
+  "Entitlement": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  },
+  "EntitlementContact": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  },
+  "QuickText": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  },
+  "ServiceContract": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  },
+  "Account": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  },
+  "Contact": {
+   "Read": true,
+   "Create": false,
+   "Edit": false,
+   "Delete": false,
+   "ViewAllRecords": false,
+   "ModifyAllRecords": false
+  }
+ },
+ "adminPermissions": {
+  "X00e1P000000J627QAC": [],
+  "APP_Contact_Read_Agent": [],
+  "DATA_Contact_Read_Only": [],
+  "APP_Contact_Read_Agent_Panel_Access": []
+ },
+ "setupAccess": [
+  [
+   "APP_Contact_Read_Agent",
+   "ApexClass",
+   "01pjV000005FisIQAS"
+  ],
+  [
+   "APP_Contact_Read_Agent_Panel_Access",
+   "BotDefinition",
+   "0XxjV000000oszhSAA"
+  ]
+ ],
+ "recordAccess": {
+  "Bulk Synthetic001 003jV00000HCVpYQAX": {
+   "uat": "Read",
+   "admin": "All"
+  },
+  "Coord Hidden11 003jV00000HCVpXQAX": {
+   "uat": "None",
+   "admin": "All"
+  },
+  "Coord Hidden10 003jV00000HCVpWQAX": {
+   "uat": "None",
+   "admin": "All"
+  },
+  "Coord Hidden09 003jV00000HCVpVQAX": {
+   "uat": "None",
+   "admin": "All"
+  },
+  "Priya Synthwell 003jV00000GrpMXQAZ": {
+   "uat": "Read",
+   "admin": "All"
+  },
+  "Jordan Samename 003jV00000Grnt4QAB": {
+   "uat": "Read",
+   "admin": "All"
+  },
+  "Priyanka Shadowell 003jV00000HCVpUQAX": {
+   "uat": "None",
+   "admin": "All"
+  },
+  "Jordan Samename 003jV00000HCVpTQAX": {
+   "uat": "None",
+   "admin": "All"
+  },
+  "Zed Hiddenmore 003jV00000HCVpSQAX": {
+   "uat": "None",
+   "admin": "All"
+  }
+ }
+}

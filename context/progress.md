@@ -15,7 +15,7 @@ Update this file at the end of every build session. A status here is a dated cla
 | Session 5 fixes: payload v3 and Option A | v3 action and template **deployed 2026-11-20** (0AfjV000006ehUDSAY). **Validation not passed:** agent relay drops escapes for the hostile Contact (L-1, High). Not published, not merged | Branch `feature/scgoe-95-s5-fixes`, draft PR #5. Template tests 83/84; 11 scenarios: 39/39 links correct; Builder: "LLC" bold in 3 turns. See session-5-v3-deployment-validation.md |
 | Session 5 delivery review | Done 2026-11-20 (local probes, no metadata change). **Direct template delivery not supported** in the CLI preview or the Builder Live Test: `__supports_result_display__: false`; render rules / `show_and_return` need a connection surface; `say` is workflow-only. Field-answer template rule corrected and validated check-only (0AfjV000006ektVSAQ), **not deployed** | Branch `feature/scgoe-95-s5-fixes`, draft PR #5. Template tests 84/84 (field answers 45/45). See session-5-delivery-review.md |
 | Session 6: Activation and Lightning panel test | **Published v1 and Active** 2026-11-20 (demo and controlled testing). Panel access via `APP_Contact_Read_Agent_Panel_Access` (agent access only), assigned to the admin user only. Panel tests 10 of 11 turns pass; **L-1 reproduced in the panel (5 of 5 hostile turns), open**. Not merged | See session-6-activation-and-lightning-panel.md. Employee_Leave_Assistant, existing permission sets and sharing unchanged. CRA tests 81/81 (707jV00000C2pQx) |
-| Session 6: Evaluation, UAT and handover | Not started | Restricted-user UAT, L-1 resolution, merge: need approval |
+| Session 6: Evaluation, UAT and handover | **In progress 2026-11-23.** UAT user, 107 synthetic Contacts, `DATA_Contact_Read_Limited_UAT` deployed; configuration-based tests 83/83. Real-user Apex tests 8/8 (check-only). Agent tests 22/27. **Blocked: Log in as disabled (B-1)**, so panel UAT not run. **L-1 open (High, release blocker); new D-1 (Medium)**. Not published, not merged | See session-6-restricted-user-uat.md |
 
 ## Design session findings (2026-11-19, read-only; corrected by Session 1)
 
@@ -142,3 +142,13 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - **L-1: open (High).** Reproduced in the Lightning panel: "LLC" rendered bold for the hostile Contact in 5 of 5 turns; shown literally for other Contacts with the same Account.
 - Not done, as instructed: no sharing change, no other users, no business record changed, no merge.
 - Full report: [session-6-activation-and-lightning-panel.md](session-6-activation-and-lightning-panel.md).
+
+## Session 6 part 2: restricted-user UAT (2026-11-23)
+
+- Approved A1–A4 (Nagaruri Johnson). Created `CRA UAT Restricted`, 107 synthetic Contacts (P1–P6 private, B1 101 on `CRA-TEST Bulk Synthetic`), deployed `DATA_Contact_Read_Limited_UAT` and configuration-based tests (check-only `0AfjV000006iijRSAQ`, then quick deploy).
+- Effective access verified from all assigned sets, and record visibility from UserRecordAccess (private Contacts: None for the UAT user).
+- Real-user Apex tests 8/8 (check-only `0AfjV000006im0fSAA`, not saved). Agent tests 22/27 (run `4KBjV00000014CrWAI`); 3 misses are expectation errors, 1 is a test-design error, 1 is defect D-1.
+- **B-1:** Log in as disabled; panel UAT for the restricted user not run.
+- **L-1: open, High, release blocker.** Reproduced again on 23 Nov (published v1).
+- **D-1 (new, Medium):** "show the remaining Contacts" passes a stray `contactId`; fix needs a new agent version.
+- Regression 83/83 (`707jV00000CKwm7`). No agent published, no sharing change, no record deleted, nothing merged.

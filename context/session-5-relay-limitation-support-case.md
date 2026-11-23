@@ -59,6 +59,7 @@ Observed frequency on the hostile Contact:
 | CLI preview, live actions | 2 | 2 of 2 |
 | Builder Live Test Mode | 3 | 3 of 3 |
 | Lightning Experience Agentforce panel, published v1 (2026-11-20) | 5 | 5 of 5 ("LLC" rendered bold) |
+| CLI preview of published v1, live actions (2026-11-23, session `01a20864-8f2b-7cdc-9089-fdeee43e77c3`) | 2 | 1 of 2 (single match dropped the escapes; the field answer kept them) |
 
 Control: in the same regression, a table reply containing the same Account value (24 backslashes) and four other escaped replies came through unchanged. 5 of 7 escaped replies were kept exactly; the 2 that changed are both the single-Contact reply for this Contact.
 
