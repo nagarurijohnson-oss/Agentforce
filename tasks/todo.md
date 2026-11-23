@@ -8,3 +8,10 @@
 - [x] Agent bundle compile check (sf agent validate authoring-bundle) — no publish
 - [x] Live read-only preview of the draft bundle (A4 scope, synthetic data)
 - [ ] Report + tracker; commit to feature branch; request deploy approval
+
+## Session 8: deploy D-1 fix, publish v2 (2026-11-23)
+- [x] Quick deploy validated Apex job (0AfjV000006iqFZSAY)
+- [x] Deploy agent script (0AfjV000006iqKPSAY), validate, publish v2, activate v2 (v1 kept)
+- [x] Apex regression 99/99; agent suite 23/27; conversation checks; 68/68 links; 0 records changed
+- [x] Recheck L-1 (reproduced, stays open High)
+- [ ] D-2: investigate empty-criteria email search (open)

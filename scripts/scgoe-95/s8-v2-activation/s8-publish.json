@@ -1,0 +1,13 @@
+ ›   Warning: @salesforce/cli update available from 2.151.7 to 2.159.7.
+{
+  "status": 0,
+  "result": {
+    "success": true,
+    "botDeveloperName": "Contact_Read_Agent",
+    "summary": {
+      "retrieved": 3,
+      "deployed": 3
+    }
+  },
+  "warnings": []
+}

@@ -160,3 +160,11 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Check-only: CRA tests 85/85 (`0AfjV000006ipD3SAI`, criteria coverage 100%); RunLocalTests 95/95 (`0AfjV000006ipTBSAY`); new tests fail on the unfixed code (`0AfjV000006ipRZSAY`); bundle compiles.
 - Live read-only preview of the draft bundle: "show me the other 3" returns rows 6–8 with links, also after selecting a Contact first.
 - **L-1: open, High, release blocker.** Not deployed, not published, nothing merged. Report: [session-7-d1-fix.md](session-7-d1-fix.md).
+
+## Session 8: D-1 fix live, v2 active (2026-11-23)
+
+- Quick deploy `0AfjV000006iqFZSAY` (Apex, 3 components); agent script deploy `0AfjV000006iqKPSAY`; published and activated `Contact_Read_Agent` **v2** (`0X9jV000001DZtpSAG`); v1 inactive for rollback.
+- Apex RunLocalTests 99/99 (`707jV00000CL03D`); agent suite 23/27 on v2 (D-1 case now passes; 4 known expectation errors); pagination, selection, follow-ups, duplicates pass; 68 of 68 links correct; 0 records changed.
+- **L-1: open, High, release blocker.** Reproduced on v2 (2 of 3 hostile turns).
+- **D-2 (new, Medium):** email search sometimes reaches the action with empty criteria (2 of 3 runs). Open.
+- Report: [session-8-v2-activation.md](session-8-v2-activation.md).

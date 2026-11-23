@@ -1,0 +1,29 @@
+{
+ "P1_pagination": [
+  "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+  "Yes, show me the other 3"
+ ],
+ "P2_select_followup_remaining": [
+  "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+  "Tell me about number 2",
+  "What Account is this Contact at?",
+  "Now show me the other 3"
+ ],
+ "P3_duplicates_select": [
+  "Find Jordan Samename",
+  "The first one",
+  "What is their phone number?"
+ ],
+ "P4_L1_hostile": [
+  "Find the contact with email zed.obrien@synthetic.example"
+ ],
+ "P4b_L1_hostile": [
+  "Find the contact with email zed.obrien@synthetic.example"
+ ],
+ "P4c_L1_hostile": [
+  "Find the contact with email zed.obrien@synthetic.example"
+ ],
+ "P4d_L1_hostile_name": [
+  "Find contacts named O'Brien-Núñez"
+ ]
+}
