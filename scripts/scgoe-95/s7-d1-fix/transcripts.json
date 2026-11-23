@@ -1,0 +1,205 @@
+{
+ "D1_original": {
+  "start": {
+   "sessionId": "01a20879-0846-733f-8781-2a7e25081446",
+   "agentApiName": "Contact_Read_Agent"
+  },
+  "turns": [
+   {
+    "user": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+    "agent": [
+     "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n# Name Record Account Title Email Phone Mobile\n1 Eng Mockup01 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng1@synthetic.example +1 555 0411 Not available\n2 Eng Mockup02 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng2@synthetic.example +1 555 0412 Not available\n3 Eng Mockup03 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng3@synthetic.example +1 555 0413 Not available\n4 Eng Mockup04 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng4@synthetic.example +1 555 0414 Not available\n5 Eng Mockup05 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng5@synthetic.example +1 555 0415 Not available"
+    ],
+    "raw": null,
+    "actions": [
+     {
+      "name": "search_contacts",
+      "input": {
+       "name": "",
+       "email": "",
+       "phone": "",
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer",
+       "city": "",
+       "stateOrRegion": "",
+       "country": "",
+       "location": "",
+       "contactId": "",
+       "showRemaining": false
+      },
+      "outcome": "LIST_6_TO_10",
+      "shown": 5,
+      "total": "8"
+     },
+     {
+      "name": "present_results",
+      "input": null,
+      "outcome": null,
+      "shown": null,
+      "total": null
+     }
+    ],
+    "template_raw": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name          | Record                                                                 | Account                        | Title              | Email                  | Phone       | Mobile        |\n|----|---------------|------------------------------------------------------------------------|--------------------------------|--------------------|------------------------|-------------|---------------|\n| 1  | Eng Mockup01  | [Open record](/lightning/r/Contact/003jV00000GrntJQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  | Eng Mockup02  | [Open record](/lightning/r/Contact/003jV00000GrntKQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3  | Eng Mockup03  | [Open record](/lightning/r/Contact/003jV00000GrntLQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4  | Eng Mockup04  | [Open record](/lightning/r/Contact/003jV00000GrntMQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5  | Eng Mockup05  | [Open record](/lightning/r/Contact/003jV00000GrntNQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available |",
+    "agent_raw": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name          | Record                                                                 | Account                        | Title              | Email                  | Phone       | Mobile        |\n|----|---------------|------------------------------------------------------------------------|--------------------------------|--------------------|------------------------|-------------|---------------|\n| 1  | Eng Mockup01  | [Open record](/lightning/r/Contact/003jV00000GrntJQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  | Eng Mockup02  | [Open record](/lightning/r/Contact/003jV00000GrntKQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3  | Eng Mockup03  | [Open record](/lightning/r/Contact/003jV00000GrntLQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4  | Eng Mockup04  | [Open record](/lightning/r/Contact/003jV00000GrntMQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5  | Eng Mockup05  | [Open record](/lightning/r/Contact/003jV00000GrntNQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available |"
+   },
+   {
+    "user": "Yes, show me the other 3",
+    "agent": [
+     "Here are the other 3 matching Contacts.\n\n# Name Record Account Title Email Phone Mobile\n6 Eng Mockup06 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng6@synthetic.example +1 555 0416 Not available\n7 Eng Mockup07 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng7@synthetic.example +1 555 0417 Not available\n8 Eng Mockup08 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng8@synthetic.example +1 555 0418 Not available"
+    ],
+    "raw": null,
+    "actions": [
+     {
+      "name": "search_contacts",
+      "input": {
+       "name": "",
+       "email": "",
+       "phone": "",
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer",
+       "city": "",
+       "stateOrRegion": "",
+       "country": "",
+       "location": "",
+       "contactId": "",
+       "requestedField": "",
+       "showRemaining": true
+      },
+      "outcome": "REMAINING_PAGE",
+      "shown": 3,
+      "total": "8"
+     },
+     {
+      "name": "present_results",
+      "input": null,
+      "outcome": null,
+      "shown": null,
+      "total": null
+     }
+    ],
+    "template_raw": "Here are the other 3 matching Contacts.\n\n| # | Name         | Record                                                                                  | Account                        | Title               | Email                   | Phone       | Mobile        |\n|---|--------------|-----------------------------------------------------------------------------------------|--------------------------------|---------------------|-------------------------|-------------|---------------|\n| 6 | Eng Mockup06 | [Open record](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example  | +1 555 0416 | Not available |\n| 7 | Eng Mockup07 | [Open record](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example  | +1 555 0417 | Not available |\n| 8 | Eng Mockup08 | [Open record](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example  | +1 555 0418 | Not available |",
+    "agent_raw": "Here are the other 3 matching Contacts.\n\n| # | Name         | Record                                                                                  | Account                        | Title               | Email                   | Phone       | Mobile        |\n|---|--------------|-----------------------------------------------------------------------------------------|--------------------------------|---------------------|-------------------------|-------------|---------------|\n| 6 | Eng Mockup06 | [Open record](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example  | +1 555 0416 | Not available |\n| 7 | Eng Mockup07 | [Open record](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example  | +1 555 0417 | Not available |\n| 8 | Eng Mockup08 | [Open record](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example  | +1 555 0418 | Not available |"
+   }
+  ],
+  "end": {
+   "sessionId": "01a20879-0846-733f-8781-2a7e25081446",
+   "tracesPath": "/tmp/agentforce_build-50144f18-a53e-4e8e-9955-a43b7975a4d2/work/Agentforce/.sfdx/agents/Contact_Read_Agent/sessions/01a20879-0846-733f-8781-2a7e25081446"
+  }
+ },
+ "D1_after_selection": {
+  "start": {
+   "sessionId": "01a20879-7bea-7510-a404-e31fbdb898d5",
+   "agentApiName": "Contact_Read_Agent"
+  },
+  "turns": [
+   {
+    "user": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+    "agent": [
+     "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n# Name Record Account Title Email Phone Mobile\n1 Eng Mockup01 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng1@synthetic.example +1 555 0411 Not available\n2 Eng Mockup02 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng2@synthetic.example +1 555 0412 Not available\n3 Eng Mockup03 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng3@synthetic.example +1 555 0413 Not available\n4 Eng Mockup04 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng4@synthetic.example +1 555 0414 Not available\n5 Eng Mockup05 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng5@synthetic.example +1 555 0415 Not available"
+    ],
+    "raw": null,
+    "actions": [
+     {
+      "name": "search_contacts",
+      "input": {
+       "requestedField": "",
+       "name": "",
+       "email": "",
+       "phone": "",
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer",
+       "city": "",
+       "stateOrRegion": "",
+       "country": "",
+       "location": "",
+       "contactId": "",
+       "showRemaining": false
+      },
+      "outcome": "LIST_6_TO_10",
+      "shown": 5,
+      "total": "8"
+     },
+     {
+      "name": "present_results",
+      "input": null,
+      "outcome": null,
+      "shown": null,
+      "total": null
+     }
+    ],
+    "template_raw": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name          | Record                                                                 | Account                        | Title               | Email                  | Phone       | Mobile        |\n|----|---------------|------------------------------------------------------------------------|--------------------------------|---------------------|------------------------|-------------|---------------|\n| 1  | Eng Mockup01  | [Open record](/lightning/r/Contact/003jV00000GrntJQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  | Eng Mockup02  | [Open record](/lightning/r/Contact/003jV00000GrntKQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3  | Eng Mockup03  | [Open record](/lightning/r/Contact/003jV00000GrntLQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4  | Eng Mockup04  | [Open record](/lightning/r/Contact/003jV00000GrntMQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5  | Eng Mockup05  | [Open record](/lightning/r/Contact/003jV00000GrntNQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available |",
+    "agent_raw": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name          | Record                                                                 | Account                        | Title               | Email                  | Phone       | Mobile        |\n|----|---------------|------------------------------------------------------------------------|--------------------------------|---------------------|------------------------|-------------|---------------|\n| 1  | Eng Mockup01  | [Open record](/lightning/r/Contact/003jV00000GrntJQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  | Eng Mockup02  | [Open record](/lightning/r/Contact/003jV00000GrntKQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3  | Eng Mockup03  | [Open record](/lightning/r/Contact/003jV00000GrntLQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4  | Eng Mockup04  | [Open record](/lightning/r/Contact/003jV00000GrntMQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5  | Eng Mockup05  | [Open record](/lightning/r/Contact/003jV00000GrntNQAR/view)           | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available |"
+   },
+   {
+    "user": "Tell me about number 2",
+    "agent": [
+     "I found one matching Contact.\n\nName: Eng Mockup02\nRecord: Open record\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Engineer\nEmail: eng2@synthetic.example\nPhone: +1 555 0412\nMobile: Not available\nMailing address: Not available"
+    ],
+    "raw": null,
+    "actions": [
+     {
+      "name": "search_contacts",
+      "input": {
+       "contactId": "003jV00000GrntKQAR",
+       "showRemaining": false
+      },
+      "outcome": "SINGLE_MATCH",
+      "shown": 1,
+      "total": "1"
+     },
+     {
+      "name": "present_results",
+      "input": null,
+      "outcome": null,
+      "shown": null,
+      "total": null
+     }
+    ],
+    "template_raw": "I found one matching Contact.\n\n**Name:** Eng Mockup02  \n**Record:** [Open record](/lightning/r/Contact/003jV00000GrntKQAR/view)  \n**Account:** CRA-TEST Northwind Synthetic  \n**Title:** Synthetic Engineer  \n**Email:** eng2@synthetic.example  \n**Phone:** +1 555 0412  \n**Mobile:** Not available  \n**Mailing address:** Not available  ",
+    "agent_raw": "I found one matching Contact.\n\n**Name:** Eng Mockup02  \n**Record:** [Open record](/lightning/r/Contact/003jV00000GrntKQAR/view)  \n**Account:** CRA-TEST Northwind Synthetic  \n**Title:** Synthetic Engineer  \n**Email:** eng2@synthetic.example  \n**Phone:** +1 555 0412  \n**Mobile:** Not available  \n**Mailing address:** Not available  "
+   },
+   {
+    "user": "Now show me the other 3",
+    "agent": [
+     "Here are the other 3 matching Contacts.\n\n# Name Record Account Title Email Phone Mobile\n6 Eng Mockup06 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng6@synthetic.example +1 555 0416 Not available\n7 Eng Mockup07 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng7@synthetic.example +1 555 0417 Not available\n8 Eng Mockup08 Open record CRA-TEST Northwind Synthetic Synthetic Engineer eng8@synthetic.example +1 555 0418 Not available"
+    ],
+    "raw": null,
+    "actions": [
+     {
+      "name": "search_contacts",
+      "input": {
+       "name": "",
+       "email": "",
+       "phone": "",
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer",
+       "city": "",
+       "stateOrRegion": "",
+       "country": "",
+       "location": "",
+       "contactId": "",
+       "requestedField": "",
+       "showRemaining": true
+      },
+      "outcome": "REMAINING_PAGE",
+      "shown": 3,
+      "total": "8"
+     },
+     {
+      "name": "present_results",
+      "input": null,
+      "outcome": null,
+      "shown": null,
+      "total": null
+     }
+    ],
+    "template_raw": "Here are the other 3 matching Contacts.\n\n| # | Name         | Record                                                                 | Account                      | Title               | Email                 | Phone      | Mobile         |\n|---|--------------|------------------------------------------------------------------------|------------------------------|---------------------|-----------------------|------------|----------------|\n| 6 | Eng Mockup06 | [Open record](/lightning/r/Contact/003jV00000GrntOQAR/view)           | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7 | Eng Mockup07 | [Open record](/lightning/r/Contact/003jV00000GrntPQAR/view)           | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available  |\n| 8 | Eng Mockup08 | [Open record](/lightning/r/Contact/003jV00000GrntQQAR/view)           | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available  |",
+    "agent_raw": "Here are the other 3 matching Contacts.\n\n| # | Name         | Record                                                                 | Account                      | Title               | Email                 | Phone      | Mobile         |\n|---|--------------|------------------------------------------------------------------------|------------------------------|---------------------|-----------------------|------------|----------------|\n| 6 | Eng Mockup06 | [Open record](/lightning/r/Contact/003jV00000GrntOQAR/view)           | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7 | Eng Mockup07 | [Open record](/lightning/r/Contact/003jV00000GrntPQAR/view)           | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available  |\n| 8 | Eng Mockup08 | [Open record](/lightning/r/Contact/003jV00000GrntQQAR/view)           | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available  |"
+   }
+  ],
+  "end": {
+   "sessionId": "01a20879-7bea-7510-a404-e31fbdb898d5",
+   "tracesPath": "/tmp/agentforce_build-50144f18-a53e-4e8e-9955-a43b7975a4d2/work/Agentforce/.sfdx/agents/Contact_Read_Agent/sessions/01a20879-7bea-7510-a404-e31fbdb898d5"
+  }
+ }
+}

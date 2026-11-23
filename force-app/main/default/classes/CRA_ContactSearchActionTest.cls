@@ -1360,4 +1360,29 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals(CONTRACT_OUTPUTS, flat.keySet());
         System.assertEquals(3, payload(response).get('payloadVersion'));
     }
+
+    /*****************************************************************
+    Tests:     D-1 through the invocable action: showRemaining with the
+               first row's Id and a requested field still returns rows
+               6 and 7 of the 7-match list, and no single Contact.
+    *****************************************************************/
+    @isTest
+    static void remainingIgnoresStrayContactIdD1() {
+        String firstRowId = runOne(byTitle('CRAACT-007-')).resultContactIds.split(',')[0];
+        CRA_ContactSearchAction.Request request = byTitle('CRAACT-007-');
+        request.showRemaining = true;
+        request.contactId = firstRowId;
+        request.requestedField = 'email';
+
+        Test.startTest();
+        CRA_ContactSearchAction.Response response = runOne(request);
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.REMAINING_PAGE, response.outcomeCode);
+        System.assertEquals(2, response.shownCount);
+        System.assertEquals(6, (Integer) row(response, 0).get('n'));
+        System.assertEquals(7, (Integer) row(response, 1).get('n'));
+        System.assert(String.isBlank(response.singleContactId), 'No Contact is identified');
+        System.assert(!response.resultContactIds.contains(firstRowId), 'The first page is not repeated');
+    }
 }

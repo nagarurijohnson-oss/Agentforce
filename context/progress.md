@@ -152,3 +152,11 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - **L-1: open, High, release blocker.** Reproduced again on 23 Nov (published v1).
 - **D-1 (new, Medium):** "show the remaining Contacts" passes a stray `contactId`; fix needs a new agent version.
 - Regression 83/83 (`707jV00000CKwm7`). No agent published, no sharing change, no record deleted, nothing merged.
+
+## Session 7: D-1 fix, proposed (2026-11-23)
+
+- Root cause: `show_remaining` left `contactId` unbound; the planner filled it; the service ANDs `Id = :contactId` with the criteria, so the list collapsed to one Contact.
+- Fix: agent script binds `contactId`/`location` (and `requestedField` on `show_remaining`) to "" and clears the selection after showing the rest; Apex guard in `CRA_ContactSearchCriteria.validate()` drops `contactId`/`requestedField` when `showRemaining` is true.
+- Check-only: CRA tests 85/85 (`0AfjV000006ipD3SAI`, criteria coverage 100%); RunLocalTests 95/95 (`0AfjV000006ipTBSAY`); new tests fail on the unfixed code (`0AfjV000006ipRZSAY`); bundle compiles.
+- Live read-only preview of the draft bundle: "show me the other 3" returns rows 6–8 with links, also after selecting a Contact first.
+- **L-1: open, High, release blocker.** Not deployed, not published, nothing merged. Report: [session-7-d1-fix.md](session-7-d1-fix.md).
