@@ -13,6 +13,9 @@ Purpose:       Search criteria for the SCGOE-95 Contact Read Agent.
                  ("@acme.com") or a partial value.
                - requestedField is matched against a fixed whitelist.
                - contactId must be a well-formed Contact Id.
+               - showRemaining replays the last search only: a
+                 contactId or requestedField sent with it is dropped
+                 (defect D-1).
                This class runs no queries and performs no DML.
 ============================================================
 History
@@ -22,6 +25,10 @@ VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.1      Revecast Orchestrate    20/11/2026   Updated   SCGOE-95 S2 review:
                                                       email domain search,
                                                       mobile field alias
+1.2      Revecast Orchestrate    23/11/2026   Updated   SCGOE-95 D-1: drop
+                                                      contactId and
+                                                      requestedField when
+                                                      showRemaining is true
 *****************************************************************/
 public with sharing class CRA_ContactSearchCriteria {
 
@@ -130,6 +137,22 @@ public with sharing class CRA_ContactSearchCriteria {
         // Clean every text input first; a rejected length stops here.
         if (!cleanAllInputs()) {
             return false;
+        }
+
+        // D-1: "show the other Contacts" must page through the same
+        // search that offered them. A Contact Id sent alongside would
+        // become an Id filter and collapse the list to one Contact, and a
+        // requested field would turn the page into a field answer, so
+        // both are dropped. With no other criteria the request is then
+        // rejected below as having nothing to search by.
+        if (wantsRemaining()) {
+            if (String.isNotBlank(contactId) || String.isNotBlank(requestedField)) {
+                System.debug(LoggingLevel.FINE, 'showRemaining: ignoring contactId/requestedField');
+            }
+            contactId = null;
+            requestedField = null;
+            contactRecordId = null;
+            requestedFieldKey = null;
         }
 
         // Each specialised check returns false and sets the message on failure.

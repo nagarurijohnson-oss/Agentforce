@@ -14,7 +14,7 @@ Purpose:       Tests for CRA_ContactSearchAction, the invocable
                  SIMULATED tests swap in a substitute access check and
                  prove only how the code reacts;
                - permission set metadata (Apex class access on APP,
-                 none on DATA, no assignments);
+                 none on DATA, no admin or write permissions);
                - a static scan that fails if DML appears in any CRA_
                  production class.
                All data is synthetic (CRA-TEST). Nothing is assigned
@@ -24,6 +24,10 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    20/11/2026   Created   SCGOE-95 Session 3
+1.1      Revecast Orchestrate    23/11/2026   Updated   SCGOE-95 Session 6:
+                                                      configuration checks
+                                                      replace the zero-
+                                                      assignment assertion
 *****************************************************************/
 @isTest
 private class CRA_ContactSearchActionTest {
@@ -55,6 +59,10 @@ private class CRA_ContactSearchActionTest {
     private static final Set<String> CONTRACT_ROW_KEYS = new Set<String>{
         'n', 'id', 'name', 'contactUrl', 'accountName', 'title', 'email', 'phone', 'mobilePhone',
         'mailingAddress' };
+    // Payload version 2 rows: the contactsJson row plus these two keys.
+    private static final Set<String> PAYLOAD_ROW_EXTRA_KEYS = new Set<String>{ 'contactPath', 'display', 'nameLinkable', 'nameLink' };
+    private static final Set<String> DISPLAY_KEYS = new Set<String>{
+        'name', 'accountName', 'title', 'email', 'phone', 'mobilePhone', 'mailingAddress' };
 
     // CRA_ production classes that must never contain DML.
     private static final Set<String> PRODUCTION_CLASSES = new Set<String>{
@@ -152,8 +160,10 @@ private class CRA_ContactSearchActionTest {
     /*****************************************************************
     Purpose:   Assert that searchResultJson parses, carries only the
                payload keys, and holds exactly the flat outputs: every
-               scalar equal (absent = null) and contacts equal to the
-               rows in contactsJson.
+               scalar equal (absent = null) and each contacts row equal
+               to its contactsJson row, plus (payload version 2) the
+               relative contactPath built from that row's Id and the
+               display copy of each value it carries.
     *****************************************************************/
     private static void assertPayloadMirrors(CRA_ContactSearchAction.Response response, String label) {
         Map<String, Object> body = payload(response);
@@ -166,7 +176,37 @@ private class CRA_ContactSearchActionTest {
             }
             System.assertEquals(flat.get(key), body.get(key), label + ' ' + key);
         }
-        System.assertEquals(JSON.deserializeUntyped(response.contactsJson), body.get('contacts'), label + ' contacts');
+        List<Object> flatRows = (List<Object>) JSON.deserializeUntyped(response.contactsJson);
+        List<Object> payloadRows = (List<Object>) body.get('contacts');
+        System.assertEquals(flatRows.size(), payloadRows.size(), label + ' row count');
+        for (Integer index = 0; index < flatRows.size(); index++) {
+            Map<String, Object> flatRow = (Map<String, Object>) flatRows[index];
+            Map<String, Object> payloadRow = (Map<String, Object>) payloadRows[index];
+            Map<String, Object> withoutExtras = new Map<String, Object>(payloadRow);
+            withoutExtras.remove('contactPath');
+            withoutExtras.remove('display');
+            withoutExtras.remove('nameLinkable');
+            withoutExtras.remove('nameLink');
+            System.assertEquals(flatRow, withoutExtras, label + ' row ' + index + ' originals unchanged');
+            System.assertEquals('/lightning/r/Contact/' + flatRow.get('id') + '/view', payloadRow.get('contactPath'),
+                label + ' row ' + index + ' relative path from its own Id');
+            // Payload v4: the flag is decided in Apex from the original name.
+            System.assertEquals(CRA_ContactSearchAction.isLinkSafeName((String) flatRow.get('name')),
+                payloadRow.get('nameLinkable'), label + ' row ' + index + ' nameLinkable');
+            String displayName = CRA_ContactSearchAction.escapeForDisplay((String) flatRow.get('name'));
+            String path = (String) payloadRow.get('contactPath');
+            String expectedLink = payloadRow.get('nameLinkable') == true
+                ? '[' + displayName + '](' + path + ')'
+                : displayName + ' — [Open record](' + path + ')';
+            System.assertEquals(expectedLink, payloadRow.get('nameLink'), label + ' row ' + index + ' nameLink');
+            Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
+            System.assert(DISPLAY_KEYS.containsAll(display.keySet()), label + ' display keys: ' + display.keySet());
+            for (String key : DISPLAY_KEYS) {
+                Object original = flatRow.get(key);
+                System.assertEquals(original == null ? null : CRA_ContactSearchAction.escapeForDisplay((String) original),
+                    display.get(key), label + ' row ' + index + ' display ' + key);
+            }
+        }
     }
 
     // =================================================================
@@ -834,7 +874,11 @@ private class CRA_ContactSearchActionTest {
     Tests:     APP_Contact_Read_Agent grants Apex class access to the
                action and nothing else (no object or field access, no
                other class). DATA_Contact_Read_Only grants no class
-               access. Neither is assigned to anyone.
+               access. Neither carries an admin or write permission,
+               so whoever holds them (for example the Session 6 UAT
+               user) gets read access and the action only.
+               Assignments are deliberately NOT counted: they change
+               with UAT and do not describe the configuration.
     *****************************************************************/
     @isTest
     static void appPermissionSetGrantsOnlyActionClassAccess() {
@@ -849,15 +893,31 @@ private class CRA_ContactSearchActionTest {
             WHERE Parent.Name = :DATA_PERMISSION_SET AND SetupEntityType = 'ApexClass'];
         Integer appObjectGrants = [SELECT COUNT() FROM ObjectPermissions WHERE Parent.Name = :APP_PERMISSION_SET];
         Integer appFieldGrants = [SELECT COUNT() FROM FieldPermissions WHERE Parent.Name = :APP_PERMISSION_SET];
-        Integer assignments = [SELECT COUNT() FROM PermissionSetAssignment
-            WHERE PermissionSet.Name IN (:APP_PERMISSION_SET, :DATA_PERMISSION_SET)];
+        Integer dataWriteGrants = [SELECT COUNT() FROM ObjectPermissions
+            WHERE Parent.Name = :DATA_PERMISSION_SET
+            AND (PermissionsCreate = true OR PermissionsEdit = true OR PermissionsDelete = true
+                 OR PermissionsViewAllRecords = true OR PermissionsModifyAllRecords = true)];
+        Integer dataFieldEdits = [SELECT COUNT() FROM FieldPermissions
+            WHERE Parent.Name = :DATA_PERMISSION_SET AND PermissionsEdit = true];
+        List<PermissionSet> craSets = [SELECT Name, IsOwnedByProfile, PermissionsViewAllData,
+                PermissionsModifyAllData, PermissionsViewSetup, PermissionsApiEnabled
+            FROM PermissionSet WHERE Name IN (:APP_PERMISSION_SET, :DATA_PERMISSION_SET)];
         Test.stopTest();
 
         System.assertEquals(new Set<Id>{ actionClassId }, appClassGrants, 'APP grants the action class only');
         System.assertEquals(0, dataClassGrants, 'DATA grants no Apex class access');
         System.assertEquals(0, appObjectGrants, 'APP grants no object access');
         System.assertEquals(0, appFieldGrants, 'APP grants no field access');
-        System.assertEquals(0, assignments, 'No automatic assignment');
+        System.assertEquals(0, dataWriteGrants, 'DATA grants no create, edit, delete, View All or Modify All');
+        System.assertEquals(0, dataFieldEdits, 'DATA grants no field edit');
+        System.assertEquals(2, craSets.size(), 'Both permission sets are in the deployment');
+        for (PermissionSet craSet : craSets) {
+            System.assert(!craSet.IsOwnedByProfile, craSet.Name + ' is a standalone permission set');
+            System.assert(!craSet.PermissionsViewAllData, craSet.Name + ': no View All Data');
+            System.assert(!craSet.PermissionsModifyAllData, craSet.Name + ': no Modify All Data');
+            System.assert(!craSet.PermissionsViewSetup, craSet.Name + ': no View Setup');
+            System.assert(!craSet.PermissionsApiEnabled, craSet.Name + ': no API Enabled');
+        }
     }
 
     // =================================================================
@@ -1057,7 +1117,10 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals(0, elevenPlus.get('remainingCount'));
         // Field answer: the row carries only the requested field, the name and the link.
         Map<String, Object> answerRow = (Map<String, Object>) ((List<Object>) payload(responses[8]).get('contacts'))[0];
-        System.assertEquals(new Set<String>{ 'n', 'id', 'name', 'contactUrl', 'mobilePhone' }, answerRow.keySet());
+        System.assertEquals(new Set<String>{ 'n', 'id', 'name', 'contactUrl', 'contactPath', 'mobilePhone', 'display', 'nameLinkable', 'nameLink' },
+            answerRow.keySet());
+        System.assertEquals(new Set<String>{ 'name', 'mobilePhone' },
+            ((Map<String, Object>) answerRow.get('display')).keySet(), 'Display carries only the answered field');
         // Single match: the link in the payload is the record's own link.
         Map<String, Object> singleRow = (Map<String, Object>) ((List<Object>) payload(responses[0]).get('contacts'))[0];
         System.assertEquals(responses[0].singleContactId, singleRow.get('id'));
@@ -1138,5 +1201,271 @@ private class CRA_ContactSearchActionTest {
         System.assert(queriesUsed <= requests.size() * CRA_ContactSearchService.QUERIES_PER_REQUEST,
             'Queries used: ' + queriesUsed);
         System.assertEquals(0, dmlUsed, 'No DML');
+    }
+
+    // =================================================================
+    // Payload version 2 — relative record paths and display values
+    // (Session 5 fixes for findings H1 and M1)
+    // =================================================================
+
+    /*****************************************************************
+    Tests:     contactPath is built only from a valid Contact Id: blank,
+               malformed and non-Contact Ids get no path, and a 15- or
+               18-character Contact Id gives the relative path with the
+               18-character Id.
+    *****************************************************************/
+    @isTest
+    static void contactPathOnlyForContactIds() {
+        Contact ava = [SELECT Id FROM Contact WHERE Email = :AVA_EMAIL LIMIT 1];
+        Id accountId = [SELECT Id FROM Account LIMIT 1].Id;
+        String expected = '/lightning/r/Contact/' + String.valueOf(ava.Id) + '/view';
+
+        Test.startTest();
+        String fromLongId = CRA_ContactSearchAction.toContactPath(String.valueOf(ava.Id));
+        String fromShortId = CRA_ContactSearchAction.toContactPath(String.valueOf(ava.Id).left(15));
+        String fromAccountId = CRA_ContactSearchAction.toContactPath(String.valueOf(accountId));
+        String fromBlank = CRA_ContactSearchAction.toContactPath('  ');
+        String fromNull = CRA_ContactSearchAction.toContactPath(null);
+        String fromText = CRA_ContactSearchAction.toContactPath('javascript:alert(1)');
+        String fromUrl = CRA_ContactSearchAction.toContactPath('https://evil.example/003');
+        Test.stopTest();
+
+        System.assertEquals(expected, fromLongId);
+        System.assertEquals(expected, fromShortId, 'A 15-character Id gives the 18-character path');
+        System.assert(!fromLongId.startsWith('http') && fromLongId.startsWith('/'), 'Relative path only');
+        System.assertEquals(null, fromAccountId, 'Not a Contact Id: no path');
+        System.assertEquals(null, fromBlank);
+        System.assertEquals(null, fromNull);
+        System.assertEquals(null, fromText, 'Malformed Id: no path');
+        System.assertEquals(null, fromUrl, 'URL: no path');
+    }
+
+    // Characters payload v3 escapes with one Markdown backslash.
+    private static final Set<String> MARKDOWN_SPECIALS = new Set<String>{
+        '\\', '<', '>', '[', ']', '|', '*', '_', '`', '~', '#', '&'
+    };
+
+    /*****************************************************************
+    Purpose:   Reads a display value left to right and proves it is
+               escaped completely and exactly once: every special
+               character carries one backslash, no backslash stands
+               alone, there is no line break, and removing the escape
+               backslashes gives back the expected original text.
+    Parameters: display — the display value; original — the value it
+               was made from (line breaks already turned into spaces)
+    *****************************************************************/
+    private static void assertEscapedOnce(String display, String original) {
+        String restored = '';
+        Integer index = 0;
+        while (index < display.length()) {
+            String character = display.substring(index, index + 1);
+            if (character == '\\') {
+                System.assert(index + 1 < display.length(), 'Lone backslash at the end: ' + display);
+                String escaped = display.substring(index + 1, index + 2);
+                System.assert(MARKDOWN_SPECIALS.contains(escaped),
+                    'Backslash before an ordinary character: ' + display);
+                restored += escaped;
+                index += 2;
+            } else {
+                System.assert(!MARKDOWN_SPECIALS.contains(character),
+                    'Unescaped ' + character + ' in display value: ' + display);
+                System.assert(character != '\n' && character != '\r', 'Line break in display value: ' + display);
+                restored += character;
+                index += 1;
+            }
+        }
+        System.assertEquals(original, restored, 'Removing the escapes gives back the original');
+    }
+
+    /*****************************************************************
+    Tests:     escapeForDisplay (payload v3): each special character
+               gets one Markdown backslash, the backslash is escaped
+               first so nothing is escaped twice, text that already
+               looks escaped keeps its own characters, line breaks
+               become spaces, and ordinary values, "Not available" and
+               null are unchanged.
+    *****************************************************************/
+    @isTest
+    static void displayEscapingIsCompleteAndSingle() {
+        Test.startTest();
+        String tags = CRA_ContactSearchAction.escapeForDisplay('Smith | Jones & Co <b>LLC</b>');
+        String link = CRA_ContactSearchAction.escapeForDisplay('[click](https://evil.example)');
+        String marks = CRA_ContactSearchAction.escapeForDisplay('a\\b *c* `d` ~e~ _f_ # g');
+        String reference = CRA_ContactSearchAction.escapeForDisplay('&lt;b&gt; &amp; &#91;');
+        String escapedAlready = CRA_ContactSearchAction.escapeForDisplay('\\<b\\> \\\\');
+        String lines = CRA_ContactSearchAction.escapeForDisplay('1 Road\r\nSuite 2\nTown\rState');
+        String plain = CRA_ContactSearchAction.escapeForDisplay('Zoë "Zed" O\'Brien-Núñez +1 (555) 010');
+        String notAvailable = CRA_ContactSearchAction.escapeForDisplay(CRA_ContactSearchResult.NOT_AVAILABLE);
+        String nothing = CRA_ContactSearchAction.escapeForDisplay(null);
+        Test.stopTest();
+
+        System.assertEquals('Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>', tags);
+        System.assertEquals('\\[click\\](https://evil.example)', link);
+        System.assertEquals('a\\\\b \\*c\\* \\`d\\` \\~e\\~ \\_f\\_ \\# g', marks);
+        System.assertEquals('\\&lt;b\\&gt; \\&amp; \\&\\#91;', reference,
+            'Text that looks like a character reference keeps its characters, escaped once');
+        System.assertEquals('\\\\\\<b\\\\\\> \\\\\\\\', escapedAlready,
+            'Existing backslashes are escaped too, so they show as typed');
+        System.assertEquals('1 Road Suite 2 Town State', lines);
+        System.assertEquals('Zoë "Zed" O\'Brien-Núñez +1 (555) 010', plain, 'Ordinary characters unchanged');
+        System.assertEquals(CRA_ContactSearchResult.NOT_AVAILABLE, notAvailable);
+        System.assertEquals(null, nothing);
+        assertEscapedOnce(tags, 'Smith | Jones & Co <b>LLC</b>');
+        assertEscapedOnce(link, '[click](https://evil.example)');
+        assertEscapedOnce(marks, 'a\\b *c* `d` ~e~ _f_ # g');
+        assertEscapedOnce(reference, '&lt;b&gt; &amp; &#91;');
+        assertEscapedOnce(escapedAlready, '\\<b\\> \\\\');
+        assertEscapedOnce(lines, '1 Road Suite 2 Town State');
+        assertEscapedOnce(plain, 'Zoë "Zed" O\'Brien-Núñez +1 (555) 010');
+    }
+
+    /*****************************************************************
+    Tests:     End to end through the action, with a Contact whose name,
+               Account and Title hold link syntax, HTML, pipes and a
+               script tag: contactsJson and the payload keep the
+               original values exactly (backward compatible), the
+               payload adds a relative path and backslash-escaped display
+               values (payload v3),
+               and nothing in the display values can form a tag, link
+               or table cell. The contract outputs are unchanged.
+    *****************************************************************/
+    @isTest
+    static void specialCharactersKeepOriginalsAndAddDisplayValues() {
+        String shortName = 'CRAQ Smith | Jones & Co <b>LLC</b>';
+        Id accountId = CRA_TestDataFactory.createAccounts(new List<String>{ shortName }).get(shortName).Id;
+        String accountName = 'CRA-TEST ' + shortName;
+        String hostileTitle = '[click here](https://evil.example/phish) <script>alert(1)</script> *now*';
+        Contact special = CRA_TestDataFactory.withDetails(
+            CRA_TestDataFactory.buildContact('Zoë [VIP]', 'O\'Brien-Núñez', accountId),
+            hostileTitle, 'zoe.special@action.example.com', null);
+        CRA_TestDataFactory.insertAllowingDuplicates(new List<Contact>{ special });
+
+        Test.startTest();
+        CRA_ContactSearchAction.Response response = runOne(byEmail('zoe.special@action.example.com'));
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.SINGLE_MATCH, response.outcomeCode);
+        assertPayloadMirrors(response, 'special characters');
+        // contactsJson: the Session 3 row, original values, no new keys.
+        Map<String, Object> flatRow = row(response, 0);
+        System.assert(CONTRACT_ROW_KEYS.containsAll(flatRow.keySet()), 'contactsJson keys unchanged: ' + flatRow.keySet());
+        System.assertEquals(accountName, flatRow.get('accountName'));
+        System.assertEquals(hostileTitle, flatRow.get('title'));
+        System.assertEquals('Zoë [VIP] O\'Brien-Núñez', flatRow.get('name'));
+        // Payload: originals, plus the relative path and display values.
+        Map<String, Object> payloadRow = (Map<String, Object>) ((List<Object>) payload(response).get('contacts'))[0];
+        System.assertEquals(accountName, payloadRow.get('accountName'), 'Original kept in the payload');
+        System.assertEquals('/lightning/r/Contact/' + special.Id + '/view', payloadRow.get('contactPath'));
+        System.assertEquals(String.valueOf(flatRow.get('contactUrl')), payloadRow.get('contactUrl'));
+        Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
+        System.assertEquals('CRA-TEST CRAQ Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>', display.get('accountName'));
+        System.assertEquals('Zoë \\[VIP\\] O\'Brien-Núñez', display.get('name'));
+        System.assertEquals(false, payloadRow.get('nameLinkable'), 'A name with brackets is never link text');
+        System.assertEquals('Zoë \\[VIP\\] O\'Brien-Núñez — [Open record](/lightning/r/Contact/' + special.Id + '/view)',
+            payloadRow.get('nameLink'), 'Escaped name as text, then the fixed record link');
+        System.assertEquals('\\[click here\\](https://evil.example/phish) \\<script\\>alert(1)\\</script\\> \\*now\\*',
+            display.get('title'));
+        // Every display value is escaped exactly once from its original payload value.
+        for (String key : display.keySet()) {
+            assertEscapedOnce((String) display.get(key), (String) payloadRow.get(key));
+        }
+        // Backward compatibility: the 16 contract outputs are still exactly the contract.
+        Map<String, Object> flat = (Map<String, Object>) JSON.deserializeUntyped(JSON.serialize(response));
+        System.assertEquals(CONTRACT_OUTPUTS, flat.keySet());
+        System.assertEquals(4, payload(response).get('payloadVersion'));
+    }
+
+    /*****************************************************************
+    Tests:     D-1 through the invocable action: showRemaining with the
+               first row's Id and a requested field still returns rows
+               6 and 7 of the 7-match list, and no single Contact.
+    *****************************************************************/
+    @isTest
+    static void remainingIgnoresStrayContactIdD1() {
+        String firstRowId = runOne(byTitle('CRAACT-007-')).resultContactIds.split(',')[0];
+        CRA_ContactSearchAction.Request request = byTitle('CRAACT-007-');
+        request.showRemaining = true;
+        request.contactId = firstRowId;
+        request.requestedField = 'email';
+
+        Test.startTest();
+        CRA_ContactSearchAction.Response response = runOne(request);
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.REMAINING_PAGE, response.outcomeCode);
+        System.assertEquals(2, response.shownCount);
+        System.assertEquals(6, (Integer) row(response, 0).get('n'));
+        System.assertEquals(7, (Integer) row(response, 1).get('n'));
+        System.assert(String.isBlank(response.singleContactId), 'No Contact is identified');
+        System.assert(!response.resultContactIds.contains(firstRowId), 'The first page is not repeated');
+    }
+
+    /*****************************************************************
+    Tests:     Session 11, payload v4: isLinkSafeName allows plain names
+               (accents, other scripts, apostrophes, quotes, hyphens,
+               initials) and refuses every name the Lightning panel
+               test turned into a link, image or formatting, plus names
+               that look like web addresses, email or blank names.
+    *****************************************************************/
+    @isTest
+    static void nameLinkableOnlyForPlainNames() {
+        List<String> safeNames = new List<String>{
+            'Priya Synthwell', 'Zoë "Zed" O\'Brien-Łukasz 李', 'J.R. Smith', 'Anne-Marie D’Arcy', 'Mary Ann 3rd',
+            'Jordan Samename'
+        };
+        List<String> unsafeNames = new List<String>{
+            'Eve ](https://evil.example/phish) Linkbreaker', '[Pay here](https://evil.example/pay)',
+            'Nested [CEO record](/lightning/r/Contact/003000000000001AAA/view)', 'Bob) [x](https://evil.example',
+            'Zed <b>VIP</b>', '![x](https://evil.example/x.png) Img', '*Bold* _it_', '~~del~~ `code` # Hash',
+            'Ana | Pipe', 'Back\\slash', 'Visit https://evil.example now', 'www.evil.example', 'mail me@evil.example',
+            '&lt;b&gt;', '<https://evil.example>', '[x](javascript:alert(1))', 'Smith & Jones (Contractor)',
+            'Ann [Finance] Lee', 'Tab\tName', 'Line\nBreak', '', '   ', null
+        };
+        Test.startTest();
+        for (String name : safeNames) {
+            System.assertEquals(true, CRA_ContactSearchAction.isLinkSafeName(name), 'Safe: ' + name);
+        }
+        for (String name : unsafeNames) {
+            System.assertEquals(false, CRA_ContactSearchAction.isLinkSafeName(name), 'Unsafe: ' + name);
+        }
+        Test.stopTest();
+    }
+
+    /*****************************************************************
+    Tests:     Session 11, payload v4 through the action: a plain name
+               row carries nameLinkable true; values are unchanged.
+    *****************************************************************/
+    @isTest
+    static void plainNameRowIsLinkable() {
+        Test.startTest();
+        CRA_ContactSearchAction.Response response = runOne(byName('Ava Actionson'));
+        Test.stopTest();
+
+        assertPayloadMirrors(response, 'plain name');
+        Map<String, Object> payloadRow = (Map<String, Object>) ((List<Object>) payload(response).get('contacts'))[0];
+        System.assertEquals(true, payloadRow.get('nameLinkable'), 'A plain name may be the link text');
+        System.assertEquals('[Ava Actionson](' + payloadRow.get('contactPath') + ')', payloadRow.get('nameLink'),
+            'A plain name is the record link');
+        System.assertEquals(4, payload(response).get('payloadVersion'));
+    }
+
+    /*****************************************************************
+    Tests:     Session 11, payload v4: toNameLink builds exactly three
+               forms, and never puts a non-linkable name in link text.
+    *****************************************************************/
+    @isTest
+    static void nameLinkFormsAreFixed() {
+        String path = '/lightning/r/Contact/003000000000001AAA/view';
+        Test.startTest();
+        String linked = CRA_ContactSearchAction.toNameLink('Priya Synthwell', path, true);
+        String fallback = CRA_ContactSearchAction.toNameLink('Ann \\[Finance\\] Lee', path, false);
+        String noPath = CRA_ContactSearchAction.toNameLink('Priya Synthwell', null, true);
+        String noName = CRA_ContactSearchAction.toNameLink(null, path, true);
+        Test.stopTest();
+        System.assertEquals('[Priya Synthwell](' + path + ')', linked);
+        System.assertEquals('Ann \\[Finance\\] Lee — [Open record](' + path + ')', fallback);
+        System.assert(!fallback.startsWith('['), 'A non-linkable name is never link text');
+        System.assertEquals('Priya Synthwell', noPath, 'No path, no link');
+        System.assertEquals(null, noName);
     }
 }

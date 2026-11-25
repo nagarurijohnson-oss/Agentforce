@@ -1,0 +1,112 @@
+{
+ "label": "r9_guard",
+ "mode": "published",
+ "turns": [
+  "Change Priya Synthwell's title to CFO",
+  "What's the weather like?"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a2128e-6028-7767-803e-9dd511d4a24f",
+   "turns": [
+    {
+     "user": "Change Priya Synthwell's title to CFO",
+     "calls": [
+      [
+       [
+        "go_read_only_guard",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    },
+    {
+     "user": "What's the weather like?",
+     "calls": [
+      [
+       [
+        "go_clarify",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a2128e-6069-725a-a252-7a4b7d3cfe32",
+   "turns": [
+    {
+     "user": "Change Priya Synthwell's title to CFO",
+     "calls": [
+      [
+       [
+        "go_read_only_guard",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    },
+    {
+     "user": "What's the weather like?",
+     "calls": [
+      [
+       [
+        "go_clarify",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a2128e-63e5-730c-a299-229a5d41ff99",
+   "turns": [
+    {
+     "user": "Change Priya Synthwell's title to CFO",
+     "calls": [
+      [
+       [
+        "go_read_only_guard",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    },
+    {
+     "user": "What's the weather like?",
+     "calls": [
+      [
+       [
+        "go_clarify",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

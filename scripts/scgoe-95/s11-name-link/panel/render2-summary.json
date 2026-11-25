@@ -1,0 +1,269 @@
+{
+ "O-esc": {
+  "record_links_correct": 19,
+  "names_exact": 17,
+  "of": 19,
+  "other_links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "https://evil.example/pay",
+    "https://evil.example/pay"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "https://evil.example/x.png\\>",
+    "https://evil.example/x.png%5C%3E"
+   ],
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "https://evil.example\\>",
+    "https://evil.example%5C%3E"
+   ]
+  ],
+  "imgs": [],
+  "fails": []
+ },
+ "O-L1": {
+  "record_links_correct": 19,
+  "names_exact": 9,
+  "of": 19,
+  "other_links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "Pay here",
+    "https://evil.example/pay"
+   ],
+   [
+    "CEO record",
+    "/lightning/r/Contact/003jV00000HCVpUQAX/view"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ]
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "fails": []
+ },
+ "G-esc": {
+  "record_links_correct": 19,
+  "names_exact": 17,
+  "of": 19,
+  "other_links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "https://evil.example/pay",
+    "https://evil.example/pay"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "https://evil.example/x.png\\>",
+    "https://evil.example/x.png%5C%3E"
+   ],
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "https://evil.example\\>",
+    "https://evil.example%5C%3E"
+   ]
+  ],
+  "imgs": [],
+  "fails": []
+ },
+ "G-L1": {
+  "record_links_correct": 19,
+  "names_exact": 9,
+  "of": 19,
+  "other_links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "Pay here",
+    "https://evil.example/pay"
+   ],
+   [
+    "CEO record",
+    "/lightning/r/Contact/003jV00000HCVpUQAX/view"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ]
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "fails": []
+ },
+ "GS-esc": {
+  "record_links_correct": 19,
+  "names_exact": 17,
+  "of": 19,
+  "other_links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "https://evil.example/pay",
+    "https://evil.example/pay"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "https://evil.example/x.png\\>",
+    "https://evil.example/x.png%5C%3E"
+   ],
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "https://evil.example\\>",
+    "https://evil.example%5C%3E"
+   ]
+  ],
+  "imgs": [],
+  "fails": []
+ },
+ "GS-L1": {
+  "record_links_correct": 19,
+  "names_exact": 10,
+  "of": 19,
+  "other_links": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "Pay here",
+    "https://evil.example/pay"
+   ],
+   [
+    "CEO record",
+    "/lightning/r/Contact/003jV00000HCVpUQAX/view"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ]
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "fails": []
+ }
+}

@@ -1,0 +1,390 @@
+{
+ "label": "r2_select",
+ "mode": "bundle-live",
+ "turns": [
+  "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+  "Tell me about number 2",
+  "What Account is this Contact at?",
+  "Show me the other 3"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a21285-37c0-7af4-bf10-ab99f9ab5faf",
+   "turns": [
+    {
+     "user": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Tell me about number 2",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "select_contact",
+        "{\"selected_contact_id\":\"003jV00000GrntKQAR\"}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "What Account is this Contact at?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"requestedField\":\"account\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Show me the other 3",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "show_remaining",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "REMAINING_PAGE",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a21285-36f2-7719-a515-f1605b16d4cb",
+   "turns": [
+    {
+     "user": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Tell me about number 2",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "select_contact",
+        "{\"selected_contact_id\":\"003jV00000GrntKQAR\"}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "What Account is this Contact at?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"requestedField\":\"account\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Show me the other 3",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "show_remaining",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "REMAINING_PAGE",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a21285-35d2-77e6-8aa3-4baa8fbd3d97",
+   "turns": [
+    {
+     "user": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Tell me about number 2",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "select_contact",
+        "{\"selected_contact_id\":\"003jV00000GrntKQAR\"}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "What Account is this Contact at?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"requestedField\":\"account\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Show me the other 3",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "show_remaining",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "REMAINING_PAGE",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

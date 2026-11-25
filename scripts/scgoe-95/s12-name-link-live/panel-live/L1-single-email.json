@@ -1,0 +1,93 @@
+{
+ "conversation": "L1-single-email",
+ "turns": [
+  {
+   "n": 3,
+   "text": "2 Contacts have this email. Which one do you mean?\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tPriya Synthwell\tCRA-TEST Northwind Synthetic\tDirector of Finance\tpriya.synthwell@synthetic.example\t+1 555 0101\t+1 555 0201\n2\tPriyanka Shadowell\tNot available\tSynthetic Controller\tpriya.synthwell@synthetic.example\t+1 555 0612\tNot available\n\nYou can also tell me one of these details instead: Account name, job title, phone, city, state or region, country.",
+   "links": [
+    {
+     "t": "Priya Synthwell",
+     "h": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+     "target": null,
+     "ctx": "1 | Priya Synthwell | CRA-TEST Northwind Synthetic | Director of Finance | priya.synthwell@synthetic.example | +1 555 0101 | +1 555 0201"
+    },
+    {
+     "t": "priya.synthwell@synthetic.example",
+     "h": "mailto:priya.synthwell@synthetic.example",
+     "target": null,
+     "ctx": "1 | Priya Synthwell | CRA-TEST Northwind Synthetic | Director of Finance | priya.synthwell@synthetic.example | +1 555 0101 | +1 555 0201"
+    },
+    {
+     "t": "Priyanka Shadowell",
+     "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+     "target": null,
+     "ctx": "2 | Priyanka Shadowell | Not available | Synthetic Controller | priya.synthwell@synthetic.example | +1 555 0612 | Not available"
+    },
+    {
+     "t": "priya.synthwell@synthetic.example",
+     "h": "mailto:priya.synthwell@synthetic.example",
+     "target": null,
+     "ctx": "2 | Priyanka Shadowell | Not available | Synthetic Controller | priya.synthwell@synthetic.example | +1 555 0612 | Not available"
+    }
+   ],
+   "imgs": [],
+   "fmt": [
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [
+    "#",
+    "Name",
+    "Account",
+    "Title",
+    "Email",
+    "Phone",
+    "Mobile"
+   ],
+   "rows": [
+    [
+     "#",
+     "Name",
+     "Account",
+     "Title",
+     "Email",
+     "Phone",
+     "Mobile"
+    ],
+    [
+     "1",
+     "Priya Synthwell",
+     "CRA-TEST Northwind Synthetic",
+     "Director of Finance",
+     "priya.synthwell@synthetic.example",
+     "+1 555 0101",
+     "+1 555 0201"
+    ],
+    [
+     "2",
+     "Priyanka Shadowell",
+     "Not available",
+     "Synthetic Controller",
+     "priya.synthwell@synthetic.example",
+     "+1 555 0612",
+     "Not available"
+    ]
+   ],
+   "utterance": "Find the contact with email priya.synthwell@synthetic.example"
+  }
+ ],
+ "agent_selected": "Contact Read Agent",
+ "navigation": [
+  {
+   "linkText": "Priya Synthwell",
+   "href": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+   "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+   "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+   "newTab": false,
+   "title": "Priya Synthwell | Contact | Salesforce"
+  }
+ ],
+ "dialogs": [],
+ "external_requests": [
+  "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+ ]
+}

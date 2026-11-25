@@ -1,0 +1,10 @@
+email_v1_draft           mode=bundle-sim   runs=12 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+email_v1_draft_b         mode=bundle-sim   runs=24 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+email_v1_live            mode=bundle-live  runs=15 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+email_v2_draft           mode=bundle-sim   runs=12 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+email_v2_draft_b         mode=bundle-sim   runs=24 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+email_v2_live            mode=bundle-live  runs=15 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+email_v2_published       mode=published    runs=12 parallel= 2 empty_criteria= 2 lost_and_parallel= 2
+email_v2_published_b     mode=published    runs=15 parallel= 6 empty_criteria= 6 lost_and_parallel= 6
+smoke_v1                 mode=bundle-sim   runs= 2 parallel= 0 empty_criteria= 0 lost_and_parallel= 0
+smoke_v2                 mode=bundle-sim   runs= 2 parallel= 0 empty_criteria= 0 lost_and_parallel= 0

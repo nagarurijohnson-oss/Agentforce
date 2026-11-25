@@ -1061,4 +1061,100 @@ private class CRA_ContactSearchTest {
         System.assert(!CRA_ContactSearchService.phoneMatches(null, criteria));
         System.assert(!CRA_ContactSearchService.phoneMatches('+44 191 4956204', criteria));
     }
+
+    // ---------------------------------------------------------------
+    // D-1: "show the other Contacts" ignores a stray contactId
+    // ---------------------------------------------------------------
+
+    private static CRA_ContactSearchResult remainingOfTenWith(String contactId, String requestedField) {
+        CRA_ContactSearchCriteria criteria = new CRA_ContactSearchCriteria();
+        criteria.jobTitle = tag(10);
+        criteria.contactId = contactId;
+        criteria.requestedField = requestedField;
+        criteria.showRemaining = true;
+        return run(criteria);
+    }
+
+    /*****************************************************************
+    Tests:     D-1 exactly as traced in Session 6: the planner sends the
+               first row's Id with showRemaining. Expected: the other 5
+               of the 10, numbered from 6, and no single Contact.
+    *****************************************************************/
+    @isTest
+    static void remainingIgnoresFirstRowContactIdD1() {
+        CRA_ContactSearchResult first = searchTitleSet(10, false);
+        String firstRowId = first.contacts[0].id;
+
+        Test.startTest();
+        CRA_ContactSearchResult rest = remainingOfTenWith(firstRowId, null);
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.REMAINING_PAGE, rest, 'D-1 first-row Id');
+        System.assertEquals('10', rest.totalMatchesLabel, 'Still the whole search, not one Contact');
+        System.assertEquals(5, rest.shownCount);
+        System.assertEquals(6, rest.contacts[0].n, 'Continues numbering');
+        System.assertEquals('Set010 Member006', rest.contacts[0].name);
+        System.assertEquals(null, rest.singleContactId, 'No Contact is identified');
+        for (CRA_ContactSearchResult.ContactRow row : rest.contacts) {
+            System.assertNotEquals(firstRowId, row.id, 'The first page is not repeated');
+        }
+    }
+
+    /*****************************************************************
+    Tests:     D-1 variant: a previously selected Contact from outside
+               the list, plus a requested field. Before the fix this
+               returned NO_MATCH (Id AND title); now the remaining page
+               with full rows, not a field answer.
+    *****************************************************************/
+    @isTest
+    static void remainingIgnoresStaleContactIdAndFieldD1() {
+        Id outsider = [SELECT Id FROM Contact WHERE FirstName = 'Ava' AND LastName = 'Lindqvist' LIMIT 1].Id;
+
+        Test.startTest();
+        CRA_ContactSearchResult rest = remainingOfTenWith(outsider, 'email');
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.REMAINING_PAGE, rest, 'D-1 stale Id');
+        System.assertEquals(5, rest.shownCount);
+        System.assertEquals(null, rest.requestedFieldLabel, 'The field question is dropped');
+        System.assertEquals(null, rest.singleContactId);
+        System.assert(!rest.criteriaSummary.contains('Selected Contact'), rest.criteriaSummary);
+    }
+
+    /*****************************************************************
+    Tests:     showRemaining with only a Contact Id has nothing left to
+               replay, so it asks for details instead of showing anyone.
+    *****************************************************************/
+    @isTest
+    static void remainingWithOnlyContactIdNeedsClarification() {
+        CRA_ContactSearchCriteria onlyId = new CRA_ContactSearchCriteria();
+        onlyId.contactId = [SELECT Id FROM Contact WHERE FirstName = 'Ava' AND LastName = 'Lindqvist' LIMIT 1].Id;
+        onlyId.showRemaining = true;
+
+        Test.startTest();
+        CRA_ContactSearchResult result = run(onlyId);
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.NEEDS_CLARIFICATION, result, 'Id only + showRemaining');
+        System.assert(result.contacts.isEmpty(), 'No Contact is shown');
+    }
+
+    /*****************************************************************
+    Tests:     Control: without showRemaining a contactId still targets
+               that Contact (the follow-up path is unchanged by D-1).
+    *****************************************************************/
+    @isTest
+    static void contactIdStillAppliesWithoutRemaining() {
+        CRA_ContactSearchResult first = searchTitleSet(10, false);
+        CRA_ContactSearchCriteria followUp = new CRA_ContactSearchCriteria();
+        followUp.contactId = first.contacts[1].id;
+        followUp.requestedField = 'title';
+
+        Test.startTest();
+        CRA_ContactSearchResult answer = run(followUp);
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.FIELD_ANSWER, answer, 'follow-up');
+        System.assertEquals(first.contacts[1].id, String.valueOf(answer.singleContactId));
+    }
 }

@@ -1,0 +1,410 @@
+{
+ "A1_single_v2raw": {
+  "text": "I found one matching Contact.\nName: Zoë \"Zed\" O'Brien VIP x (Open record)\nAccount: Smith | Jones & Co LLC\nTitle: CFO\nEmail: zed.obrien@synthetic.example",
+  "links": [
+   [
+    "x",
+    "https://evil.example"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ]
+  ],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [
+   "Name:",
+   "VIP",
+   "Account:",
+   "LLC",
+   "Title:",
+   "Email:"
+  ],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [],
+  "dialogs": [],
+  "evil_requests": []
+ },
+ "A2_single_v3esc": {
+  "text": "I found one matching Contact.\nName: Zoë \"Zed\" O'Brien <b>VIP</b> [x](https://evil.example) (Open record)\nAccount: Smith | Jones & Co <b>LLC</b>\nTitle: <script>alert(1)</script> CFO\nEmail: zed.obrien@synthetic.example",
+  "links": [
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ]
+  ],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [
+   "Name:",
+   "Account:",
+   "Title:",
+   "Email:"
+  ],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [],
+  "dialogs": [],
+  "evil_requests": []
+ },
+ "A3_table_v2raw": {
+  "text": "Here are the test values.\n\n#\tName\tRecord\n1\tSmith\tJones & Co LLC\n2\tAnn Lee\tOpen record\n3\tImg\tOpen record\n4\tclick here\tOpen record\n5\topen\tOpen record\n6\thttps://evil.example/auto\tOpen record\n7\tVisit https://evil.example/bare now\tOpen record\n8\tsee www.evil.example today\tOpen record\n9\tPay here\tOpen record\n10\tSales\tEMEA\n11\tC:\\Temp\\new and * star\tOpen record\n12\tR&D literal\tOpen record\n13\tTag <b> literal | code\tOpen record\n14\tbold ital strike code\tOpen record\n15\t# Heading text\tOpen record\n16\t\tOpen record\n17\tzed.obrien@synthetic.example\tOpen record\n18\tZoë \"Zed\" O'Brien-Núñez [VIP]\tOpen record",
+  "links": [
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "click here",
+    "https://evil.example/phish"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "open",
+    null
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/auto",
+    "https://evil.example/auto"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/bare",
+    "https://evil.example/bare"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Pay here",
+    "https://evil.example/a"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ]
+  ],
+  "imgs": [
+   "x",
+   "https://evil.example/x.png"
+  ],
+  "scripts": 0,
+  "bold": [
+   "LLC"
+  ],
+  "em": [
+   "bold",
+   "ital"
+  ],
+  "code": [
+   "code"
+  ],
+  "del": [
+   "strike"
+  ],
+  "cells": [
+   "1",
+   "Smith",
+   "Jones & Co LLC",
+   "2",
+   "Ann Lee",
+   "Open record",
+   "3",
+   "Img",
+   "Open record",
+   "4",
+   "click here",
+   "Open record",
+   "5",
+   "open",
+   "Open record",
+   "6",
+   "https://evil.example/auto",
+   "Open record",
+   "7",
+   "Visit https://evil.example/bare now",
+   "Open record",
+   "8",
+   "see www.evil.example today",
+   "Open record",
+   "9",
+   "Pay here",
+   "Open record",
+   "10",
+   "Sales",
+   "EMEA",
+   "11",
+   "C:\\Temp\\new and * star",
+   "Open record",
+   "12",
+   "R&D literal",
+   "Open record",
+   "13",
+   "Tag <b> literal | code",
+   "Open record",
+   "14",
+   "bold ital strike code",
+   "Open record",
+   "15",
+   "# Heading text",
+   "Open record",
+   "16",
+   "",
+   "Open record",
+   "17",
+   "zed.obrien@synthetic.example",
+   "Open record",
+   "18",
+   "Zoë \"Zed\" O'Brien-Núñez [VIP]",
+   "Open record"
+  ],
+  "dialogs": [],
+  "evil_requests": [
+   "https://evil.example/x.png"
+  ]
+ },
+ "A4_table_v3esc": {
+  "text": "Here are the test values.\n\n#\tName\tRecord\n1\tSmith | Jones & Co <b>LLC</b>\tOpen record\n2\tAnn <script>alert(1)</script> Lee\tOpen record\n3\t<img src=x onerror=alert(1)>Img\tOpen record\n4\t[click here](https://evil.example/phish)\tOpen record\n5\t[open](javascript:alert(1))\tOpen record\n6\t<https://evil.example/auto\\>\tOpen record\n7\tVisit https://evil.example/bare now\tOpen record\n8\tsee www.evil.example today\tOpen record\n9\t<a href=\"https://evil.example/a\"\\>Pay here</a>\tOpen record\n10\tSales | EMEA\tOpen record\n11\tC:\\Temp\\new and \\* star\tOpen record\n12\tR&amp;D literal\tOpen record\n13\tTag &lt;b&gt; literal &#124; code\tOpen record\n14\t*bold* _ital_ ~~strike~~ `code`\tOpen record\n15\t# Heading text\tOpen record\n16\t![x](https://evil.example/x.png)\tOpen record\n17\tzed.obrien@synthetic.example\tOpen record\n18\tZoë \"Zed\" O'Brien-Núñez [VIP]\tOpen record",
+  "links": [
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/auto\\>",
+    "https://evil.example/auto%5C%3E"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/bare",
+    "https://evil.example/bare"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/a\"\\>Pay",
+    "https://evil.example/a%22%5C%3EPay"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "zed.obrien@synthetic.example",
+    "mailto:zed.obrien@synthetic.example"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ],
+   [
+    "Open record",
+    "/lightning/r/Contact/003jV00000GrntVQAR/view"
+   ]
+  ],
+  "imgs": [],
+  "scripts": 0,
+  "bold": [],
+  "em": [],
+  "code": [],
+  "del": [],
+  "cells": [
+   "1",
+   "Smith | Jones & Co <b>LLC</b>",
+   "Open record",
+   "2",
+   "Ann <script>alert(1)</script> Lee",
+   "Open record",
+   "3",
+   "<img src=x onerror=alert(1)>Img",
+   "Open record",
+   "4",
+   "[click here](https://evil.example/phish)",
+   "Open record",
+   "5",
+   "[open](javascript:alert(1))",
+   "Open record",
+   "6",
+   "<https://evil.example/auto\\>",
+   "Open record",
+   "7",
+   "Visit https://evil.example/bare now",
+   "Open record",
+   "8",
+   "see www.evil.example today",
+   "Open record",
+   "9",
+   "<a href=\"https://evil.example/a\"\\>Pay here</a>",
+   "Open record",
+   "10",
+   "Sales | EMEA",
+   "Open record",
+   "11",
+   "C:\\Temp\\new and \\* star",
+   "Open record",
+   "12",
+   "R&amp;D literal",
+   "Open record",
+   "13",
+   "Tag &lt;b&gt; literal &#124; code",
+   "Open record",
+   "14",
+   "*bold* _ital_ ~~strike~~ `code`",
+   "Open record",
+   "15",
+   "# Heading text",
+   "Open record",
+   "16",
+   "![x](https://evil.example/x.png)",
+   "Open record",
+   "17",
+   "zed.obrien@synthetic.example",
+   "Open record",
+   "18",
+   "Zoë \"Zed\" O'Brien-Núñez [VIP]",
+   "Open record"
+  ],
+  "dialogs": [],
+  "evil_requests": []
+ }
+}

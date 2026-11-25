@@ -1,0 +1,15 @@
+{
+  "name": "FailedValidationError",
+  "message": "Failed to validate the deployment (0AfjV000006ipRZSAY). Due To:\nCRA_ContactSearchActionTest.remainingIgnoresStrayContactIdD1 - System.AssertException: Assertion Failed: Expected: REMAINING_PAGE, Actual: FIELD_ANSWER,CRA_ContactSearchTest.remainingIgnoresFirstRowContactIdD1 - System.AssertException: Assertion Failed: D-1 first-row Id: I found one matching Contact.: Expected: REMAINING_PAGE, Actual: SINGLE_MATCH,CRA_ContactSearchTest.remainingIgnoresStaleContactIdAndFieldD1 - System.AssertException: Assertion Failed: D-1 stale Id: I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail.: Expected: REMAINING_PAGE, Actual: NO_MATCH,CRA_ContactSearchTest.remainingWithOnlyContactIdNeedsClarification - System.AssertException: Assertion Failed: Id only + showRemaining: I found one matching Contact.: Expected: NEEDS_CLARIFICATION, Actual: SINGLE_MATCH",
+  "exitCode": 1,
+  "context": "DeployMetadataValidate",
+  "data": {
+    "deployId": "0AfjV000006ipRZSAY"
+  },
+  "stack": "FailedValidationError: Failed to validate the deployment (0AfjV000006ipRZSAY). Due To:\nCRA_ContactSearchActionTest.remainingIgnoresStrayContactIdD1 - System.AssertException: Assertion Failed: Expected: REMAINING_PAGE, Actual: FIELD_ANSWER,CRA_ContactSearchTest.remainingIgnoresFirstRowContactIdD1 - System.AssertException: Assertion Failed: D-1 first-row Id: I found one matching Contact.: Expected: REMAINING_PAGE, Actual: SINGLE_MATCH,CRA_ContactSearchTest.remainingIgnoresStaleContactIdAndFieldD1 - System.AssertException: Assertion Failed: D-1 stale Id: I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail.: Expected: REMAINING_PAGE, Actual: NO_MATCH,CRA_ContactSearchTest.remainingWithOnlyContactIdNeedsClarification - System.AssertException: Assertion Failed: Id only + showRemaining: I found one matching Contact.: Expected: NEEDS_CLARIFICATION, Actual: SINGLE_MATCH\n    at SfCommandError.from (file:///usr/local/lib/node_modules/@salesforce/cli/node_modules/@salesforce/sf-plugins-core/lib/SfCommandError.js:48:16)\n    at DeployMetadataValidate.catch (file:///usr/local/lib/node_modules/@salesforce/cli/node_modules/@salesforce/sf-plugins-core/lib/sfCommand.js:333:47)\n    at DeployMetadataValidate._run (/usr/local/lib/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/command.js:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async Config.runCommand (/usr/local/lib/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/config/config.js:389:25)\n    at async run (/usr/local/lib/node_modules/@salesforce/cli/node_modules/@oclif/core/lib/main.js:97:16)\n    at async file:///usr/local/lib/node_modules/@salesforce/cli/bin/run.js:15:1",
+  "cause": "undefined",
+  "warnings": [],
+  "code": "FailedValidationError",
+  "status": 1,
+  "commandName": "DeployMetadataValidate"
+}

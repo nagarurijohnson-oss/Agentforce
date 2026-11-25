@@ -1,0 +1,10 @@
+ent1 23 | criteriaSummary": "Name: Zqent & <b>x</b> [y] \\&z", "outcomeCode": "NO_MATCH", "refinementRequired": false, "remainingCount": 0, "resultContactIds": "", "
+ent1 23 | criteriaSummary\":\"Name: Zqent & <b>x</b> [y] \\\\&z\",\"contacts\":[],\"canShowRemaining\":false}", "shownCount": 0, "similarNameCount": 0, "suggestedFil
+ent1 23 | name": "search_contacts", "input": {"location": "", "name": "Zqent & <b>x</b> [y] \\&z", "email": "", "phone": "", "accountName": "", "jobTitle"
+ent1 23 | name, job title, email, phone, city, state or region, country\",\"similarNameCount\":0,\"shownCount\":0,\"remainingCount\":0,\"refinementRequire
+ent1 23 | name, job title, email, phone, city, state or region, country", "totalMatchesLabel": "0", "userMessage": "I could not find any Contacts that mat
+ent1 27 | criteriaSummary\":\"Name: Zqent & <b>x</b> [y] \\\\&z\",\"contacts\":[],\"canShowRemaining\":false}"}, "output": {"__action_execution_status__": "success",
+ent1 27 | name": "present_results", "input": {"Input:searchResultJson": "{\"userMessage\":\"I could not find any Contacts that match your search. Try chec
+ent1 27 | name, job title, email, phone, city, state or region, country\",\"similarNameCount\":0,\"shownCount\":0,\"remainingCount\":0,\"refinementRequire
+ent1 27 | name, job title, email, phone, city, state or region, country.", "__tool_idx__": "01f64e22", "__supports_result_display__": false}}, "executionL
+ent1 REPLY | ["I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: Account name, job title, email, phone, city, state or region, country."]

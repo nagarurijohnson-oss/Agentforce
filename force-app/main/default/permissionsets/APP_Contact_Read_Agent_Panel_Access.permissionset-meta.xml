@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <agentAccesses>
+        <agentName>Contact_Read_Agent</agentName>
+        <enabled>true</enabled>
+    </agentAccesses>
+    <description>SCGOE-95. Agent access to Contact_Read_Agent only, for the Lightning Agentforce panel. No object, field or Apex access. Demo and controlled testing; assigned only to the org admin.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>APP – Contact Read Agent Panel Access</label>
+</PermissionSet>

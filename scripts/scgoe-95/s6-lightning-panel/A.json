@@ -1,0 +1,41 @@
+{
+  "conversation": "A",
+  "turns": [
+    {
+      "utterance": "Find the Contact with the email priya.synthwell@synthetic.example",
+      "reply": {
+        "all": "I found one matching Contact.\n\nName: Priya Synthwell\nRecord: Open record\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States",
+        "links": [
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrpMXQAZ/view"
+          },
+          {
+            "t": "priya.synthwell@synthetic.example",
+            "h": "mailto:priya.synthwell@synthetic.example"
+          }
+        ],
+        "fmt": [
+          "STRONG:Name:",
+          "STRONG:Record:",
+          "STRONG:Account:",
+          "STRONG:Title:",
+          "STRONG:Email:",
+          "STRONG:Phone:",
+          "STRONG:Mobile:",
+          "STRONG:Mailing address:"
+        ]
+      }
+    }
+  ],
+  "agent_selected": "Contact Read Agent",
+  "navigation": {
+    "href": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+    "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+    "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+    "pages": [
+      "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home"
+    ],
+    "title": "Priya Synthwell | Contact | Salesforce"
+  }
+}
