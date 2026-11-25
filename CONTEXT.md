@@ -26,4 +26,15 @@ Environment: personal Salesforce **Developer Edition org** (`MAX`, org id 00DjV0
 - [context/decisions/](context/decisions/) — decision records, including D-B, D-C, D-D, D-F, the permission set split and query selectivity (2026-11-20)
 - [context/decisions/2026-11-19-environment-is-developer-edition-org.md](context/decisions/2026-11-19-environment-is-developer-edition-org.md) — the environment is a Developer Edition org, not a sandbox
 
+## Knowledge Article Search (design for review, 2026-11-25)
+- [context/knowledge-search/README.md](context/knowledge-search/README.md) — feature index and phase status (K0 in review; nothing built)
+- [context/knowledge-search/technical-design.md](context/knowledge-search/technical-design.md) — Knowledge → Data Library → retriever → Prompt Template → Contact_Read_Agent v4; no Apex, Flow or LWC
+- [context/knowledge-search/prerequisites.md](context/knowledge-search/prerequisites.md) — approvals, platform prerequisites, automated vs manual steps
+- [context/knowledge-search/implementation-phases.md](context/knowledge-search/implementation-phases.md) — phases K0–K6 and gates
+- [context/knowledge-search/test-scenarios.md](context/knowledge-search/test-scenarios.md) — sample articles, KT-01 to KT-20, acceptance criteria
+- [context/knowledge-search/security-validation.md](context/knowledge-search/security-validation.md) — security checks SV-1 to SV-10 still to prove
+- [context/decisions/2026-11-25-kb-k1-enable-lightning-knowledge-irreversible.md](context/decisions/2026-11-25-kb-k1-enable-lightning-knowledge-irreversible.md) — **ADR-K1, Proposed: enabling Knowledge is irreversible; needs Lal and Nagaruri Johnson**
+- `context/decisions/2026-11-25-kb-k2-…` to `…-kb-k5-…` — ADR-K2 to K5 (Proposed)
+- `context/build-prompts/K1-…` to `K6-…` — Knowledge build prompts
+
 Every build session must keep the requirements, decisions and progress files up to date. Nothing is activated or merged without explicit approval.
