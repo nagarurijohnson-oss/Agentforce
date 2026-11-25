@@ -57,7 +57,17 @@ Gate failed on template v5 answer quality (ambiguity, citation links). Retrieval
 - [x] Live v6 suite 102/102
 - [x] Agent v4 preview (local): Knowledge cases pass; KT-19 fails; preview strips links (same as v3 Contact)
 - [x] Contact regression: Apex 102/102, agent suite 23/27 (same 4), permission sets unchanged, v3 Active
-- [ ] Deploy + publish v4 (no activation): awaiting decision on KT-19
-- [ ] Remove test-only CRA_Knowledge_Answer_v6_Candidate (destructive deploy, needs confirmation)
+- [x] Deploy + publish v4 (no activation): done after KT-19 fix (session 14)
+- [x] CRA_Knowledge_Answer_v6_Candidate: user chose to keep it for regression testing
 ### Review
 Template gate met; v6 Active. v4 held on KT-19. L-1 and SV-1/3/4 open.
+
+## Session 14 (2026-11-25): KT-19 fix and v4 publish
+- [x] Root cause: mixed request routed to contact_search only, which ends the turn after its reply
+- [x] Add contact_and_knowledge subagent + router rule + knowledge_search handoff (Agent Script only)
+- [x] contact_search / read_only_guard byte-identical to v3
+- [x] KT-19 20/20, variants 8/8, full v4 suite 46/46
+- [x] Apex 102/102, CRA_S6 23/27 (same 4)
+- [x] Validate 0AfjV000006mh2PSAQ; publish v4 Inactive; v3 Active; org bundle == repo
+### Review
+v4 published inactive with KT-19 fixed. Not activated. L-1 open (High); SV-1/3/4 blocked by B-1; no release approved.

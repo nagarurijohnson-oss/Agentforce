@@ -205,3 +205,8 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Template v5: facts 27/27, no-match 9/9, **ambiguity 0/9, citation links 1/27**. Agent v4 preview: routing 21/21, Knowledge replies inherit the failures, KT-19 fail.
 - Contact regression: Apex 102/102 (`707jV00000CXe9U`), contact_search + read_only_guard byte-identical to v3, v3 Active.
 - **v4 NOT deployed or published (gate failed).** L-1 open High; SV-1/3/4 blocked by B-1. Report: [session-kb-v5-validation.md](session-kb-v5-validation.md).
+
+## Knowledge Search: KT-19 fix + v4 published inactive (2026-11-25)
+- Agent Script only: new `contact_and_knowledge` subagent, router mixed rule first, knowledge_search handoff. contact_search + read_only_guard byte-identical to v3.
+- KT-19 20/20 (+ 8/8 variants); full v4 suite 46/46; Apex 102/102 (`707jV00000CXhyy`); CRA_S6 23/27 (same 4).
+- **v4 published Inactive (`0X9jV000001DhubSAC`); v3 Active.** Template v6 unchanged, candidate kept. L-1 open High; SV-1/3/4 blocked by B-1. Report: [session-kb-v4-kt19.md](session-kb-v4-kt19.md).

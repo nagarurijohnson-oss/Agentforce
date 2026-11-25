@@ -8,3 +8,5 @@
 - 2026-11-25: Prompt Builder Jinja: reference `EinsteinSearch.<retriever>.results` directly (e.g. `{% set kb = ….results %}`) or the retriever does not run; loop `kb.searchResults` / `sr.result` and test `resultFieldApiKey`. Escaping cannot be disabled; double the newline after block tags.
 - 2026-11-25: Generations API only runs the active version; test a new version on a separate test-only template before activating.
 - 2026-11-25: `sf agent preview` responses drop Markdown links even when the reply contains them; check the trace and verify links in the panel.
+- 2026-11-25: A subagent that relays its own reply ends the turn; a request needing two capabilities needs one subagent that runs both deterministically, not a hand-off "offer".
+- 2026-11-25: Injection-style messages can be refused by the platform Prompt_Injection guardrail before any subagent; score agent-level injection tests on 'nothing leaked', not on a specific decline text.
