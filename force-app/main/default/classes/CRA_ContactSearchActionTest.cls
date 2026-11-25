@@ -60,7 +60,7 @@ private class CRA_ContactSearchActionTest {
         'n', 'id', 'name', 'contactUrl', 'accountName', 'title', 'email', 'phone', 'mobilePhone',
         'mailingAddress' };
     // Payload version 2 rows: the contactsJson row plus these two keys.
-    private static final Set<String> PAYLOAD_ROW_EXTRA_KEYS = new Set<String>{ 'contactPath', 'display' };
+    private static final Set<String> PAYLOAD_ROW_EXTRA_KEYS = new Set<String>{ 'contactPath', 'display', 'nameLinkable', 'nameLink' };
     private static final Set<String> DISPLAY_KEYS = new Set<String>{
         'name', 'accountName', 'title', 'email', 'phone', 'mobilePhone', 'mailingAddress' };
 
@@ -185,9 +185,20 @@ private class CRA_ContactSearchActionTest {
             Map<String, Object> withoutExtras = new Map<String, Object>(payloadRow);
             withoutExtras.remove('contactPath');
             withoutExtras.remove('display');
+            withoutExtras.remove('nameLinkable');
+            withoutExtras.remove('nameLink');
             System.assertEquals(flatRow, withoutExtras, label + ' row ' + index + ' originals unchanged');
             System.assertEquals('/lightning/r/Contact/' + flatRow.get('id') + '/view', payloadRow.get('contactPath'),
                 label + ' row ' + index + ' relative path from its own Id');
+            // Payload v4: the flag is decided in Apex from the original name.
+            System.assertEquals(CRA_ContactSearchAction.isLinkSafeName((String) flatRow.get('name')),
+                payloadRow.get('nameLinkable'), label + ' row ' + index + ' nameLinkable');
+            String displayName = CRA_ContactSearchAction.escapeForDisplay((String) flatRow.get('name'));
+            String path = (String) payloadRow.get('contactPath');
+            String expectedLink = payloadRow.get('nameLinkable') == true
+                ? '[' + displayName + '](' + path + ')'
+                : displayName + ' — [Open record](' + path + ')';
+            System.assertEquals(expectedLink, payloadRow.get('nameLink'), label + ' row ' + index + ' nameLink');
             Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
             System.assert(DISPLAY_KEYS.containsAll(display.keySet()), label + ' display keys: ' + display.keySet());
             for (String key : DISPLAY_KEYS) {
@@ -1106,7 +1117,7 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals(0, elevenPlus.get('remainingCount'));
         // Field answer: the row carries only the requested field, the name and the link.
         Map<String, Object> answerRow = (Map<String, Object>) ((List<Object>) payload(responses[8]).get('contacts'))[0];
-        System.assertEquals(new Set<String>{ 'n', 'id', 'name', 'contactUrl', 'contactPath', 'mobilePhone', 'display' },
+        System.assertEquals(new Set<String>{ 'n', 'id', 'name', 'contactUrl', 'contactPath', 'mobilePhone', 'display', 'nameLinkable', 'nameLink' },
             answerRow.keySet());
         System.assertEquals(new Set<String>{ 'name', 'mobilePhone' },
             ((Map<String, Object>) answerRow.get('display')).keySet(), 'Display carries only the answered field');
@@ -1349,6 +1360,9 @@ private class CRA_ContactSearchActionTest {
         Map<String, Object> display = (Map<String, Object>) payloadRow.get('display');
         System.assertEquals('CRA-TEST CRAQ Smith \\| Jones \\& Co \\<b\\>LLC\\</b\\>', display.get('accountName'));
         System.assertEquals('Zoë \\[VIP\\] O\'Brien-Núñez', display.get('name'));
+        System.assertEquals(false, payloadRow.get('nameLinkable'), 'A name with brackets is never link text');
+        System.assertEquals('Zoë \\[VIP\\] O\'Brien-Núñez — [Open record](/lightning/r/Contact/' + special.Id + '/view)',
+            payloadRow.get('nameLink'), 'Escaped name as text, then the fixed record link');
         System.assertEquals('\\[click here\\](https://evil.example/phish) \\<script\\>alert(1)\\</script\\> \\*now\\*',
             display.get('title'));
         // Every display value is escaped exactly once from its original payload value.
@@ -1358,7 +1372,7 @@ private class CRA_ContactSearchActionTest {
         // Backward compatibility: the 16 contract outputs are still exactly the contract.
         Map<String, Object> flat = (Map<String, Object>) JSON.deserializeUntyped(JSON.serialize(response));
         System.assertEquals(CONTRACT_OUTPUTS, flat.keySet());
-        System.assertEquals(3, payload(response).get('payloadVersion'));
+        System.assertEquals(4, payload(response).get('payloadVersion'));
     }
 
     /*****************************************************************
@@ -1384,5 +1398,74 @@ private class CRA_ContactSearchActionTest {
         System.assertEquals(7, (Integer) row(response, 1).get('n'));
         System.assert(String.isBlank(response.singleContactId), 'No Contact is identified');
         System.assert(!response.resultContactIds.contains(firstRowId), 'The first page is not repeated');
+    }
+
+    /*****************************************************************
+    Tests:     Session 11, payload v4: isLinkSafeName allows plain names
+               (accents, other scripts, apostrophes, quotes, hyphens,
+               initials) and refuses every name the Lightning panel
+               test turned into a link, image or formatting, plus names
+               that look like web addresses, email or blank names.
+    *****************************************************************/
+    @isTest
+    static void nameLinkableOnlyForPlainNames() {
+        List<String> safeNames = new List<String>{
+            'Priya Synthwell', 'Zoë "Zed" O\'Brien-Łukasz 李', 'J.R. Smith', 'Anne-Marie D’Arcy', 'Mary Ann 3rd',
+            'Jordan Samename'
+        };
+        List<String> unsafeNames = new List<String>{
+            'Eve ](https://evil.example/phish) Linkbreaker', '[Pay here](https://evil.example/pay)',
+            'Nested [CEO record](/lightning/r/Contact/003000000000001AAA/view)', 'Bob) [x](https://evil.example',
+            'Zed <b>VIP</b>', '![x](https://evil.example/x.png) Img', '*Bold* _it_', '~~del~~ `code` # Hash',
+            'Ana | Pipe', 'Back\\slash', 'Visit https://evil.example now', 'www.evil.example', 'mail me@evil.example',
+            '&lt;b&gt;', '<https://evil.example>', '[x](javascript:alert(1))', 'Smith & Jones (Contractor)',
+            'Ann [Finance] Lee', 'Tab\tName', 'Line\nBreak', '', '   ', null
+        };
+        Test.startTest();
+        for (String name : safeNames) {
+            System.assertEquals(true, CRA_ContactSearchAction.isLinkSafeName(name), 'Safe: ' + name);
+        }
+        for (String name : unsafeNames) {
+            System.assertEquals(false, CRA_ContactSearchAction.isLinkSafeName(name), 'Unsafe: ' + name);
+        }
+        Test.stopTest();
+    }
+
+    /*****************************************************************
+    Tests:     Session 11, payload v4 through the action: a plain name
+               row carries nameLinkable true; values are unchanged.
+    *****************************************************************/
+    @isTest
+    static void plainNameRowIsLinkable() {
+        Test.startTest();
+        CRA_ContactSearchAction.Response response = runOne(byName('Ava Actionson'));
+        Test.stopTest();
+
+        assertPayloadMirrors(response, 'plain name');
+        Map<String, Object> payloadRow = (Map<String, Object>) ((List<Object>) payload(response).get('contacts'))[0];
+        System.assertEquals(true, payloadRow.get('nameLinkable'), 'A plain name may be the link text');
+        System.assertEquals('[Ava Actionson](' + payloadRow.get('contactPath') + ')', payloadRow.get('nameLink'),
+            'A plain name is the record link');
+        System.assertEquals(4, payload(response).get('payloadVersion'));
+    }
+
+    /*****************************************************************
+    Tests:     Session 11, payload v4: toNameLink builds exactly three
+               forms, and never puts a non-linkable name in link text.
+    *****************************************************************/
+    @isTest
+    static void nameLinkFormsAreFixed() {
+        String path = '/lightning/r/Contact/003000000000001AAA/view';
+        Test.startTest();
+        String linked = CRA_ContactSearchAction.toNameLink('Priya Synthwell', path, true);
+        String fallback = CRA_ContactSearchAction.toNameLink('Ann \\[Finance\\] Lee', path, false);
+        String noPath = CRA_ContactSearchAction.toNameLink('Priya Synthwell', null, true);
+        String noName = CRA_ContactSearchAction.toNameLink(null, path, true);
+        Test.stopTest();
+        System.assertEquals('[Priya Synthwell](' + path + ')', linked);
+        System.assertEquals('Ann \\[Finance\\] Lee — [Open record](' + path + ')', fallback);
+        System.assert(!fallback.startsWith('['), 'A non-linkable name is never link text');
+        System.assertEquals('Priya Synthwell', noPath, 'No path, no link');
+        System.assertEquals(null, noName);
     }
 }

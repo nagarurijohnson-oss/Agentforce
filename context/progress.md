@@ -183,3 +183,10 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Check-only `0AfjV000006mEObSAM` (95/95); quick deploy `0AfjV000006mERpSAM`; published and activated **v3** (`0X9jV000001Dh1lSAC`); v2 inactive for rollback.
 - D-2: email search 30/30 on v3 (was 10/30 empty). D-3: narrowing 12/12 (was 6/12 skipped). Pagination, selection, switching, duplicates, field question, guard all pass; agent suite 23/27 (same as v2); Apex 99/99 (`707jV00000CW8dH`); 249/249 links correct; 0 records changed.
 - **L-1: open, High, release blocker.** Reproduced 3 of 3 on v3. Report: [session-10-v3-d2-d3-fix.md](session-10-v3-d2-d3-fix.md).
+
+## Session 11: Contact name as the record link (2026-11-25)
+
+- Requested: remove the Record column/line, make the name the record link. Lightning panel pre-deploy test: always linking the name is **unsafe** (escaped names still produced a link to a different Contact, a `javascript:` link and an external image).
+- Built (not deployed): Apex payload v4 adds `nameLinkable` and an Apex-built `nameLink` (`[name](contactPath)` for link-safe names, else `name — [Open record](contactPath)`); template copies `nameLink`; no Record line or column. Search logic and security unchanged.
+- Check-only `0AfjV000006mGv4SAE`: 98/98, 100% coverage. Template suite 104/108 (4 explained, cosmetic or scorer). Panel injection of 16 real replies: all links correct, nothing injected.
+- **L-1: open, High, release blocker** (non-linkable hostile names unchanged under L-1). Awaiting deployment approval. Report: [session-11-name-hyperlink.md](session-11-name-hyperlink.md).

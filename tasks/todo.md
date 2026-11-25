@@ -15,3 +15,12 @@
 - [x] Apex regression 99/99; agent suite 23/27; conversation checks; 68/68 links; 0 records changed
 - [x] Recheck L-1 (reproduced, stays open High)
 - [ ] D-2: investigate empty-criteria email search (open)
+
+## Session 11 (2026-11-25): Contact name as record link
+- [x] Retrieve live template and Apex; confirm org == repo
+- [x] Lightning panel pre-deploy render test (19 hostile names, escaped and L-1 stripped, 3 forms)
+- [x] Apex payload v4: nameLinkable + nameLink (display only), 3 new tests
+- [x] Template: copy nameLink; Record line/column removed
+- [x] Check-only RunLocalTests 0AfjV000006mGv4SAE 98/98
+- [x] Template suite 104/108; baseline case 27 7/10; panel injection of 16 real replies
+- [ ] Deploy (awaiting approval), post-deploy panel test, L-1 recheck
