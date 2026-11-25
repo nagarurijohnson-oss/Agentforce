@@ -1,0 +1,108 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-11-25T13:08:18.000Z",
+    "createdBy": "005jV000001p8m9",
+    "createdByName": "John Steve",
+    "createdDate": "2026-11-25T13:08:14.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2026-11-25T13:08:15.000Z",
+          "deleted": false,
+          "fileName": "classes/CRA_ContactSearchAction.cls",
+          "fullName": "CRA_ContactSearchAction",
+          "id": "01pjV000005FisIQAS",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2026-11-25T13:08:15.000Z",
+          "deleted": false,
+          "fileName": "classes/CRA_ContactSearchActionTest.cls",
+          "fullName": "CRA_ContactSearchActionTest",
+          "id": "01pjV000005FisJQAS",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "GenAiPromptTemplate",
+          "created": false,
+          "createdDate": "2026-11-25T13:08:17.000Z",
+          "deleted": false,
+          "fileName": "genAiPromptTemplates/CRA_Contact_Result_Presentation.genAiPromptTemplate",
+          "fullName": "CRA_Contact_Result_Presentation",
+          "id": "0hfjV0000027hqHQAQ",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-11-25T13:08:17.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0AfjV000006mJEbSAM",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-11-25T13:08:18.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 3,
+    "numberComponentsTotal": 3,
+    "numberFiles": "8",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-11-25T13:08:14.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": "126492",
+    "files": [
+      {
+        "fullName": "CRA_ContactSearchAction",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "classes/CRA_ContactSearchAction.cls"
+      },
+      {
+        "fullName": "CRA_ContactSearchActionTest",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "classes/CRA_ContactSearchActionTest.cls"
+      },
+      {
+        "fullName": "CRA_Contact_Result_Presentation",
+        "type": "GenAiPromptTemplate",
+        "state": "Changed",
+        "filePath": "genAiPromptTemplates/CRA_Contact_Result_Presentation.genAiPromptTemplate"
+      }
+    ],
+    "deployUrl": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com//lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfjV000006mJEbSAM%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

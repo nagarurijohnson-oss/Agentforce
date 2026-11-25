@@ -190,3 +190,11 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Built (not deployed): Apex payload v4 adds `nameLinkable` and an Apex-built `nameLink` (`[name](contactPath)` for link-safe names, else `name — [Open record](contactPath)`); template copies `nameLink`; no Record line or column. Search logic and security unchanged.
 - Check-only `0AfjV000006mGv4SAE`: 98/98, 100% coverage. Template suite 104/108 (4 explained, cosmetic or scorer). Panel injection of 16 real replies: all links correct, nothing injected.
 - **L-1: open, High, release blocker** (non-linkable hostile names unchanged under L-1). Awaiting deployment approval. Report: [session-11-name-hyperlink.md](session-11-name-hyperlink.md).
+
+## Session 12: name-link presentation live (2026-11-25)
+
+- Quick deploy `0AfjV000006mJEbSAM` (Apex action, test class, template) from validated `0AfjV000006mGv4SAE`; live on active v3, no new agent version.
+- Lightning panel, live: 12 conversations / 20 turns, all search outcomes pass; 36 of 36 record links correct, 7 of 7 navigations open the right Contact; no external, image or dialog.
+- Hostile names via the deployed template in the panel renderer: escaped path clean; under L-1 stripping identical to Session 11 and the old format.
+- Apex 102/102 (`707jV00000CWnd1`), agent suite 23/27 (same 4), template suite 102/108 (explained), 0 records changed.
+- **L-1: open, High, release blocker** (6 of 6 hostile turns in the panel). Report: [session-12-name-link-live.md](session-12-name-link-live.md).

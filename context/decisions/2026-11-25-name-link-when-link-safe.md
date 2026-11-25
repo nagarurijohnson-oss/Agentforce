@@ -1,8 +1,8 @@
 # Contact name as the record link only when link-safe (payload v4)
 
-- **Status:** Proposed (built and validated check-only; deployment awaits approval). Amends `2026-11-20-option-a-separate-record-link.md`.
+- **Status:** Accepted (deployed 2026-11-25, quick deploy `0AfjV000006mJEbSAM`; tested live in Session 12). Amends `2026-11-20-option-a-separate-record-link.md`.
 - **Date:** 2026-11-25
-- **Deciders:** Nagaruri Johnson (requested the name as hyperlink); design by Revecast Orchestrate, pending approval
+- **Deciders:** Nagaruri Johnson (requested the name as hyperlink); design by Revecast Orchestrate; deployment approved by Nagaruri Johnson
 
 ## Context
 The request was to remove the separate Record column and make each name the record link. Lightning panel tests showed escaped names inside link text still create nested and disguised links and load images (see `context/session-11-name-hyperlink.md`).

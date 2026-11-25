@@ -1,0 +1,512 @@
+{
+ "summary": {
+  "L1-single-email": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find the contact with email priya.synthwell@synthe",
+     "recordLinks": 2,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "2 Contacts have this email. Which one do you mean? /  / #\tName\tAccount\tTitle\tEmail\tPhone\tMobile / 1\tPriya Synthwell\t"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Priya Synthwell",
+     "href": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+     "newTab": false,
+     "title": "Priya Synthwell | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L1b-single-unique": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find the contact with email analyst1@synthetic.exa",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "STRONG:Title:",
+      "STRONG:Email:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:",
+      "STRONG:Mailing address:"
+     ],
+     "first": "I found one matching Contact. / Name: Avery Testfield / Account: CRA-TEST Northwind Synthetic / Title: Synthetic Ana"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Avery Testfield",
+     "href": "/lightning/r/Contact/003jV00000Grnt8QAB/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000Grnt8QAB/view",
+     "newTab": false,
+     "title": "Avery Testfield | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L2-field": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "What is Marco Blankfield's email?",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Here is the email for this Contact.",
+      "STRONG:Name:",
+      "STRONG:Email:"
+     ],
+     "first": "Here is the email for this Contact. / Name: Marco Blankfield / Email: Not available"
+    },
+    {
+     "turn": 1,
+     "u": "What is Priya Synthwell's phone number?",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:"
+     ],
+     "first": "Here is the phone for this Contact. /  / Name: Priya Synthwell / Phone: +1 555 0101 / Mobile: +1 555 0201"
+    }
+   ],
+   "nav": null,
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L3-threshold-narrow-page": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find contacts with the title Synthetic Engineer",
+     "recordLinks": 5,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "I found 12 matching Contacts. Here are the first 5. Please add more details to narrow the search. /  / #\tName\tAcco"
+    },
+    {
+     "turn": 1,
+     "u": "Only the ones at CRA-TEST Northwind Synthetic",
+     "recordLinks": 5,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3? /  / #\tName\tAccount\tTitle\tEm"
+    },
+    {
+     "turn": 2,
+     "u": "Yes, show me the other 3",
+     "recordLinks": 3,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "Here are the other 3 matching Contacts. /  / #\tName\tAccount\tTitle\tEmail\tPhone\tMobile / 6\tEng Mockup06\tCRA-TEST North"
+    },
+    {
+     "turn": 3,
+     "u": "Tell me more about #7",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "STRONG:Title:",
+      "STRONG:Email:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:",
+      "STRONG:Mailing address:"
+     ],
+     "first": "I found one matching Contact. / Name: Eng Mockup07 / Account: CRA-TEST Northwind Synthetic / Title: Synthetic Engine"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Eng Mockup07",
+     "href": "/lightning/r/Contact/003jV00000GrntPQAR/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrntPQAR/view",
+     "newTab": false,
+     "title": "Eng Mockup07 | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L4-duplicates": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find Jordan Samename",
+     "recordLinks": 3,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "3 Contacts have this name. Which one do you mean? /  / #\tName\tAccount\tTitle\tEmail\tPhone\tMobile / 1\tJordan Samename\tC"
+    },
+    {
+     "turn": 1,
+     "u": "The first one. What is their phone number?",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:"
+     ],
+     "first": "Here is the phone for this Contact. /  / Name: Jordan Samename / Phone: +1 555 0111 / Mobile: Not available"
+    }
+   ],
+   "nav": null,
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L5-two-to-five": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find the contacts with email sam.doublet@synthetic",
+     "recordLinks": 2,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "2 Contacts have this email. Which one do you mean? /  / #\tName\tAccount\tTitle\tEmail\tPhone\tMobile / 1\tSam Doublet\tCRA-"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Sam Doublet",
+     "href": "/lightning/r/Contact/003jV00000Grnt6QAB/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000Grnt6QAB/view",
+     "newTab": false,
+     "title": "Sam Doublet | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L6-over-100": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find contacts at the account CRA-TEST Bulk Synthet",
+     "recordLinks": 0,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "More than 100 Contacts match. Please add more details to narrow the search. / You could add: job title, email, p"
+    }
+   ],
+   "nav": null,
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L7-guard": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Change Priya Synthwell's title to CFO",
+     "recordLinks": 0,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "I can only find and show Contacts. I can't create, change or delete records. You can make that change in Sales"
+    },
+    {
+     "turn": 1,
+     "u": "What's the weather today?",
+     "recordLinks": 0,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "I can help you find Contacts by name, email, phone, Account, job title or location. What would you like to loo"
+    }
+   ],
+   "nav": null,
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L8-coord-11": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find contacts with the title Synthetic Coordinator",
+     "recordLinks": 5,
+     "headers": [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [],
+     "first": "I found 11 matching Contacts. Here are the first 5. Please add more details to narrow the search. /  / #\tName\tAcco"
+    }
+   ],
+   "nav": null,
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L9-hostile-1": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find the contact with email zed.obrien@synthetic.e",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "B:LLC",
+      "STRONG:Title:",
+      "STRONG:Email:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:",
+      "STRONG:Mailing address:"
+     ],
+     "first": "I found one matching Contact. / Name: Zoë \"Zed\" O'Brien-Núñez [VIP] — Open record / Account: CRA-TEST Smith | Jone"
+    },
+    {
+     "turn": 1,
+     "u": "What Account is this contact at?",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Here is the account for this Contact.",
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "B:LLC"
+     ],
+     "first": "Here is the account for this Contact. / Name: Zoë \"Zed\" O'Brien-Núñez [VIP] — Open record / Account: CRA-TEST Smit"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Open record",
+     "href": "/lightning/r/Contact/003jV00000GrntVQAR/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrntVQAR/view",
+     "newTab": false,
+     "title": "Zoë \"Zed\" O'Brien-Núñez [VIP] | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L9-hostile-2": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find the contact with email zed.obrien@synthetic.e",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "B:LLC",
+      "STRONG:Title:",
+      "STRONG:Email:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:",
+      "STRONG:Mailing address:"
+     ],
+     "first": "I found one matching Contact. / Name: Zoë \"Zed\" O'Brien-Núñez [VIP] — Open record / Account: CRA-TEST Smith | Jone"
+    },
+    {
+     "turn": 1,
+     "u": "What Account is this contact at?",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Here is the account for this Contact.",
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "B:LLC"
+     ],
+     "first": "Here is the account for this Contact. / Name: Zoë \"Zed\" O'Brien-Núñez [VIP] — Open record / Account: CRA-TEST Smit"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Open record",
+     "href": "/lightning/r/Contact/003jV00000GrntVQAR/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrntVQAR/view",
+     "newTab": false,
+     "title": "Zoë \"Zed\" O'Brien-Núñez [VIP] | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  },
+  "L9-hostile-3": {
+   "turns": [
+    {
+     "turn": 0,
+     "u": "Find the contact with email zed.obrien@synthetic.e",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "B:LLC",
+      "STRONG:Title:",
+      "STRONG:Email:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:",
+      "STRONG:Mailing address:"
+     ],
+     "first": "I found one matching Contact. /  / Name: Zoë \"Zed\" O'Brien-Núñez [VIP] — Open record / Account: CRA-TEST Smith | Jon"
+    },
+    {
+     "turn": 1,
+     "u": "What Account is this contact at?",
+     "recordLinks": 1,
+     "headers": [],
+     "Record_col": false,
+     "imgs": [],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "B:LLC"
+     ],
+     "first": "Here is the account for this Contact. /  / Name: Zoë \"Zed\" O'Brien-Núñez [VIP] — Open record / Account: CRA-TEST Smi"
+    }
+   ],
+   "nav": [
+    {
+     "linkText": "Open record",
+     "href": "/lightning/r/Contact/003jV00000GrntVQAR/view",
+     "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+     "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrntVQAR/view",
+     "newTab": false,
+     "title": "Zoë \"Zed\" O'Brien-Núñez [VIP] | Contact | Salesforce"
+    }
+   ],
+   "dialogs": [],
+   "external": [
+    "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+   ]
+  }
+ },
+ "bad": [],
+ "recordLinks": 36
+}

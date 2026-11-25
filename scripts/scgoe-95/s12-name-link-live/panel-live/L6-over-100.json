@@ -1,0 +1,22 @@
+{
+ "conversation": "L6-over-100",
+ "turns": [
+  {
+   "n": 3,
+   "text": "More than 100 Contacts match. Please add more details to narrow the search.\nYou could add: job title, email, phone, city, state or region, country.",
+   "links": [],
+   "imgs": [],
+   "fmt": [
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "Find contacts at the account CRA-TEST Bulk Synthetic"
+  }
+ ],
+ "agent_selected": "Contact Read Agent",
+ "dialogs": [],
+ "external_requests": [
+  "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+ ]
+}

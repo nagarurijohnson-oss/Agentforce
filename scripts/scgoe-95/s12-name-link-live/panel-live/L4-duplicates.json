@@ -1,0 +1,126 @@
+{
+ "conversation": "L4-duplicates",
+ "turns": [
+  {
+   "n": 3,
+   "text": "3 Contacts have this name. Which one do you mean?\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tJordan Samename\tCRA-TEST Northwind Synthetic\tSynthetic Partner\tjordan.samename.a@synthetic.example\t+1 555 0111\tNot available\n2\tJordan Samename\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Partner\tjordan.samename.b@synthetic.example\t+1 555 0112\tNot available\n3\tJordan Samename\tNot available\tSynthetic Partner\tjordan.samename.c@synthetic.example\t+1 555 0113\tNot available\n\nYou can also tell me one of these details instead: Account name, job title, email, phone, city, state or region, country.",
+   "links": [
+    {
+     "t": "Jordan Samename",
+     "h": "/lightning/r/Contact/003jV00000Grnt4QAB/view",
+     "target": null,
+     "ctx": "1 | Jordan Samename | CRA-TEST Northwind Synthetic | Synthetic Partner | jordan.samename.a@synthetic.example | +1 555 0111 | Not available"
+    },
+    {
+     "t": "jordan.samename.a@synthetic.example",
+     "h": "mailto:jordan.samename.a@synthetic.example",
+     "target": null,
+     "ctx": "1 | Jordan Samename | CRA-TEST Northwind Synthetic | Synthetic Partner | jordan.samename.a@synthetic.example | +1 555 0111 | Not available"
+    },
+    {
+     "t": "Jordan Samename",
+     "h": "/lightning/r/Contact/003jV00000Grnt5QAB/view",
+     "target": null,
+     "ctx": "2 | Jordan Samename | CRA-TEST Smith | Jones & Co <b>LLC</b> | Synthetic Partner | jordan.samename.b@synthetic.example | +1 555 0112 | Not available"
+    },
+    {
+     "t": "jordan.samename.b@synthetic.example",
+     "h": "mailto:jordan.samename.b@synthetic.example",
+     "target": null,
+     "ctx": "2 | Jordan Samename | CRA-TEST Smith | Jones & Co <b>LLC</b> | Synthetic Partner | jordan.samename.b@synthetic.example | +1 555 0112 | Not available"
+    },
+    {
+     "t": "Jordan Samename",
+     "h": "/lightning/r/Contact/003jV00000HCVpTQAX/view",
+     "target": null,
+     "ctx": "3 | Jordan Samename | Not available | Synthetic Partner | jordan.samename.c@synthetic.example | +1 555 0113 | Not available"
+    },
+    {
+     "t": "jordan.samename.c@synthetic.example",
+     "h": "mailto:jordan.samename.c@synthetic.example",
+     "target": null,
+     "ctx": "3 | Jordan Samename | Not available | Synthetic Partner | jordan.samename.c@synthetic.example | +1 555 0113 | Not available"
+    }
+   ],
+   "imgs": [],
+   "fmt": [
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [
+    "#",
+    "Name",
+    "Account",
+    "Title",
+    "Email",
+    "Phone",
+    "Mobile"
+   ],
+   "rows": [
+    [
+     "#",
+     "Name",
+     "Account",
+     "Title",
+     "Email",
+     "Phone",
+     "Mobile"
+    ],
+    [
+     "1",
+     "Jordan Samename",
+     "CRA-TEST Northwind Synthetic",
+     "Synthetic Partner",
+     "jordan.samename.a@synthetic.example",
+     "+1 555 0111",
+     "Not available"
+    ],
+    [
+     "2",
+     "Jordan Samename",
+     "CRA-TEST Smith | Jones & Co <b>LLC</b>",
+     "Synthetic Partner",
+     "jordan.samename.b@synthetic.example",
+     "+1 555 0112",
+     "Not available"
+    ],
+    [
+     "3",
+     "Jordan Samename",
+     "Not available",
+     "Synthetic Partner",
+     "jordan.samename.c@synthetic.example",
+     "+1 555 0113",
+     "Not available"
+    ]
+   ],
+   "utterance": "Find Jordan Samename"
+  },
+  {
+   "n": 5,
+   "text": "Here is the phone for this Contact.\n\nName: Jordan Samename\nPhone: +1 555 0111\nMobile: Not available",
+   "links": [
+    {
+     "t": "Jordan Samename",
+     "h": "/lightning/r/Contact/003jV00000Grnt4QAB/view",
+     "target": null,
+     "ctx": "Name: Jordan Samename\nPhone: +1 555 0111\nMobile: Not available"
+    }
+   ],
+   "imgs": [],
+   "fmt": [
+    "STRONG:Name:",
+    "STRONG:Phone:",
+    "STRONG:Mobile:",
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "The first one. What is their phone number?"
+  }
+ ],
+ "agent_selected": "Contact Read Agent",
+ "dialogs": [],
+ "external_requests": [
+  "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+ ]
+}
