@@ -48,3 +48,16 @@ K1–K3 complete and verified in the org. K4 rule set proven through the templat
 
 ### Review
 Gate failed on template v5 answer quality (ambiguity, citation links). Retrieval and Contact regression are fine. Next: template v6 (model GPT-4o, restore heading, clean characters), then rerun.
+
+## Session 13 (2026-11-25): template v6 fix
+- [x] Model entitlement check (29 active templates on DefaultGPT4Omni; no external models)
+- [x] v6 content: restored rules, PASSAGES heading, 0 hidden characters, retriever binding kept, Jinja passages with verified links, Rule 3 examples, Rule 2 extension case
+- [x] Test-only candidate template; strict scorer; 162/162 over 3 rounds
+- [x] Validate 0AfjV000006mcabSAA, deploy 0AfjV000006mcp7SAA; v6 Active; retrieve matches
+- [x] Live v6 suite 102/102
+- [x] Agent v4 preview (local): Knowledge cases pass; KT-19 fails; preview strips links (same as v3 Contact)
+- [x] Contact regression: Apex 102/102, agent suite 23/27 (same 4), permission sets unchanged, v3 Active
+- [ ] Deploy + publish v4 (no activation): awaiting decision on KT-19
+- [ ] Remove test-only CRA_Knowledge_Answer_v6_Candidate (destructive deploy, needs confirmation)
+### Review
+Template gate met; v6 Active. v4 held on KT-19. L-1 and SV-1/3/4 open.
