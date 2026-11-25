@@ -157,7 +157,7 @@ Template rules (meet K-R4 to K-R6):
 
 | Topic | Design |
 |---|---|
-| Run-as | Employee agent runs as the chatting user (verified for Contact search in Sessions 5–6; to be re-verified for template grounding, SV-5) |
+| Run-as | Employee agent runs as the chatting user (verified for Contact search in Sessions 5–6; to be re-verified for template grounding, SV-4) |
 | Article read access | New `DATA_Knowledge_Read_Only`: Read on `Knowledge__kav`; FLS Read on Title, Summary, ArticleNumber, UrlName. No create, edit, delete, publish, View All, Modify All. Not auto-assigned |
 | Agent and template access | Unchanged: `APP_Contact_Read_Agent` and `APP_Contact_Read_Agent_Panel_Access` |
 | Retrieval scope | Published (Online) articles only; `--restrict-to-public-articles` decided in K3 |
