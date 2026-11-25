@@ -1,6 +1,6 @@
 # ADR-K1 — Enable Salesforce Knowledge and Lightning Knowledge in MAX (IRREVERSIBLE)
 
-- **Status:** **Proposed — awaiting explicit approval. Not carried out.**
+- **Status:** **Accepted and carried out 2026-11-25** (Nagaruri Johnson). Lal's approval line: **not recorded in this build session — pending.**
 - **Date:** 2026-11-25
 - **Deciders (required):** Lal (requirement owner) and Nagaruri Johnson (org owner). Design by Revecast Orchestrate.
 
@@ -45,3 +45,11 @@ A sandbox or separate org becomes the preferred place for Knowledge before K1 ru
 |---|---|---|
 | Lal | _pending_ | |
 | Nagaruri Johnson | _pending_ | |
+
+## Outcome (2026-11-25, build session)
+
+- Nagaruri Johnson confirmed the IRREVERSIBLE confirmation naming MAX in the build session ("Confirm. I acknowledge this action is irreversible — proceed.").
+- Pre-check: `enableKnowledge=false`; Contact_Read_Agent v3 Active; Contact Apex 98/98 on the last run before enablement.
+- Deployed `KnowledgeSettings` (enableKnowledge, enableLightningKnowledge = true): Succeeded, 1 component. Read back: both true. `Knowledge__kav` describe succeeds (42 fields, record type Master only).
+- After: Contact Apex **102/102** (run 707jV00000CWqIA); v3 still Active.
+- Lal's approval is still to be recorded here; it was not used as authorization.

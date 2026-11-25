@@ -24,3 +24,16 @@
 - [x] Check-only RunLocalTests 0AfjV000006mGv4SAE 98/98
 - [x] Template suite 104/108; baseline case 27 7/10; panel injection of 16 real replies
 - [ ] Deploy (awaiting approval), post-deploy panel test, L-1 recheck
+
+## Knowledge Article Search build K1–K5 (2026-11-25)
+- [x] K1 enable Knowledge + Lightning Knowledge (IRREVERSIBLE confirmed), describe, reader access, DATA_Knowledge_Read_Only, Scholarship_Programs
+- [x] K2 14 synthetic articles, 13 published via publishKnowledgeArticles, A14 Draft
+- [x] K3 Data Library CRA_Scholarship_Knowledge READY; retriever KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61
+- [x] K4 CRA_Knowledge_Answer v2 96/96; v3 question-only deployed
+- [ ] K4 retriever binding in Prompt Builder (manual, M-1) then retrieve
+- [x] K5 v4 script edited and validated (contact_search unchanged)
+- [ ] K5 preview end to end, Contact regression suite, deploy bundle, publish v4 (no activation)
+- [ ] K6 UAT, SV-1/SV-4 (blocked by B-1), approvals A5/A6
+
+## Review (2026-11-25)
+K1–K3 complete and verified in the org. K4 rule set proven through the template API; retriever-in-template binding could not be created through metadata (ADR-K6), so one admin step remains. v4 not deployed or published. L-1 open High.

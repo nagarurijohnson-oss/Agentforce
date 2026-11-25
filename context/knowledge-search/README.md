@@ -1,6 +1,6 @@
 # Knowledge Article Search (Contact_Read_Agent extension)
 
-**Status 2026-11-25: design for review (phase K0). Nothing built.** Requirement owner: Lal. Approach: Salesforce Knowledge → Agentforce Data Library → retriever → Prompt Template `CRA_Knowledge_Answer` → existing `Contact_Read_Agent` (new v4). No Apex, custom Flow or LWC.
+**Status 2026-11-25 (build session): K1–K3 done, K4 rules done (retriever binding is one manual Prompt Builder step), K5 script validated, not deployed. v3 Active. L-1 open (High).** See [../session-kb-build-k1-k5.md](../session-kb-build-k1-k5.md). Requirement owner: Lal. Approach: Salesforce Knowledge → Agentforce Data Library → retriever → Prompt Template `CRA_Knowledge_Answer` → existing `Contact_Read_Agent` (new v4). No Apex, custom Flow or LWC.
 
 | File | Contents |
 |---|---|
