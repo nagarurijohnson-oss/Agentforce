@@ -1,0 +1,3 @@
+r10_hostile 0 sep sent=[{'email': 'zed.obrien@synthetic.example'}] out=[('SINGLE_MATCH', '1')]
+r10_hostile 1 sep sent=[{'email': 'zed.obrien@synthetic.example'}] out=[('SINGLE_MATCH', '1')]
+r10_hostile 2 sep sent=[{'email': 'zed.obrien@synthetic.example'}] out=[('SINGLE_MATCH', '1')]

@@ -176,3 +176,10 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - **D-3 (new, High):** narrowing turn skipped the search in 6 of 12 runs and answered from history (no links, no true count).
 - **Proposed fix (agent script only):** `set_criteria` sets `search_pending`; the search runs deterministically in the instructions; `run_search` removed from planner tools. Scratch compile check passed. Needs publish of v3 to prove (R1–R13).
 - **L-1: open, High, release blocker.** Nothing changed, deployed or published. Report: [session-9-d2-diagnosis.md](session-9-d2-diagnosis.md).
+
+## Session 10: D-2/D-3 fix live, v3 active (2026-11-25)
+
+- Agent script only: `set_criteria` marks a search pending; the search runs deterministically with the stored criteria; `run_search` removed from the planner's tools; one instruction line forbids replying from earlier tables.
+- Check-only `0AfjV000006mEObSAM` (95/95); quick deploy `0AfjV000006mERpSAM`; published and activated **v3** (`0X9jV000001Dh1lSAC`); v2 inactive for rollback.
+- D-2: email search 30/30 on v3 (was 10/30 empty). D-3: narrowing 12/12 (was 6/12 skipped). Pagination, selection, switching, duplicates, field question, guard all pass; agent suite 23/27 (same as v2); Apex 99/99 (`707jV00000CW8dH`); 249/249 links correct; 0 records changed.
+- **L-1: open, High, release blocker.** Reproduced 3 of 3 on v3. Report: [session-10-v3-d2-d3-fix.md](session-10-v3-d2-d3-fix.md).

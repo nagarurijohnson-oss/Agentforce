@@ -1,0 +1,114 @@
+{
+ "label": "r8_field",
+ "mode": "published",
+ "turns": [
+  "What is Marco Blankfield's email?"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a2128e-6058-73e2-831e-e3f0eb2a823d",
+   "turns": [
+    {
+     "user": "What is Marco Blankfield's email?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Marco Blankfield\",\"criteria_requested_field\":\"email\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Marco Blankfield"
+      }
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a2128e-6221-7adc-a2d8-41b37106b47e",
+   "turns": [
+    {
+     "user": "What is Marco Blankfield's email?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Marco Blankfield\",\"criteria_requested_field\":\"email\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Marco Blankfield"
+      }
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a2128e-62ee-76db-90fb-578312e5fd1f",
+   "turns": [
+    {
+     "user": "What is Marco Blankfield's email?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Marco Blankfield\",\"criteria_requested_field\":\"email\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Marco Blankfield"
+      }
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "label": "r2_narrow",
+ "mode": "bundle-live",
+ "turns": [
+  "Find contacts with job title Synthetic Coordinator",
+  "Only the ones at CRA-TEST Northwind Synthetic"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a21282-1f39-7be7-94f4-7ddf8633f3ed",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Coordinator",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Coordinator\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Coordinator"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "11"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ]
+     ],
+     "search_inputs": [],
+     "outcomes": [],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a21282-1c38-7f74-8fbf-74da8ed780de",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Coordinator",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Coordinator\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Coordinator"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "11"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Coordinator\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Coordinator"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}
