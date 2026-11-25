@@ -37,3 +37,14 @@
 
 ## Review (2026-11-25)
 K1–K3 complete and verified in the org. K4 rule set proven through the template API; retriever-in-template binding could not be created through metadata (ADR-K6), so one admin step remains. v4 not deployed or published. L-1 open High.
+
+## Session 12 (2026-11-25): template v5 binding verified, v4 deploy + publish (no activation)
+- [x] Verify CRA_Knowledge_Answer active version (v5) and retrieve into repo
+- [x] Knowledge template suite against v5 (KT-01..KT-15; KT-16 not runnable) — FAIL ambiguity 0/9, links 1/27
+- [x] Agent v4 integration preview — routing 21/21; Knowledge replies inherit failures; KT-19 fail
+- [x] Contact regression: Apex 102/102, contact_search/read_only_guard identical to v3
+- [ ] Deploy bundle, publish v4 — NOT DONE, gate failed; v3 Active verified
+- [x] Commit + push; L-1 and SV-1/3/4 stay open
+
+### Review
+Gate failed on template v5 answer quality (ambiguity, citation links). Retrieval and Contact regression are fine. Next: template v6 (model GPT-4o, restore heading, clean characters), then rerun.

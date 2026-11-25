@@ -4,3 +4,4 @@
 - Knowledge__kav standard fields are not FLS-controlled; required ones (Title, UrlName) reject fieldPermissions.
 - publishKnowledgeArticles needs articleVersionIdList as a JSON array.
 - Agent Script retriever:// outputs are objects; they do not reach a String template input as text. Ground the template on the retriever instead.
+- 2026-11-25: Saving a prompt template version in Prompt Builder can silently change the model and inject zero-width characters. Always retrieve and diff the new version (model, content) before reusing earlier test results.

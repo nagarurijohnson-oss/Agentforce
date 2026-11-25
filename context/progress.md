@@ -199,3 +199,9 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Hostile names via the deployed template in the panel renderer: escaped path clean; under L-1 stripping identical to Session 11 and the old format.
 - Apex 102/102 (`707jV00000CWnd1`), agent suite 23/27 (same 4), template suite 102/108 (explained), 0 records changed.
 - **L-1: open, High, release blocker** (6 of 6 hostile turns in the panel). Report: [session-12-name-link-live.md](session-12-name-link-live.md).
+
+## Knowledge Search: template v5 + v4 gate (2026-11-25)
+- `CRA_Knowledge_Answer` v5 active with retriever bound; retrieved to repo. Editor also switched model to GPT-4o mini and altered heading/hidden characters.
+- Template v5: facts 27/27, no-match 9/9, **ambiguity 0/9, citation links 1/27**. Agent v4 preview: routing 21/21, Knowledge replies inherit the failures, KT-19 fail.
+- Contact regression: Apex 102/102 (`707jV00000CXe9U`), contact_search + read_only_guard byte-identical to v3, v3 Active.
+- **v4 NOT deployed or published (gate failed).** L-1 open High; SV-1/3/4 blocked by B-1. Report: [session-kb-v5-validation.md](session-kb-v5-validation.md).
