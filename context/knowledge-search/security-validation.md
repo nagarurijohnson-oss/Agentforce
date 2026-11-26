@@ -25,3 +25,10 @@ Retrieval would return article content to users who cannot read the article. Opt
 3. Do not activate v4.
 
 The Contact search path is not affected in any of these cases.
+
+## Status 2026-11-26 (S15–S17)
+- SV-1, SV-3, SV-4: pass as CRA UAT Restricted (S14/S15). Release sets match the tested configuration (S17).
+- SV-2: pass on A08 (S16).
+- SV-6 / SV-8: read-only guard and Contact regression pass in S17 (v4 suite 46/46, Apex 102/102, v3 suite 22/27 with test-only D-4).
+- SV-7: recorded; L-1 still open (High).
+- Minimum permissions: `context/knowledge-search/minimum-permissions.md`. Still open: A5 acceptance, and prompt template execution permission through the agent before v4 activation.

@@ -220,3 +220,10 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 SV-2 pass on synthetic A08 only: archived → 0/6 retrieval (immediately, before and after index sync);
 restored and republished as v2 (`ka0jV000000nIqDQAU`) → 6/6 after ~24 min sync. Control KT-05 3/3 throughout.
 Only A08 changed. v3 Active / v4 Inactive. L-1 open. Report: `context/session-kb-s16-sv2-archive.md`.
+
+## S17 — release permission sets + regression (2026-11-26)
+F-2 fixed: `DATA_Knowledge_Read_Only` Custom visibility, 8 scholarship categories (no Campus_Services). New
+`SYS_Knowledge_Default_DataSpace` (default data space only, no permissions), unassigned. Both match the S15 sets that passed.
+Template 51/51 (A08 cited as `ka0jV000000nIqDQAU`), v4 suite 46/46, links 13/13, Apex 102/102, v3 suite 22/27 (new
+test-only D-4, case 8; real pagination 3/3). v3 Active / v4 Inactive; records unchanged. L-1 open.
+Report: `context/session-kb-s17-release-permissions.md`.
