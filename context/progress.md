@@ -227,3 +227,11 @@ F-2 fixed: `DATA_Knowledge_Read_Only` Custom visibility, 8 scholarship categorie
 Template 51/51 (A08 cited as `ka0jV000000nIqDQAU`), v4 suite 46/46, links 13/13, Apex 102/102, v3 suite 22/27 (new
 test-only D-4, case 8; real pagination 3/3). v3 Active / v4 Inactive; records unchanged. L-1 open.
 Report: `context/session-kb-s17-release-permissions.md`.
+
+## S18 — final validation (2026-11-26)
+- D-4 fixed: multi-turn cases 8/15/16 run as real Agent API sessions (evaluation API, version pinned); expectations 17/21/22/23 corrected. Testing Center `CRA_S6_Agent_Tests` = 24 single-turn cases, pinned to v3.
+- New D-5 (High): v3 invented the next page in 7/27 two-turn runs; 0/50 on v4. New D-6 (Medium): v4 replied without any action once.
+- L-1 investigated: no plain-text panel setting; supported alternatives are "Show in conversation" (no clickable links) or Lightning types (custom LWC, ADR-003). Open.
+- Execute Prompt Templates / PSL not needed for agent-run templates (Contact template shown as the restricted user); Knowledge to confirm in plan V-3.
+- Regression: v4 27/27, v3 27/27, published v4 Knowledge/mixed/guards 23/23, template 51/51, Apex 102/102, 9/9 links. Snapshot identical to S17.
+- Plan: `context/knowledge-search/v4-restricted-user-validation-plan.md`. Report: `context/session-kb-s18-final-validation.md`.

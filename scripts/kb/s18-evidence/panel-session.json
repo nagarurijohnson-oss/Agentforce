@@ -1,0 +1,22 @@
+[
+ {
+  "method": "GET",
+  "url": "https://login.salesforce.com/login/sessionserver212.html",
+  "body": null
+ },
+ {
+  "method": "GET",
+  "url": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/img/acc/einstein-legal-image.png",
+  "body": null
+ },
+ {
+  "method": "GET",
+  "url": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/img/acc/agentforce-welcome-image.png",
+  "body": null
+ },
+ {
+  "method": "POST",
+  "url": "https://api.salesforce.com/einstein/ai-agent/v1/agents/0XxjV000000oszhSAA/sessions",
+  "body": "{\"externalSessionKey\":\"69f7acae-410f-447a-921f-8231f7034c89\",\"featureSupport\":\"Streaming\",\"streamingCapabilities\":{\"chunkTypes\":[\"Text\",\"LightningChunk\",\"ThoughtText\"]},\"variables\":[{\"name\":\"$Context.EndUserLanguage\",\"type\":\"Text\",\"value\":\"en_US\"},{\"name\":\"$Context.timezone\",\"type\":\"Text\",\"value\":\"America/Los_Angeles\"},{\"name\":\"$Context.ChannelType\",\"type\":\"Text\",\"value\":\"LightningExperienceDesktop\"}],\"instanceConfig\":{\"endpoint\":\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com\"}}"
+ }
+]

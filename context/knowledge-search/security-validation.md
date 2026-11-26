@@ -32,3 +32,8 @@ The Contact search path is not affected in any of these cases.
 - SV-6 / SV-8: read-only guard and Contact regression pass in S17 (v4 suite 46/46, Apex 102/102, v3 suite 22/27 with test-only D-4).
 - SV-7: recorded; L-1 still open (High).
 - Minimum permissions: `context/knowledge-search/minimum-permissions.md`. Still open: A5 acceptance, and prompt template execution permission through the agent before v4 activation.
+
+## Status 2026-11-26 (S18)
+- SV-6 / SV-8: CRA_S18 suite 27/27 on v4 and v3 (real multi-turn); published v4 Knowledge/mixed/guards 23/23 through the Agent API (admin).
+- SV-1 / SV-3 / SV-4 through the **agent** as the restricted user: not yet run; Phase A of `v4-restricted-user-validation-plan.md`.
+- New: D-5 (v3 invented paging rows, High), D-6 (v4 reply without action, Medium). L-1 open.
