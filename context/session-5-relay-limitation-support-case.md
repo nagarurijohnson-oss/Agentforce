@@ -4,6 +4,7 @@
 - **Decision (Nagaruri Johnson, 2026-11-20):** raise it with Salesforce. No further escaping changes until Salesforce answers. Session 5 stays open; Session 6 is on hold.
 - **2026-11-20:** also reproduced in the Lightning Experience Agentforce panel with the published, active agent (5 of 5 turns). See `session-6-activation-and-lightning-panel.md`.
 - **Case:** not yet filed. The draft below is ready to paste into Salesforce Help. Filing needs a person with a Salesforce Help login for this org.
+- **2026-11-26 (S19):** Nagaruri Johnson chose to file this case before changing the L-1 design. The draft now includes the S18 panel findings (see "2026-11-26 update" at the end). Still to be filed by a person with a Salesforce Help login; Orchestrate has no access to Salesforce Help.
 - Apex (`CRA_ContactSearchAction`, payload v3), the search service and the agent draft are unchanged by this work. The template's field-answer rule fix was deployed separately (see `progress.md`); it does not affect this limitation.
 
 ## Environment
@@ -123,3 +124,19 @@ Check before sending: the attachments contain synthetic data only (`CRA-TEST` re
 - HTML in a Contact value can be applied in the chat (seen: bold text). No script ran and no outside image loaded in any test.
 - A value containing a Markdown link could become a clickable link with misleading text if its escapes are dropped. Not seen in a real conversation; shown possible in the earlier rendering checks.
 - Real Contacts with markup in their fields are the exposure. All tests used synthetic data and an admin user in the Builder preview; the Lightning Experience panel hasn't been tested (it needs publishing and activation).
+
+
+## 2026-11-26 update (add to the case when filing)
+
+**Versions now in the org:** `Contact_Read_Agent` v3 Active (`0X9jV000001Dh1lSAC`), v4 Inactive (`0X9jV000001DhubSAC`, adds Knowledge answers), v5 Inactive (`0X9jV000001DjRlSAK`, deterministic paging). All three relay the template reply through the final reasoning step the same way, so L-1 applies to each.
+
+**What the Lightning Experience panel declares** (captured read-only from the panel's own session request, `scripts/scgoe-95/s18-agent-tests/` and `s18-evidence/panel-session.json`): `chunkTypes: ["Text","LightningChunk","ThoughtText"]` and `$Context.ChannelType = LightningExperienceDesktop`. The CLI preview, Builder preview and Agent API sessions report `__supports_result_display__: false`.
+
+**Add these questions to the case:**
+
+6. In the Lightning Experience panel (`LightningExperienceDesktop`, `LightningChunk` supported), does an Employee agent action output with `is_displayable: True` ("Show in conversation") reach the user verbatim, without the final reasoning step rewriting it? Help article 005232619 says such output is shown in a code-style box that prevents HTML or rich text rendering. Is there a supported way to keep Markdown links clickable while showing other text literally?
+7. For Lightning types (`complex_data_type_name` with `is_displayable: True` and `filter_from_agent: False`): is the display decided by the model (`__show_tool_results__`), or can the agent script force it? If the model can skip it, the text reply still needs to be safe, so this alone doesn't close the issue.
+8. Is there a panel or org setting that renders an agent's text replies as plain text, or that turns off HTML rendering while keeping Markdown links?
+9. Can a deterministic relay step (Agent Script) emit text to the user without a model rewriting it, for example a supported `say`/`render` statement for Employee agents?
+
+**Current impact:** one synthetic Contact with markup in its Account name shows "LLC" in bold in the panel (6 of 6 turns on v3). Record links stay correct because Apex builds them; names that can't be links are shown as text with a separate "Open record" link. No script ran and no outside request was seen in any test.

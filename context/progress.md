@@ -235,3 +235,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Execute Prompt Templates / PSL not needed for agent-run templates (Contact template shown as the restricted user); Knowledge to confirm in plan V-3.
 - Regression: v4 27/27, v3 27/27, published v4 Knowledge/mixed/guards 23/23, template 51/51, Apex 102/102, 9/9 links. Snapshot identical to S17.
 - Plan: `context/knowledge-search/v4-restricted-user-validation-plan.md`. Report: `context/session-kb-s18-final-validation.md`.
+
+## S19 — v6 paging fix (2026-11-26)
+- Decisions: build the D-5 fix first, test inactive, no activation; L-1: file the Salesforce support case first.
+- v6 published Inactive (`0X9jV000001DjefSAC`): router `go_show_remaining` → deterministic `contact_page` (D-5); router stores new/narrowed searches (D-6); per-message criteria merged by the script (new D-7, stale criteria, also in v4's mixed request). v5 (`0X9jV000001DjRlSAK`) superseded, Inactive.
+- v6: paging 60/60 with 0 invented, edge cases 12/12, stale criteria 9/9, suite 27/27, Knowledge/mixed/guards 23/23, Apex 102/102. v3 Active; records unchanged. No Apex/template/permission change.
+- L-1 open (High): support case draft updated, to be filed by a person with a Salesforce Help login.
+- Report: `context/session-kb-s19-v6-paging-fix.md`; ADR-K9.

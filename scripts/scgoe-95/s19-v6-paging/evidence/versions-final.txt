@@ -1,0 +1,7 @@
+Contact_Read_Agent 1 Inactive
+Contact_Read_Agent 2 Inactive
+Contact_Read_Agent 3 Active
+Contact_Read_Agent 4 Inactive
+Contact_Read_Agent 5 Inactive
+Contact_Read_Agent 6 Inactive
+Employee_Leave_Assistant 1 Active
