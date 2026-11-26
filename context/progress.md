@@ -256,3 +256,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - D-8 as CRA UAT Restricted: Config 1 (no Prompt Template User) 18/18 turns show only the fixed messages, nothing invented. Config 2 (Prompt Template User, no Knowledge sets): Contact correct; Knowledge shows the platform's generic error, not the fixed message (new D-8b, Medium, nothing invented). New D-9 (Low): "show the other 3" after a failed display says "no other Contacts".
 - Restored and read back (identical to before): Log in as off, set and licence removed, saved sign-in deleted, v3 Active / v7 Inactive, 157 Contacts. L-1 open (High).
 - Plan: `context/knowledge-search/v7-restricted-user-phaseA-plan.md`. Report: `context/session-kb-s22-v7-regression-d8.md`.
+
+## S23 — Phase A on v7 as CRA UAT Restricted, all five grants (2026-11-26)
+- Passed: 89 sessions / 135 turns (A-1 25/25, A-2 31/31, A-3 71/71, A-4 8/8), A-5 refused, A-6 37/37.
+- D-8b not reproduced with all grants (33/33 Knowledge turns returned output); stays Medium for misconfigured users.
+- Restored immediately after testing; after-snapshot identical to the baseline. v3 Active, v7 Inactive.
+- Open: L-1 (High), permission sign-off (Lal), Phase B panel window, D-8b and D-9 decisions, PR review, release approval.
+- Report: `session-kb-s23-v7-phaseA.md`.

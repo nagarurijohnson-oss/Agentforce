@@ -33,7 +33,8 @@ all five grants (plan `v7-restricted-user-phaseA-plan.md`, step A-1).
   activating v4 offers the Knowledge route to every holder. Without the two Knowledge sets they get "No published Knowledge article
   covers that" (S15 D0): the design fails closed.
 - Category visibility is a fixed list of 8. A new Scholarship_Programs category stays hidden until added to `DATA_Knowledge_Read_Only`.
-- The data space set has no Data Cloud permissions; that it gives no direct Data Cloud query access is to be shown in plan step V-6.
+- The data space permission set has no Data Cloud permissions. S23 A-5: as CRA UAT Restricted with all five grants, direct `/ssot/query-sql` was refused (403); the user also has no API Enabled, so the refusal is at the API-access layer. Agent users do not need API Enabled.
+- S23 Phase A: with grants #1–#5 the restricted user passed 135/135 turns on v7 (Knowledge cited, Contact within sharing and FLS, no D-8b).
 
 **Manual steps per org:** category visibility and the data space scope are set in Setup (see
 `context/session-kb-s17-release-permissions.md`); neither can be deployed as metadata.

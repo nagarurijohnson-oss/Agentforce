@@ -1,6 +1,6 @@
 # Controlled plan: Phase A on Contact_Read_Agent v7 as a real restricted user (prepared S22, 2026-11-26)
 
-Status: **plan only — nothing in this plan has run.** It replaces the V-1 to V-8 steps of
+Status: **Phase A run and passed on 2026-11-26 (S23)** — see `../session-kb-s23-v7-phaseA.md`. Phase B has not run. It replaces the V-1 to V-8 steps of
 `v4-restricted-user-validation-plan.md` (S18) for the release candidate v7 (`0X9jV000001DkAvSAK`, Inactive).
 Each approval below is requested separately; none is implied by this document.
 
