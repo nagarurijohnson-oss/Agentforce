@@ -15,11 +15,17 @@ assigned automatically; assigning them to business users needs approval A5.
 - The Knowledge User feature licence (`UserPermissionsKnowledgeUser` is false for the UAT user).
 - View All, Modify All, and any edit or publish permission.
 
-**Execute Prompt Templates / Einstein Prompt Templates PSL — not needed for the agent (S18).** CRA UAT Restricted has neither,
-yet in the Lightning panel (S14 P0) v3 returned field values that reach the reply only through the `CRA_Contact_Result_Presentation`
-template (the planner sees only codes and Ids). A prompt template run by the agent therefore needs no prompt template permission for
-the chatting user. The S15 flow harness needed both because a Flow's prompt template action checks them. `CRA_Knowledge_Answer` uses
-the same action type; confirming it as the restricted user is step V-3 of `v4-restricted-user-validation-plan.md`.
+**Execute Prompt Templates + Einstein Prompt Templates PSL — REQUIRED for agent users (S20, corrects S18).**
+Add both to the agent user list:
+
+| Permission | Why | Evidence |
+|---|---|---|
+| `EinsteinGPTPromptTemplatesPsl` (Einstein Prompt Templates licence) | Needed to hold the set below | S20 |
+| `EinsteinGPTPromptTemplateUser` (standard Prompt Template User set: Execute Prompt Templates, Read on prompt template definitions) | Without it the agent's `present_results` and `answer_from_knowledge` steps are silently dropped: 0/27 vs 23/27 sessions ran `present_results` (no other change) | S20 |
+
+S18 concluded the opposite from S14 P0 panel replies, but those were captured while the S14 test set granted the
+permission. Details: `../session-kb-s20-phaseA-permission-compare.md`. Still to confirm as the restricted user: the
+Knowledge answer with both Knowledge sets **and** this set (plan V-3).
 
 **Review notes (S18):**
 - Agent access is agent-wide: `APP_Contact_Read_Agent_Panel_Access` grants the agent (`BotDefinition 0XxjV000000oszhSAA`), so

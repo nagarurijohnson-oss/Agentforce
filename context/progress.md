@@ -242,3 +242,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - v6: paging 60/60 with 0 invented, edge cases 12/12, stale criteria 9/9, suite 27/27, Knowledge/mixed/guards 23/23, Apex 102/102. v3 Active; records unchanged. No Apex/template/permission change.
 - L-1 open (High): support case draft updated, to be filed by a person with a Salesforce Help login.
 - Report: `context/session-kb-s19-v6-paging-fix.md`; ADR-K9.
+
+## S20 — Phase A permission comparison on v6 (2026-11-26)
+- V-0 pass (evaluation API runs v6 as CRA UAT Restricted). V-1: template steps absent for that user. V-5 debug-log step declined; none created.
+- Controlled comparison, identical 33 sessions: without Prompt Template User, `present_results` ran 0/27 and `answer_from_knowledge` was absent 5/5; with the licence + set only, `present_results` 23/23 applicable, 48 links all readable by the user, values match FLS, hidden Contacts never shown, paging and narrowing correct. Knowledge step ran but returned null (no Knowledge sets yet) → generic error.
+- Root cause: missing Execute Prompt Templates, not Agent Script. S18 conclusion corrected; minimum-permissions.md updated. New D-8 (High): no fail-closed message when a template step returns nothing.
+- Restored and read back: set and licence removed, Log in as off, saved sign-in deleted, 27 assignments, v3 Active / v6 Inactive, 157 Contacts. L-1 open (High).
+- Report: `context/session-kb-s20-phaseA-permission-compare.md`; ADR-K10.

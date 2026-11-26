@@ -1,0 +1,36 @@
+== KT_01
+  B sid 01a217da-6a8a-74df-86b5-6a4f84aecb6d  G sid 01a217eb-2667-7076-82d9-f907319dc29d
+  t0 B acts [] links []
+     G acts ['answer_from_knowledge[NULL]'] links [] errs []
+     B reply: 'To keep the Merit Excellence Scholarship, you must meet the GPA requirements specified in the official scholarship policy. Would you like more details or inform'
+     G reply: 'I apologize, but I encountered an unexpected error.'
+== KT_06
+  B sid 01a217da-78d3-78de-834f-1e989fac5529  G sid 01a217eb-39ee-7abd-8c55-c77dce728aec
+  t0 B acts [] links []
+     G acts ['answer_from_knowledge[NULL]'] links [] errs []
+     B reply: 'To apply for an athletic scholarship, you typically need to provide several documents. These often include proof of athletic achievement (such as awards, statis'
+     G reply: 'I apologize, but I encountered an unexpected error.'
+== KT_10
+  B sid 01a217da-8903-7ab0-9829-480cd3406307  G sid 01a217eb-4d45-7f32-8508-31a2bf188b03
+  t0 B acts [] links []
+     G acts ['answer_from_knowledge[NULL]'] links [] errs []
+     B reply: 'To answer your question about renewal requirements, I will check the published scholarship Knowledge articles and provide the official information. Please hold '
+     G reply: 'I apologize, but I encountered an unexpected error.'
+== KT_13
+  B sid 01a217da-e488-768f-afc0-4936b4ab8932  G sid 01a217eb-85f3-78a3-a49d-9dcc69180175
+  t0 B acts [] links []
+     G acts ['answer_from_knowledge[NULL]'] links [] errs []
+     B reply: 'To renew your parking permit, please refer to the official scholarship Knowledge articles for the most accurate and up-to-date process. If you need more details'
+     G reply: 'I apologize, but I encountered an unexpected error.'
+== KT_15
+  B sid 01a217da-f319-7fc9-a3a0-630e2b59ceaa  G sid 01a217eb-9b46-7948-8ec3-e8f176180dc8
+  t0 B acts [] links []
+     G acts ['answer_from_knowledge[NULL]'] links [] errs []
+     B reply: 'I will check the official Knowledge articles for the policy on when scholarship funds are paid out and provide the answer here. Please wait a moment.'
+     G reply: 'I apologize, but I encountered an unexpected error.'
+== FLS_01
+  B sid 01a217db-00a5-7859-bf39-50d713dc7e5d  G sid 01a217eb-ac65-7905-a012-f107748139b6
+  t0 B acts ['search_contacts[out]', 'search_contacts[out]', 'search_contacts[out]', 'search_contacts[out]'] links []
+     G acts ['search_contacts[out]', 'present_results[out]'] links ['003jV00000GrpMXQAZ'] errs []
+     B reply: "I could not retrieve Priya Synthwell's department or birthdate. If you have more details about her, such as her Account, location, or job title, I can try to na"
+     G reply: 'I found one matching Contact.  \n**Name:** [Priya Synthwell](/lightning/r/Contact/003jV00000GrpMXQAZ/view)  \n**Account:** CRA-TEST Northwind Synthetic  \n**Title:'
