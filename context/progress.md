@@ -215,3 +215,8 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - F-1: "cannot describe data provider" = no default data-space membership. Data space association alone fixes it; Data Cloud User and Data Cloud licences not needed.
 - SV-1 pass (no access → no content; all categories → correct citations). SV-3 pass (Campus_Services hidden → Library Fine article 000001007 never returned).
 - All temp components deleted, UAT user restored, Login As false (read back). v3 Active, v4 Inactive. L-1 open High. Report: [session-kb-s15-f1-sv1-sv3.md](session-kb-s15-f1-sv1-sv3.md).
+
+## S16 — SV-2 archive test (2026-11-26)
+SV-2 pass on synthetic A08 only: archived → 0/6 retrieval (immediately, before and after index sync);
+restored and republished as v2 (`ka0jV000000nIqDQAU`) → 6/6 after ~24 min sync. Control KT-05 3/3 throughout.
+Only A08 changed. v3 Active / v4 Inactive. L-1 open. Report: `context/session-kb-s16-sv2-archive.md`.

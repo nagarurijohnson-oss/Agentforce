@@ -1,0 +1,146 @@
+{
+ "dmo": [
+  {
+   "ssot__Id__c": "ka0jV000000nIDWQA2",
+   "ssot__ArticleNumber__c": "000001000",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Need-Based Opportunity Grant \u2013 Eligibility",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIDbQAM",
+   "ssot__ArticleNumber__c": "000001001",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "International Student Scholarship \u2013 Required Documents",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIDaQAM",
+   "ssot__ArticleNumber__c": "000001002",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Arts & Humanities Scholarship \u2013 Application Deadline",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIDVQA2",
+   "ssot__ArticleNumber__c": "000001003",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Merit Excellence Scholarship \u2013 Eligibility",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:18+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIDXQA2",
+   "ssot__ArticleNumber__c": "000001004",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Merit Excellence Scholarship \u2013 Renewal Requirements",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIDZQA2",
+   "ssot__ArticleNumber__c": "000001005",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "STEM Futures Scholarship \u2013 Application Deadline",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIDYQA2",
+   "ssot__ArticleNumber__c": "000001006",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Graduate Research Scholarship \u2013 Renewal Requirements",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIFCQA2",
+   "ssot__ArticleNumber__c": "000001007",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Library Fine \u2013 Appeal Process",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIFDQA2",
+   "ssot__ArticleNumber__c": "000001008",
+   "ssot__VersionNumber__c": 0,
+   "ssot__KnowledgePublicationStatus__c": "Draft",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "STEM Futures Scholarship \u2013 Deadline Extension",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:02+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIFAQA2",
+   "ssot__ArticleNumber__c": "000001009",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Federal Work-Study \u2013 Eligibility",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIF9QAM",
+   "ssot__ArticleNumber__c": "000001010",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Scholarship Appeal Process",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIF7QAM",
+   "ssot__ArticleNumber__c": "000001011",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Athletic Scholarship \u2013 Required Documents",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIF8QAM",
+   "ssot__ArticleNumber__c": "000001012",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Scholarship Disbursement and Refund Timing",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  },
+  {
+   "ssot__Id__c": "ka0jV000000nIFBQA2",
+   "ssot__ArticleNumber__c": "000001013",
+   "ssot__VersionNumber__c": 1,
+   "ssot__KnowledgePublicationStatus__c": "Online",
+   "ssot__IsLatestVersion__c": "true",
+   "ssot__Name__c": "Campus Parking Permit \u2013 Renewal",
+   "ssot__LastModifiedDate__c": "2026-11-25T15:15:35+00:00"
+  }
+ ],
+ "chunks": {
+  "ka0jV000000nIFCQA2": 2,
+  "ka0jV000000nIFDQA2": 2,
+  "ka0jV000000nIF8QAM": 2,
+  "ka0jV000000nIF7QAM": 2,
+  "ka0jV000000nIDYQA2": 2,
+  "ka0jV000000nIFBQA2": 2,
+  "ka0jV000000nIDZQA2": 2,
+  "ka0jV000000nIDVQA2": 2,
+  "ka0jV000000nIDbQAM": 2,
+  "ka0jV000000nIFAQA2": 2,
+  "ka0jV000000nIDaQAM": 2,
+  "ka0jV000000nIF9QAM": 2,
+  "ka0jV000000nIDXQA2": 2,
+  "ka0jV000000nIDWQA2": 2
+ }
+}

@@ -1,0 +1,178 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDWQA2"
+        },
+        "Id": "ka0jV000000nIDWQA2",
+        "KnowledgeArticleId": "kA0jV000000WBunSAG",
+        "ArticleNumber": "000001000",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDbQAM"
+        },
+        "Id": "ka0jV000000nIDbQAM",
+        "KnowledgeArticleId": "kA0jV000000WBuoSAG",
+        "ArticleNumber": "000001001",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDaQAM"
+        },
+        "Id": "ka0jV000000nIDaQAM",
+        "KnowledgeArticleId": "kA0jV000000WBupSAG",
+        "ArticleNumber": "000001002",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDVQA2"
+        },
+        "Id": "ka0jV000000nIDVQA2",
+        "KnowledgeArticleId": "kA0jV000000WBuqSAG",
+        "ArticleNumber": "000001003",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:18.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDXQA2"
+        },
+        "Id": "ka0jV000000nIDXQA2",
+        "KnowledgeArticleId": "kA0jV000000WBurSAG",
+        "ArticleNumber": "000001004",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDZQA2"
+        },
+        "Id": "ka0jV000000nIDZQA2",
+        "KnowledgeArticleId": "kA0jV000000WBusSAG",
+        "ArticleNumber": "000001005",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDYQA2"
+        },
+        "Id": "ka0jV000000nIDYQA2",
+        "KnowledgeArticleId": "kA0jV000000WButSAG",
+        "ArticleNumber": "000001006",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFCQA2"
+        },
+        "Id": "ka0jV000000nIFCQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwPSAW",
+        "ArticleNumber": "000001007",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFDQA2"
+        },
+        "Id": "ka0jV000000nIFDQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwQSAW",
+        "ArticleNumber": "000001008",
+        "PublishStatus": "Draft",
+        "VersionNumber": 0,
+        "LastModifiedDate": "2026-11-25T15:15:02.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFAQA2"
+        },
+        "Id": "ka0jV000000nIFAQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwRSAW",
+        "ArticleNumber": "000001009",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIF9QAM"
+        },
+        "Id": "ka0jV000000nIF9QAM",
+        "KnowledgeArticleId": "kA0jV000000WBwSSAW",
+        "ArticleNumber": "000001010",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIF7QAM"
+        },
+        "Id": "ka0jV000000nIF7QAM",
+        "KnowledgeArticleId": "kA0jV000000WBwTSAW",
+        "ArticleNumber": "000001011",
+        "PublishStatus": "Archived",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-26T06:42:36.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIF8QAM"
+        },
+        "Id": "ka0jV000000nIF8QAM",
+        "KnowledgeArticleId": "kA0jV000000WBwUSAW",
+        "ArticleNumber": "000001012",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFBQA2"
+        },
+        "Id": "ka0jV000000nIFBQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwVSAW",
+        "ArticleNumber": "000001013",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      }
+    ],
+    "totalSize": 14,
+    "done": true
+  },
+  "warnings": []
+}

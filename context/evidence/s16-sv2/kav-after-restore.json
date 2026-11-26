@@ -1,0 +1,248 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDWQA2"
+        },
+        "Id": "ka0jV000000nIDWQA2",
+        "KnowledgeArticleId": "kA0jV000000WBunSAG",
+        "ArticleNumber": "000001000",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Need-Based Opportunity Grant – Eligibility",
+        "UrlName": "KB-TEST-Need-Based-Opportunity-Eligibility",
+        "Summary": "Applies to: Need-Based Opportunity Grant, undergraduate students. The Need-Based Opportunity Grant is a grant, not a scholarship. Undergraduate students are eligible if they submit the FAFSA and their family income is up to $60,000 a year. There is no GPA threshold. The grant is reassessed each year from the new FAFSA.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDbQAM"
+        },
+        "Id": "ka0jV000000nIDbQAM",
+        "KnowledgeArticleId": "kA0jV000000WBuoSAG",
+        "ArticleNumber": "000001001",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "International Student Scholarship – Required Documents",
+        "UrlName": "KB-TEST-International-Student-Documents",
+        "Summary": "Applies to: International Student Scholarship, applicants who are not citizens or permanent residents. Required documents: a valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement showing how remaining costs will be covered.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDaQAM"
+        },
+        "Id": "ka0jV000000nIDaQAM",
+        "KnowledgeArticleId": "kA0jV000000WBupSAG",
+        "ArticleNumber": "000001002",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Arts & Humanities Scholarship – Application Deadline",
+        "UrlName": "KB-TEST-Arts-Humanities-Deadline",
+        "Summary": "Applies to: Arts & Humanities Scholarship, applicants in the arts and humanities. The application deadline for the Arts & Humanities Scholarship is 1 March. The application must include a portfolio of 10 works.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDVQA2"
+        },
+        "Id": "ka0jV000000nIDVQA2",
+        "KnowledgeArticleId": "kA0jV000000WBuqSAG",
+        "ArticleNumber": "000001003",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Merit Excellence Scholarship – Eligibility",
+        "UrlName": "KB-TEST-Merit-Excellence-Eligibility",
+        "Summary": "Applies to: Merit Excellence Scholarship, first-year undergraduate applicants. To be eligible for the Merit Excellence Scholarship you must be entering your first year of undergraduate study and have a cumulative high-school GPA of 3.5 or higher. No FAFSA or financial-need assessment is required for this scholarship; selection is on academic merit only. Applicants are considered automatically when they apply for admission.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:18.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDXQA2"
+        },
+        "Id": "ka0jV000000nIDXQA2",
+        "KnowledgeArticleId": "kA0jV000000WBurSAG",
+        "ArticleNumber": "000001004",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Merit Excellence Scholarship – Renewal Requirements",
+        "UrlName": "KB-TEST-Merit-Excellence-Renewal",
+        "Summary": "Applies to: Merit Excellence Scholarship, current recipients. To renew the Merit Excellence Scholarship each year you must keep a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June; no application is needed.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDZQA2"
+        },
+        "Id": "ka0jV000000nIDZQA2",
+        "KnowledgeArticleId": "kA0jV000000WBusSAG",
+        "ArticleNumber": "000001005",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "STEM Futures Scholarship – Application Deadline",
+        "UrlName": "KB-TEST-STEM-Futures-Deadline",
+        "Summary": "Applies to: STEM Futures Scholarship, applicants in science, technology, engineering and mathematics. The application deadline for the STEM Futures Scholarship is 15 February at 23:59 local time. The application must include a 500-word essay on a STEM problem you want to solve.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIDYQA2"
+        },
+        "Id": "ka0jV000000nIDYQA2",
+        "KnowledgeArticleId": "kA0jV000000WButSAG",
+        "ArticleNumber": "000001006",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Graduate Research Scholarship – Renewal Requirements",
+        "UrlName": "KB-TEST-Graduate-Research-Renewal",
+        "Summary": "Applies to: Graduate Research Scholarship, current graduate recipients. To renew the Graduate Research Scholarship you must submit an annual progress report signed by your research advisor. The report is due by 30 April each year. There is no GPA threshold for renewal of this scholarship.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFCQA2"
+        },
+        "Id": "ka0jV000000nIFCQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwPSAW",
+        "ArticleNumber": "000001007",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Library Fine – Appeal Process",
+        "UrlName": "KB-TEST-Library-Fine-Appeal",
+        "Summary": "Applies to: University Library, borrowers with an overdue fine. Appeal a library fine within 14 days at the circulation desk. This article is about library fines, not scholarships.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFDQA2"
+        },
+        "Id": "ka0jV000000nIFDQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwQSAW",
+        "ArticleNumber": "000001008",
+        "PublishStatus": "Draft",
+        "VersionNumber": 0,
+        "IsLatestVersion": true,
+        "Title": "STEM Futures Scholarship – Deadline Extension",
+        "UrlName": "KB-TEST-STEM-Futures-Deadline-Extension",
+        "Summary": "Applies to: STEM Futures Scholarship. DRAFT, not approved: the deadline is extended to 1 March. This draft must never be returned to users.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:02.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFAQA2"
+        },
+        "Id": "ka0jV000000nIFAQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwRSAW",
+        "ArticleNumber": "000001009",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Federal Work-Study – Eligibility",
+        "UrlName": "KB-TEST-Federal-Work-Study-Eligibility",
+        "Summary": "Applies to: Federal Work-Study, undergraduate and graduate students with financial need. Federal Work-Study is need-based part-time employment, not a scholarship. Eligibility requires the FAFSA. Students may work up to 20 hours a week during term.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIF9QAM"
+        },
+        "Id": "ka0jV000000nIF9QAM",
+        "KnowledgeArticleId": "kA0jV000000WBwSSAW",
+        "ArticleNumber": "000001010",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Scholarship Appeal Process",
+        "UrlName": "KB-TEST-Scholarship-Appeal-Process",
+        "Summary": "Applies to: all scholarship programmes, students whose scholarship was denied, reduced or not renewed. Submit an appeal within 30 days of the decision using form SA-1. The scholarship appeals committee meets monthly and replies in writing after its meeting.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIqDQAU"
+        },
+        "Id": "ka0jV000000nIqDQAU",
+        "KnowledgeArticleId": "kA0jV000000WBwTSAW",
+        "ArticleNumber": "000001011",
+        "PublishStatus": "Online",
+        "VersionNumber": 2,
+        "IsLatestVersion": true,
+        "Title": "Athletic Scholarship – Required Documents",
+        "UrlName": "KB-TEST-Athletic-Documents",
+        "Summary": "Applies to: Athletic Scholarship, recruited student athletes. Required documents: a recommendation from the team coach, an NCAA eligibility certificate, and a medical clearance form from a licensed physician.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-26T07:11:57.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIF8QAM"
+        },
+        "Id": "ka0jV000000nIF8QAM",
+        "KnowledgeArticleId": "kA0jV000000WBwUSAW",
+        "ArticleNumber": "000001012",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Scholarship Disbursement and Refund Timing",
+        "UrlName": "KB-TEST-Scholarship-Disbursement-Timing",
+        "Summary": "Applies to: all scholarship programmes, all recipients. Scholarship funds post to the student account 10 days before the term starts. Any credit balance is refunded to the student 14 days after the funds post.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "Knowledge__kav",
+          "url": "/services/data/v68.0/sobjects/Knowledge__kav/ka0jV000000nIFBQA2"
+        },
+        "Id": "ka0jV000000nIFBQA2",
+        "KnowledgeArticleId": "kA0jV000000WBwVSAW",
+        "ArticleNumber": "000001013",
+        "PublishStatus": "Online",
+        "VersionNumber": 1,
+        "IsLatestVersion": true,
+        "Title": "Campus Parking Permit – Renewal",
+        "UrlName": "KB-TEST-Campus-Parking-Permit-Renewal",
+        "Summary": "Applies to: Campus Parking, students and staff with a parking permit. Renew your campus parking permit online before 1 August. The annual permit costs $120. This article is about parking, not scholarships.",
+        "IsVisibleInApp": true,
+        "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+      }
+    ],
+    "totalSize": 14,
+    "done": true
+  },
+  "warnings": []
+}

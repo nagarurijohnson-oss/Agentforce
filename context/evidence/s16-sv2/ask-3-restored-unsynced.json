@@ -1,0 +1,24 @@
+{
+ "questions": {
+  "KT-06": "What documents do I need for an athletic scholarship?",
+  "KT-05": "What documents do international students need for their scholarship?",
+  "KT-06b": "Do athletic scholarship applicants need an NCAA eligibility certificate?"
+ },
+ "results": {
+  "KT-06": {
+   "0": "No published Knowledge article covers that.",
+   "1": "No published Knowledge article covers that.",
+   "2": "No published Knowledge article covers that."
+  },
+  "KT-05": {
+   "0": "International students applying for the International Student Scholarship must provide the following documents: a valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement showing how remaining costs will be covered.\n\nSource: [International Student Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIDbQAM/view) (Article 000001001)",
+   "1": "International students applying for the International Student Scholarship must provide a valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement showing how remaining costs will be covered.\n\nSource: [International Student Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIDbQAM/view) (Article 000001001)",
+   "2": "International students applying for the International Student Scholarship must provide a valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement demonstrating how remaining costs will be covered.\n\nSource: [International Student Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIDbQAM/view) (Article 000001001)"
+  },
+  "KT-06b": {
+   "1": "No published Knowledge article covers that.",
+   "0": "No published Knowledge article covers that.",
+   "2": "No published Knowledge article covers that."
+  }
+ }
+}
