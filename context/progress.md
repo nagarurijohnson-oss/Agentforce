@@ -249,3 +249,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Root cause: missing Execute Prompt Templates, not Agent Script. S18 conclusion corrected; minimum-permissions.md updated. New D-8 (High): no fail-closed message when a template step returns nothing.
 - Restored and read back: set and licence removed, Log in as off, saved sign-in deleted, 27 assignments, v3 Active / v6 Inactive, 157 Contacts. L-1 open (High).
 - Report: `context/session-kb-s20-phaseA-permission-compare.md`; ADR-K10.
+
+## S21–S22 — v7 D-8 fail-closed, regression and restricted-user failure path (2026-11-26)
+- v7 published Inactive (`0X9jV000001DkAvSAK`): agent script only. A search or template step that was due but produced nothing shows a fixed failure message and switches the planner's actions off for that turn. Check-only `0AfjV000006no9tSAA` 98/98; 10/10 draft probes.
+- v7 regression (admin): suite 27/27, Knowledge/mixed/guards 23/23 (citations 000001004), paging 60/60 with 0 invented, edge cases 12/12, narrowing/new search/mixed 9/9; 0 false failure messages.
+- D-8 as CRA UAT Restricted: Config 1 (no Prompt Template User) 18/18 turns show only the fixed messages, nothing invented. Config 2 (Prompt Template User, no Knowledge sets): Contact correct; Knowledge shows the platform's generic error, not the fixed message (new D-8b, Medium, nothing invented). New D-9 (Low): "show the other 3" after a failed display says "no other Contacts".
+- Restored and read back (identical to before): Log in as off, set and licence removed, saved sign-in deleted, v3 Active / v7 Inactive, 157 Contacts. L-1 open (High).
+- Plan: `context/knowledge-search/v7-restricted-user-phaseA-plan.md`. Report: `context/session-kb-s22-v7-regression-d8.md`.

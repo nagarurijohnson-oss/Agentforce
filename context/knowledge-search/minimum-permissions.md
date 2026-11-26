@@ -24,8 +24,9 @@ Add both to the agent user list:
 | `EinsteinGPTPromptTemplateUser` (standard Prompt Template User set: Execute Prompt Templates, Read on prompt template definitions) | Without it the agent's `present_results` and `answer_from_knowledge` steps are silently dropped: 0/27 vs 23/27 sessions ran `present_results` (no other change) | S20 |
 
 S18 concluded the opposite from S14 P0 panel replies, but those were captured while the S14 test set granted the
-permission. Details: `../session-kb-s20-phaseA-permission-compare.md`. Still to confirm as the restricted user: the
-Knowledge answer with both Knowledge sets **and** this set (plan V-3).
+permission. Details: `../session-kb-s20-phaseA-permission-compare.md`. S22 confirmed on v7: with this set and licence but without the Knowledge sets, Contact
+works and Knowledge fails (platform error, D-8b). Still to confirm as the restricted user: the Knowledge answer with
+all five grants (plan `v7-restricted-user-phaseA-plan.md`, step A-1).
 
 **Review notes (S18):**
 - Agent access is agent-wide: `APP_Contact_Read_Agent_Panel_Access` grants the agent (`BotDefinition 0XxjV000000oszhSAA`), so

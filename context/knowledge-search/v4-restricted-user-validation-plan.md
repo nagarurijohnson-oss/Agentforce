@@ -1,5 +1,7 @@
 # Controlled plan: validate Contact_Read_Agent v4 as a real restricted user (prepared S18, 2026-11-26)
 
+**Superseded for v7 by `v7-restricted-user-phaseA-plan.md` (S22).**
+
 Status: **plan only — nothing here has run.** Each approval below is requested separately; none is implied by this document.
 
 ## Why two phases
