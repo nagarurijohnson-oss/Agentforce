@@ -210,3 +210,8 @@ Deployment and validation (2026-11-20): **deployed, Session 5 validation not pas
 - Agent Script only: new `contact_and_knowledge` subagent, router mixed rule first, knowledge_search handoff. contact_search + read_only_guard byte-identical to v3.
 - KT-19 20/20 (+ 8/8 variants); full v4 suite 46/46; Apex 102/102 (`707jV00000CXhyy`); CRA_S6 23/27 (same 4).
 - **v4 published Inactive (`0X9jV000001DhubSAC`); v3 Active.** Template v6 unchanged, candidate kept. L-1 open High; SV-1/3/4 blocked by B-1. Report: [session-kb-v4-kt19.md](session-kb-v4-kt19.md).
+
+## Knowledge Search: F-1 root cause + SV-1/SV-3 as restricted user (2026-11-26)
+- F-1: "cannot describe data provider" = no default data-space membership. Data space association alone fixes it; Data Cloud User and Data Cloud licences not needed.
+- SV-1 pass (no access → no content; all categories → correct citations). SV-3 pass (Campus_Services hidden → Library Fine article 000001007 never returned).
+- All temp components deleted, UAT user restored, Login As false (read back). v3 Active, v4 Inactive. L-1 open High. Report: [session-kb-s15-f1-sv1-sv3.md](session-kb-s15-f1-sv1-sv3.md).

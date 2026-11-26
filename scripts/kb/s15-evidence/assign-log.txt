@@ -1,0 +1,40 @@
+2026-11-26T05:37:58Z
+F0
++PSL EinsteinGPTPromptTemplatesPsl 0 
++PS SYS_UAT_KB_Harness 0 
++PS DATA_Knowledge_UAT_All_Categories 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'DATA_Knowledge_UAT_All_Categories', 'SYS_UAT_KB_Harness', 'X00e1P000000J627QAC'] PSL=['EinsteinGPTPromptTemplatesPsl']
+
+2026-11-26T05:39:05Z
+F1
++PS SYS_UAT_DC_Default_DataSpace 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'DATA_Knowledge_UAT_All_Categories', 'SYS_UAT_DC_Default_DataSpace', 'SYS_UAT_KB_Harness', 'X00e1P000000J627QAC'] PSL=['EinsteinGPTPromptTemplatesPsl']
+
+2026-11-26T05:42:23Z
+D2
+-PS DATA_Knowledge_UAT_All_Categories 0 
++PS DATA_Knowledge_UAT_No_Campus 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'DATA_Knowledge_UAT_No_Campus', 'SYS_UAT_DC_Default_DataSpace', 'SYS_UAT_KB_Harness', 'X00e1P000000J627QAC'] PSL=['EinsteinGPTPromptTemplatesPsl']
+
+2026-11-26T05:44:25Z
+D0
+-PS DATA_Knowledge_UAT_No_Campus 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'SYS_UAT_DC_Default_DataSpace', 'SYS_UAT_KB_Harness', 'X00e1P000000J627QAC'] PSL=['EinsteinGPTPromptTemplatesPsl']
+
+2026-11-26T05:45:53Z
+D1b
++PS DATA_Knowledge_Read_Only 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'DATA_Knowledge_Read_Only', 'SYS_UAT_DC_Default_DataSpace', 'SYS_UAT_KB_Harness', 'X00e1P000000J627QAC'] PSL=['EinsteinGPTPromptTemplatesPsl']
+
+2026-11-26T05:47:03Z
+D1b-end
+-PS DATA_Knowledge_Read_Only 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'SYS_UAT_DC_Default_DataSpace', 'SYS_UAT_KB_Harness', 'X00e1P000000J627QAC'] PSL=['EinsteinGPTPromptTemplatesPsl']
+
+2026-11-26T05:53:28Z
+RESTORE
+-PS SYS_UAT_DC_Default_DataSpace 0 
+-PS SYS_UAT_KB_Harness 0 
+-PSL EinsteinGPTPromptTemplatesPsl 0 
+NOW PS=['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'X00e1P000000J627QAC'] PSL=[]
+

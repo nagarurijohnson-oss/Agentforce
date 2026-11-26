@@ -1,0 +1,56 @@
+{
+ "phase": "D1b",
+ "started": "2026-11-26T05:45:53Z",
+ "login_as": {
+  "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@00djv000003bvbruaw.ex"
+ },
+ "harness": [
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "No published Knowledge article covers that.",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "No published Knowledge article covers that.",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 8
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "No published Knowledge article covers that.",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "No published Knowledge article covers that.",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 4
+  }
+ ],
+ "external_requests": [],
+ "logout_url": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/",
+ "ended": "2026-11-26T05:46:55Z"
+}

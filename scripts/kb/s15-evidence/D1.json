@@ -1,0 +1,142 @@
+{
+ "phase": "D1",
+ "started": "2026-11-26T05:40:04Z",
+ "login_as": {
+  "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@00djv000003bvbruaw.ex"
+ },
+ "harness": [
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "To renew the Merit Excellence Scholarship each year you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: [Merit Excellence Scholarship – Renewal Requirements](/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view) (Article 000001004)",
+   "fault": null,
+   "cited_ids": [
+    "ka0jV000000nIDXQA2"
+   ],
+   "cited_numbers": [
+    "000001004"
+   ],
+   "secs": 8
+  },
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "To renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: [Merit Excellence Scholarship – Renewal Requirements](/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view) (Article 000001004)",
+   "fault": null,
+   "cited_ids": [
+    "ka0jV000000nIDXQA2"
+   ],
+   "cited_numbers": [
+    "000001004"
+   ],
+   "secs": 8
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "Which one do you mean?\n- Scholarship Appeal Process\n- Library Fine – Appeal Process",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "Which one do you mean?\n- Scholarship Appeal Process\n- Library Fine – Appeal Process",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12b",
+   "q": "What appeal processes are available?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "Which one do you mean?\n- Scholarship Appeal Process\n- Library Fine – Appeal Process",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 8
+  },
+  {
+   "key": "KT-12b",
+   "q": "What appeal processes are available?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "Submit an appeal within 30 days of the decision using form SA-1. The scholarship appeals committee meets monthly and replies in writing after its meeting.\n\nSource: [Scholarship Appeal Process](/lightning/r/Knowledge__kav/ka0jV000000nIF9QAM/view) (Article 000001010)",
+   "fault": null,
+   "cited_ids": [
+    "ka0jV000000nIF9QAM"
+   ],
+   "cited_numbers": [
+    "000001010"
+   ],
+   "secs": 8
+  },
+  {
+   "key": "KT-12S",
+   "q": "What is the scholarship appeal process?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "Submit an appeal within 30 days of the decision using form SA-1. The scholarship appeals committee meets monthly and replies in writing after its meeting.\n\nSource: [Scholarship Appeal Process](/lightning/r/Knowledge__kav/ka0jV000000nIF9QAM/view) (Article 000001010)",
+   "fault": null,
+   "cited_ids": [
+    "ka0jV000000nIF9QAM"
+   ],
+   "cited_numbers": [
+    "000001010"
+   ],
+   "secs": 4
+  },
+  {
+   "key": "KT-12S",
+   "q": "What is the scholarship appeal process?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "Submit an appeal within 30 days of the decision using form SA-1. The scholarship appeals committee meets monthly and replies in writing after its meeting.\n\nSource: [Scholarship Appeal Process](/lightning/r/Knowledge__kav/ka0jV000000nIF9QAM/view) (Article 000001010)",
+   "fault": null,
+   "cited_ids": [
+    "ka0jV000000nIF9QAM"
+   ],
+   "cited_numbers": [
+    "000001010"
+   ],
+   "secs": 4
+  },
+  {
+   "key": "KT-13",
+   "q": "How do I renew my parking permit?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "I can only answer scholarship questions from published Knowledge articles, and none covers that.",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 24
+  },
+  {
+   "key": "KT-13",
+   "q": "How do I renew my parking permit?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": "I can only answer scholarship questions from published Knowledge articles, and none covers that.",
+   "fault": null,
+   "cited_ids": [],
+   "cited_numbers": [],
+   "secs": 4
+  }
+ ],
+ "external_requests": [],
+ "logout_url": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/",
+ "ended": "2026-11-26T05:42:03Z"
+}
