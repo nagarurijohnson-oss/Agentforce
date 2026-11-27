@@ -326,3 +326,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Agent Script: `in_account_id` / `criteria_account_id`, 3 new-search actions, 2 searches + paging, follow-up sends "", instructions. `sf agent validate` passes. 9/9 draft-preview turns (live read-only actions), traces error-free. Not published.
 - Case creation: `case-create-design.md` + proposed decision; nothing built, no Case created, no permission changed.
 - v3 Active; v1–v2, v4–v8 Inactive. Record: `knowledge-search/session-kb-s30-requirements-aid1-case-design.md`.
+
+## S31 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): v9 published Inactive
+
+- Pre-publication checks: v9 script contains ID-1 + AID-1, unchanged since the S30 tested commit, compiles; Account Id path reads only Account Id in user mode; deployed Apex identical to repo (7/7 classes).
+- `sf agent publish authoring-bundle` → v9 Inactive. Readback: v3 Active, v1–v2 and v4–v9 Inactive, Employee_Leave_Assistant v1 unchanged; published script byte-identical to repo; planner schema has `accountId` in all 3 search actions.
+- Case creation: design only; placement inside Contact_Read_Agent recorded; decisions C-1 to C-6 for Lal. No Case actions, permissions or test Cases.
+- Record: `knowledge-search/session-kb-s31-v9-publish.md`. Not release-ready (OPS-1, L-1 panel check).

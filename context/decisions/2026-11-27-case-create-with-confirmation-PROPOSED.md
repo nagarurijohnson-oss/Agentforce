@@ -17,6 +17,10 @@ record says the agent is read-only. Nagaruri Johnson chose on 2026-11-27 to desi
 | **B — Separate Case agent** | Contact_Read_Agent stays read-only | A new agent, its own permissions and tests |
 | **C — Don't add it** | No new risk | Request not met |
 
+## Placement (2026-11-27, S31)
+
+Nagaruri Johnson directed that, if approved, Case creation stays inside Contact_Read_Agent (option A), not a separate agent. This does not approve the read-only exception; that remains Lal's decision. The decision list is C-1 to C-6 in `knowledge-search/session-kb-s31-v9-publish.md` §4.
+
 ## Decision requested
 
 Option A, as designed in `context/knowledge-search/case-create-design.md`, plus these sub-choices:

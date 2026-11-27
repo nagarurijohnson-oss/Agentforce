@@ -1,3 +1,9 @@
+## Update — 27 Nov (S31)
+
+- **v9 published as Inactive** with Contact Id search (ID-1) and Account Id → its Contacts (AID-1). The published script is byte-identical to the tested one, and the deployed Apex matches the repo (7 of 7 classes). v3 stays Active; v1–v2 and v4–v8 Inactive; Employee_Leave_Assistant unchanged. Decision 10 is closed.
+- **Case creation:** still design only. If you approve it, it stays inside Contact_Read_Agent. Your decisions are C-1 to C-6 in `knowledge-search/session-kb-s31-v9-publish.md` §4: the read-only exception, confirmation UI, duplicate guard, required fields, who gets `DATA_Case_Create`, and synthetic test writes.
+- **Not release-ready:** OPS-1 live tests and the restricted-user Lightning panel check (now on v9) are still open.
+
 ## Update — 27 Nov (S30)
 
 - **Account Id search (AID-1):** built as you approved — an Account Id returns only that Account's Contacts the user can see; a hidden or missing Account reads as no match; no Account details. Apex deployed (99/99 tests, 100%); Agent Script change in the repo; 9 of 9 targeted turns pass. Not yet published (decision 10).
@@ -86,9 +92,9 @@ release candidate with Knowledge answers, is published but Inactive.
 | 4 | A6: release timing, which waits until L-1 and OPS-1 are closed |
 | 5 | Name the on-call person for any future activation window (OPS-1, C5) |
 | 6 | ~~Account ID search out of scope~~ — superseded: you approved Account Id → its Contacts (AID-1, S30). Confirm Account details, related Cases and related Opportunities stay out of scope |
-| 8 | Contact Id search fix (S29): publish as inactive v8 now, or hold for the release version |
-| 9 | **Case creation (CASE-1):** approve or reject `decisions/2026-11-27-case-create-with-confirmation-PROPOSED.md` — it lifts the read-only rule for creating a Case only — and its sub-choices (confirmation UI, duplicate guard, required fields, who gets `DATA_Case_Create`, synthetic test writes) |
-| 10 | AID-1 + ID-1: publish a new inactive v9 now, or hold until the Case decision so both share one version |
+| 8 | ~~Contact Id search fix: publish v8 inactive~~ — done (v8, then v9, S31) |
+| 9 | **Case creation (CASE-1):** approve or reject `decisions/2026-11-27-case-create-with-confirmation-PROPOSED.md` — it lifts the read-only rule for creating a Case only, inside Contact_Read_Agent — and its sub-choices C-2 to C-6 (confirmation UI, duplicate guard, required fields, who gets `DATA_Case_Create`, synthetic test writes; S31 §4) |
+| 10 | ~~AID-1 + ID-1: publish v9~~ — published Inactive (S31). Case creation, if approved, goes in a later version |
 | 7 | Accept Customize Application on `SYS_Agent_Rollback_Automation` (needed to activate agent versions) or ask for an alternative |
 
 ## Release prerequisites
