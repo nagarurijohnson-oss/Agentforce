@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "5e4dd422-90b2-4178-ae2d-04525d7b4d55",
+        "metrics": {},
+        "feedbackId": "01a21cbd-98cc-78c1-989e-2a81390a035c",
+        "planId": "01a21cbd-98cc-78c1-989e-2a81390a035c",
+        "isContentSafe": true,
+        "message": "4 Contacts have this phone. Which one do you mean?\n\n# Name Account Title Email Phone Mobile\n1 Arthur Song United Oil ＆ Gas Corp. CEO asong@uog.com (212) 842-5500 (212) 842-4535\n2 Avi Green United Oil ＆ Gas Corp. CFO agreen@uog.com (212) 842-5500 (212) 842-2383\n3 Lauren Boyle United Oil ＆ Gas Corp. SVP, Technology lboyle@uog.com (212) 842-5500 (212) 842-5611\n4 Stella Pavlova United Oil ＆ Gas Corp. SVP, Production spavlova@uog.com (212) 842-5500 (212) 842-5501\n\nYou can also tell me one of these details instead: Account name, job title, email, city, state or region, country.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cbd-4a9e-7513-b429-2ceab4da2803"
+  },
+  "warnings": []
+}

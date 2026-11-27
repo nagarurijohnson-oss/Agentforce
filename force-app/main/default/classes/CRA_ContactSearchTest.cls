@@ -1157,4 +1157,183 @@ private class CRA_ContactSearchTest {
         assertOutcome(CRA_ContactSearchResult.FIELD_ANSWER, answer, 'follow-up');
         System.assertEquals(first.contacts[1].id, String.valueOf(answer.singleContactId));
     }
+
+    // =================================================================
+    // AID-1 — Account Id to its Contacts (approved 2026-11-27)
+    // =================================================================
+
+    private static Id accountIdNamed(String shortName) {
+        String fullName = 'CRA-TEST ' + shortName;
+        return [SELECT Id FROM Account WHERE Name = :fullName LIMIT 1].Id;
+    }
+
+    private static CRA_ContactSearchCriteria byAccountId(String accountId) {
+        CRA_ContactSearchCriteria criteria = new CRA_ContactSearchCriteria();
+        criteria.accountId = accountId;
+        return criteria;
+    }
+
+    /*****************************************************************
+    Tests:     An 18-character and the matching 15-character Account Id
+               both return exactly that Account's Contacts, and no
+               Contact from another Account.
+               Data: Globex has 4 Contacts (John Smith, Maria Garcia,
+               Mario Garcia, Mia Mobile). Expected: LIST_2_TO_5, 4 rows.
+    *****************************************************************/
+    @isTest
+    static void accountIdReturnsOnlyThatAccountsContacts() {
+        Id globex = accountIdNamed('Globex');
+        String fullId = String.valueOf(globex);
+
+        Test.startTest();
+        CRA_ContactSearchResult longId = run(byAccountId(fullId));
+        CRA_ContactSearchResult shortId = run(byAccountId(fullId.left(15)));
+        Test.stopTest();
+
+        Set<Id> expected = new Map<Id, Contact>([SELECT Id FROM Contact WHERE AccountId = :globex]).keySet();
+        System.assertEquals(4, expected.size(), 'Test data changed');
+        for (CRA_ContactSearchResult result : new List<CRA_ContactSearchResult>{ longId, shortId }) {
+            assertOutcome(CRA_ContactSearchResult.LIST_2_TO_5, result, 'Account Id');
+            System.assertEquals('4', result.totalMatchesLabel);
+            for (CRA_ContactSearchResult.ContactRow row : result.contacts) {
+                System.assert(expected.contains(row.id), 'Contact from another Account: ' + row.id);
+            }
+            System.assert(result.criteriaSummary.contains('Account record'), result.criteriaSummary);
+        }
+    }
+
+    /*****************************************************************
+    Tests:     An Account Id combines with other filters (AND), and a
+               single match identifies the Contact.
+               Data: Globex + name "Mia". Expected: SINGLE_MATCH.
+    *****************************************************************/
+    @isTest
+    static void accountIdNarrowsWithOtherFilters() {
+        CRA_ContactSearchCriteria criteria = byAccountId(String.valueOf(accountIdNamed('Globex')));
+        criteria.name = 'Mia';
+        CRA_ContactSearchCriteria otherAccount = byAccountId(String.valueOf(accountIdNamed('Acme')));
+        otherAccount.name = 'Mia';
+
+        Test.startTest();
+        CRA_ContactSearchResult found = run(criteria);
+        CRA_ContactSearchResult notOnAccount = run(otherAccount);
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.SINGLE_MATCH, found, 'Globex + Mia');
+        System.assertEquals('Mia Mobile', found.contacts[0].name);
+        assertOutcome(CRA_ContactSearchResult.NO_MATCH, notOnAccount, 'Acme + Mia');
+    }
+
+    /*****************************************************************
+    Tests:     Paging keeps the Account filter: 6 Contacts on the Bulk
+               Account with title CRAB-006- give LIST_6_TO_10, and
+               showRemaining returns the 6th from the same Account.
+    *****************************************************************/
+    @isTest
+    static void accountIdIsKeptWhenPaging() {
+        String bulkAccountId = String.valueOf(accountIdNamed('Bulk'));
+        CRA_ContactSearchCriteria first = byAccountId(bulkAccountId);
+        first.jobTitle = tag(6);
+        CRA_ContactSearchCriteria remaining = byAccountId(bulkAccountId);
+        remaining.jobTitle = tag(6);
+        remaining.showRemaining = true;
+
+        Test.startTest();
+        CRA_ContactSearchResult firstPage = run(first);
+        CRA_ContactSearchResult secondPage = run(remaining);
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.LIST_6_TO_10, firstPage, 'first page');
+        System.assertEquals(true, firstPage.canShowRemaining);
+        assertOutcome(CRA_ContactSearchResult.REMAINING_PAGE, secondPage, 'second page');
+        System.assertEquals(1, secondPage.contacts.size());
+    }
+
+    /*****************************************************************
+    Tests:     More than 100 Contacts on one Account gives TOO_MANY,
+               never a list (Bulk Account holds well over 100).
+    *****************************************************************/
+    @isTest
+    static void accountIdWithTooManyContactsAsksForMore() {
+        Test.startTest();
+        CRA_ContactSearchResult result = run(byAccountId(String.valueOf(accountIdNamed('Bulk'))));
+        Test.stopTest();
+        assertOutcome(CRA_ContactSearchResult.TOO_MANY, result, 'Bulk Account');
+        System.assert(result.contacts.isEmpty());
+        System.assert(!result.suggestedFiltersText.contains('Account name'), result.suggestedFiltersText);
+        System.assert(result.suggestedFiltersText.contains('job title'), result.suggestedFiltersText);
+    }
+
+    /*****************************************************************
+    Tests:     A Contact Id, a User Id, a malformed value and a wrong
+               length in accountId ask for clarification, with the
+               same message and no rows. Nothing is searched.
+    *****************************************************************/
+    @isTest
+    static void accountIdRejectsNonAccountValues() {
+        String contactId = String.valueOf([SELECT Id FROM Contact LIMIT 1].Id);
+        List<String> invalid = new List<String>{
+            contactId, String.valueOf(UserInfo.getUserId()), 'not-an-account-id', '001ABC' };
+
+        Test.startTest();
+        List<CRA_ContactSearchResult> results = new List<CRA_ContactSearchResult>();
+        for (String value : invalid) {
+            results.add(run(byAccountId(value)));
+        }
+        Test.stopTest();
+
+        for (Integer index = 0; index < results.size(); index++) {
+            assertOutcome(CRA_ContactSearchResult.NEEDS_CLARIFICATION, results[index], invalid[index]);
+            System.assert(results[index].userMessage.contains('which Account'), results[index].userMessage);
+            System.assert(results[index].contacts.isEmpty());
+        }
+    }
+
+    /*****************************************************************
+    Tests:     An over-long accountId is rejected by length, never cut.
+    *****************************************************************/
+    @isTest
+    static void accountIdTooLongIsRejected() {
+        Test.startTest();
+        CRA_ContactSearchResult result = run(byAccountId('001' + 'A'.repeat(30)));
+        Test.stopTest();
+        assertOutcome(CRA_ContactSearchResult.NEEDS_CLARIFICATION, result, 'too long');
+        System.assert(result.userMessage.contains('too long'), result.userMessage);
+    }
+
+    /*****************************************************************
+    Tests:     A well-formed Id of an Account that no longer exists
+               gives the neutral NO_MATCH, never a different message.
+    *****************************************************************/
+    @isTest
+    static void accountIdOfDeletedAccountIsNeutralNoMatch() {
+        Account gone = new Account(Name = 'CRA-TEST Deleted Synthetic');
+        insert gone;
+        Id goneId = gone.Id;
+        delete gone;
+
+        Test.startTest();
+        CRA_ContactSearchResult result = run(byAccountId(String.valueOf(goneId)));
+        Test.stopTest();
+
+        assertOutcome(CRA_ContactSearchResult.NO_MATCH, result, 'deleted Account');
+        System.assertEquals(CRA_ContactSearchService.NO_MATCH_MESSAGE, result.userMessage);
+    }
+
+    /*****************************************************************
+    Tests:     showRemaining drops a Contact Id but keeps the Account
+               Id, because the Account Id is part of the paged search.
+    *****************************************************************/
+    @isTest
+    static void accountIdSurvivesShowRemainingValidation() {
+        CRA_ContactSearchCriteria criteria = byAccountId(String.valueOf(accountIdNamed('Acme')));
+        criteria.contactId = String.valueOf([SELECT Id FROM Contact LIMIT 1].Id);
+        criteria.showRemaining = true;
+        Test.startTest();
+        Boolean valid = criteria.validate();
+        Test.stopTest();
+        System.assert(valid, criteria.validationMessage);
+        System.assertEquals(null, criteria.contactRecordId);
+        System.assertEquals(accountIdNamed('Acme'), criteria.accountRecordId);
+    }
 }

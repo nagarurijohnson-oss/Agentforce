@@ -1,0 +1,10 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cbd-4a9e-7513-b429-2ceab4da2803",
+    "format": "detail",
+    "dimension": "errors",
+    "detail": []
+  },
+  "warnings": []
+}

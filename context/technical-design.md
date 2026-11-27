@@ -33,7 +33,7 @@ Session 2 refinement: a user with no Contact Read gets NO_MATCH before FILTER_UN
 
 ## Action contract
 
-Inputs (optional text unless noted): `name`, `email`, `phone`, `accountName`, `jobTitle`, `city`, `stateOrRegion`, `country`, `location`, `contactId`, `requestedField` (Name, Account, Title, Email, Phone, MobilePhone, MailingAddress), `showRemaining` (Boolean).
+Inputs (optional text unless noted): `name`, `email`, `phone`, `accountName`, `jobTitle`, `city`, `stateOrRegion`, `country`, `location`, `contactId`, `accountId` (AID-1, added 2026-11-27: an Account Id; returns only that Account's Contacts the user can see, never Account details), `requestedField` (Name, Account, Title, Email, Phone, MobilePhone, MailingAddress), `showRemaining` (Boolean).
 
 Outputs: `outcomeCode`, `totalMatchesLabel`, `shownCount`, `remainingCount`, `canShowRemaining` (Boolean), `refinementRequired` (Boolean), `similarNameCount` (Integer), `suggestedFiltersText`, `duplicateOn`, `requestedFieldLabel`, `criteriaSummary`, `userMessage`, `singleContactId`, `resultContactIds` (comma-separated), `contactsJson`.
 
@@ -51,7 +51,7 @@ Session 5 fixes (2026-11-20): each `contacts` row in `searchResultJson` also car
 
 At least one filter required. Name words match the start of first or last name; for two or more words, exact full-name matches take priority. Email: a full address is exact, `@domain.tld` matches that domain exactly, anything else is contains. Phone digit-normalised, on Phone and MobilePhone. Account name and title contains. Location matches mailing city, state or country (the text fields; state and country picklists appear to be on, so `MailingStateCode`/`MailingCountryCode` also exist). `%`, `_`, `\` escaped. Bind variables only, whitelisted fields, order `Name, Id`. Count is USER_MODE and capped at 101. Page size 5.
 
-Session 2 implementation details (proposed, see session-2-search-engine.md): city, state and country are starts-with on the text field, and state and country also equal the ISO code. Values longer than the field are rejected, never truncated. More than 5 name words, a malformed `contactId` or an unknown `requestedField` return NEEDS_CLARIFICATION. `with sharing` and USER_MODE both apply to every query, and only readable fields are selected. At most 3 queries per request and at most 10 requests per call.
+Session 2 implementation details (proposed, see session-2-search-engine.md): city, state and country are starts-with on the text field, and state and country also equal the ISO code. Values longer than the field are rejected, never truncated. More than 5 name words, a malformed `contactId` or an unknown `requestedField` return NEEDS_CLARIFICATION. `with sharing` and USER_MODE both apply to every query, and only readable fields are selected. At most 3 queries per request (4 with an `accountId`, which adds one USER_MODE Account visibility check; AID-1) and at most 10 requests per call.
 
 ## Query selectivity (2026-11-20)
 

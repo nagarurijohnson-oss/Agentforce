@@ -15,6 +15,9 @@ History
 -------
 VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
 1.0      Revecast Orchestrate    19/11/2026   Created   SCGOE-95 Session 2
+1.1      Revecast Orchestrate    27/11/2026   Updated   SCGOE-95 AID-1:
+                                                      Account Id filter and
+                                                      visibility checks
 *****************************************************************/
 public virtual with sharing class CRA_FieldAccess {
 
@@ -36,6 +39,29 @@ public virtual with sharing class CRA_FieldAccess {
         return isContactFieldReadable('AccountId')
             && Schema.SObjectType.Account.isAccessible()
             && Schema.SObjectType.Account.fields.Name.isAccessible();
+    }
+
+    /*****************************************************************
+    Purpose:   True when the running user may filter Contacts by an
+               Account Id: Read on Contact.AccountId and on Account.
+               No Account field is selected or returned (AID-1).
+    *****************************************************************/
+    public virtual Boolean isAccountIdFilterable() {
+        return isContactFieldReadable('AccountId') && Schema.SObjectType.Account.isAccessible();
+    }
+
+    /*****************************************************************
+    Purpose:   True when the running user can see the Account record,
+               checked with a USER_MODE query (sharing, object access).
+               Only the Id is selected. A missing Account and a hidden
+               one both return false, so callers answer them alike.
+    Parameters: accountId — a validated Account Id.
+    *****************************************************************/
+    public virtual Boolean isAccountRecordVisible(Id accountId) {
+        List<Account> visible = Database.queryWithBinds(
+            'SELECT Id FROM Account WHERE Id = :accountIdValue LIMIT 1',
+            new Map<String, Object>{ 'accountIdValue' => accountId }, AccessLevel.USER_MODE);
+        return !visible.isEmpty();
     }
 
     /*****************************************************************

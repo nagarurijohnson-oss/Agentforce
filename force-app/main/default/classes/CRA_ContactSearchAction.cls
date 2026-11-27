@@ -205,6 +205,7 @@ public with sharing class CRA_ContactSearchAction {
         criteria.country = request.country;
         criteria.location = request.location;
         criteria.contactId = request.contactId;
+        criteria.accountId = request.accountId;
         criteria.requestedField = request.requestedField;
         criteria.showRemaining = request.showRemaining;
         return criteria;
@@ -479,6 +480,9 @@ public with sharing class CRA_ContactSearchAction {
 
         @InvocableVariable(label='Contact Id' description='Id of a Contact already shown to the user, for follow-up questions. Never invent one.' required=false)
         public String contactId;
+
+        @InvocableVariable(label='Account Id' description='Id of an Account (15 or 18 characters, starts with 001) typed by the user. Returns only the Contacts on that Account the user can see; no Account details are returned. Never invent one.' required=false)
+        public String accountId;
 
         @InvocableVariable(label='Requested Field' description='The one detail the user asked for: Name, Account, Title, Email, Phone, MobilePhone or MailingAddress. Leave empty for the full record.' required=false)
         public String requestedField;

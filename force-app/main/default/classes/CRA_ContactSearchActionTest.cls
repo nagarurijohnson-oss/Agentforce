@@ -44,7 +44,7 @@ private class CRA_ContactSearchActionTest {
     // The flat contract (context/technical-design.md).
     private static final Set<String> CONTRACT_INPUTS = new Set<String>{
         'name', 'email', 'phone', 'accountName', 'jobTitle', 'city', 'stateOrRegion', 'country',
-        'location', 'contactId', 'requestedField', 'showRemaining' };
+        'location', 'contactId', 'accountId', 'requestedField', 'showRemaining' };
     private static final Set<String> CONTRACT_OUTPUTS = new Set<String>{
         'outcomeCode', 'totalMatchesLabel', 'shownCount', 'remainingCount', 'canShowRemaining',
         'refinementRequired', 'similarNameCount', 'suggestedFiltersText', 'duplicateOn',
@@ -249,6 +249,7 @@ private class CRA_ContactSearchActionTest {
         request.country = 'co';
         request.location = 'l';
         request.contactId = 'id';
+        request.accountId = 'aid';
         request.requestedField = 'rf';
         request.showRemaining = true;
 
@@ -258,10 +259,10 @@ private class CRA_ContactSearchActionTest {
         Test.stopTest();
 
         System.assertEquals(null, none, 'A null request maps to null criteria');
-        List<String> expected = new List<String>{ 'n', 'e', 'p', 'a', 'j', 'c', 's', 'co', 'l', 'id', 'rf' };
+        List<String> expected = new List<String>{ 'n', 'e', 'p', 'a', 'j', 'c', 's', 'co', 'l', 'id', 'aid', 'rf' };
         List<String> actual = new List<String>{ criteria.name, criteria.email, criteria.phone,
             criteria.accountName, criteria.jobTitle, criteria.city, criteria.stateOrRegion, criteria.country,
-            criteria.location, criteria.contactId, criteria.requestedField };
+            criteria.location, criteria.contactId, criteria.accountId, criteria.requestedField };
         System.assertEquals(expected, actual);
         System.assertEquals(true, criteria.showRemaining);
     }

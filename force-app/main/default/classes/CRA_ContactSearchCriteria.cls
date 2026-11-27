@@ -13,6 +13,8 @@ Purpose:       Search criteria for the SCGOE-95 Contact Read Agent.
                  ("@acme.com") or a partial value.
                - requestedField is matched against a fixed whitelist.
                - contactId must be a well-formed Contact Id.
+               - accountId must be a well-formed Account Id; it limits
+                 the search to that Account's Contacts (AID-1).
                - showRemaining replays the last search only: a
                  contactId or requestedField sent with it is dropped
                  (defect D-1).
@@ -29,6 +31,10 @@ VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
                                                       contactId and
                                                       requestedField when
                                                       showRemaining is true
+1.3      Revecast Orchestrate    27/11/2026   Updated   SCGOE-95 AID-1:
+                                                      accountId input
+                                                      (Account Id to its
+                                                      Contacts)
 *****************************************************************/
 public with sharing class CRA_ContactSearchCriteria {
 
@@ -47,6 +53,7 @@ public with sharing class CRA_ContactSearchCriteria {
         'country' => 80,
         'location' => 80,
         'contactId' => 18,
+        'accountId' => 18,
         'requestedField' => 40
     };
 
@@ -105,6 +112,9 @@ public with sharing class CRA_ContactSearchCriteria {
     public String country;
     public String location;
     public String contactId;
+    // AID-1: Id of an Account; the search returns only its Contacts.
+    // Kept on showRemaining, because it is part of the search being paged.
+    public String accountId;
     public String requestedField;
     public Boolean showRemaining;
 
@@ -120,6 +130,7 @@ public with sharing class CRA_ContactSearchCriteria {
     public String phoneDigits { get; private set; }
     public String phoneCoreDigits { get; private set; }
     public Id contactRecordId { get; private set; }
+    public Id accountRecordId { get; private set; }
     public String requestedFieldKey { get; private set; }
 
     /*****************************************************************
@@ -157,7 +168,7 @@ public with sharing class CRA_ContactSearchCriteria {
 
         // Each specialised check returns false and sets the message on failure.
         Boolean passed = validateName() && validateEmail() && validatePhone()
-            && validateContactId() && validateRequestedField();
+            && validateContactId() && validateAccountId() && validateRequestedField();
 
         if (passed && !hasAnyFilter()) {
             validationMessage = 'Please tell me something to search by, such as a name, '
@@ -179,7 +190,7 @@ public with sharing class CRA_ContactSearchCriteria {
             || String.isNotBlank(accountName) || String.isNotBlank(jobTitle)
             || String.isNotBlank(city) || String.isNotBlank(stateOrRegion)
             || String.isNotBlank(country) || String.isNotBlank(location)
-            || String.isNotBlank(contactId);
+            || String.isNotBlank(contactId) || String.isNotBlank(accountId);
     }
 
     /*****************************************************************
@@ -204,6 +215,7 @@ public with sharing class CRA_ContactSearchCriteria {
         country = clean(country);
         location = clean(location);
         contactId = clean(contactId);
+        accountId = clean(accountId);
         requestedField = clean(requestedField);
 
         Map<String, String> valuesByInput = new Map<String, String>{
@@ -211,7 +223,7 @@ public with sharing class CRA_ContactSearchCriteria {
             'accountName' => accountName, 'jobTitle' => jobTitle, 'city' => city,
             'stateOrRegion' => stateOrRegion, 'country' => country,
             'location' => location, 'contactId' => contactId,
-            'requestedField' => requestedField
+            'accountId' => accountId, 'requestedField' => requestedField
         };
 
         for (String inputName : valuesByInput.keySet()) {
@@ -332,6 +344,30 @@ public with sharing class CRA_ContactSearchCriteria {
             System.debug(LoggingLevel.FINE, 'contactId is not a valid Id');
         }
         validationMessage = 'I could not tell which Contact you mean. Please search for them again.';
+        return false;
+    }
+
+    /*****************************************************************
+    Purpose:   accountId must be a well-formed Id of an Account (AID-1).
+               15- and 18-character Ids are both accepted. Whether the
+               Account exists or is visible is decided later by a
+               USER_MODE query, so this message never depends on it.
+    *****************************************************************/
+    private Boolean validateAccountId() {
+        if (String.isBlank(accountId)) {
+            return true;
+        }
+        try {
+            Id parsedId = Id.valueOf(accountId);
+            if (parsedId.getSObjectType() == Account.SObjectType) {
+                accountRecordId = parsedId;
+                return true;
+            }
+        } catch (StringException invalidId) {
+            System.debug(LoggingLevel.FINE, 'accountId is not a valid Id');
+        }
+        validationMessage = 'I could not tell which Account you mean. '
+            + 'Please check the Account Id or search by the Account name.';
         return false;
     }
 

@@ -558,6 +558,19 @@ private class CRA_ContactSearchSecurityTest {
     }
 
     /*****************************************************************
+    Purpose:   SIMULATED access in which no Account record is visible,
+               as for a user outside the Account's sharing (AID-1).
+               The org's Account default is Public Read/Write, so a
+               hidden Account cannot be produced with real sharing in
+               a test without changing org settings.
+    *****************************************************************/
+    private class AccountRecordHidden extends CRA_FieldAccess {
+        public override Boolean isAccountRecordVisible(Id accountId) {
+            return false;
+        }
+    }
+
+    /*****************************************************************
     Tests:     SIMULATED: Account name unreadable — the Account filter
                is unavailable, the value reads "Not available" and is
                not suggested.
@@ -617,5 +630,91 @@ private class CRA_ContactSearchSecurityTest {
         Test.stopTest();
         System.assertEquals(CRA_ContactSearchResult.NO_MATCH, result.outcomeCode);
         System.assertEquals(CRA_ContactSearchService.NO_MATCH_MESSAGE, result.userMessage);
+    }
+
+    // =================================================================
+    // AID-1 — Account Id search security
+    // =================================================================
+
+    private static Id visibleAccountId() {
+        return [SELECT Id FROM Account WHERE Name = 'CRA-TEST Visible Co' LIMIT 1].Id;
+    }
+
+    /*****************************************************************
+    Tests:     ENFORCED: a restricted user searching by Account Id sees
+               only the Account's Contacts they can read (3 visible;
+               the 3 private Contacts have no Account).
+    *****************************************************************/
+    @isTest
+    static void enforcedAccountIdReturnsOnlyReadableContacts() {
+        User reader = CRA_TestDataFactory.createRestrictedUser('craaid', BOTH_OBJECTS, ALL_FIELDS);
+        String accountId = String.valueOf(visibleAccountId());
+        CRA_ContactSearchResult result;
+
+        Test.startTest();
+        System.runAs(reader) {
+            CRA_ContactSearchCriteria criteria = new CRA_ContactSearchCriteria();
+            criteria.accountId = accountId;
+            result = run(criteria);
+        }
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.LIST_2_TO_5, result.outcomeCode, result.userMessage);
+        System.assertEquals('3', result.totalMatchesLabel);
+        System.assert(!result.getContactsJson().contains('Hidden'), 'Private rows leaked');
+    }
+
+    /*****************************************************************
+    Tests:     ENFORCED: without Read on Account the Account Id filter
+               is unavailable, whether or not the Account exists, so the
+               answer reveals nothing about the record.
+    *****************************************************************/
+    @isTest
+    static void enforcedAccountIdNeedsAccountRead() {
+        User contactOnly = CRA_TestDataFactory.createRestrictedUser('craacno',
+            new List<String>{ 'Contact' }, ALL_FIELDS);
+        String realId = String.valueOf(visibleAccountId());
+        Account gone = new Account(Name = 'CRA-TEST Gone');
+        insert gone;
+        String goneId = String.valueOf(gone.Id);
+        delete gone;
+        CRA_ContactSearchResult real;
+        CRA_ContactSearchResult missing;
+
+        Test.startTest();
+        System.runAs(contactOnly) {
+            CRA_ContactSearchCriteria first = new CRA_ContactSearchCriteria();
+            first.accountId = realId;
+            real = run(first);
+            CRA_ContactSearchCriteria second = new CRA_ContactSearchCriteria();
+            second.accountId = goneId;
+            missing = run(second);
+        }
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.FILTER_UNAVAILABLE, real.outcomeCode, real.userMessage);
+        System.assertEquals(real.outcomeCode, missing.outcomeCode);
+        System.assertEquals(real.userMessage, missing.userMessage);
+        System.assert(real.contacts.isEmpty());
+    }
+
+    /*****************************************************************
+    Tests:     SIMULATED: an Account the user cannot see gives exactly
+               the NO_MATCH a nonexistent Account gives, and no rows,
+               even though Contacts exist on it.
+    *****************************************************************/
+    @isTest
+    static void simulatedHiddenAccountIdIsNeutralNoMatch() {
+        CRA_ContactSearchService service = new CRA_ContactSearchService(new AccountRecordHidden());
+        CRA_ContactSearchCriteria criteria = new CRA_ContactSearchCriteria();
+        criteria.accountId = String.valueOf(visibleAccountId());
+
+        Test.startTest();
+        CRA_ContactSearchResult result = service.search(criteria);
+        Test.stopTest();
+
+        System.assertEquals(CRA_ContactSearchResult.NO_MATCH, result.outcomeCode);
+        System.assertEquals(CRA_ContactSearchService.NO_MATCH_MESSAGE, result.userMessage);
+        System.assert(result.contacts.isEmpty());
     }
 }

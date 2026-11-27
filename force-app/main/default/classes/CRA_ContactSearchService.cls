@@ -25,6 +25,10 @@ VERSION  AUTHOR                  DATE         DETAIL    DESCRIPTION
                                                       priority, email
                                                       domain search,
                                                       refinement flags
+1.2      Revecast Orchestrate    27/11/2026   Updated   SCGOE-95 AID-1:
+                                                      Account Id filter;
+                                                      hidden or missing
+                                                      Account = NO_MATCH
 *****************************************************************/
 public with sharing class CRA_ContactSearchService {
 
@@ -35,9 +39,10 @@ public with sharing class CRA_ContactSearchService {
     public static final Integer TOO_MANY_THRESHOLD = 100;
     public static final Integer COUNT_CAP = TOO_MANY_THRESHOLD + 1;
 
-    // Bounds on one call. Each request runs at most three queries.
+    // Bounds on one call. Each request runs at most four queries
+    // (an Account Id search adds one Account visibility check).
     public static final Integer MAX_REQUESTS_PER_CALL = 10;
-    public static final Integer QUERIES_PER_REQUEST = 3;
+    public static final Integer QUERIES_PER_REQUEST = 4;
 
     // Phone fields searched and returned (review H1: Phone and
     // MobilePhone only). Each is used only when the user can read it.
@@ -152,6 +157,11 @@ public with sharing class CRA_ContactSearchService {
             result.userMessage = 'You cannot search by ' + String.join(unavailable, ', ')
                 + '. Please try different details.';
             return result;
+        }
+        // AID-1: an Account the user cannot see, and one that does not
+        // exist, both give the neutral NO_MATCH (never imply it exists).
+        if (criteria.accountRecordId != null && !access.isAccountRecordVisible(criteria.accountRecordId)) {
+            return finishNoMatch(result, criteria);
         }
         QueryPlan plan = buildPlan(criteria);
         MatchSet matches = String.isNotBlank(criteria.phone)
@@ -293,6 +303,9 @@ public with sharing class CRA_ContactSearchService {
         QueryPlan plan = new QueryPlan();
         if (criteria.contactRecordId != null) {
             plan.add('Id = :contactIdValue', 'contactIdValue', criteria.contactRecordId);
+        }
+        if (criteria.accountRecordId != null) {
+            plan.add('AccountId = :accountIdValue', 'accountIdValue', criteria.accountRecordId);
         }
         for (Integer index = 0; index < criteria.nameWords.size(); index++) {
             String bindName = 'nameWord' + index;
@@ -723,6 +736,9 @@ public with sharing class CRA_ContactSearchService {
         if (String.isNotBlank(criteria.accountName) && !access.isAccountNameReadable()) {
             unavailable.add('Account name');
         }
+        if (criteria.accountRecordId != null && !access.isAccountIdFilterable()) {
+            unavailable.add('Account');
+        }
         if (String.isNotBlank(criteria.jobTitle) && !access.isContactFieldReadable('Title')) {
             unavailable.add('job title');
         }
@@ -739,7 +755,10 @@ public with sharing class CRA_ContactSearchService {
     *****************************************************************/
     private String suggestFilters(CRA_ContactSearchCriteria criteria) {
         List<String> suggestions = new List<String>();
-        addSuggestion(suggestions, criteria.accountName, access.isAccountNameReadable(), 'Account name');
+        // AID-1: a search already limited to one Account never suggests Account name.
+        String accountUsed = criteria.accountRecordId != null ? String.valueOf(criteria.accountRecordId)
+            : criteria.accountName;
+        addSuggestion(suggestions, accountUsed, access.isAccountNameReadable(), 'Account name');
         addSuggestion(suggestions, criteria.jobTitle, access.isContactFieldReadable('Title'), 'job title');
         addSuggestion(suggestions, criteria.email, access.isContactFieldReadable('Email'), 'email');
         addSuggestion(suggestions, criteria.phone, !readablePhoneFields().isEmpty(), 'phone');
@@ -779,6 +798,7 @@ public with sharing class CRA_ContactSearchService {
     private String summarise(CRA_ContactSearchCriteria criteria) {
         List<String> parts = new List<String>();
         addSummary(parts, 'Selected Contact', criteria.contactRecordId == null ? null : 'yes');
+        addSummary(parts, 'Account record', criteria.accountRecordId == null ? null : 'yes');
         addSummary(parts, 'Name', criteria.name);
         addSummary(parts, emailSummaryLabel(criteria), criteria.emailSearchValue);
         addSummary(parts, 'Phone', criteria.phone);

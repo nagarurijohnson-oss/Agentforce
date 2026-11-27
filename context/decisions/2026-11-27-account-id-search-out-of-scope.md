@@ -1,6 +1,6 @@
 # Account ID search is outside the approved Contact search scope
 
-**Date:** 2026-11-27 · **Status:** Accepted (pending Lal's confirmation)
+**Date:** 2026-11-27 · **Status:** Superseded on 2026-11-27 by 2026-11-27-account-id-to-contacts-approved.md (Lal approved Account Id → its Contacts)
 **Deciders:** Orchestrate, from the approved requirements; Lal to confirm
 
 ## Context

@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "b6549d36-4e55-4ee0-92bd-283de9642f0e",
+        "metrics": {},
+        "feedbackId": "01a21cbc-6bae-7bc9-ae16-5632161dc757",
+        "planId": "01a21cbc-6bae-7bc9-ae16-5632161dc757",
+        "isContentSafe": true,
+        "message": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n# Name Account Title Email Phone Mobile\n1 Eng Mockup09 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng9@synthetic.example +1 555 0419 Not available\n2 Eng Mockup10 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng10@synthetic.example +1 555 0420 Not available\n3 Eng Mockup11 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng11@synthetic.example +1 555 0421 Not available\n4 Eng Mockup12 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng12@synthetic.example +1 555 0422 Not available\n5 Jordan Samename CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Partner jordan.samename.b@synthetic.example +1 555 0112 Not available",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cbc-5647-7c19-8b6b-c80a95835766"
+  },
+  "warnings": []
+}

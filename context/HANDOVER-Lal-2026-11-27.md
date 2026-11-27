@@ -1,3 +1,9 @@
+## Update — 27 Nov (S30)
+
+- **Account Id search (AID-1):** built as you approved — an Account Id returns only that Account's Contacts the user can see; a hidden or missing Account reads as no match; no Account details. Apex deployed (99/99 tests, 100%); Agent Script change in the repo; 9 of 9 targeted turns pass. Not yet published (decision 10).
+- **Case creation:** it conflicts with the read-only requirements, so it is **designed but not built** — your call (decision 9). Design and test plan: `knowledge-search/case-create-design.md`. A Screen Flow probably can't show inside the agent panel; the fallback is the platform's built-in action confirmation.
+- Requirement matrix: `knowledge-search/session-kb-s30-requirements-aid1-case-design.md` §2.
+
 ## Update — 27 Nov (S28, Salesforce org only)
 
 - **Read back today:** v3 Active, v7 Inactive, Employee_Leave_Assistant untouched; 14 articles (13 Online, 1 Draft; one older version archived), each in one Scholarship_Programs category, internal only. The v7 script, the Knowledge template and the category group in the org match the repo exactly.
@@ -79,8 +85,10 @@ release candidate with Knowledge answers, is published but Inactive.
 | 3 | D-8b and D-9: accept or fix |
 | 4 | A6: release timing, which waits until L-1 and OPS-1 are closed |
 | 5 | Name the on-call person for any future activation window (OPS-1, C5) |
-| 6 | Confirm Account ID search stays out of scope (R2 says Account name; `decisions/2026-11-27-account-id-search-out-of-scope.md`) |
+| 6 | ~~Account ID search out of scope~~ — superseded: you approved Account Id → its Contacts (AID-1, S30). Confirm Account details, related Cases and related Opportunities stay out of scope |
 | 8 | Contact Id search fix (S29): publish as inactive v8 now, or hold for the release version |
+| 9 | **Case creation (CASE-1):** approve or reject `decisions/2026-11-27-case-create-with-confirmation-PROPOSED.md` — it lifts the read-only rule for creating a Case only — and its sub-choices (confirmation UI, duplicate guard, required fields, who gets `DATA_Case_Create`, synthetic test writes) |
+| 10 | AID-1 + ID-1: publish a new inactive v9 now, or hold until the Case decision so both share one version |
 | 7 | Accept Customize Application on `SYS_Agent_Rollback_Automation` (needed to activate agent versions) or ask for an alternative |
 
 ## Release prerequisites

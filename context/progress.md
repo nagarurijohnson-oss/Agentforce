@@ -319,3 +319,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Review of v7→v8: 7/7 PASS. Correction: a Contact Id must contain a letter; digits-only values are phone numbers (`3c7337f`, 6 lines).
 - Targeted draft-preview turns with live read-only actions: 10/10 PASS, inputs confirmed in action traces, no errors. D-10 (Low, pre-existing): combined route searches twice.
 - `sf agent publish authoring-bundle`: v8 Inactive; v3 Active, v7 Inactive, Employee_Leave_Assistant v1 unchanged; org bundle byte-identical to repo. Nothing activated, no Apex, permission or record change.
+
+## S30 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): requirements matrix, AID-1, Case design
+- Decisions (Nagaruri Johnson): Case creation design only, wait for Lal; confirmation UI verify then fall back; Lal approved Account Id → its Contacts only; no synthetic writes.
+- AID-1: `accountId` input (Criteria, FieldAccess, Service, Action) + 11 new tests; validate `0AfjV000006pBkLSAU`, deploy `0AfjV000006pBlxSAE`, suggestion fix `0AfjV000006pByrSAE`; 99/99, 100% coverage; org = repo.
+- Agent Script: `in_account_id` / `criteria_account_id`, 3 new-search actions, 2 searches + paging, follow-up sends "", instructions. `sf agent validate` passes. 9/9 draft-preview turns (live read-only actions), traces error-free. Not published.
+- Case creation: `case-create-design.md` + proposed decision; nothing built, no Case created, no permission changed.
+- v3 Active; v1–v2, v4–v8 Inactive. Record: `knowledge-search/session-kb-s30-requirements-aid1-case-design.md`.

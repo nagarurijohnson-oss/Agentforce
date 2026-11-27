@@ -84,3 +84,14 @@ v4 published inactive with KT-19 fixed. Not activated. L-1 open (High); SV-1/3/4
 
 ### Review
 L-1 fixed and verified by API; OPS-1 built and mock-tested; waiting on the certificate and secrets for live tests. Release not approved.
+
+## S30 — 2026-11-27: requirements, AID-1, Case design
+- [x] Requirements review and matrix; conflicts raised; decisions recorded
+- [x] AID-1 Apex (accountId input), 11 tests, validate + deploy, org read-back
+- [x] AID-1 Agent Script, validate, 9 targeted preview turns
+- [x] Case creation design, test plan, proposed decision (no build — Lal)
+- [x] Docs: release review, handover, progress, decisions
+- [ ] Publish v9 Inactive (awaiting decision)
+- [ ] Case creation build (awaiting Lal)
+### Review
+Account Id search built and tested, not published. Case creation designed only. No activation, no record or permission change.

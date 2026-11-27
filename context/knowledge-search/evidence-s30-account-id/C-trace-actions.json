@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cbc-e4fe-7813-8a11-035bcce6624e",
+    "format": "detail",
+    "dimension": "actions",
+    "detail": [
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21cbc-f621-78a7-a81a-f9f1449cd65c",
+        "action": "search_contacts",
+        "input": "{\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"\",\"jobTitle\":\"\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"location\":\"\",\"contactId\":\"\",\"accountId\":\"001jV00000LhPtV\",\"requestedField\":\"\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[]\",\"criteriaSummary\":\"Account record: yes\",\"outcomeCode\":\"TOO_MANY\",\"refinementRequired\":true,\"remainingCount\":0,\"resultContactIds\":\"\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"More than 100 Contacts match. Please add more details to narrow the search.\\\",\\\"totalMatchesLabel\\\":\\\"more than 100\\\",\\\"suggestedFiltersText\\\":\\\"job title, email, phone, city, state or region, country\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":0,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":true,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"TOO_MANY\\\",\\\"criteriaSummary\\\":\\\"Account record: yes\\\",\\\"contacts\\\":[],\\\"canShowRemaining\\\":false}\",\"shownCount\":0,\"similarNameCount\":0,\"suggestedFiltersText\":\"job title, email, phone, city, state or region, country\",\"totalMatchesLabel\":\"more than 100\",\"userMessage\":\"More than 100 Contacts match. Please add more details to narrow the search.\",\"__tool_idx__\":\"fad7ffe3\",\"__supports_result_display__\":false}",
+        "latencyMs": 370,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21cbc-f621-78a7-a81a-f9f1449cd65c",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"More than 100 Contacts match. Please add more details to narrow the search.\\\",\\\"totalMatchesLabel\\\":\\\"more than 100\\\",\\\"suggestedFiltersText\\\":\\\"job title, email, phone, city, state or region, country\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":0,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":true,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"TOO_MANY\\\",\\\"criteriaSummary\\\":\\\"Account record: yes\\\",\\\"contacts\\\":[],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"2cf52802-52a6-4218-b2d1-1f8119f7a229\",\"promptResponse\":\"More than 100 Contacts match. Please add more details to narrow the search.  \\nYou could add: job title, email, phone, city, state or region, country.\",\"__tool_idx__\":\"b1491066\",\"__supports_result_display__\":false}",
+        "latencyMs": 2989,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}
