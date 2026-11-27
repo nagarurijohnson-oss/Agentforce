@@ -1,3 +1,9 @@
+## Update — 27 Nov (S26)
+
+- **L-1 verified live** on v3 with a synthetic Contact holding a Markdown link, a `javascript:` link, backticks, bold, a heading, strike-through and underscores: 4/4 replies clean, the record keeps its original text, the name link is the relative Salesforce record path, and planner traces show the real topic and actions ran. Still to do: the panel check P-1 to P-5 (it includes whether the panel auto-links a bare URL).
+- **OPS-1:** the rollback user and permission set are confirmed minimal. Nothing is set up on GitHub yet (no environment, secrets or installed workflow), so live T1/T2/T5 have not run. The steps needing Nagaruri's accounts are listed in `knowledge-search/session-kb-s26-l1-live-ops1-status.md`.
+- No change to your decisions list.
+
 ## Update — end of 27 Nov (S25)
 
 - **L-1 fixed** in `CRA_ContactSearchAction`. Markup characters in Contact data are now shown as look-alikes (`‹b›`, `［VIP］`, `｜`), so nothing can render. This is an Apex-only change: no agent version, and it applies to v3 and v7. 88/88 tests passed. On live v3 through the Agent API, 4/4 turns were clean. Still to do: one panel check as a restricted user.

@@ -1,7 +1,7 @@
 # SCGOE-95 Contact Read Agent + Knowledge Article Search — final release review (2026-11-27)
 
 **Branch:** `feature/kb-knowledge-search-build` · **Evidence baseline:** commit `412eb69` (S24)
-**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S25): L-1 fixed in Apex and verified through the Agent API, with one panel check left; OPS-1 controls built and mock-tested, with live tests waiting for the rollback credential.
+**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S26): L-1 fixed and verified live against links, `javascript:` links, backticks, bold, headings, strike and underscores (4/4 clean, traced), with one panel check left; OPS-1 org side verified, GitHub environment, secrets and workflow not yet set up, so live T1/T2/T5 not run.
 Everything below was established in earlier sessions; no test suite was re-run for this review.
 
 ## 1. What is built
@@ -85,8 +85,8 @@ Run from the repository root with `--target-org <alias>`. Validate each step che
 
 | ID | Severity | Issue | Next action |
 |---|---|---|---|
-| **L-1** | **High → fixed, panel check pending** | Final reasoning step removed Markdown escaping, so the panel rendered HTML from data. **Fixed 2026-11-27:** display values use look-alike characters, with no backslashes (`knowledge-search/L-1-fix-lookalike-characters.md`). Agent API on v3: 4/4 turns clean | One Lightning panel check as a restricted user in the next approved window, then close |
-| **OPS-1** | **High, open** | Rollback watchdog failed; v7 live 11 h 35 min instead of 90 min. **Built 2026-11-27:** C1–C5 and C7 (integration user, permission set, workflow, script); mock tests 10/10 (`knowledge-search/OPS-1-rollback-runbook.md`) | Certificate and GitHub secrets from Nagaruri Johnson, then live T1/T2/T5, then sign-off |
+| **L-1** | **High → fixed, panel check pending** | Final reasoning step removed Markdown escaping, so the panel rendered HTML from data. **Fixed 2026-11-27:** display values use look-alike characters, with no backslashes (`knowledge-search/L-1-fix-lookalike-characters.md`). Agent API on v3: 4/4 turns clean (S25), plus S26 hostile-link/Markdown check 4/4 clean with planner traces (`knowledge-search/session-kb-s26-l1-live-ops1-status.md`) | Lightning panel check P-1 to P-5 (incl. bare-URL auto-linking) as a restricted user in the next approved window, then close |
+| **OPS-1** | **High, open** | Rollback watchdog failed; v7 live 11 h 35 min instead of 90 min. **Built 2026-11-27:** C1–C5 and C7 (integration user, permission set, workflow, script); mock tests 10/10 (`knowledge-search/OPS-1-rollback-runbook.md`) S26: user, licence and permission set verified minimal; connected app, GitHub environment, secrets and installed workflow absent | Steps 1–5 in S26 record (certificate, consumer key, environment + secrets, workflow on default branch), then live T1/T2/T5, then sign-off |
 | D-5 | High, on v3 only | v3 (currently Active) can invent the next page of results (7/27 two-turn runs). Fixed in v6/v7 | Fixed by releasing v7; accept or mitigate while v3 is Active |
 | D-8b | Medium, accepted (pending Lal) | Missing data space set gives a platform error, not the fixed message | Accepted 2026-11-27: the permission design plus an assignment check is the control (`decisions/2026-11-27-d8b-d9-accepted-residual-risk.md`) |
 | D-9 | Low, accepted (pending Lal) | "show the other 3" after a failed display says "no other Contacts" | Accepted 2026-11-27; fix in any future agent version |

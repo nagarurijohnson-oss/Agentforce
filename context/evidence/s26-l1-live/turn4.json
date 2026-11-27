@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "01a21c3c-ed81-7342-a911-6587c59dcc55",
+        "isContentSafe": true,
+        "message": "I found one matching Contact.  \n**Name:** [CRA-TEST Mallory](/lightning/r/Contact/003jV00000HOooHQAT/view)  \n**Account:** CRA-TEST Northwind Synthetic  \n**Title:** ＃ heading ∼∼strike∼∼ ＿under＿score＿ ［x］(javascript:alert(1)) https://evil.example  \n**Email:** mallory_test@synthetic.example  \n**Phone:** Not available  \n**Mobile:** Not available  \n**Mailing address:** Not available",
+        "id": "53dc910d-4551-44e4-bded-5409f26f888e",
+        "metrics": {},
+        "planId": "01a21c3c-ed81-7342-a911-6587c59dcc55",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c3c-de98-78d4-b1a3-1ac8d7dd7297"
+  },
+  "warnings": []
+}
