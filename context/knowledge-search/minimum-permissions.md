@@ -36,5 +36,6 @@ all five grants (plan `v7-restricted-user-phaseA-plan.md`, step A-1).
 - The data space permission set has no Data Cloud permissions. S23 A-5: as CRA UAT Restricted with all five grants, direct `/ssot/query-sql` was refused (403); the user also has no API Enabled, so the refusal is at the API-access layer. Agent users do not need API Enabled.
 - S23 Phase A: with grants #1–#5 the restricted user passed 135/135 turns on v7 (Knowledge cited, Contact within sharing and FLS, no D-8b).
 
-**Manual steps per org:** category visibility and the data space scope are set in Setup (see
-`context/session-kb-s17-release-permissions.md`); neither can be deployed as metadata.
+**Manual steps per org:** category visibility is set in Setup (see
+`context/session-kb-s17-release-permissions.md`); it cannot be deployed as metadata. **S28:** the data space scope *is* now in the
+permission set XML (`dataspaceScopes`, API v68) and passed a check-only deploy (`0AfjV000006p3y5SAA`), so it ships with the permission set.

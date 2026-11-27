@@ -1,7 +1,7 @@
 # SCGOE-95 Contact Read Agent + Knowledge Article Search — final release review (2026-11-27)
 
 **Branch:** `feature/kb-knowledge-search-build` · **Evidence baseline:** commit `412eb69` (S24)
-**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S26): L-1 fixed and verified live against links, `javascript:` links, backticks, bold, headings, strike and underscores (4/4 clean, traced), with one panel check left; OPS-1 org side verified, GitHub environment, secrets and workflow not yet set up, so live T1/T2/T5 not run. Update S27: GitHub environment `agent-rollback` created but limited to `main` (armed `rollback-arm/*` runs would get no secrets — rule to add); certificate still not received, so no connected app; Knowledge requirements traced to evidence; Account ID search confirmed out of scope (`knowledge-search/session-kb-s27-requirements-trace.md`).
+**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S26): L-1 fixed and verified live against links, `javascript:` links, backticks, bold, headings, strike and underscores (4/4 clean, traced), with one panel check left; OPS-1 org side verified, GitHub environment, secrets and workflow not yet set up, so live T1/T2/T5 not run. Update S27: GitHub environment `agent-rollback` created but limited to `main` (armed `rollback-arm/*` runs would get no secrets — rule to add); certificate still not received, so no connected app; Knowledge requirements traced to evidence; Account ID search confirmed out of scope (`knowledge-search/session-kb-s27-requirements-trace.md`). Update S28 (org only): Knowledge and v7 components read back and match the repo; data space scope now deployable (M2 no longer manual); connected-app template reduced to scope Api and validated check-only without a certificate; L-1 class 35/35, 100%; certificate still not received (`knowledge-search/session-kb-s28-org-verification.md`).
 Everything below was established in earlier sessions; no test suite was re-run for this review.
 
 ## 1. What is built
@@ -76,7 +76,7 @@ Run from the repository root with `--target-org <alias>`. Validate each step che
 | # | Step | Path |
 |---|---|---|
 | M1 | Category visibility on `DATA_Knowledge_Read_Only` (Custom, 8 Scholarship_Programs categories) | Setup → Permission Sets → DATA – Knowledge – Read Only → Data Category Visibility |
-| M2 | Data space `default` on `SYS_Knowledge_Default_DataSpace` | Setup → Permission Sets → SYS – Knowledge Default Data Space → Data Spaces |
+| M2 | **No longer manual (S28):** data space `default` on `SYS_Knowledge_Default_DataSpace` now deploys with the permission set (check-only `0AfjV000006p3y5SAA`). Read it back after deploy | Setup → Permission Sets → SYS – Knowledge Default Data Space → Data Spaces (read-back only) |
 | M3 | Bind the Einstein Search retriever in `CRA_Knowledge_Answer` | Prompt Builder → Insert Resource → Einstein Search; save and activate (ADR-K6) |
 | M4 | External Client App for Agent API tests (the OPS-1 rollback credential is a deployable connected app, `ops/agent-rollback/org/`) | Setup → External Client App Manager |
 | M5 | "Administrators Can Log in as Any User" only for an approved test window | Setup → Login Access Policies |

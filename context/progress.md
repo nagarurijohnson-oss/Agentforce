@@ -299,3 +299,11 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Knowledge requirements traced to existing evidence; Account ID search judged out of scope (decision record).
 - OPS-1: environment `agent-rollback` exists but deployment branches = `main` only (defect; runbook step 3 corrected). No certificate, connected app or installed workflow; live T1/T2/T5 not run.
 - No org change, no test run, no activation. Record: `knowledge-search/session-kb-s27-requirements-trace.md`.
+
+## S28 — 2026-11-27 — Salesforce org verification (org only)
+
+- Read back: v3 Active, v7 Inactive, Employee_Leave_Assistant untouched; 14 articles (13 Online, 1 Draft; 000001011 v1 Archived); no expiring grants; no connected app.
+- v7 script, `CRA_Knowledge_Answer`, category group: org = repo. Data space scope added to the repo permission set (check-only `0AfjV000006p3y5SAA`); other permission sets and the presentation template synced from the org.
+- Connected-app template: scope Api only, schema order; check-only without certificate `0AfjV000006p4CbSAI`. Certificate not received, deploy pending.
+- L-1: `CRA_ContactSearchActionTest` 35/35, 100% of 166 lines (run `707jV00000ChBON`). No activation, no assignment, no business-record change.
+- Record: `knowledge-search/session-kb-s28-org-verification.md`.

@@ -1,3 +1,11 @@
+## Update — 27 Nov (S28, Salesforce org only)
+
+- **Read back today:** v3 Active, v7 Inactive, Employee_Leave_Assistant untouched; 14 articles (13 Online, 1 Draft; one older version archived), each in one Scholarship_Programs category, internal only. The v7 script, the Knowledge template and the category group in the org match the repo exactly.
+- **Fixed in the repo (no org change):** the data space permission set now carries its data space scope in metadata, and a check-only deploy passed. Manual step M2 goes away for future orgs; only M1 (category visibility) and M3 (retriever binding) stay manual.
+- **Rollback sign-in app:** template reduced to the `Api` scope and validated check-only without any certificate. Still **not deployed**, because `rollback.crt` has not arrived.
+- **L-1:** deployed class identical to the repo; its test class passed 35/35 with 100% coverage. Panel check P-1 to P-5 still waits for OPS-1 and a separately approved v7 window.
+- No new decision. Record: `knowledge-search/session-kb-s28-org-verification.md`.
+
 ## Update — 27 Nov (S27)
 
 - **Knowledge requirements:** each one is traced to existing evidence (S15–S24) in `knowledge-search/session-kb-s27-requirements-trace.md`. All are met **on v7 (Inactive)**. Users on v3 still have Contact search only.
@@ -49,10 +57,11 @@ release candidate with Knowledge answers, is published but Inactive.
 
 ## Remaining risks
 
-1. **L-1 (High, release blocker):** for a Contact whose data contains markup, the agent's final step drops the
-   escaping and the panel applies it. Only bold text has been seen. The Salesforce case is ready for manual
-   filing (`knowledge-search/L-1-salesforce-support-case.md`); nobody has filed it yet.
-2. **OPS-1 (High):** in the last test window the automatic rollback failed. v7 stayed live for 11 h 35 min instead
+1. **L-1 (High, release blocker until the panel check):** fixed in Apex in S25 (markup shown as look-alike
+   characters) and verified through the Agent API (S25, S26). Open only for the restricted-user Lightning panel
+   check P-1 to P-5. The prepared Salesforce case is no longer needed for the fix.
+2. **OPS-1 (High):** rollback rebuilt (S25) but not proven live: it needs the certificate, the GitHub secrets,
+   the installed workflow and live tests T1, T2 and T5. In the last test window the automatic rollback failed. v7 stayed live for 11 h 35 min instead
    of 90 minutes, and the temporary test access stayed on for about 13 h 37 min. Only two users could reach the agent.
    No further window will be run until the rollback is rebuilt and tested
    (`knowledge-search/OPS-1-activation-gate.md`).
