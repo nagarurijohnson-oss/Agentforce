@@ -1,3 +1,10 @@
+## Update — end of 27 Nov (S25)
+
+- **L-1 fixed** in `CRA_ContactSearchAction`. Markup characters in Contact data are now shown as look-alikes (`‹b›`, `［VIP］`, `｜`), so nothing can render. This is an Apex-only change: no agent version, and it applies to v3 and v7. 88/88 tests passed. On live v3 through the Agent API, 4/4 turns were clean. Still to do: one panel check as a restricted user.
+- **OPS-1 rollback rebuilt:** a GitHub Actions workflow with its own JWT integration user. It activates v3 first, reads back, retries, escalates, removes the recorded grants and turns Log in as off. Mock tests passed 10/10. Waiting for Nagaruri to supply the certificate and GitHub secrets; then come live tests T1, T2 and T5, then sign-off.
+- **D-8b and D-9** accepted as residual risk by Nagaruri. **Your confirmation is needed** (decision 3 below).
+- v3 Active, v7 Inactive (read back). Release is still not approved.
+
 ## Summary
 
 Contact Read Agent (SCGOE-95) and Knowledge Article Search are built and tested in MAX Developer Edition org

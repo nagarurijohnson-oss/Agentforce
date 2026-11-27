@@ -10,3 +10,9 @@
 - 2026-11-25: `sf agent preview` responses drop Markdown links even when the reply contains them; check the trace and verify links in the panel.
 - 2026-11-25: A subagent that relays its own reply ends the turn; a request needing two capabilities needs one subagent that runs both deterministically, not a hand-off "offer".
 - 2026-11-25: Injection-style messages can be refused by the platform Prompt_Injection guardrail before any subagent; score agent-level injection tests on 'nothing leaked', not on a specific decline text.
+
+## 2026-11-27 (S25)
+- When a model step may strip escapes, escaping cannot be the control: remove the dangerous characters (look-alikes) before the model sees the text.
+- An integration-licence user accepted CustomizeApplication/ModifyMetadata/AssignPermissionSets; CustomizeApplication pulls in ManageCustomPermissions and ManageTranslation, ViewSetup pulls in ViewRoles.
+- A repo token without Actions-secrets scope cannot store secrets: have the person generate the key pair and send only the certificate. Never handle the private key.
+- workflow_dispatch and schedule only run from the default branch; use a push trigger on a non-default branch for pre-merge tests.

@@ -1,7 +1,7 @@
 # SCGOE-95 Contact Read Agent + Knowledge Article Search — final release review (2026-11-27)
 
 **Branch:** `feature/kb-knowledge-search-build` · **Evidence baseline:** commit `412eb69` (S24)
-**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Two High blockers are open (L-1, OPS-1).
+**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S25): L-1 fixed in Apex and verified through the Agent API, with one panel check left; OPS-1 controls built and mock-tested, with live tests waiting for the rollback credential.
 Everything below was established in earlier sessions; no test suite was re-run for this review.
 
 ## 1. What is built
@@ -78,18 +78,18 @@ Run from the repository root with `--target-org <alias>`. Validate each step che
 | M1 | Category visibility on `DATA_Knowledge_Read_Only` (Custom, 8 Scholarship_Programs categories) | Setup → Permission Sets → DATA – Knowledge – Read Only → Data Category Visibility |
 | M2 | Data space `default` on `SYS_Knowledge_Default_DataSpace` | Setup → Permission Sets → SYS – Knowledge Default Data Space → Data Spaces |
 | M3 | Bind the Einstein Search retriever in `CRA_Knowledge_Answer` | Prompt Builder → Insert Resource → Einstein Search; save and activate (ADR-K6) |
-| M4 | External Client App for Agent API tests and the OPS-1 rollback credential | Setup → External Client App Manager |
+| M4 | External Client App for Agent API tests (the OPS-1 rollback credential is a deployable connected app, `ops/agent-rollback/org/`) | Setup → External Client App Manager |
 | M5 | "Administrators Can Log in as Any User" only for an approved test window | Setup → Login Access Policies |
 
 ## 6. Unresolved issues
 
 | ID | Severity | Issue | Next action |
 |---|---|---|---|
-| **L-1** | **High, release blocker** | Final reasoning step removes Markdown escaping; panel renders HTML from data ("LLC" bold). Confirmed in the Lightning panel on v7 | File `knowledge-search/L-1-salesforce-support-case.md`; verify any fix in the panel |
-| **OPS-1** | **High, operational** | Rollback watchdog failed; v7 live 11 h 35 min instead of 90 min | Build and test controls C1–C7 in `knowledge-search/OPS-1-activation-gate.md`. No window until then |
+| **L-1** | **High → fixed, panel check pending** | Final reasoning step removed Markdown escaping, so the panel rendered HTML from data. **Fixed 2026-11-27:** display values use look-alike characters, with no backslashes (`knowledge-search/L-1-fix-lookalike-characters.md`). Agent API on v3: 4/4 turns clean | One Lightning panel check as a restricted user in the next approved window, then close |
+| **OPS-1** | **High, open** | Rollback watchdog failed; v7 live 11 h 35 min instead of 90 min. **Built 2026-11-27:** C1–C5 and C7 (integration user, permission set, workflow, script); mock tests 10/10 (`knowledge-search/OPS-1-rollback-runbook.md`) | Certificate and GitHub secrets from Nagaruri Johnson, then live T1/T2/T5, then sign-off |
 | D-5 | High, on v3 only | v3 (currently Active) can invent the next page of results (7/27 two-turn runs). Fixed in v6/v7 | Fixed by releasing v7; accept or mitigate while v3 is Active |
-| D-8b | Medium | Missing data space set gives a platform error, not the fixed message | Decide: accept with permission design as control, or raise |
-| D-9 | Low | "show the other 3" after a failed display says "no other Contacts" | Decide |
+| D-8b | Medium, accepted (pending Lal) | Missing data space set gives a platform error, not the fixed message | Accepted 2026-11-27: the permission design plus an assignment check is the control (`decisions/2026-11-27-d8b-d9-accepted-residual-risk.md`) |
+| D-9 | Low, accepted (pending Lal) | "show the other 3" after a failed display says "no other Contacts" | Accepted 2026-11-27; fix in any future agent version |
 | P-1 | Low, platform | Addresses and emails are auto-linked; occasional stray backslash next to them | Accept |
 | A5, A6 | Approval | Who gets Knowledge answers; activation timing | Lal |
 

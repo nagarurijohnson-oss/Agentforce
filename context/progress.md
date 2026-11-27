@@ -278,3 +278,11 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - OPS-1 controls C1–C7 specified: `knowledge-search/OPS-1-activation-gate.md`. No window scheduled.
 - Consolidated release review: `RELEASE-REVIEW-SCGOE-95-KB.md`. Handover: `HANDOVER-Lal-2026-11-27.md`.
 - **L-1 open (High, release blocker); OPS-1 open (High).** Release not approved; nothing merged.
+
+## S25 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): L-1 fix, OPS-1 build
+- Recovered state: HEAD `7910f6c` = PR #7 head, no uncommitted work; v3 Active, v7 Inactive, Employee_Leave_Assistant v1 Active.
+- Decisions (Nagaruri Johnson): L-1 neutralise in Apex; OPS-1 build all; alerts GitHub issue + e-mail; D-8b/D-9 accept.
+- **L-1 fixed:** look-alike display characters. Validation `0AfjV000006owwbSAA` 88/88, 166/166 lines; deploy `0AfjV000006ox1RSAQ`. Agent API on published v3: 4/4 turns clean, table columns intact. Panel check as a restricted user pending.
+- **OPS-1 built:** `ops/agent-rollback/` (script, mock tests 10/10, window example, backstop), `.github/workflows/agent-rollback.yml`, permission set `SYS_Agent_Rollback_Automation` (deploy `0AfjV000006oxnpSAA`), integration user `005jV000003ufYDQAY` with PSL and set. Connected app template ready; needs the certificate. Runbook `knowledge-search/OPS-1-rollback-runbook.md`.
+- D-8b, D-9 accepted (pending Lal).
+- Open: certificate + secrets → live T1/T2/T5 → OPS-1 sign-off; panel check for L-1; Lal decisions; PR review; release approval.

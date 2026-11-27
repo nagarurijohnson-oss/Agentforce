@@ -71,3 +71,16 @@ Template gate met; v6 Active. v4 held on KT-19. L-1 and SV-1/3/4 open.
 - [x] Validate 0AfjV000006mh2PSAQ; publish v4 Inactive; v3 Active; org bundle == repo
 ### Review
 v4 published inactive with KT-19 fixed. Not activated. L-1 open (High); SV-1/3/4 blocked by B-1; no release approved.
+
+## S25 — 2026-11-27
+- [x] Recover state (repo, PR #7, org versions)
+- [x] L-1 Apex fix, tests, validate, deploy, Agent API check on v3
+- [x] OPS-1 script, workflow, mock tests T1/T3/T4/T5/T6, runbook
+- [x] OPS-1 org identity: permission set, integration user, PSL
+- [ ] OPS-1 connected app (needs the certificate), live T1/T2/T5
+- [ ] L-1 panel check as a restricted user (next approved window)
+- [x] D-8b / D-9 decisions recorded
+- [x] Update PR #7, handover
+
+### Review
+L-1 fixed and verified by API; OPS-1 built and mock-tested; waiting on the certificate and secrets for live tests. Release not approved.

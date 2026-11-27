@@ -1,0 +1,11 @@
+{
+  "windowId": "backstop",
+  "agent": "Contact_Read_Agent",
+  "safeVersion": 3,
+  "armedAt": "2026-11-27T00:00:00Z",
+  "deadline": "2026-11-27T00:00:00Z",
+  "onCall": [],
+  "escalation": [],
+  "grants": [],
+  "loginAsOffAtDeadline": false
+}
