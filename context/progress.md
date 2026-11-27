@@ -271,3 +271,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - D-8b and D-9 not tested (skipped by decision).
 - Restored 2026-11-27 07:04Z and read back, identical to baseline: v3 Active / v7 Inactive, Log in as off, 4 sets and licence removed, saved sign-in deleted, `SYS_Lightning_Experience_User` deployed and unassigned.
 - Report: `session-kb-s24-v7-phaseB.md`. Incident: `knowledge-search/incident-2026-11-26-v7-window-overrun.md`.
+
+## S25 — finalisation for review (2026-11-27, documentation only)
+- No test cycle re-run; uses S24 evidence (`412eb69`). No org change: v3 Active, v7 Inactive, UAT user on its 4 original sets (read back).
+- L-1 Salesforce case ready for manual filing: `knowledge-search/L-1-salesforce-support-case.md`, with trace excerpt `evidence/s24-v7-phaseB/L-1-trace-excerpt.json` (template output escaped → final model step output unescaped, 3 of 3 turns). **Not filed** (no Salesforce Help connection). Case number: _pending_.
+- OPS-1 controls C1–C7 specified: `knowledge-search/OPS-1-activation-gate.md`. No window scheduled.
+- Consolidated release review: `RELEASE-REVIEW-SCGOE-95-KB.md`. Handover: `HANDOVER-Lal-2026-11-27.md`.
+- **L-1 open (High, release blocker); OPS-1 open (High).** Release not approved; nothing merged.

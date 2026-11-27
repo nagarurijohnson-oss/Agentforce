@@ -1,6 +1,6 @@
 # Incident OPS-1 — Phase B activation window overran by about 10 hours
 
-**Severity:** High (operational) · **Status:** Open until the rollback mechanism is redesigned and tested
+**Severity:** High (operational) · **Status:** Open until the rollback mechanism is redesigned and tested (controls C1–C7: `OPS-1-activation-gate.md`, 2026-11-27)
 **Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Agent:** Contact_Read_Agent
 **Recorded:** 2026-11-27 (S24 cleanup) · **Raised by:** Orchestrate session 50144f18 · **Approver of the window:** Nagaruri Johnson
 

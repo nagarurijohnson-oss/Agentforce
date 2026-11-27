@@ -1,5 +1,8 @@
 ## Status
 
+> **2026-11-27:** superseded for filing by `knowledge-search/L-1-salesforce-support-case.md` (adds the S24 Lightning panel and Agent API trace evidence). This file keeps the history.
+
+
 - **Limitation L-1 (High): open. Not resolved.** The agent's final reasoning step can change the escaped Prompt Template reply before it reaches the user. When it does, HTML in a Contact value is applied in the chat.
 - **Decision (Nagaruri Johnson, 2026-11-20):** raise it with Salesforce. No further escaping changes until Salesforce answers. Session 5 stays open; Session 6 is on hold.
 - **2026-11-20:** also reproduced in the Lightning Experience Agentforce panel with the published, active agent (5 of 5 turns). See `session-6-activation-and-lightning-panel.md`.
