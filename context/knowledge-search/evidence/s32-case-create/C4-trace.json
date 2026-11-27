@@ -1,0 +1,48 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cf1-633c-7c2b-ac1a-130bb2009f09",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21cf1-7568-7090-9bf6-5ddb12493019",
+        "topic": "contact_search",
+        "userInput": "Find Avery Testfield",
+        "agentResponse": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3069,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21cf1-976b-74b8-b987-a5d2c4769465",
+        "topic": "case_create",
+        "userInput": "Create a case for her. Subject: CRA-TEST Portal login issue. Description: Synthetic test case, cannot sign in to the scholarship portal. Origin: Web",
+        "agentResponse": "Here is the Case I will create. Nothing is saved yet.\n\nContact: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nSubject: CRA-TEST Portal login issue\nDescription: Synthetic test case, cannot sign in to the scholarship portal.\nOrigin: Web\nPriority: Medium\nStatus: New\n\nReply Confirm to create this Case, or Cancel to stop. Any other reply cancels it.",
+        "actionsExecuted": [
+          "check_contact",
+          "validate_case_draft"
+        ],
+        "latencyMs": 482,
+        "error": null
+      },
+      {
+        "turn": 7,
+        "planId": "01a21cf1-addc-7c25-bcf0-e65fe4b62076",
+        "topic": "case_create",
+        "userInput": "Confirm",
+        "agentResponse": "I didn't create another Case: Case 00001026 with the same Subject was already created by you for this Contact in the last 10 minutes.\n\nOpen Case 00001026",
+        "actionsExecuted": [
+          "create_confirmed_case"
+        ],
+        "latencyMs": 341,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

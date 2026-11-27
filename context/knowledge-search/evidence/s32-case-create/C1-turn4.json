@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "31483db8-5b3c-4a1d-ad98-2a77741cbad2",
+        "metrics": {},
+        "feedbackId": "01a21cef-aa9f-7d44-a61b-913e4ead3397",
+        "planId": "01a21cef-aa9f-7d44-a61b-913e4ead3397",
+        "isContentSafe": true,
+        "message": "The Case for Avery Testfield has already been created. If you need to create another Case or have questions about Contacts or scholarship policies, please let me know how I can help!",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cef-45fe-734e-b6fd-950790156a0a"
+  },
+  "warnings": []
+}

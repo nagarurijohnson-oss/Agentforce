@@ -7,7 +7,7 @@
         <name>Contact_Read_Agent</name>
     </botMlDomain>
     <botSource>None</botSource>
-    <description>SCGOE-95. Read-only Contact search for employees. Runs as the logged-in user, so results respect their sharing, object and field access.</description>
+    <description>SCGOE-95. Contact search for employees (read-only), plus Case creation after explicit confirmation. Runs as the logged-in user, so results respect their sharing, object and field access.</description>
     <label>Contact Read Agent</label>
     <logPrivateConversationData>false</logPrivateConversationData>
     <richContentEnabled>true</richContentEnabled>

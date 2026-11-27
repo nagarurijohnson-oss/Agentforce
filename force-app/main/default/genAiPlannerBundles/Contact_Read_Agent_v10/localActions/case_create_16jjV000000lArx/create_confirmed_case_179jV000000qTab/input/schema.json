@@ -1,0 +1,42 @@
+{
+  "required" : [ ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varT_ContactId" : {
+      "title" : "Var T Contact Id",
+      "description" : "Id of the Contact the Case is for",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varT_Description" : {
+      "title" : "Var T Description",
+      "description" : "Case Description",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varT_Origin" : {
+      "title" : "Var T Origin",
+      "description" : "Case Origin: Phone, Email or Web",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varT_Priority" : {
+      "title" : "Var T Priority",
+      "description" : "Case Priority: High, Medium or Low; empty means Medium",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varT_Subject" : {
+      "title" : "Var T Subject",
+      "description" : "Case Subject",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

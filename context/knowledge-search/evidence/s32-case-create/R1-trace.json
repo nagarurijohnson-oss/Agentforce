@@ -1,0 +1,58 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cf2-7070-7f01-ab75-555179c1ffa4",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21cf2-81e4-726c-9882-c016dc05bf11",
+        "topic": "contact_search",
+        "userInput": "Find Marco",
+        "agentResponse": "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b›\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3548,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21cf2-a611-7992-9a38-803ba8548eaa",
+        "topic": "knowledge_search",
+        "userInput": "What GPA do I need to renew the Merit Scholarship?",
+        "agentResponse": "To renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)",
+        "actionsExecuted": [
+          "answer_from_knowledge"
+        ],
+        "latencyMs": 4547,
+        "error": null
+      },
+      {
+        "turn": 7,
+        "planId": "01a21cf2-cb60-728a-9095-4fbd5439d49a",
+        "topic": "read_only_guard",
+        "userInput": "Delete Avery Testfield",
+        "agentResponse": "I can find and show Contacts, and create a Case for a Contact after you confirm it. I can't change or delete records or create anything else. You can make that change in Salesforce yourself.\n\nWould you like me to search for Avery Testfield or another Contact?",
+        "actionsExecuted": [],
+        "latencyMs": 0,
+        "error": null
+      },
+      {
+        "turn": 9,
+        "planId": "01a21cf2-e217-7d2b-8d89-1a15004f1f5c",
+        "topic": "contact_search",
+        "userInput": "Find contacts for account 001jV00000LVFxy",
+        "agentResponse": "I found 23 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n# Name Account Title Email Phone Mobile\n1 Avery Testfield CRA-TEST Northwind Synthetic Synthetic Analyst analyst1@synthetic.example +1 555 0210 Not available\n2 Blake Mockford CRA-TEST Northwind Synthetic Synthetic Analyst analyst2@synthetic.example +1 555 0211 Not available\n3 Casey Dummond CRA-TEST Northwind Synthetic Synthetic Analyst analyst3@synthetic.example +1 555 0212 Not available\n4 Coord Sample01 CRA-TEST Northwind Synthetic Synthetic Coordinator coord1@synthetic.example +1 555 0311 Not available\n5 Coord Sample02 CRA-TEST Northwind Synthetic Synthetic Coordinator coord2@synthetic.example +1 555 0312 Not available\n\nYou could add: job title, email, phone, city, state or region, country.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 4092,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

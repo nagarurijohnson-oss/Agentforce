@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SCGOE-95 CASE-1. Allows creating a Case through Contact_Read_Agent. Checked first by SUB_Case_Draft_Validate and SUB_Case_Create_Confirmed. Granted only by DATA_Case_Create.</description>
+    <isLicensed>false</isLicensed>
+    <label>CRA Case Create</label>
+</CustomPermission>

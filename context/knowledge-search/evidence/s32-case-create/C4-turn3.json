@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "62e18951-27f6-4817-bc91-007562a03994",
+        "metrics": {},
+        "feedbackId": "01a21cf1-addc-7c25-bcf0-e65fe4b62076",
+        "planId": "01a21cf1-addc-7c25-bcf0-e65fe4b62076",
+        "isContentSafe": true,
+        "message": "I didn't create another Case: Case 00001026 with the same Subject was already created by you for this Contact in the last 10 minutes.\n\nOpen Case 00001026",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf1-633c-7c2b-ac1a-130bb2009f09"
+  },
+  "warnings": []
+}

@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "4960794f-77f8-4aeb-bf27-800649f4fb2c",
+        "metrics": {},
+        "feedbackId": "01a21cf3-fc3c-7eaf-9e57-faf5fcbd7305",
+        "planId": "01a21cf3-fc3c-7eaf-9e57-faf5fcbd7305",
+        "isContentSafe": true,
+        "message": "To create a Case for Avery Testfield, I need the following details:\n\nSubject (what is the Case about?)\nDescription (more details about the issue or request)\nOrigin (was this request made by Phone, Email, or Web?)\n\nPlease provide these details and I'll show you a draft before proceeding.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf3-c8a7-7746-8c71-ab90d62db58a"
+  },
+  "warnings": []
+}

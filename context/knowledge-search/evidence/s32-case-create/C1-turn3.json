@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "a058d887-5e1c-4986-890b-0b5f3580f2de",
+        "metrics": {},
+        "feedbackId": "01a21cef-93e5-7fe1-b205-e9b783329751",
+        "planId": "01a21cef-93e5-7fe1-b205-e9b783329751",
+        "isContentSafe": true,
+        "message": "Case 00001026 was created for Avery Testfield.\n\nOpen Case 00001026",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cef-45fe-734e-b6fd-950790156a0a"
+  },
+  "warnings": []
+}

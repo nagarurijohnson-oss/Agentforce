@@ -1,0 +1,134 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "canShowRemaining" : {
+      "title" : "Can Show Remaining",
+      "description" : "The other Contacts may be shown",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "contactsJson" : {
+      "title" : "Contacts Json",
+      "description" : "Contact rows as JSON. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "criteriaSummary" : {
+      "title" : "Criteria Summary",
+      "description" : "Summary of the criteria used. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "duplicateOn" : {
+      "title" : "Duplicate On",
+      "description" : "Field the duplicates share. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "outcomeCode" : {
+      "title" : "Outcome Code",
+      "description" : "Outcome code",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "refinementRequired" : {
+      "title" : "Refinement Required",
+      "description" : "More details are needed",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "remainingCount" : {
+      "title" : "Remaining Count",
+      "description" : "Contacts not shown. Presentation only; read through the template.",
+      "lightning:type" : "lightning__integerType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "requestedFieldLabel" : {
+      "title" : "Requested Field Label",
+      "description" : "Label of the requested field. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "resultContactIds" : {
+      "title" : "Result Contact Ids",
+      "description" : "Comma-separated Ids of the Contacts shown, in order",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "searchResultJson" : {
+      "title" : "Search Result Json",
+      "description" : "Whole result for the presentation template",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "shownCount" : {
+      "title" : "Shown Count",
+      "description" : "Contacts shown. Presentation only; read through the template.",
+      "lightning:type" : "lightning__integerType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "similarNameCount" : {
+      "title" : "Similar Name Count",
+      "description" : "Similar names not counted as exact. Presentation only; read through the template.",
+      "lightning:type" : "lightning__integerType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "singleContactId" : {
+      "title" : "Single Contact Id",
+      "description" : "Id when exactly one Contact matched",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "suggestedFiltersText" : {
+      "title" : "Suggested Filters Text",
+      "description" : "Suggested filters. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "totalMatchesLabel" : {
+      "title" : "Total Matches Label",
+      "description" : "Total matches, as text. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "userMessage" : {
+      "title" : "User Message",
+      "description" : "Fixed message for the outcome. Presentation only; read through the template.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

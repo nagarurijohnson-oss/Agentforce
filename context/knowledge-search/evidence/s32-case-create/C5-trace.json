@@ -1,0 +1,20 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cf2-1647-777f-aa16-f3418d00f133",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21cf2-2a95-766a-8c7a-bf219c7c2dff",
+        "topic": "case_create",
+        "userInput": "Create a case. Subject: CRA-TEST no contact. Description: test. Origin: Web",
+        "agentResponse": "Which Contact is the Case for? Search for the Contact first (for example, \"find Avery Testfield\"), then ask me to create the Case.",
+        "actionsExecuted": [],
+        "latencyMs": 0,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

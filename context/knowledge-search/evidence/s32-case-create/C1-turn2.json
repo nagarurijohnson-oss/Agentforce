@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "10742a69-8179-4973-8590-8f9d26d440c9",
+        "metrics": {},
+        "feedbackId": "01a21cef-7d3c-71eb-a38a-7a728c1162a9",
+        "planId": "01a21cef-7d3c-71eb-a38a-7a728c1162a9",
+        "isContentSafe": true,
+        "message": "Here is the Case I will create. Nothing is saved yet.\n\nContact: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nSubject: CRA-TEST Portal login issue\nDescription: Synthetic test case, cannot sign in to the scholarship portal.\nOrigin: Web\nPriority: Medium\nStatus: New\n\nReply Confirm to create this Case, or Cancel to stop. Any other reply cancels it.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cef-45fe-734e-b6fd-950790156a0a"
+  },
+  "warnings": []
+}

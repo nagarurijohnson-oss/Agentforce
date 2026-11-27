@@ -1,0 +1,46 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varB_Success" : {
+      "title" : "Var B Success",
+      "description" : "True when a Case was created",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "varT_CaseId" : {
+      "title" : "Var T Case Id",
+      "description" : "Id of the Case created, or of the duplicate found",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "varT_CaseNumber" : {
+      "title" : "Var T Case Number",
+      "description" : "Case Number of the Case created, or of the duplicate found",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "varT_Message" : {
+      "title" : "Var T Message",
+      "description" : "The result: Case Number and record link, or the fixed refusal or failure message",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "varT_OutcomeCode" : {
+      "title" : "Var T Outcome Code",
+      "description" : "Outcome code",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

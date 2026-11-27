@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "f2298b2c-2309-4a98-a41b-80a7fd1a2ed7",
+        "metrics": {},
+        "feedbackId": "01a21cf2-e217-7d2b-8d89-1a15004f1f5c",
+        "planId": "01a21cf2-e217-7d2b-8d89-1a15004f1f5c",
+        "isContentSafe": true,
+        "message": "I found 23 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n# Name Account Title Email Phone Mobile\n1 Avery Testfield CRA-TEST Northwind Synthetic Synthetic Analyst analyst1@synthetic.example +1 555 0210 Not available\n2 Blake Mockford CRA-TEST Northwind Synthetic Synthetic Analyst analyst2@synthetic.example +1 555 0211 Not available\n3 Casey Dummond CRA-TEST Northwind Synthetic Synthetic Analyst analyst3@synthetic.example +1 555 0212 Not available\n4 Coord Sample01 CRA-TEST Northwind Synthetic Synthetic Coordinator coord1@synthetic.example +1 555 0311 Not available\n5 Coord Sample02 CRA-TEST Northwind Synthetic Synthetic Coordinator coord2@synthetic.example +1 555 0312 Not available\n\nYou could add: job title, email, phone, city, state or region, country.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf2-7070-7f01-ab75-555179c1ffa4"
+  },
+  "warnings": []
+}

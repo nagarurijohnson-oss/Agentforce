@@ -27,7 +27,7 @@ Sources: `context/requirements-status.md` (R, O, SEC, T), `context/knowledge-sea
 | Knowledge | K-R1–K-R10: 14 synthetic articles, Data Library, retriever, `CRA_Knowledge_Answer`, programme clarification, citations, combined requests, visibility | **Complete in v7/v8 (Inactive)** | S15–S24, S27 trace, S28 org check. Live v3 has no Knowledge |
 | Related records | Related Cases for a Contact | **Not approved — not built** | Only Salesforce template flows exist in MAX; no approved action |
 | Related records | Related Opportunities | **Not approved — not built** | Same |
-| Case creation | Create Case with Confirm/Cancel | **Design only — awaiting Lal** | `case-create-design.md`; decision draft `decisions/2026-11-27-case-create-with-confirmation-PROPOSED.md` |
+| Case creation | Create Case with Confirm/Cancel | **Design only — awaiting Lal** | `case-create-design.md`; decision draft `decisions/2026-11-27-case-create-with-confirmation.md` |
 | Security | SEC1–SEC5 sharing, CRUD, FLS, no existence leaks, input validation | **Complete for read paths** | Apex security suites; AID-1 adds 3 security tests |
 | Release | OPS-1 rollback live tests, L-1 Lightning panel check | **Open (High)** | Certificate and GitHub setup outstanding (S26–S28) |
 

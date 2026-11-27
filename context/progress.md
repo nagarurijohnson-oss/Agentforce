@@ -333,3 +333,9 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - `sf agent publish authoring-bundle` → v9 Inactive. Readback: v3 Active, v1–v2 and v4–v9 Inactive, Employee_Leave_Assistant v1 unchanged; published script byte-identical to repo; planner schema has `accountId` in all 3 search actions.
 - Case creation: design only; placement inside Contact_Read_Agent recorded; decisions C-1 to C-6 for Lal. No Case actions, permissions or test Cases.
 - Record: `knowledge-search/session-kb-s31-v9-publish.md`. Not release-ready (OPS-1, L-1 panel check).
+
+## S32 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): Case creation, v10 published Inactive
+
+- Lal's exception recorded (Case creation only). Deployed `CRA_Case_Create`, `DATA_Case_Create`, `SUB_Case_Draft_Validate`, `SUB_Case_Create_Confirmed`; `case_create` subagent in Agent Script.
+- `DATA_Case_Create` assigned to admin John Steve for tests, then removed (0 assignments). Tests C1–C6 + R1 pass, traces error-free; 1 synthetic Case 00001026; F-1 fixed.
+- v10 published Inactive; v3 Active; Employee_Leave_Assistant unchanged; published script = repo. Record: `knowledge-search/session-kb-s32-case-create-v10.md`. Not release-ready.

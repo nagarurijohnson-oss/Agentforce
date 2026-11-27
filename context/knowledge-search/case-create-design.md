@@ -1,7 +1,7 @@
 # Case creation with confirmation — design for Lal's approval
 
 **Status:** PROPOSED, not built (decision: design only, wait for Lal, 2026-11-27). **Ticket:** SCGOE-95.
-**Decision draft:** `context/decisions/2026-11-27-case-create-with-confirmation-PROPOSED.md`
+**Decision draft:** `context/decisions/2026-11-27-case-create-with-confirmation.md`
 
 Nothing in this document exists in the org. No Case, Flow, permission set or agent version was created for it.
 
