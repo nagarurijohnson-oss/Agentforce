@@ -1,0 +1,173 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": true,
+    "completedDate": "2026-11-27T12:41:50.000Z",
+    "createdBy": "005jV000001p8m9",
+    "createdByName": "John Steve",
+    "createdDate": "2026-11-27T12:41:12.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2026-11-27T12:41:17.000Z",
+          "deleted": false,
+          "fileName": "classes/CRA_CaseCreateFlowSecurityTest.cls",
+          "fullName": "CRA_CaseCreateFlowSecurityTest",
+          "id": "01pjV000005Hs5xQAC",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-11-27T12:41:17.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "flowCoverage": [
+          {
+            "elementsNotCovered": [
+              "set_denied"
+            ],
+            "flowId": "301jV00000LxxBI",
+            "flowName": "SUB_Case_Create_Access_Check",
+            "flowNamespace": null,
+            "numElements": 12,
+            "numElementsNotCovered": 1,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "set_not_found",
+              "set_invalid",
+              "set_created_no_number",
+              "set_failed"
+            ],
+            "flowId": "301jV00000LxxBG",
+            "flowName": "SUB_Case_Create_Confirmed",
+            "flowNamespace": null,
+            "numElements": 19,
+            "numElementsNotCovered": 4,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "set_not_found",
+              "set_invalid",
+              "set_failed"
+            ],
+            "flowId": "301jV00000LxxBH",
+            "flowName": "SUB_Case_Draft_Validate",
+            "flowNamespace": null,
+            "numElements": 14,
+            "numElementsNotCovered": 3,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "get_my_leave_records"
+            ],
+            "flowId": "301jV00000CVoMb",
+            "flowName": "SUB_Get_My_Leave_Records",
+            "flowNamespace": null,
+            "numElements": 1,
+            "numElementsNotCovered": 1,
+            "processType": "AutoLaunchedFlow"
+          }
+        ],
+        "numFailures": 0,
+        "numTestsRun": 6,
+        "successes": [
+          {
+            "id": "01pjV000005Hs5xQAC",
+            "methodName": "accountLinkNeedsAccountIdEdit",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 7501
+          },
+          {
+            "id": "01pjV000005Hs5xQAC",
+            "methodName": "authorizedUserCreatesExactlyOneCase",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 3593
+          },
+          {
+            "id": "01pjV000005Hs5xQAC",
+            "methodName": "customPermissionWithoutCaseAccessIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 3851
+          },
+          {
+            "id": "01pjV000005Hs5xQAC",
+            "methodName": "missingFieldEditIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 4825
+          },
+          {
+            "id": "01pjV000005Hs5xQAC",
+            "methodName": "mutedFieldInPermissionSetGroupIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 6623
+          },
+          {
+            "id": "01pjV000005Hs5xQAC",
+            "methodName": "unmutedPermissionSetGroupAllowsOneCase",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 5461
+          }
+        ],
+        "totalTime": 31955,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverageWarnings": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0AfjV000006pIfNSAU",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-11-27T12:41:50.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 1,
+    "numberComponentsTotal": 1,
+    "numberFiles": "4",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 6,
+    "numberTestsTotal": 6,
+    "rollbackOnError": true,
+    "runTestsEnabled": true,
+    "startDate": "2026-11-27T12:41:16.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": "16587",
+    "files": [
+      {
+        "fullName": "CRA_CaseCreateFlowSecurityTest",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/classes/CRA_CaseCreateFlowSecurityTest.cls"
+      },
+      {
+        "fullName": "CRA_CaseCreateFlowSecurityTest",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/classes/CRA_CaseCreateFlowSecurityTest.cls-meta.xml"
+      }
+    ],
+    "deployUrl": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com//lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfjV000006pIfNSAU%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

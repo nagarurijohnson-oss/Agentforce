@@ -211,4 +211,72 @@ private class CRA_CaseCreateFlowSecurityTest {
         System.assertEquals('DUPLICATE', repeatOutcome, 'A repeated confirm is refused');
         System.assertEquals(1, caseCount(testContact.Id), 'Exactly one Case after two confirms');
     }
+    /*************************************************************
+    Purpose: S34. A permission set group that contains DATA_Case_Create
+             and a muting permission set removing Edit on Case.Priority.
+             The platform then treats Priority as not editable, so the
+             Flows must refuse too. Control: the same group without the
+             mute allows exactly one Case.
+    *************************************************************/
+    private static User createGroupUser(Boolean mutePriority) {
+        User testUser = createUser(new List<String>{ CONTACT_PERMSET }, new List<PermissionSet>());
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            String uniqueKey = String.valueOf(Crypto.getRandomInteger()).replace('-', '');
+            PermissionSetGroup caseGroup = new PermissionSetGroup(DeveloperName = 'CRA_S34_Group_' + uniqueKey,
+                                                                  MasterLabel = 'CRA S34 Group');
+            insert caseGroup;
+            PermissionSet caseSet = [SELECT Id FROM PermissionSet WHERE Name = :CASE_PERMSET LIMIT 1];
+            List<PermissionSetGroupComponent> components = new List<PermissionSetGroupComponent>{
+                new PermissionSetGroupComponent(PermissionSetGroupId = caseGroup.Id, PermissionSetId = caseSet.Id)
+            };
+            if (mutePriority) {
+                MutingPermissionSet mute = new MutingPermissionSet(DeveloperName = 'CRA_S34_Mute_' + uniqueKey,
+                                                                   MasterLabel = 'CRA S34 Mute');
+                insert mute;
+                insert new FieldPermissions(ParentId = mute.Id, SobjectType = 'Case', Field = 'Case.Priority',
+                                            PermissionsRead = false, PermissionsEdit = true);
+                components.add(new PermissionSetGroupComponent(PermissionSetGroupId = caseGroup.Id,
+                                                               PermissionSetId = mute.Id));
+            }
+            insert components;
+            Test.calculatePermissionSetGroup(caseGroup.Id);
+            insert new PermissionSetAssignment(AssigneeId = testUser.Id, PermissionSetGroupId = caseGroup.Id);
+        }
+        return testUser;
+    }
+
+    @isTest
+    static void mutedFieldInPermissionSetGroupIsDenied() {
+        Contact testContact = createContact(true, null);
+        User testUser = createGroupUser(true);
+        Boolean platformEditable;
+        String draftOutcome;
+        String createOutcome;
+        Test.startTest();
+        System.runAs(testUser) {
+            platformEditable = Schema.sObjectType.Case.fields.Priority.isUpdateable();
+            draftOutcome = runFlow(DRAFT_FLOW, inputs(testContact.Id));
+            createOutcome = runFlow(CREATE_FLOW, inputs(testContact.Id));
+        }
+        Test.stopTest();
+        System.debug('S34 muted: platformPriorityEditable=' + platformEditable + ' draft=' + draftOutcome + ' create=' + createOutcome);
+        System.assertEquals(false, platformEditable, 'Muting must remove Edit on Case.Priority for the platform');
+        System.assertEquals('NO_PERMISSION', draftOutcome, 'Draft must follow the muted field');
+        System.assertEquals('NO_PERMISSION', createOutcome, 'Create must follow the muted field');
+        System.assertEquals(0, caseCount(testContact.Id), 'No Case may be created');
+    }
+
+    @isTest
+    static void unmutedPermissionSetGroupAllowsOneCase() {
+        Contact testContact = createContact(true, null);
+        User testUser = createGroupUser(false);
+        String createOutcome;
+        Test.startTest();
+        System.runAs(testUser) {
+            createOutcome = runFlow(CREATE_FLOW, inputs(testContact.Id));
+        }
+        Test.stopTest();
+        System.assertEquals('CREATED', createOutcome, 'A group granting DATA_Case_Create must allow the Case');
+        System.assertEquals(1, caseCount(testContact.Id), 'Exactly one Case');
+    }
 }
