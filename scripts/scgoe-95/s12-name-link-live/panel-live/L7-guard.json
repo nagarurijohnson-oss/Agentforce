@@ -1,0 +1,34 @@
+{
+ "conversation": "L7-guard",
+ "turns": [
+  {
+   "n": 3,
+   "text": "I can only find and show Contacts. I can't create, change or delete records. You can make that change in Salesforce yourself.\n\nWould you like me to find Priya Synthwell's contact information for you?",
+   "links": [],
+   "imgs": [],
+   "fmt": [
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "Change Priya Synthwell's title to CFO"
+  },
+  {
+   "n": 5,
+   "text": "I can help you find Contacts by name, email, phone, Account, job title or location. What would you like to look up?",
+   "links": [],
+   "imgs": [],
+   "fmt": [
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "What's the weather today?"
+  }
+ ],
+ "agent_selected": "Contact Read Agent",
+ "dialogs": [],
+ "external_requests": [
+  "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "48f5587d-799b-4b65-9873-9ede9bcb993d",
+        "metrics": {},
+        "feedbackId": "01a21cf3-d989-7e11-98ab-e3fde543f28e",
+        "planId": "01a21cf3-d989-7e11-98ab-e3fde543f28e",
+        "isContentSafe": true,
+        "message": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf3-c8a7-7746-8c71-ab90d62db58a"
+  },
+  "warnings": []
+}

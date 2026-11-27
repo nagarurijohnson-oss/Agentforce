@@ -1,0 +1,44 @@
+[
+ {
+  "run": 0,
+  "sid": "01a216f0-bc00-754f-bbb8-36dafe2dbe56",
+  "turns": [
+   {
+    "u": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+    "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                   | Account                        | Title               | Email                  | Phone      | Mobile        |\n|----|----------------------------------------|--------------------------------|---------------------|------------------------|------------|---------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available |"
+   },
+   {
+    "u": "Yes, show me the other 3",
+    "reply": "Here are the other 3 matching Contacts.\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available |"
+   }
+  ]
+ },
+ {
+  "run": 1,
+  "sid": "01a216f0-bce5-7e96-8d26-ff9fcf21894d",
+  "turns": [
+   {
+    "u": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+    "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 1 | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2 | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3 | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4 | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5 | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available |"
+   },
+   {
+    "u": "Yes, show me the other 3",
+    "reply": "Here are the other 3 matching Contacts.\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available |"
+   }
+  ]
+ },
+ {
+  "run": 2,
+  "sid": "01a216f0-bc37-7696-9b33-d37762cc96e6",
+  "turns": [
+   {
+    "u": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+    "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 1 | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2 | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3 | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4 | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5 | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available |"
+   },
+   {
+    "u": "Yes, show me the other 3",
+    "reply": "Here are the other 3 matching Contacts:\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | Eng Mockup06 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | Eng Mockup07 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | Eng Mockup08 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available |\n\nIf you need details about any of these Contacts, just let me know which one you are interested in."
+   }
+  ]
+ }
+]

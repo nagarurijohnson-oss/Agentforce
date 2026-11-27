@@ -1,0 +1,99 @@
+{
+ "label": "smoke_v2",
+ "mode": "bundle-sim",
+ "utterance": "Find the contact with email zed.obrien@synthetic.example",
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a2088a-2c49-7a0b-97f2-05c1338f36e5",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  },
+  {
+   "run": 1,
+   "session": "01a2088a-2b4e-753b-839a-1e3bcd4a2a69",
+   "llm_calls": [
+    [
+     [
+      "go_contact_search",
+      "{}"
+     ]
+    ],
+    [
+     [
+      "set_criteria",
+      "{\"criteria_email\":\"zed.obrien@synthetic.example\"}"
+     ]
+    ],
+    [
+     [
+      "run_search",
+      "{\"requestedField\":\"\"}"
+     ]
+    ],
+    []
+   ],
+   "search_input": {
+    "requestedField": "",
+    "name": "",
+    "email": "zed.obrien@synthetic.example",
+    "phone": "",
+    "accountName": "",
+    "jobTitle": "",
+    "city": "",
+    "stateOrRegion": "",
+    "country": "",
+    "location": "",
+    "contactId": "",
+    "showRemaining": false
+   },
+   "criteria_update_step": 18,
+   "search_step": 23,
+   "parallel": false,
+   "criteria_sent": {
+    "email": "zed.obrien@synthetic.example"
+   },
+   "lost": false
+  }
+ ]
+}

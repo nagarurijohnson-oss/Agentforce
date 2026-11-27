@@ -1,0 +1,188 @@
+{
+ "uat_psa": [
+  {
+   "PermissionSet": {
+    "Name": "APP_Contact_Read_Agent",
+    "IsOwnedByProfile": false
+   }
+  },
+  {
+   "PermissionSet": {
+    "Name": "APP_Contact_Read_Agent_Panel_Access",
+    "IsOwnedByProfile": false
+   }
+  },
+  {
+   "PermissionSet": {
+    "Name": "DATA_Contact_Read_Only",
+    "IsOwnedByProfile": false
+   }
+  },
+  {
+   "PermissionSet": {
+    "Name": "X00e1P000000J627QAC",
+    "IsOwnedByProfile": true
+   }
+  }
+ ],
+ "uat_psl": [],
+ "uat_user": [
+  {
+   "Username": "cra.uat.restricted@00djv000003bvbruaw.example",
+   "IsActive": true,
+   "ProfileId": "00ejV0000016X46QAE",
+   "UserRoleId": null,
+   "UserPermissionsKnowledgeUser": false
+  }
+ ],
+ "all_psa_count": 27,
+ "dc_psl": [
+  {
+   "DeveloperName": "GenieDataPlatformStarterPsl",
+   "UsedLicenses": 2
+  },
+  {
+   "DeveloperName": "EinsteinGPTPromptTemplatesPsl",
+   "UsedLicenses": 1
+  }
+ ],
+ "botversions": [
+  {
+   "VersionNumber": 1,
+   "Status": "Inactive",
+   "BotDefinition": {
+    "DeveloperName": "Contact_Read_Agent"
+   }
+  },
+  {
+   "VersionNumber": 2,
+   "Status": "Inactive",
+   "BotDefinition": {
+    "DeveloperName": "Contact_Read_Agent"
+   }
+  },
+  {
+   "VersionNumber": 3,
+   "Status": "Active",
+   "BotDefinition": {
+    "DeveloperName": "Contact_Read_Agent"
+   }
+  },
+  {
+   "VersionNumber": 4,
+   "Status": "Inactive",
+   "BotDefinition": {
+    "DeveloperName": "Contact_Read_Agent"
+   }
+  },
+  {
+   "VersionNumber": 1,
+   "Status": "Active",
+   "BotDefinition": {
+    "DeveloperName": "Employee_Leave_Assistant"
+   }
+  }
+ ],
+ "contacts": 157,
+ "articles": [
+  {
+   "Id": "ka0jV000000nIDWQA2",
+   "ArticleNumber": "000001000",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIDbQAM",
+   "ArticleNumber": "000001001",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIDaQAM",
+   "ArticleNumber": "000001002",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIDVQA2",
+   "ArticleNumber": "000001003",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:18.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIDXQA2",
+   "ArticleNumber": "000001004",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIDZQA2",
+   "ArticleNumber": "000001005",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIDYQA2",
+   "ArticleNumber": "000001006",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIFCQA2",
+   "ArticleNumber": "000001007",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIFDQA2",
+   "ArticleNumber": "000001008",
+   "PublishStatus": "Draft",
+   "LastModifiedDate": "2026-11-25T15:15:02.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIFAQA2",
+   "ArticleNumber": "000001009",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIF9QAM",
+   "ArticleNumber": "000001010",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIF7QAM",
+   "ArticleNumber": "000001011",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIF8QAM",
+   "ArticleNumber": "000001012",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  },
+  {
+   "Id": "ka0jV000000nIFBQA2",
+   "ArticleNumber": "000001013",
+   "PublishStatus": "Online",
+   "LastModifiedDate": "2026-11-25T15:15:35.000+0000"
+  }
+ ],
+ "permsets_uat_temp": [
+  {
+   "Name": "DATA_Contact_Read_Limited_UAT"
+  }
+ ],
+ "flows_uat": [],
+ "traceflags_uat": [],
+ "index": [
+  {
+   "Name": "KA_CRA_Scholarship_Knowledge",
+   "DataSpaceId": "0vhjV0000008CwrQAE",
+   "RuntimeStatus": "READY",
+   "SharingStatus": "REGULAR"
+  }
+ ]
+}

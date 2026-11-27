@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "2ff4c31c-8cd1-4886-aad1-380dbf2f0dbf",
+        "metrics": {},
+        "feedbackId": "01a21cf1-279a-76e6-a02a-fb35c89f00d0",
+        "planId": "01a21cf1-279a-76e6-a02a-fb35c89f00d0",
+        "isContentSafe": true,
+        "message": "OK, I didn't create the Case. Nothing was saved.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf0-ce9b-7980-8f30-6cccb28ff09d"
+  },
+  "warnings": []
+}

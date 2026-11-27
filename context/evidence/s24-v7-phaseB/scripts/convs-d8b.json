@@ -1,0 +1,22 @@
+[
+ {
+  "id": "D8B_01_KT01",
+  "area": "Knowledge citation",
+  "turns": [
+   "What GPA do I need to keep the Merit Excellence Scholarship?"
+  ],
+  "nav": [
+   "Merit"
+  ]
+ },
+ {
+  "id": "D8B_05_MIXED",
+  "area": "Mixed Contact + Knowledge",
+  "turns": [
+   "Find Marco and tell me the merit renewal GPA"
+  ],
+  "nav": [
+   "Marco"
+  ]
+ }
+]

@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "01a21c6f-fd26-7039-b398-5d63800da09b",
+        "isContentSafe": true,
+        "message": "Please tell me something to search by, such as a name, email, phone number, Account, job title or location.",
+        "id": "50c6d0d0-c2c8-40cd-92a7-2e26bda5a050",
+        "metrics": {},
+        "planId": "01a21c6f-fd26-7039-b398-5d63800da09b",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c6f-ed05-7e99-ab29-0b65600b6352"
+  },
+  "warnings": []
+}

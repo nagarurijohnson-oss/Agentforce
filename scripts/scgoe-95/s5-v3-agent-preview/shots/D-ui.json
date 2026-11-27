@@ -1,0 +1,158 @@
+[
+ {
+  "user": "Find Contacts with the job title Synthetic Engineer",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Contacts with the job title Synthetic Engineer\n\nI found 12 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng1@synthetic.example\t+1 555 0411\tNot available\n2\tEng Mockup02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng2@synthetic.example\t+1 555 0412\tNot available\n3\tEng Mockup03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng3@synthetic.example\t+1 555 0413\tNot available\n4\tEng Mockup04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng4@synthetic.example\t+1 555 0414\tNot available\n5\tEng Mockup05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng5@synthetic.example\t+1 555 0415\tNot available\n\nYou could add: Account name, email, phone, city, state or region, country.\n\nAgentforce Avatar responded I found 12 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng1@synthetic.example\t+1 555 0411\tNot available\n2\tEng Mockup02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng2@synthetic.example\t+1 555 0412\tNot available\n3\tEng Mockup03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng3@synthetic.example\t+1 555 0413\tNot available\n4\tEng Mockup04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng4@synthetic.example\t+1 555 0414\tNot available\n5\tEng Mockup05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng5@synthetic.example\t+1 555 0415\tNot available\n\nYou could add: Account name, email, phone, city, state or region, country.\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntJQAR/view"
+    ],
+    [
+     "eng1@synthetic.example",
+     "mailto:eng1@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntKQAR/view"
+    ],
+    [
+     "eng2@synthetic.example",
+     "mailto:eng2@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntLQAR/view"
+    ],
+    [
+     "eng3@synthetic.example",
+     "mailto:eng3@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntMQAR/view"
+    ],
+    [
+     "eng4@synthetic.example",
+     "mailto:eng4@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntNQAR/view"
+    ],
+    [
+     "eng5@synthetic.example",
+     "mailto:eng5@synthetic.example"
+    ],
+    [
+     "Show 17 hidden",
+     "#"
+    ]
+   ],
+   "bold": [],
+   "html": 1
+  }
+ },
+ {
+  "user": "Only the ones at the Account CRA-TEST Smith",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Contacts with the job title Synthetic Engineer\n\nI found 12 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng1@synthetic.example\t+1 555 0411\tNot available\n2\tEng Mockup02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng2@synthetic.example\t+1 555 0412\tNot available\n3\tEng Mockup03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng3@synthetic.example\t+1 555 0413\tNot available\n4\tEng Mockup04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng4@synthetic.example\t+1 555 0414\tNot available\n5\tEng Mockup05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng5@synthetic.example\t+1 555 0415\tNot available\n\nYou could add: Account name, email, phone, city, state or region, country.\n\nOnly the ones at the Account CRA-TEST Smith\n\nI found 4 matching Contacts.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup09\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng9@synthetic.example\t+1 555 0419\tNot available\n2\tEng Mockup10\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng10@synthetic.example\t+1 555 0420\tNot available\n3\tEng Mockup11\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng11@synthetic.example\t+1 555 0421\tNot available\n4\tEng Mockup12\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng12@synthetic.example\t+1 555 0422\tNot available\nAgentforce Avatar responded I found 4 matching Contacts.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup09\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng9@synthetic.example\t+1 555 0419\tNot available\n2\tEng Mockup10\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng10@synthetic.example\t+1 555 0420\tNot available\n3\tEng Mockup11\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng11@synthetic.example\t+1 555 0421\tNot available\n4\tEng Mockup12\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Engineer\teng12@synthetic.example\t+1 555 0422\tNot available\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntJQAR/view"
+    ],
+    [
+     "eng1@synthetic.example",
+     "mailto:eng1@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntKQAR/view"
+    ],
+    [
+     "eng2@synthetic.example",
+     "mailto:eng2@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntLQAR/view"
+    ],
+    [
+     "eng3@synthetic.example",
+     "mailto:eng3@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntMQAR/view"
+    ],
+    [
+     "eng4@synthetic.example",
+     "mailto:eng4@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntNQAR/view"
+    ],
+    [
+     "eng5@synthetic.example",
+     "mailto:eng5@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntRQAR/view"
+    ],
+    [
+     "eng9@synthetic.example",
+     "mailto:eng9@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntSQAR/view"
+    ],
+    [
+     "eng10@synthetic.example",
+     "mailto:eng10@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntTQAR/view"
+    ],
+    [
+     "eng11@synthetic.example",
+     "mailto:eng11@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntUQAR/view"
+    ],
+    [
+     "eng12@synthetic.example",
+     "mailto:eng12@synthetic.example"
+    ],
+    [
+     "Show 34 hidden",
+     "#"
+    ]
+   ],
+   "bold": [],
+   "html": 2
+  }
+ }
+]

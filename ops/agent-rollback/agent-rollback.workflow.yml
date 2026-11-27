@@ -1,0 +1,83 @@
+# SCGOE-95 OPS-1 — independent, verified rollback of an Agentforce activation window.
+# Install as .github/workflows/agent-rollback.yml.
+# Arm a window: push ops/agent-rollback/window.json to a branch named rollback-arm/<window-id>
+#   (never the default branch). The run signs in with its own JWT user, alerts "armed",
+#   waits until the deadline (90 minutes at most) and rolls back to the safe version.
+# Backstop: the schedule runs only from the default branch (after merge). Outside an open
+#   window it makes sure the safe version is the Active one.
+# Manual: Actions → Agent rollback → Run workflow, mode precheck | rollback | backstop.
+# Secrets: SF_JWT_KEY, SF_CLIENT_ID, SF_USERNAME, SF_INSTANCE_URL (environment "agent-rollback").
+name: Agent rollback
+
+on:
+  push:
+    branches: ['rollback-arm/**']
+    paths: ['ops/agent-rollback/window.json']
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'precheck, rollback or backstop'
+        required: true
+        default: precheck
+        type: choice
+        options: [precheck, rollback, backstop]
+      window_file:
+        description: 'Window file (rollback-arm branches use ops/agent-rollback/window.json)'
+        required: false
+        default: ops/agent-rollback/backstop.json
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: agent-rollback-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    environment: agent-rollback
+    timeout-minutes: 300
+    env:
+      SF_JWT_KEY: ${{ secrets.SF_JWT_KEY }}
+      SF_CLIENT_ID: ${{ secrets.SF_CLIENT_ID }}
+      SF_USERNAME: ${{ secrets.SF_USERNAME }}
+      SF_INSTANCE_URL: ${{ secrets.SF_INSTANCE_URL }}
+      GITHUB_TOKEN: ${{ github.token }}
+      ROLLBACK_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      ROLLBACK_GIVE_UP_SECONDS: '15600'   # 260 min: alert before the 300-minute job timeout
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Salesforce CLI (pinned)
+        run: npm install --global @salesforce/cli@2.151.7
+      - name: Choose mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "mode=window" >> "$GITHUB_OUTPUT"; echo "file=ops/agent-rollback/window.json" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "mode=backstop" >> "$GITHUB_OUTPUT"; echo "file=ops/agent-rollback/backstop.json" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"; echo "file=${{ inputs.window_file }}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Rollback job
+        run: python3 ops/agent-rollback/rollback.py "${{ steps.mode.outputs.mode }}" "${{ steps.mode.outputs.file }}"
+      - name: Collect the CLI log file (redacted)
+        if: always()
+        run: |
+          mkdir -p rollback-logs/cli
+          for f in ~/.sf/sf-*.log; do [ -f "$f" ] && python3 -c "import sys;sys.path.insert(0,'ops/agent-rollback');import rollback;print(rollback.redact(open(sys.argv[1]).read()))" "$f" > "rollback-logs/cli/$(basename "$f")"; done || true
+          rm -rf ~/.sf/*.json ~/.sfdx 2>/dev/null || true
+      - name: Save logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rollback-logs-${{ github.run_id }}
+          path: rollback-logs/
+          retention-days: 90

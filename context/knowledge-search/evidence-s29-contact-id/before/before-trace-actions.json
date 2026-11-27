@@ -1,0 +1,51 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c6f-ed05-7e99-ab29-0b65600b6352",
+    "format": "detail",
+    "dimension": "actions",
+    "detail": [
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c6f-fd26-7039-b398-5d63800da09b",
+        "action": "search_contacts",
+        "input": "{\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"\",\"jobTitle\":\"\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"location\":\"\",\"contactId\":\"\",\"requestedField\":\"\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[]\",\"outcomeCode\":\"NEEDS_CLARIFICATION\",\"refinementRequired\":false,\"remainingCount\":0,\"resultContactIds\":\"\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"Please tell me something to search by, such as a name, email, phone number, Account, job title or location.\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":0,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"NEEDS_CLARIFICATION\\\",\\\"contacts\\\":[],\\\"canShowRemaining\\\":false}\",\"shownCount\":0,\"similarNameCount\":0,\"userMessage\":\"Please tell me something to search by, such as a name, email, phone number, Account, job title or location.\",\"__tool_idx__\":\"ee2f972e\",\"__supports_result_display__\":false}",
+        "latencyMs": 269,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c6f-fd26-7039-b398-5d63800da09b",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"Please tell me something to search by, such as a name, email, phone number, Account, job title or location.\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":0,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"NEEDS_CLARIFICATION\\\",\\\"contacts\\\":[],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"e18dd811-b774-45b7-a031-b35d81d16d7f\",\"promptResponse\":\"Please tell me something to search by, such as a name, email, phone number, Account, job title or location.\",\"__tool_idx__\":\"7f636674\",\"__supports_result_display__\":false}",
+        "latencyMs": 1767,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 5,
+        "planId": "01a21c70-1711-7269-81f9-3b8995cdf472",
+        "action": "search_contacts",
+        "input": "{\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"001jV00000LVFxyQAH\",\"jobTitle\":\"\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"location\":\"\",\"contactId\":\"\",\"requestedField\":\"\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[]\",\"criteriaSummary\":\"Account name: 001jV00000LVFxyQAH\",\"outcomeCode\":\"NO_MATCH\",\"refinementRequired\":false,\"remainingCount\":0,\"resultContactIds\":\"\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail.\\\",\\\"totalMatchesLabel\\\":\\\"0\\\",\\\"suggestedFiltersText\\\":\\\"job title, email, phone, city, state or region, country\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":0,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"NO_MATCH\\\",\\\"criteriaSummary\\\":\\\"Account name: 001jV00000LVFxyQAH\\\",\\\"contacts\\\":[],\\\"canShowRemaining\\\":false}\",\"shownCount\":0,\"similarNameCount\":0,\"suggestedFiltersText\":\"job title, email, phone, city, state or region, country\",\"totalMatchesLabel\":\"0\",\"userMessage\":\"I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail.\",\"__tool_idx__\":\"9715f714\",\"__supports_result_display__\":false}",
+        "latencyMs": 247,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 5,
+        "planId": "01a21c70-1711-7269-81f9-3b8995cdf472",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail.\\\",\\\"totalMatchesLabel\\\":\\\"0\\\",\\\"suggestedFiltersText\\\":\\\"job title, email, phone, city, state or region, country\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":0,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"NO_MATCH\\\",\\\"criteriaSummary\\\":\\\"Account name: 001jV00000LVFxyQAH\\\",\\\"contacts\\\":[],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"1a42786d-aa87-4d92-9945-a4619df8ca77\",\"promptResponse\":\"I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: job title, email, phone, city, state or region, country.\",\"__tool_idx__\":\"42ed4b38\",\"__supports_result_display__\":false}",
+        "latencyMs": 2467,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

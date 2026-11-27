@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "01a21c3b-cd59-7624-a7d5-ab3802baa714",
+        "isContentSafe": true,
+        "message": "**Here is the email for this Contact.**  \n**Name:** [CRA-TEST Mallory](/lightning/r/Contact/003jV00000HOooHQAT/view)  \n**Email:** mallory_test@synthetic.example",
+        "id": "029f6ec1-f971-4338-9614-c9d8e1a1b046",
+        "metrics": {},
+        "planId": "01a21c3b-cd59-7624-a7d5-ab3802baa714",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c3b-9ae0-73c2-899c-ae92fefca84a"
+  },
+  "warnings": []
+}

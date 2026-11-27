@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "23baee58-6c83-43e5-8e05-68ba26f1f7b0",
+        "metrics": {},
+        "feedbackId": "01a21d01-1791-7bfd-a703-2d7eadd8afa8",
+        "planId": "01a21d01-1791-7bfd-a703-2d7eadd8afa8",
+        "isContentSafe": true,
+        "message": "You don't have permission to create Cases through this agent, so I didn't create one. If you need it, ask your Salesforce administrator.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21d00-df6f-7db4-a6b7-c407d72baf9e"
+  },
+  "warnings": []
+}

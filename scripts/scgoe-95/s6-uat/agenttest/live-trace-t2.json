@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a20864-8f2b-7cdc-9089-fdeee43e77c3",
+    "format": "detail",
+    "dimension": "actions",
+    "detail": [
+      {
+        "dimension": "actions",
+        "turn": 2,
+        "planId": "01a20864-cd12-7372-b560-24f5b67a6877",
+        "action": "search_contacts",
+        "input": "{\"contactId\":\"003jV00000GrntJQAR\",\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"CRA-TEST Northwind Synthetic\",\"jobTitle\":\"Synthetic Engineer\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"showRemaining\":true}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[{\\\"title\\\":\\\"Synthetic Engineer\\\",\\\"phone\\\":\\\"+1 555 0411\\\",\\\"name\\\":\\\"Eng Mockup01\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntJQAR\\\",\\\"email\\\":\\\"eng1@synthetic.example\\\",\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntJQAR/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}]\",\"criteriaSummary\":\"Selected Contact: yes; Account name: CRA-TEST Northwind Synthetic; Job title: Synthetic Engineer\",\"outcomeCode\":\"SINGLE_MATCH\",\"refinementRequired\":false,\"remainingCount\":0,\"resultContactIds\":\"003jV00000GrntJQAR\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000GrntJQAR\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":3,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes; Account name: CRA-TEST Northwind Synthetic; Job title: Synthetic Engineer\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Engineer\\\",\\\"phone\\\":\\\"+1 555 0411\\\",\\\"name\\\":\\\"Eng Mockup01\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntJQAR\\\",\\\"email\\\":\\\"eng1@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Engineer\\\",\\\"phone\\\":\\\"+1 555 0411\\\",\\\"name\\\":\\\"Eng Mockup01\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"eng1@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntJQAR/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000GrntJQAR/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\",\"shownCount\":1,\"similarNameCount\":0,\"singleContactId\":\"003jV00000GrntJQAR\",\"totalMatchesLabel\":\"1\",\"userMessage\":\"I found one matching Contact.\",\"__tool_idx__\":\"e383700f\",\"__supports_result_display__\":false}",
+        "latencyMs": 369,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 2,
+        "planId": "01a20864-cd12-7372-b560-24f5b67a6877",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000GrntJQAR\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":3,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes; Account name: CRA-TEST Northwind Synthetic; Job title: Synthetic Engineer\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Engineer\\\",\\\"phone\\\":\\\"+1 555 0411\\\",\\\"name\\\":\\\"Eng Mockup01\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntJQAR\\\",\\\"email\\\":\\\"eng1@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Engineer\\\",\\\"phone\\\":\\\"+1 555 0411\\\",\\\"name\\\":\\\"Eng Mockup01\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"eng1@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntJQAR/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000GrntJQAR/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"5384d9d4-c57a-43bc-9e3f-4428b1fa6ef6\",\"promptResponse\":\"I found one matching Contact.\\n\\n**Name:** Eng Mockup01  \\n**Record:** [Open record](/lightning/r/Contact/003jV00000GrntJQAR/view)  \\n**Account:** CRA-TEST Northwind Synthetic  \\n**Title:** Synthetic Engineer  \\n**Email:** eng1@synthetic.example  \\n**Phone:** +1 555 0411  \\n**Mobile:** Not available  \\n**Mailing address:** Not available  \",\"__tool_idx__\":\"6c3480b0\",\"__supports_result_display__\":false}",
+        "latencyMs": 2168,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

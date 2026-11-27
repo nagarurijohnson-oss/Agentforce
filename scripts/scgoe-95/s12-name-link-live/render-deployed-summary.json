@@ -1,0 +1,994 @@
+{
+ "R-01_single_full": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "priya.synthwell@synthetic.example",
+    "mailto:priya.synthwell@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-01_single_full": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "priya.synthwell@synthetic.example",
+    "mailto:priya.synthwell@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-03_single_hostile_special": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "zoe.obrien+test@synthetic.example",
+    "mailto:zoe.obrien+test@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-03_single_hostile_special": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "zoe.obrien+test@synthetic.example",
+    "mailto:zoe.obrien+test@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [
+   "B:LLC"
+  ],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-04_field_email": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "priya.synthwell@synthetic.example",
+    "mailto:priya.synthwell@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-04_field_email": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "priya.synthwell@synthetic.example",
+    "mailto:priya.synthwell@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-06_list_2_to_5": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "avery.testfield10@synthetic.example",
+    "mailto:avery.testfield10@synthetic.example"
+   ],
+   [
+    "chen.testfield12@synthetic.example",
+    "mailto:chen.testfield12@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-06_list_2_to_5": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "avery.testfield10@synthetic.example",
+    "mailto:avery.testfield10@synthetic.example"
+   ],
+   [
+    "chen.testfield12@synthetic.example",
+    "mailto:chen.testfield12@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-20_list_hostile_rows": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "avery.testfield70@synthetic.example",
+    "mailto:avery.testfield70@synthetic.example"
+   ],
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "bilal.testfield71@synthetic.example",
+    "mailto:bilal.testfield71@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-20_list_hostile_rows": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "avery.testfield70@synthetic.example",
+    "mailto:avery.testfield70@synthetic.example"
+   ],
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "bilal.testfield71@synthetic.example",
+    "mailto:bilal.testfield71@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-22_field_account_special": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-22_field_account_special": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [],
+  "images": [],
+  "formatting": [
+   "B:LLC"
+  ],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-28_single_entities_image": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "tess.entity@synthetic.example",
+    "mailto:tess.entity@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-28_single_entities_image": {
+  "record_link_issues": [
+   "row 1 name not shown exactly"
+  ],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "tess.entity@synthetic.example",
+    "mailto:tess.entity@synthetic.example"
+   ]
+  ],
+  "images": [
+   "https://evil.example/x.png"
+  ],
+  "formatting": [],
+  "new_evil_requests": 1,
+  "header": [],
+  "dialogs": []
+ },
+ "R-29a_list_hostile_names": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile01@synthetic.example",
+    "mailto:hostile01@synthetic.example"
+   ],
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "hostile02@synthetic.example",
+    "mailto:hostile02@synthetic.example"
+   ],
+   [
+    "https://evil.example/pay",
+    "https://evil.example/pay"
+   ],
+   [
+    "hostile03@synthetic.example",
+    "mailto:hostile03@synthetic.example"
+   ],
+   [
+    "hostile04@synthetic.example",
+    "mailto:hostile04@synthetic.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "hostile05@synthetic.example",
+    "mailto:hostile05@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-29a_list_hostile_names": {
+  "record_link_issues": [
+   "row 3 name not shown exactly",
+   "row 4 name not shown exactly"
+  ],
+  "disguised_links": [
+   [
+    "Pay here",
+    "https://evil.example/pay"
+   ],
+   [
+    "CEO record",
+    "/lightning/r/Contact/003jV00000HCVpUQAX/view"
+   ]
+  ],
+  "autolinks": [
+   [
+    "hostile01@synthetic.example",
+    "mailto:hostile01@synthetic.example"
+   ],
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "hostile02@synthetic.example",
+    "mailto:hostile02@synthetic.example"
+   ],
+   [
+    "hostile03@synthetic.example",
+    "mailto:hostile03@synthetic.example"
+   ],
+   [
+    "hostile04@synthetic.example",
+    "mailto:hostile04@synthetic.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "hostile05@synthetic.example",
+    "mailto:hostile05@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-29b_list_hostile_names": {
+  "record_link_issues": [
+   "row 1 name not shown exactly"
+  ],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "https://evil.example/x.png\\>",
+    "https://evil.example/x.png%5C%3E"
+   ],
+   [
+    "hostile06@synthetic.example",
+    "mailto:hostile06@synthetic.example"
+   ],
+   [
+    "https://evil.example/x.png",
+    "https://evil.example/x.png"
+   ],
+   [
+    "hostile07@synthetic.example",
+    "mailto:hostile07@synthetic.example"
+   ],
+   [
+    "hostile08@synthetic.example",
+    "mailto:hostile08@synthetic.example"
+   ],
+   [
+    "hostile09@synthetic.example",
+    "mailto:hostile09@synthetic.example"
+   ],
+   [
+    "hostile10@synthetic.example",
+    "mailto:hostile10@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-29b_list_hostile_names": {
+  "record_link_issues": [
+   "row 1 name not shown exactly",
+   "row 2 name not shown exactly",
+   "row 3 name not shown exactly",
+   "row 4 name not shown exactly",
+   "row 5 name not shown exactly"
+  ],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile06@synthetic.example",
+    "mailto:hostile06@synthetic.example"
+   ],
+   [
+    "hostile07@synthetic.example",
+    "mailto:hostile07@synthetic.example"
+   ],
+   [
+    "hostile08@synthetic.example",
+    "mailto:hostile08@synthetic.example"
+   ],
+   [
+    "hostile09@synthetic.example",
+    "mailto:hostile09@synthetic.example"
+   ],
+   [
+    "hostile10@synthetic.example",
+    "mailto:hostile10@synthetic.example"
+   ]
+  ],
+  "images": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "formatting": [
+   "B:VIP",
+   "EM:Bold",
+   "EM:it",
+   "DEL:del",
+   "CODE:code"
+  ],
+  "new_evil_requests": 2,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-29c_list_hostile_names": {
+  "record_link_issues": [
+   "row 5 name not shown exactly"
+  ],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "hostile11@synthetic.example",
+    "mailto:hostile11@synthetic.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "hostile12@synthetic.example",
+    "mailto:hostile12@synthetic.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "hostile13@synthetic.example",
+    "mailto:hostile13@synthetic.example"
+   ],
+   [
+    "hostile14@synthetic.example",
+    "mailto:hostile14@synthetic.example"
+   ],
+   [
+    "https://evil.example\\>",
+    "https://evil.example%5C%3E"
+   ],
+   [
+    "hostile15@synthetic.example",
+    "mailto:hostile15@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-29c_list_hostile_names": {
+  "record_link_issues": [
+   "row 4 name not shown exactly",
+   "row 5 name not shown exactly"
+  ],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "hostile11@synthetic.example",
+    "mailto:hostile11@synthetic.example"
+   ],
+   [
+    "www.evil.example",
+    "http://www.evil.example"
+   ],
+   [
+    "hostile12@synthetic.example",
+    "mailto:hostile12@synthetic.example"
+   ],
+   [
+    "me@evil.example",
+    "mailto:me@evil.example"
+   ],
+   [
+    "hostile13@synthetic.example",
+    "mailto:hostile13@synthetic.example"
+   ],
+   [
+    "hostile14@synthetic.example",
+    "mailto:hostile14@synthetic.example"
+   ],
+   [
+    "https://evil.example",
+    "https://evil.example"
+   ],
+   [
+    "hostile15@synthetic.example",
+    "mailto:hostile15@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-29d_list_hostile_names": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile16@synthetic.example",
+    "mailto:hostile16@synthetic.example"
+   ],
+   [
+    "hostile17@synthetic.example",
+    "mailto:hostile17@synthetic.example"
+   ],
+   [
+    "hostile18@synthetic.example",
+    "mailto:hostile18@synthetic.example"
+   ],
+   [
+    "hostile19@synthetic.example",
+    "mailto:hostile19@synthetic.example"
+   ],
+   [
+    "hostile20@synthetic.example",
+    "mailto:hostile20@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-29d_list_hostile_names": {
+  "record_link_issues": [
+   "row 1 name not shown exactly"
+  ],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile16@synthetic.example",
+    "mailto:hostile16@synthetic.example"
+   ],
+   [
+    "hostile17@synthetic.example",
+    "mailto:hostile17@synthetic.example"
+   ],
+   [
+    "hostile18@synthetic.example",
+    "mailto:hostile18@synthetic.example"
+   ],
+   [
+    "hostile19@synthetic.example",
+    "mailto:hostile19@synthetic.example"
+   ],
+   [
+    "hostile20@synthetic.example",
+    "mailto:hostile20@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-30_single_hostile_name": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "https://evil.example/pay",
+    "https://evil.example/pay"
+   ],
+   [
+    "hostile40@synthetic.example",
+    "mailto:hostile40@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-30_single_hostile_name": {
+  "record_link_issues": [
+   "row 1 name not shown exactly"
+  ],
+  "disguised_links": [
+   [
+    "Pay here",
+    "https://evil.example/pay"
+   ]
+  ],
+  "autolinks": [
+   [
+    "hostile40@synthetic.example",
+    "mailto:hostile40@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-31_single_linkable_name": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile41@synthetic.example",
+    "mailto:hostile41@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-31_single_linkable_name": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile41@synthetic.example",
+    "mailto:hostile41@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-32_field_hostile_name": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile42@synthetic.example",
+    "mailto:hostile42@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-32_field_hostile_name": {
+  "record_link_issues": [
+   "row 1 name not shown exactly"
+  ],
+  "disguised_links": [
+   [
+    "CEO record",
+    "/lightning/r/Contact/003jV00000HCVpUQAX/view"
+   ]
+  ],
+  "autolinks": [
+   [
+    "hostile42@synthetic.example",
+    "mailto:hostile42@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-33_field_linkable_name": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile43@synthetic.example",
+    "mailto:hostile43@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "L1-33_field_linkable_name": {
+  "record_link_issues": [],
+  "disguised_links": [],
+  "autolinks": [
+   [
+    "hostile43@synthetic.example",
+    "mailto:hostile43@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [],
+  "dialogs": []
+ },
+ "R-27_list_link_html_markdown": {
+  "record_link_issues": [],
+  "disguised_links": [
+   [
+    "https://evil.example\"\\>Evil\\",
+    "https://evil.example%22%5C%3EEvil%5C"
+   ]
+  ],
+  "autolinks": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "avery.testfield90@synthetic.example",
+    "mailto:avery.testfield90@synthetic.example"
+   ],
+   [
+    "bilal.testfield91@synthetic.example",
+    "mailto:bilal.testfield91@synthetic.example"
+   ],
+   [
+    "chen.testfield92@synthetic.example",
+    "mailto:chen.testfield92@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-27_list_link_html_markdown": {
+  "record_link_issues": [
+   "row 3 name not shown exactly"
+  ],
+  "disguised_links": [
+   [
+    "Click here to verify",
+    "https://evil.example/phish"
+   ],
+   [
+    "Evil",
+    "https://evil.example"
+   ]
+  ],
+  "autolinks": [
+   [
+    "avery.testfield90@synthetic.example",
+    "mailto:avery.testfield90@synthetic.example"
+   ],
+   [
+    "bilal.testfield91@synthetic.example",
+    "mailto:bilal.testfield91@synthetic.example"
+   ],
+   [
+    "chen.testfield92@synthetic.example",
+    "mailto:chen.testfield92@synthetic.example"
+   ]
+  ],
+  "images": [
+   "x"
+  ],
+  "formatting": [
+   "STRONG:Bold",
+   "CODE:code",
+   "DEL:gone"
+  ],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "R-27_list_link_html_markdown_fail": {
+  "record_link_issues": [
+   "row 3 name not shown exactly"
+  ],
+  "disguised_links": [
+   [
+    "https://evil.example\"\\>Evil\\",
+    "https://evil.example%22%5C%3EEvil%5C"
+   ]
+  ],
+  "autolinks": [
+   [
+    "https://evil.example/phish",
+    "https://evil.example/phish"
+   ],
+   [
+    "avery.testfield90@synthetic.example",
+    "mailto:avery.testfield90@synthetic.example"
+   ],
+   [
+    "bilal.testfield91@synthetic.example",
+    "mailto:bilal.testfield91@synthetic.example"
+   ],
+   [
+    "chen.testfield92@synthetic.example",
+    "mailto:chen.testfield92@synthetic.example"
+   ]
+  ],
+  "images": [],
+  "formatting": [],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ },
+ "L1-27_list_link_html_markdown_fail": {
+  "record_link_issues": [
+   "row 3 name not shown exactly"
+  ],
+  "disguised_links": [
+   [
+    "Click here to verify",
+    "https://evil.example/phish"
+   ],
+   [
+    "Evil",
+    "https://evil.example"
+   ]
+  ],
+  "autolinks": [
+   [
+    "avery.testfield90@synthetic.example",
+    "mailto:avery.testfield90@synthetic.example"
+   ],
+   [
+    "bilal.testfield91@synthetic.example",
+    "mailto:bilal.testfield91@synthetic.example"
+   ],
+   [
+    "chen.testfield92@synthetic.example",
+    "mailto:chen.testfield92@synthetic.example"
+   ]
+  ],
+  "images": [
+   "x"
+  ],
+  "formatting": [
+   "STRONG:Bold",
+   "CODE:code",
+   "DEL:gone"
+  ],
+  "new_evil_requests": 0,
+  "header": [
+   "#",
+   "Name",
+   "Account",
+   "Title",
+   "Email",
+   "Phone",
+   "Mobile"
+  ],
+  "dialogs": []
+ }
+}

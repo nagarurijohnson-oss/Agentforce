@@ -1,0 +1,15 @@
+{
+  "windowId": "2026-12-01-v7-panel",
+  "agent": "Contact_Read_Agent",
+  "safeVersion": 3,
+  "testVersion": 7,
+  "armedAt": "2026-12-01T09:00:00Z",
+  "deadline": "2026-12-01T10:30:00Z",
+  "onCall": ["github-login-of-on-call-person"],
+  "escalation": ["github-login-of-escalation-contact"],
+  "loginAsOffAtDeadline": true,
+  "grants": [
+    {"sobject": "PermissionSetAssignment", "id": "0PaXXXXXXXXXXXXXXX", "note": "DATA_Knowledge_Read_Only to CRA UAT Restricted"},
+    {"sobject": "PermissionSetLicenseAssign", "id": "2LAXXXXXXXXXXXXXXX", "note": "EinsteinGPTPromptTemplatesPsl to CRA UAT Restricted"}
+  ]
+}

@@ -1,0 +1,205 @@
+{
+ "label": "r2_dup",
+ "mode": "bundle-live",
+ "turns": [
+  "Find Jordan Samename",
+  "The first one",
+  "What is their phone number?"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a21285-35f1-7398-83e2-63c8315440fd",
+   "turns": [
+    {
+     "user": "Find Jordan Samename",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Jordan Samename\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Jordan Samename"
+      }
+     ],
+     "outcomes": [
+      [
+       "DUPLICATE_IDENTIFIER",
+       "3"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "The first one",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "select_contact",
+        "{\"selected_contact_id\":\"003jV00000Grnt4QAB\"}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"name\":\"Jordan Samename\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Jordan Samename"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "What is their phone number?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"requestedField\":\"phone\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a21285-3783-75f8-a07a-7762eb88f04f",
+   "turns": [
+    {
+     "user": "Find Jordan Samename",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Jordan Samename\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Jordan Samename"
+      }
+     ],
+     "outcomes": [
+      [
+       "DUPLICATE_IDENTIFIER",
+       "3"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "The first one",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "select_contact",
+        "{\"selected_contact_id\":\"003jV00000Grnt4QAB\"}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"name\":\"Jordan Samename\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Jordan Samename"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "What is their phone number?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "ask_about_selected",
+        "{\"requestedField\":\"phone\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {}
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "required" : [ "Input:searchResultJson" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:searchResultJson" : {
+      "title" : "Input:Search Result Json",
+      "description" : "The search result, passed unchanged from the search action",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

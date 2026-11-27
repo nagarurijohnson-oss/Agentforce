@@ -1,0 +1,46 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cf0-ce9b-7980-8f30-6cccb28ff09d",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21cf0-dfbe-7c73-86f4-c9fe44b6abc8",
+        "topic": "contact_search",
+        "userInput": "Find Avery Testfield",
+        "agentResponse": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 5227,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21cf1-0b74-720b-b32a-7eb70fc3f54d",
+        "topic": "case_create",
+        "userInput": "Create a case for her. Subject: CRA-TEST Unclear reply check. Description: Synthetic test, should not be saved. Origin: Phone",
+        "agentResponse": "Here is the Case I will create. Nothing is saved yet.\n\nContact: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nSubject: CRA-TEST Unclear reply check\nDescription: Synthetic test, should not be saved.\nOrigin: Phone\nPriority: Medium\nStatus: New\n\nReply Confirm to create this Case, or Cancel to stop. Any other reply cancels it.",
+        "actionsExecuted": [
+          "check_contact",
+          "validate_case_draft"
+        ],
+        "latencyMs": 532,
+        "error": null
+      },
+      {
+        "turn": 7,
+        "planId": "01a21cf1-279a-76e6-a02a-fb35c89f00d0",
+        "topic": "case_create",
+        "userInput": "Hmm, what priority would that be?",
+        "agentResponse": "OK, I didn't create the Case. Nothing was saved.",
+        "actionsExecuted": [],
+        "latencyMs": 0,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

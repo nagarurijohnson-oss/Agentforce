@@ -1,0 +1,58 @@
+{
+ "promptTemplateUser": {
+  "id": "0PSjV000001ZGQnWAO",
+  "systemPermsOn": [
+   "PermissionsExecutePromptTemplates"
+  ],
+  "objectPerms": [
+   {
+    "SobjectType": "GenAiPromptTemplate",
+    "PermissionsRead": true,
+    "PermissionsCreate": false,
+    "PermissionsEdit": false,
+    "PermissionsDelete": false
+   }
+  ],
+  "assignments": []
+ },
+ "uatPSA": [
+  "APP_Contact_Read_Agent",
+  "APP_Contact_Read_Agent_Panel_Access",
+  "DATA_Contact_Read_Only",
+  "X00e1P000000J627QAC"
+ ],
+ "uatPSL": [],
+ "psl": [
+  {
+   "TotalLicenses": 5000,
+   "UsedLicenses": 1
+  }
+ ],
+ "versions": [
+  [
+   1,
+   "Inactive"
+  ],
+  [
+   2,
+   "Inactive"
+  ],
+  [
+   3,
+   "Active"
+  ],
+  [
+   4,
+   "Inactive"
+  ],
+  [
+   5,
+   "Inactive"
+  ],
+  [
+   6,
+   "Inactive"
+  ]
+ ],
+ "trace": []
+}

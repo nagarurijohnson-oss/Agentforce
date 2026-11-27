@@ -1,0 +1,46 @@
+{
+ "contact": "synthetic CRA-TEST record, email zed.obrien@synthetic.example",
+ "session": "01a1f966-4101-79c0-abe9-250e08f13b0d",
+ "chain": [
+  {
+   "stage": "1 Apex returns (probe_action_output.apex, Invocable.Action)",
+   "value": "accountName\":\"CRA-TEST Smith &#124; Jones &amp; Co &lt;b&gt;LLC&lt;/b&gt;\""
+  },
+  {
+   "stage": "2 Agentforce records action output (trace step 23 FunctionStep search_contacts, display.accountName)",
+   "value": "CRA-TEST Smith | Jones & Co <b>LLC</b>"
+  },
+  {
+   "stage": "2 same step, display.name",
+   "value": "Zoë \"Zed\" O'Brien-Núñez [VIP]"
+  },
+  {
+   "stage": "3 variable last_result_json (step 24)",
+   "value": "accountName\":\"CRA-TEST Smith | Jones & Co <b>LLC</b>\"},\"c"
+  },
+  {
+   "stage": "4 template input Input:searchResultJson (step 27)",
+   "value": "accountName\":\"CRA-TEST Smith | Jones & Co <b>LLC</b>\"},\"c"
+  },
+  {
+   "stage": "5 template output promptResponse (step 27)",
+   "value": "\n**Account:** CRA-TEST Smith | Jones & Co <b>LLC</b>  \n**"
+  },
+  {
+   "stage": "6 relay model reply (step 32 LLMStep)",
+   "value": "\n**Account:** CRA-TEST Smith | Jones & Co <b>LLC</b>  \n**"
+  },
+  {
+   "stage": "7 API message (step 34, plain-text rendering)",
+   "value": "VIP]\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitl"
+  }
+ ],
+ "control": {
+  "note": "character codes written literally in the agent script survive every step unchanged (steps 3, 29, 32)",
+  "example": "such as &amp;, &lt;, &gt;, &#91;, &#124;"
+ },
+ "links": {
+  "contactPath": "/lightning/r/Contact/003jV00000GrntVQAR/view",
+  "template_link": "/lightning/r/Contact/003jV00000GrntVQAR/view"
+ }
+}

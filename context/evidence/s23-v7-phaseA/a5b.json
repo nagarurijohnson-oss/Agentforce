@@ -1,0 +1,21 @@
+{
+ "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@0",
+ "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com": {
+  "userinfo": [
+   200,
+   "005jV000003sYUPQA2"
+  ],
+  "soql": [
+   403,
+   "[{\"message\":\"API is disabled for this User\",\"errorCode\":\"API_CURRENTLY_DISABLED\"}]"
+  ],
+  "dmo_kav": [
+   403,
+   "[{\"message\":\"The Chatter Connect API is not enabled for this organization or user type.\",\"errorCode\":\"API_DISABLED_FOR_ORG\"}]"
+  ],
+  "dmo_chunk": [
+   403,
+   "[{\"message\":\"The Chatter Connect API is not enabled for this organization or user type.\",\"errorCode\":\"API_DISABLED_FOR_ORG\"}]"
+  ]
+ }
+}

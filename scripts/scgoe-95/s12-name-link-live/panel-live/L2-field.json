@@ -1,0 +1,54 @@
+{
+ "conversation": "L2-field",
+ "turns": [
+  {
+   "n": 3,
+   "text": "Here is the email for this Contact.\nName: Marco Blankfield\nEmail: Not available",
+   "links": [
+    {
+     "t": "Marco Blankfield",
+     "h": "/lightning/r/Contact/003jV00000GrntWQAR/view",
+     "target": null,
+     "ctx": "Here is the email for this Contact.\nName: Marco Blankfield\nEmail: Not available"
+    }
+   ],
+   "imgs": [],
+   "fmt": [
+    "STRONG:Here is the email for this Contact.",
+    "STRONG:Name:",
+    "STRONG:Email:",
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "What is Marco Blankfield's email?"
+  },
+  {
+   "n": 5,
+   "text": "Here is the phone for this Contact.\n\nName: Priya Synthwell\nPhone: +1 555 0101\nMobile: +1 555 0201",
+   "links": [
+    {
+     "t": "Priya Synthwell",
+     "h": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+     "target": null,
+     "ctx": "Name: Priya Synthwell\nPhone: +1 555 0101\nMobile: +1 555 0201"
+    }
+   ],
+   "imgs": [],
+   "fmt": [
+    "STRONG:Name:",
+    "STRONG:Phone:",
+    "STRONG:Mobile:",
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "What is Priya Synthwell's phone number?"
+  }
+ ],
+ "agent_selected": "Contact Read Agent",
+ "dialogs": [],
+ "external_requests": [
+  "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+ ]
+}

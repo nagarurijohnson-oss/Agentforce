@@ -1,0 +1,312 @@
+{
+ "phase": "P0",
+ "started": "2026-11-25T19:45:44Z",
+ "login_as": {
+  "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@00djv000003bvbruaw.ex",
+  "url": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home"
+ },
+ "harness": [
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-13",
+   "q": "How do I renew my parking permit?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-13",
+   "q": "How do I renew my parking permit?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12L",
+   "q": "How do I appeal a library fine?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12L",
+   "q": "How do I appeal a library fine?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  }
+ ],
+ "articles": [
+  {
+   "n": "000001000",
+   "status": "Online",
+   "title": "Need-Based Opportunity Grant – Eligibility",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001001",
+   "status": "Online",
+   "title": "International Student Scholarship – Required Documents",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001002",
+   "status": "Online",
+   "title": "Arts & Humanities Scholarship – Application Deadline",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001003",
+   "status": "Online",
+   "title": "Merit Excellence Scholarship – Eligibility",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001004",
+   "status": "Online",
+   "title": "Merit Excellence Scholarship – Renewal Requirements",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001005",
+   "status": "Online",
+   "title": "STEM Futures Scholarship – Application Deadline",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001006",
+   "status": "Online",
+   "title": "Graduate Research Scholarship – Renewal Requirements",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001007",
+   "status": "Online",
+   "title": "Library Fine – Appeal Process",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001008",
+   "status": "Draft",
+   "title": "STEM Futures Scholarship – Deadline Extension",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001009",
+   "status": "Online",
+   "title": "Federal Work-Study – Eligibility",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001010",
+   "status": "Online",
+   "title": "Scholarship Appeal Process",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001011",
+   "status": "Online",
+   "title": "Athletic Scholarship – Required Documents",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001012",
+   "status": "Online",
+   "title": "Scholarship Disbursement and Refund Timing",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "n": "000001013",
+   "status": "Online",
+   "title": "Campus Parking Permit – Renewal",
+   "shown": false,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  }
+ ],
+ "panel": {
+  "opened": true,
+  "agent": "Contact Read Agent",
+  "turns": [
+   {
+    "key": "C1",
+    "u": "Find the contact with email priya.synthwell@synthetic.example",
+    "reply": {
+     "all": "I found one matching Contact.\n\nName: Priya Synthwell\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States",
+     "links": [
+      {
+       "t": "Priya Synthwell",
+       "h": "/lightning/r/Contact/003jV00000GrpMXQAZ/view"
+      },
+      {
+       "t": "priya.synthwell@synthetic.example",
+       "h": "mailto:priya.synthwell@synthetic.example"
+      }
+     ],
+     "fmt": [
+      "STRONG:Name:",
+      "STRONG:Account:",
+      "STRONG:Title:",
+      "STRONG:Email:",
+      "STRONG:Phone:",
+      "STRONG:Mobile:",
+      "STRONG:Mailing address:"
+     ]
+    }
+   },
+   {
+    "key": "C2",
+    "u": "Find Zed Hiddenmore",
+    "reply": {
+     "all": "I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: Account name, job title, email, phone, city, state or region, country.",
+     "links": [],
+     "fmt": []
+    }
+   },
+   {
+    "key": "C3",
+    "u": "Find Jordan Samename",
+    "reply": {
+     "all": "2 Contacts have this name. Which one do you mean?\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tJordan Samename\tCRA-TEST Northwind Synthetic\tSynthetic Partner\tjordan.samename.a@synthetic.example\t+1 555 0111\tNot available\n2\tJordan Samename\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Partner\tjordan.samename.b@synthetic.example\t+1 555 0112\tNot available\n\nYou can also tell me one of these details instead: Account name, job title, email, phone, city, state or region, country.",
+     "links": [
+      {
+       "t": "Jordan Samename",
+       "h": "/lightning/r/Contact/003jV00000Grnt4QAB/view"
+      },
+      {
+       "t": "jordan.samename.a@synthetic.example",
+       "h": "mailto:jordan.samename.a@synthetic.example"
+      },
+      {
+       "t": "Jordan Samename",
+       "h": "/lightning/r/Contact/003jV00000Grnt5QAB/view"
+      },
+      {
+       "t": "jordan.samename.b@synthetic.example",
+       "h": "mailto:jordan.samename.b@synthetic.example"
+      }
+     ],
+     "fmt": [
+      "TABLE:#\nName\nAccount\nTitle\nEmail\nPhone\nMobile\n\n\n\n1\nJordan Samename"
+     ]
+    }
+   },
+   {
+    "key": "C4",
+    "u": "Change Priya Synthwell's title to CFO",
+    "reply": {
+     "all": "I can only find and show Contacts. I can't create, change or delete records. You can make that change in Salesforce yourself.\n\nWould you like to search for another Contact?",
+     "links": [],
+     "fmt": []
+    }
+   },
+   {
+    "key": "C5",
+    "u": "What GPA do I need to keep the Merit Excellence Scholarship?",
+    "reply": {
+     "all": "I can help you find Contacts by name, email, phone, Account, job title or location. What would you like to look up?",
+     "links": [],
+     "fmt": []
+    }
+   }
+  ]
+ },
+ "links": [
+  {
+   "key": "L-A04",
+   "expected_id": "ka0jV000000nIDXQA2",
+   "rendered_links": [
+    {
+     "t": "Merit Excellence Scholarship – Renewal Requirements",
+     "h": "/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view"
+    }
+   ],
+   "href": "/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view",
+   "new_tab": false,
+   "url_after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/ka0jV000000nIDXQA2/view",
+   "article_shown": true,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  },
+  {
+   "key": "L-A13",
+   "expected_id": "ka0jV000000nIFBQA2",
+   "rendered_links": [
+    {
+     "t": "Campus Parking Permit – Renewal",
+     "h": "/lightning/r/Knowledge__kav/ka0jV000000nIFBQA2/view"
+    }
+   ],
+   "href": "/lightning/r/Knowledge__kav/ka0jV000000nIFBQA2/view",
+   "new_tab": false,
+   "url_after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/ka0jV000000nIFBQA2/view",
+   "article_shown": true,
+   "error": "isn't available in Salesforce Lightning Experience or mobile app."
+  }
+ ],
+ "external_requests": [],
+ "logout_url": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/",
+ "ended": "2026-11-25T19:55:12Z"
+}

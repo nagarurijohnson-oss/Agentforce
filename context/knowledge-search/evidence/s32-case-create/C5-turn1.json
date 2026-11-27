@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "ce89eeb3-5942-4f14-94d5-c419b32a7d66",
+        "metrics": {},
+        "feedbackId": "01a21cf2-2a95-766a-8c7a-bf219c7c2dff",
+        "planId": "01a21cf2-2a95-766a-8c7a-bf219c7c2dff",
+        "isContentSafe": true,
+        "message": "Which Contact is the Case for? Search for the Contact first (for example, \"find Avery Testfield\"), then ask me to create the Case.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf2-1647-777f-aa16-f3418d00f133"
+  },
+  "warnings": []
+}

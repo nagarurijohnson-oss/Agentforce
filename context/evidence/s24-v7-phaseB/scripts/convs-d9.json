@@ -1,0 +1,17 @@
+[
+ {
+  "id": "D9_PAGE",
+  "area": "D-8 fixed message + D-9",
+  "turns": [
+   "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+   "Yes, show me the other 3"
+  ]
+ },
+ {
+  "id": "D9_KB",
+  "area": "D-8 fixed message (Knowledge)",
+  "turns": [
+   "What GPA do I need to keep the Merit Excellence Scholarship?"
+  ]
+ }
+]

@@ -1,0 +1,143 @@
+{
+  "conversation": "B",
+  "turns": [
+    {
+      "utterance": "Find Jordan Samename",
+      "reply": {
+        "all": "2 Contacts have this name. Which one do you mean?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tJordan Samename\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Partner\tjordan.samename.a@synthetic.example\t+1 555 0111\tNot available\n2\tJordan Samename\tOpen record\tCRA-TEST Smith | Jones & Co <b>LLC</b>\tSynthetic Partner\tjordan.samename.b@synthetic.example\t+1 555 0112\tNot available",
+        "links": [
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000Grnt4QAB/view"
+          },
+          {
+            "t": "jordan.samename.a@synthetic.example",
+            "h": "mailto:jordan.samename.a@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000Grnt5QAB/view"
+          },
+          {
+            "t": "jordan.samename.b@synthetic.example",
+            "h": "mailto:jordan.samename.b@synthetic.example"
+          }
+        ],
+        "fmt": [
+          "TABLE:#\nName\nRecord\nAccount\nTitle\nEmail\nPhone\nMobile\n\n\n\n1\nJordan S"
+        ]
+      }
+    },
+    {
+      "utterance": "Find Contacts with the title Synthetic Coordinator",
+      "reply": {
+        "all": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tCoord Sample01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord1@synthetic.example\t+1 555 0311\tNot available\n2\tCoord Sample02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord2@synthetic.example\t+1 555 0312\tNot available\n3\tCoord Sample03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord3@synthetic.example\t+1 555 0313\tNot available\n4\tCoord Sample04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord4@synthetic.example\t+1 555 0314\tNot available\n5\tCoord Sample05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord5@synthetic.example\t+1 555 0315\tNot available",
+        "links": [
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntBQAR/view"
+          },
+          {
+            "t": "coord1@synthetic.example",
+            "h": "mailto:coord1@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntCQAR/view"
+          },
+          {
+            "t": "coord2@synthetic.example",
+            "h": "mailto:coord2@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntDQAR/view"
+          },
+          {
+            "t": "coord3@synthetic.example",
+            "h": "mailto:coord3@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntEQAR/view"
+          },
+          {
+            "t": "coord4@synthetic.example",
+            "h": "mailto:coord4@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntFQAR/view"
+          },
+          {
+            "t": "coord5@synthetic.example",
+            "h": "mailto:coord5@synthetic.example"
+          }
+        ],
+        "fmt": [
+          "TABLE:#\nName\nRecord\nAccount\nTitle\nEmail\nPhone\nMobile\n\n\n\n1\nCoord Sa"
+        ]
+      }
+    },
+    {
+      "utterance": "Find Contacts at the account CRA-TEST Northwind Synthetic",
+      "reply": {
+        "all": "I found 22 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tAvery Testfield\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Analyst\tanalyst1@synthetic.example\t+1 555 0210\tNot available\n2\tBlake Mockford\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Analyst\tanalyst2@synthetic.example\t+1 555 0211\tNot available\n3\tCasey Dummond\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Analyst\tanalyst3@synthetic.example\t+1 555 0212\tNot available\n4\tCoord Sample01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord1@synthetic.example\t+1 555 0311\tNot available\n5\tCoord Sample02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord2@synthetic.example\t+1 555 0312\tNot available\n\nYou could add: job title, email, phone, city, state or region, country.",
+        "links": [
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000Grnt8QAB/view"
+          },
+          {
+            "t": "analyst1@synthetic.example",
+            "h": "mailto:analyst1@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000Grnt9QAB/view"
+          },
+          {
+            "t": "analyst2@synthetic.example",
+            "h": "mailto:analyst2@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntAQAR/view"
+          },
+          {
+            "t": "analyst3@synthetic.example",
+            "h": "mailto:analyst3@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntBQAR/view"
+          },
+          {
+            "t": "coord1@synthetic.example",
+            "h": "mailto:coord1@synthetic.example"
+          },
+          {
+            "t": "Open record",
+            "h": "/lightning/r/Contact/003jV00000GrntCQAR/view"
+          },
+          {
+            "t": "coord2@synthetic.example",
+            "h": "mailto:coord2@synthetic.example"
+          }
+        ],
+        "fmt": [
+          "TABLE:#\nName\nRecord\nAccount\nTitle\nEmail\nPhone\nMobile\n\n\n\n1\nAvery Te"
+        ]
+      }
+    },
+    {
+      "utterance": "Change Priya Synthwell's title to CFO",
+      "reply": {
+        "all": "I can only find and show Contacts. I can't create, change or delete records. You can make that change in Salesforce yourself.\n\nWould you like me to find Priya Synthwell or another Contact for you?",
+        "links": [],
+        "fmt": []
+      }
+    }
+  ],
+  "agent_selected": "Contact Read Agent"
+}

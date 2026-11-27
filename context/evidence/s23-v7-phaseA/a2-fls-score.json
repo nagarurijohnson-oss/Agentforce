@@ -1,0 +1,38 @@
+[
+ {
+  "id": "FLS_01",
+  "turn": 0,
+  "sid": "01a218b4-90aa-7d21-95b2-94b2877c667c",
+  "topic": "contact_search",
+  "admin_topic": null,
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": null,
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrpMXQAZ"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "priya.synthwell@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": null,
+  "admin_ka": null,
+  "admin_an": null,
+  "reply": "I found one matching Contact.  \n**Name:** [Priya Synthwell](/lightning/r/Contact/003jV00000GrpMXQAZ/view)  \n**Account:** CRA-TEST Northwind Synthetic  \n**Title:** Director of Finance  \n**Email:** priya.synthwell@synthetic.example  \n**Phone:** +1 555 0101  \n**Mobile:** +1 555 0201  \n**Mailing address:** 1 Sample Road, Testville, California, 00001, United States",
+  "admin_reply": null,
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrpMXQAZ": true
+  }
+ }
+]

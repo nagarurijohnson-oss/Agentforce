@@ -1,0 +1,43 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cf3-c8a7-7746-8c71-ab90d62db58a",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21cf3-d989-7e11-98ab-e3fde543f28e",
+        "topic": "contact_search",
+        "userInput": "Find Avery Testfield",
+        "agentResponse": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3268,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21cf3-fc3c-7eaf-9e57-faf5fcbd7305",
+        "topic": "case_create",
+        "userInput": "Create a case for her",
+        "agentResponse": "To create a Case for Avery Testfield, I need the following details:\n\nSubject (what is the Case about?)\nDescription (more details about the issue or request)\nOrigin (was this request made by Phone, Email, or Web?)\n\nPlease provide these details and I'll show you a draft before proceeding.",
+        "actionsExecuted": [],
+        "latencyMs": 0,
+        "error": null
+      },
+      {
+        "turn": 7,
+        "planId": "01a21cf4-0ee5-72c9-b500-6e9e83ffebff",
+        "topic": "case_create",
+        "userInput": "Confirm",
+        "agentResponse": "There's no Case draft waiting for confirmation, so I didn't create anything. Tell me what the Case is about and I'll show you a new draft first.",
+        "actionsExecuted": [],
+        "latencyMs": 0,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

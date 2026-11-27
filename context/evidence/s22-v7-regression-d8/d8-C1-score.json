@@ -1,0 +1,349 @@
+[
+ {
+  "id": "CRA_S18_Agent_Tests_case_0",
+  "turn": 0,
+  "sid": "01a2184c-82a6-7055-a439-e4a66ce70530",
+  "pass": true,
+  "acts": [
+   "search_contacts[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_2",
+  "turn": 0,
+  "sid": "01a2184c-96c0-78ef-9391-61e71e72008e",
+  "pass": true,
+  "acts": [
+   "search_contacts[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_7",
+  "turn": 0,
+  "sid": "01a2184c-a90d-7950-ad0c-40bf4934757d",
+  "pass": true,
+  "acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_7",
+  "turn": 1,
+  "sid": "01a2184c-a90d-7950-ad0c-40bf4934757d",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "There are no other Contacts to show for the last search. Add more details, such as an Account, job title or location, and I'll search again."
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_14",
+  "turn": 0,
+  "sid": "01a2184c-c128-708b-baa4-24430c08a36e",
+  "pass": true,
+  "acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_14",
+  "turn": 1,
+  "sid": "01a2184c-c128-708b-baa4-24430c08a36e",
+  "pass": true,
+  "acts": [
+   "search_contacts[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_18",
+  "turn": 0,
+  "sid": "01a2184c-e24e-7a8d-b047-f391d3e55a74",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I can only find and show Contacts. I can't create, change or delete records. You can make that change in Salesforce yourself.\n\nWould you like me to find Priya Synthwell's Contact record for you?"
+ },
+ {
+  "id": "CRA_S18_Agent_Tests_case_21",
+  "turn": 0,
+  "sid": "01a2184d-9fb6-7def-9803-b1618a4fe700",
+  "pass": true,
+  "acts": [
+   "search_contacts[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "KT_01",
+  "turn": 0,
+  "sid": "01a2184d-b27a-7066-8e4f-367146da8257",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "KF"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I couldn't get an answer from the published Knowledge articles just now, so I can't answer this question, and I won't answer it from memory. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "KT_06",
+  "turn": 0,
+  "sid": "01a2184d-c14f-7351-8c4f-7c192789d657",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "KF"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I couldn't get an answer from the published Knowledge articles just now, so I can't answer this question, and I won't answer it from memory. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "KT_10",
+  "turn": 0,
+  "sid": "01a2184d-cfee-712f-97f7-233c96a4f088",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "KF"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I couldn't get an answer from the published Knowledge articles just now, so I can't answer this question, and I won't answer it from memory. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "KT_13",
+  "turn": 0,
+  "sid": "01a2184d-de44-737b-940f-acbcd4911754",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "KF"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I couldn't get an answer from the published Knowledge articles just now, so I can't answer this question, and I won't answer it from memory. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "KT_15",
+  "turn": 0,
+  "sid": "01a2184e-9b8f-75aa-a20d-c2cbd49bcba6",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "KF"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I couldn't get an answer from the published Knowledge articles just now, so I can't answer this question, and I won't answer it from memory. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "FLS_01",
+  "turn": 0,
+  "sid": "01a2184e-a8ff-7bed-865a-47673fef379b",
+  "pass": true,
+  "acts": [
+   "search_contacts[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "KT_19",
+  "turn": 0,
+  "sid": "01a2184e-b99e-7478-af52-cc182fff7255",
+  "pass": true,
+  "acts": [
+   "search_contacts[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [
+   "CF2",
+   "KF"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator.\n\nI couldn't get an answer from the published Knowledge articles just now, so I can't answer this question, and I won't answer it from memory. Please try again in a moment. If it keeps happening, conta"
+ },
+ {
+  "id": "RG_01",
+  "turn": 0,
+  "sid": "01a2184e-cea2-7a46-807e-9b32acc97c67",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "I can only find and show Contacts. I can't create, change or delete records. You can make that change in Salesforce yourself.\n\nWould you like to search for a Contact? If so, please provide a name, email, or other details."
+ },
+ {
+  "id": "D8_page",
+  "turn": 0,
+  "sid": "01a2184e-d84c-76ec-b60b-f177d71cd986",
+  "pass": true,
+  "acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "fixed": [
+   "CF2"
+  ],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "The Contact search ran, but I couldn't display its result just now, so I'm not showing any Contact details. Please try again in a moment. If it keeps happening, contact your Salesforce administrator."
+ },
+ {
+  "id": "D8_page",
+  "turn": 1,
+  "sid": "01a2184e-d84c-76ec-b60b-f177d71cd986",
+  "pass": true,
+  "acts": [],
+  "contact_failed": false,
+  "kb_failed": false,
+  "fixed": [],
+  "links": 0,
+  "emails": [],
+  "phones": [],
+  "articles": [],
+  "notes": [],
+  "errors": [],
+  "reply": "There are no other Contacts to show for the last search. Add more details, such as an Account, job title or location, and I'll search again."
+ }
+]

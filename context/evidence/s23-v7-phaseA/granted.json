@@ -1,0 +1,84 @@
+{
+ "org": {
+  "Id": "00DjV000003BVbRUAW",
+  "Name": "MAX",
+  "OrganizationType": "Developer Edition",
+  "IsSandbox": false
+ },
+ "uat_sets": [
+  "APP_Contact_Read_Agent",
+  "APP_Contact_Read_Agent_Panel_Access",
+  "DATA_Contact_Read_Only",
+  "DATA_Knowledge_Read_Only",
+  "EinsteinGPTPromptTemplateUser",
+  "SYS_Knowledge_Default_DataSpace",
+  "X00e1P000000J627QAC"
+ ],
+ "uat_psl": [
+  "EinsteinGPTPromptTemplatesPsl"
+ ],
+ "psl_used": {
+  "UsedLicenses": 2,
+  "TotalLicenses": 5000
+ },
+ "grant_set_assignees": {
+  "EinsteinGPTPromptTemplateUser": [
+   "005jV000003sYUPQA2"
+  ],
+  "DATA_Knowledge_Read_Only": [
+   "005jV000003sYUPQA2"
+  ],
+  "SYS_Knowledge_Default_DataSpace": [
+   "005jV000003sYUPQA2"
+  ]
+ },
+ "org_assignments": 24,
+ "versions": [
+  [
+   "Contact_Read_Agent",
+   1,
+   "Inactive"
+  ],
+  [
+   "Contact_Read_Agent",
+   2,
+   "Inactive"
+  ],
+  [
+   "Contact_Read_Agent",
+   3,
+   "Active"
+  ],
+  [
+   "Contact_Read_Agent",
+   4,
+   "Inactive"
+  ],
+  [
+   "Contact_Read_Agent",
+   5,
+   "Inactive"
+  ],
+  [
+   "Contact_Read_Agent",
+   6,
+   "Inactive"
+  ],
+  [
+   "Contact_Read_Agent",
+   7,
+   "Inactive"
+  ],
+  [
+   "Employee_Leave_Assistant",
+   1,
+   "Active"
+  ]
+ ],
+ "contacts": 157,
+ "articles_online": 13,
+ "trace": 0,
+ "debuglevel_cra": 0,
+ "loginas": "enableAdminLoginAsAnyUser=true",
+ "saved_signin": []
+}

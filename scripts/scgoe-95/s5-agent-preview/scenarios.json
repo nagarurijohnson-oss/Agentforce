@@ -1,0 +1,45 @@
+{
+ "S01_single_and_followups": [
+  "Find Priya Synthwell",
+  "What is her mobile number?",
+  "Which Account is she at?"
+ ],
+ "S02_list_2_to_5": [
+  "Show me Contacts with the job title Synthetic Analyst"
+ ],
+ "S05_duplicate_name": [
+  "Find Jordan Samename",
+  "The one in Mockton",
+  "What is the phone number?"
+ ],
+ "S06_duplicate_email": [
+  "Who has the email sam.doublet@synthetic.example?"
+ ],
+ "S07_hostile_special": [
+  "Find the Contact with the email zed.obrien@synthetic.example",
+  "What Account is this Contact at?"
+ ],
+ "S08_not_available": [
+  "What is Marco Blankfield's email address?"
+ ],
+ "S09_no_match": [
+  "Find Quentin Nonexistentperson"
+ ],
+ "S11_email_domain_11_to_100": [
+  "Show Contacts with an email at @synthetic.example"
+ ],
+ "S03_6_to_10_and_remaining": [
+  "Find Contacts whose job title is Synthetic Coordinator",
+  "Yes, show me the rest"
+ ],
+ "S04_11_to_100_refine_pick": [
+  "Find Contacts with the job title Synthetic Engineer",
+  "Can I see the other ones?",
+  "Only the ones at the Account CRA-TEST Smith",
+  "Tell me more about the second one",
+  "What is their email?"
+ ],
+ "S10_read_only_guard": [
+  "Delete the Contact Priya Synthwell"
+ ]
+}

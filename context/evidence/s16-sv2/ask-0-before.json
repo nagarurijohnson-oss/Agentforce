@@ -1,0 +1,24 @@
+{
+ "questions": {
+  "KT-06": "What documents do I need for an athletic scholarship?",
+  "KT-05": "What documents do international students need for their scholarship?",
+  "KT-06b": "Do athletic scholarship applicants need an NCAA eligibility certificate?"
+ },
+ "results": {
+  "KT-05": {
+   "2": "A valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement showing how remaining costs will be covered are required documents for the International Student Scholarship.\n\nSource: [International Student Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIDbQAM/view) (Article 000001001)",
+   "1": "A valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement showing how remaining costs will be covered are required documents for international students applying for the International Student Scholarship.\n\nSource: [International Student Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIDbQAM/view) (Article 000001001)",
+   "0": "A valid passport, proof of English proficiency (IELTS 6.5 or higher), and a financial statement showing how remaining costs will be covered are required documents for the International Student Scholarship.\n\nSource: [International Student Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIDbQAM/view) (Article 000001001)"
+  },
+  "KT-06": {
+   "0": "A recommendation from the team coach, an NCAA eligibility certificate, and a medical clearance form from a licensed physician are required documents for an Athletic Scholarship.\n\nSource: [Athletic Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIF7QAM/view) (Article 000001011)",
+   "2": "A recommendation from the team coach, an NCAA eligibility certificate, and a medical clearance form from a licensed physician are required documents for an Athletic Scholarship.\n\nSource: [Athletic Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIF7QAM/view) (Article 000001011)",
+   "1": "A recommendation from the team coach, an NCAA eligibility certificate, and a medical clearance form from a licensed physician are required for an Athletic Scholarship.\n\nSource: [Athletic Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIF7QAM/view) (Article 000001011)"
+  },
+  "KT-06b": {
+   "0": "Yes, athletic scholarship applicants need an NCAA eligibility certificate. \n\nSource: [Athletic Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIF7QAM/view) (Article 000001011)",
+   "1": "Yes, athletic scholarship applicants need an NCAA eligibility certificate as part of the required documents.\n\nSource: [Athletic Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIF7QAM/view) (Article 000001011)",
+   "2": "Yes, athletic scholarship applicants need an NCAA eligibility certificate. It is one of the required documents along with a recommendation from the team coach and a medical clearance form from a licensed physician.\n\nSource: [Athletic Scholarship – Required Documents](/lightning/r/Knowledge__kav/ka0jV000000nIF7QAM/view) (Article 000001011)"
+  }
+ }
+}

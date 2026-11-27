@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "ea73aebc-f0b3-4443-b257-4a79d1e60c82",
+        "metrics": {},
+        "feedbackId": "01a21c7b-b587-7f28-8a3d-8e5479d6acac",
+        "planId": "01a21c7b-b587-7f28-8a3d-8e5479d6acac",
+        "isContentSafe": true,
+        "message": "I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: Account name, job title, email, phone, city, state or region, country.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351"
+  },
+  "warnings": []
+}

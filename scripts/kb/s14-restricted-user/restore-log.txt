@@ -1,0 +1,18 @@
+2026-11-25T20:17:20Z
+SECDEPLOY Succeeded 0AfjV000006mnuDSAQ 1
+unassign DATA_Knowledge_UAT_No_Campus 0PajV0000096NETSA2 0
+unassign SYS_UAT_KB_Harness 0PajV0000095uahSAA 0
+psl removed 0
+traceflag 0
+debuglevel 0
+flow deactivate 0 
+flow version delete 0 
+delete DATA_Knowledge_UAT_No_Campus 0 
+delete SYS_UAT_KB_Harness 0 
+SECREADBACK enableAdminLoginAsAnyUser=false
+UAT_PSA ['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'X00e1P000000J627QAC']
+UAT_PSL []
+LEFT_SETS []
+LEFT_FLOW []
+LEFT_TRACE []
+

@@ -1,0 +1,15 @@
+test_backstop_skips_open_window_and_enforces_otherwise (test_rollback.RollbackMock.test_backstop_skips_open_window_and_enforces_otherwise) ... ok
+test_t1_noop_when_safe_already_active (test_rollback.RollbackMock.test_t1_noop_when_safe_already_active) ... ok
+test_t1_normal_deadline (test_rollback.RollbackMock.test_t1_normal_deadline) ... ok
+test_t3_expired_credentials_fail_loudly_and_keep_retrying (test_rollback.RollbackMock.test_t3_expired_credentials_fail_loudly_and_keep_retrying) ... ok
+test_t3b_credentials_missing (test_rollback.RollbackMock.test_t3b_credentials_missing) ... ok
+test_t3c_recovers_when_credential_starts_working (test_rollback.RollbackMock.test_t3c_recovers_when_credential_starts_working) ... ok
+test_t4_readback_error_still_activates_and_retries (test_rollback.RollbackMock.test_t4_readback_error_still_activates_and_retries) ... ok
+test_t5_grants_removed_and_login_as_off (test_rollback.RollbackMock.test_t5_grants_removed_and_login_as_off) ... ok
+test_t6_logging_hygiene (test_rollback.RollbackMock.test_t6_logging_hygiene) ... ok
+test_window_longer_than_90_minutes_is_clamped (test_rollback.RollbackMock.test_window_longer_than_90_minutes_is_clamped) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.753s
+
+OK

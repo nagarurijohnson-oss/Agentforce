@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "cb720398-467f-425a-8c7b-dafed77e8fcc",
+        "metrics": {},
+        "feedbackId": "01a21cf2-a611-7992-9a38-803ba8548eaa",
+        "planId": "01a21cf2-a611-7992-9a38-803ba8548eaa",
+        "isContentSafe": true,
+        "message": "To renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf2-7070-7f01-ab75-555179c1ffa4"
+  },
+  "warnings": []
+}

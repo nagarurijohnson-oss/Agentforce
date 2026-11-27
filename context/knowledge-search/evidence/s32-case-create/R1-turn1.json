@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "2a5e935c-9542-40dc-ac90-55c1a202378f",
+        "metrics": {},
+        "feedbackId": "01a21cf2-81e4-726c-9882-c016dc05bf11",
+        "planId": "01a21cf2-81e4-726c-9882-c016dc05bf11",
+        "isContentSafe": true,
+        "message": "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b›\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf2-7070-7f01-ab75-555179c1ffa4"
+  },
+  "warnings": []
+}

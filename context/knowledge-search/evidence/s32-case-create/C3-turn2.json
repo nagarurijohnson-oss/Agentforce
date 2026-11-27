@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "3517dcda-feb4-4265-bdba-b7dd4ccf3a53",
+        "metrics": {},
+        "feedbackId": "01a21cf1-0b74-720b-b32a-7eb70fc3f54d",
+        "planId": "01a21cf1-0b74-720b-b32a-7eb70fc3f54d",
+        "isContentSafe": true,
+        "message": "Here is the Case I will create. Nothing is saved yet.\n\nContact: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nSubject: CRA-TEST Unclear reply check\nDescription: Synthetic test, should not be saved.\nOrigin: Phone\nPriority: Medium\nStatus: New\n\nReply Confirm to create this Case, or Cancel to stop. Any other reply cancels it.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf0-ce9b-7980-8f30-6cccb28ff09d"
+  },
+  "warnings": []
+}

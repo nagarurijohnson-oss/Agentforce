@@ -1,0 +1,150 @@
+[
+ {
+  "user": "Find Contacts whose job title is Synthetic Coordinator",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Contacts whose job title is Synthetic Coordinator\n\nI found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tCoord Sample01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord1@synthetic.example\t+1 555 0311\tNot available\n2\tCoord Sample02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord2@synthetic.example\t+1 555 0312\tNot available\n3\tCoord Sample03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord3@synthetic.example\t+1 555 0313\tNot available\n4\tCoord Sample04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord4@synthetic.example\t+1 555 0314\tNot available\n5\tCoord Sample05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord5@synthetic.example\t+1 555 0315\tNot available\nAgentforce Avatar responded I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tCoord Sample01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord1@synthetic.example\t+1 555 0311\tNot available\n2\tCoord Sample02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord2@synthetic.example\t+1 555 0312\tNot available\n3\tCoord Sample03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord3@synthetic.example\t+1 555 0313\tNot available\n4\tCoord Sample04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord4@synthetic.example\t+1 555 0314\tNot available\n5\tCoord Sample05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord5@synthetic.example\t+1 555 0315\tNot available\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntBQAR/view"
+    ],
+    [
+     "coord1@synthetic.example",
+     "mailto:coord1@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntCQAR/view"
+    ],
+    [
+     "coord2@synthetic.example",
+     "mailto:coord2@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntDQAR/view"
+    ],
+    [
+     "coord3@synthetic.example",
+     "mailto:coord3@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntEQAR/view"
+    ],
+    [
+     "coord4@synthetic.example",
+     "mailto:coord4@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntFQAR/view"
+    ],
+    [
+     "coord5@synthetic.example",
+     "mailto:coord5@synthetic.example"
+    ],
+    [
+     "Show 17 hidden",
+     "#"
+    ]
+   ],
+   "bold": [],
+   "html": 1
+  }
+ },
+ {
+  "user": "Yes, show me the rest",
+  "panel_text": "Reset Simulator\n\nHi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them.\n\nFind Contacts whose job title is Synthetic Coordinator\n\nI found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tCoord Sample01\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord1@synthetic.example\t+1 555 0311\tNot available\n2\tCoord Sample02\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord2@synthetic.example\t+1 555 0312\tNot available\n3\tCoord Sample03\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord3@synthetic.example\t+1 555 0313\tNot available\n4\tCoord Sample04\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord4@synthetic.example\t+1 555 0314\tNot available\n5\tCoord Sample05\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord5@synthetic.example\t+1 555 0315\tNot available\nYes, show me the rest\n\nHere are the other 3 matching Contacts.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n6\tCoord Sample06\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord6@synthetic.example\t+1 555 0316\tNot available\n7\tCoord Sample07\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord7@synthetic.example\t+1 555 0317\tNot available\n8\tCoord Sample08\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord8@synthetic.example\t+1 555 0318\tNot available\nAgentforce Avatar responded Here are the other 3 matching Contacts.\n\n#\tName\tRecord\tAccount\tTitle\tEmail\tPhone\tMobile\n6\tCoord Sample06\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord6@synthetic.example\t+1 555 0316\tNot available\n7\tCoord Sample07\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord7@synthetic.example\t+1 555 0317\tNot available\n8\tCoord Sample08\tOpen record\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord8@synthetic.example\t+1 555 0318\tNot available\n",
+  "rendered": {
+   "links": [
+    [
+     "Preview",
+     "javascript:void(0)"
+    ],
+    [
+     "Agent Definition",
+     "javascript:void(0)"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntBQAR/view"
+    ],
+    [
+     "coord1@synthetic.example",
+     "mailto:coord1@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntCQAR/view"
+    ],
+    [
+     "coord2@synthetic.example",
+     "mailto:coord2@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntDQAR/view"
+    ],
+    [
+     "coord3@synthetic.example",
+     "mailto:coord3@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntEQAR/view"
+    ],
+    [
+     "coord4@synthetic.example",
+     "mailto:coord4@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntFQAR/view"
+    ],
+    [
+     "coord5@synthetic.example",
+     "mailto:coord5@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntGQAR/view"
+    ],
+    [
+     "coord6@synthetic.example",
+     "mailto:coord6@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntHQAR/view"
+    ],
+    [
+     "coord7@synthetic.example",
+     "mailto:coord7@synthetic.example"
+    ],
+    [
+     "Open record",
+     "/lightning/r/Contact/003jV00000GrntIQAR/view"
+    ],
+    [
+     "coord8@synthetic.example",
+     "mailto:coord8@synthetic.example"
+    ],
+    [
+     "Show 32 hidden",
+     "#"
+    ]
+   ],
+   "bold": [],
+   "html": 2
+  }
+ }
+]

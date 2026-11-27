@@ -1,0 +1,501 @@
+{
+ "label": "phone_v2_published",
+ "mode": "published",
+ "turns": [
+  "Find the contact with phone +1 555 0131"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a20895-e4c0-7fb2-b0a9-bdff8b613053",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a20895-df38-7823-9dac-27c510522d19",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a20895-e36d-7f79-85d9-7656890d059f",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 3,
+   "session": "01a20896-5679-7d0d-8111-f2d2e53705dc",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 4,
+   "session": "01a20896-746a-78c6-ad0c-bf6f69f626fe",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 5,
+   "session": "01a20896-8fcb-714c-8f89-87933969432a",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 6,
+   "session": "01a20896-e4d7-72d0-88e8-cec3f73e134e",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 7,
+   "session": "01a20896-f257-7ef9-9c25-6e605cd6ee52",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 8,
+   "session": "01a20897-07a8-720c-86eb-6fa82f6a0841",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 9,
+   "session": "01a20897-422c-7aec-9c91-535510e95ccb",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 10,
+   "session": "01a20897-6ba8-7c4c-a39c-657aa6da949b",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 11,
+   "session": "01a20897-99a3-7d12-a06e-86fb0c00d1f2",
+   "turns": [
+    {
+     "user": "Find the contact with phone +1 555 0131",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_phone\":\"+1 555 0131\"}"
+       ]
+      ],
+      [
+       [
+        "run_search",
+        "{\"requestedField\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "phone": "+1 555 0131"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "label": "r2_field",
+ "mode": "bundle-live",
+ "turns": [
+  "What is Marco Blankfield's email?"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a21282-1ff5-790f-843f-cf44a1c27b1e",
+   "turns": [
+    {
+     "user": "What is Marco Blankfield's email?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Marco Blankfield\",\"criteria_requested_field\":\"email\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Marco Blankfield"
+      }
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a21282-1f21-7052-bb15-c8fe292f622b",
+   "turns": [
+    {
+     "user": "What is Marco Blankfield's email?",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"Marco Blankfield\",\"criteria_requested_field\":\"email\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "name": "Marco Blankfield"
+      }
+     ],
+     "outcomes": [
+      [
+       "FIELD_ANSWER",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,909 @@
+{
+ "T-esc": {
+  "n": 3,
+  "text": "Here are the test values.\n\n#\tName\tAccount\tTitle\n1\tPriya Synthwell\tACC01\tTTL01\n2\tZoë \"Zed\" O'Brien-Łukasz 李\tACC02\tTTL02\n3\tEve ](https://evil.example/phish) Linkbreaker\tACC03\tTTL03\n4\tPay here\tACC04\tTTL04\n5\tNested CEO record\tACC05\tTTL05\n6\tBob) [x](https://evil.example\tACC06\tTTL06\n7\tZed <b>VIP</b> <img src=https://evil.example/x.png>\tACC07\tTTL07\n8\t Img\tACC08\tTTL08\n9\t*Bold* _it_ ~~del~~ `code` # Hash\tACC09\tTTL09\n10\tAna | Pipe | Split\tACC10\tTTL10\n11\tBack\\slash \\] Name\tACC11\tTTL11\n12\tVisit https://evil.example now\tACC12\tTTL12\n13\twww.evil.example\tACC13\tTTL13\n14\tmail me@evil.example\tACC14\tTTL14\n15\t&lt;b&gt; &amp; entity\tACC15\tTTL15\n16\t<https://evil.example>\tACC16\tTTL16\n17\tx\tACC17\tTTL17\n18\tSmith & Jones (Contractor)\tACC18\tTTL18\n19\tAnn [Finance] Lee\tACC19\tTTL19",
+  "links": [
+   {
+    "t": "Priya Synthwell",
+    "h": "/lightning/r/Contact/003SYN000000001AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zoë \"Zed\" O'Brien-Łukasz 李",
+    "h": "/lightning/r/Contact/003SYN000000002AAA/view",
+    "target": null
+   },
+   {
+    "t": "Eve ](https://evil.example/phish) Linkbreaker",
+    "h": "/lightning/r/Contact/003SYN000000003AAA/view",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000004AAA/view",
+    "target": null
+   },
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "Nested ",
+    "h": "/lightning/r/Contact/003SYN000000005AAA/view",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   },
+   {
+    "t": "Bob) [x](https://evil.example",
+    "h": "/lightning/r/Contact/003SYN000000006AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zed <b>VIP</b> <img src=https://evil.example/x.png>",
+    "h": "/lightning/r/Contact/003SYN000000007AAA/view",
+    "target": null
+   },
+   {
+    "t": " Img",
+    "h": "/lightning/r/Contact/003SYN000000008AAA/view",
+    "target": null
+   },
+   {
+    "t": "*Bold* _it_ ~~del~~ `code` # Hash",
+    "h": "/lightning/r/Contact/003SYN000000009AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ana | Pipe | Split",
+    "h": "/lightning/r/Contact/003SYN000000010AAA/view",
+    "target": null
+   },
+   {
+    "t": "Back\\slash \\] Name",
+    "h": "/lightning/r/Contact/003SYN000000011AAA/view",
+    "target": null
+   },
+   {
+    "t": "Visit https://evil.example now",
+    "h": "/lightning/r/Contact/003SYN000000012AAA/view",
+    "target": null
+   },
+   {
+    "t": "www.evil.example",
+    "h": "/lightning/r/Contact/003SYN000000013AAA/view",
+    "target": null
+   },
+   {
+    "t": "mail me@evil.example",
+    "h": "/lightning/r/Contact/003SYN000000014AAA/view",
+    "target": null
+   },
+   {
+    "t": "&lt;b&gt; &amp; entity",
+    "h": "/lightning/r/Contact/003SYN000000015AAA/view",
+    "target": null
+   },
+   {
+    "t": "<https://evil.example>",
+    "h": "/lightning/r/Contact/003SYN000000016AAA/view",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000017AAA/view",
+    "target": null
+   },
+   {
+    "t": "x",
+    "h": null,
+    "target": null
+   },
+   {
+    "t": "Smith & Jones (Contractor)",
+    "h": "/lightning/r/Contact/003SYN000000018AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ann [Finance] Lee",
+    "h": "/lightning/r/Contact/003SYN000000019AAA/view",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png"
+  ],
+  "fmt": [
+   "STRONG:*Why wasn't it helpful?"
+  ],
+  "rows": [
+   [
+    "#",
+    "Name",
+    "Account",
+    "Title"
+   ],
+   [
+    "1",
+    "Priya Synthwell",
+    "ACC01",
+    "TTL01"
+   ],
+   [
+    "2",
+    "Zoë \"Zed\" O'Brien-Łukasz 李",
+    "ACC02",
+    "TTL02"
+   ],
+   [
+    "3",
+    "Eve ](https://evil.example/phish) Linkbreaker",
+    "ACC03",
+    "TTL03"
+   ],
+   [
+    "4",
+    "Pay here",
+    "ACC04",
+    "TTL04"
+   ],
+   [
+    "5",
+    "Nested CEO record",
+    "ACC05",
+    "TTL05"
+   ],
+   [
+    "6",
+    "Bob) [x](https://evil.example",
+    "ACC06",
+    "TTL06"
+   ],
+   [
+    "7",
+    "Zed <b>VIP</b> <img src=https://evil.example/x.png>",
+    "ACC07",
+    "TTL07"
+   ],
+   [
+    "8",
+    " Img",
+    "ACC08",
+    "TTL08"
+   ],
+   [
+    "9",
+    "*Bold* _it_ ~~del~~ `code` # Hash",
+    "ACC09",
+    "TTL09"
+   ],
+   [
+    "10",
+    "Ana | Pipe | Split",
+    "ACC10",
+    "TTL10"
+   ],
+   [
+    "11",
+    "Back\\slash \\] Name",
+    "ACC11",
+    "TTL11"
+   ],
+   [
+    "12",
+    "Visit https://evil.example now",
+    "ACC12",
+    "TTL12"
+   ],
+   [
+    "13",
+    "www.evil.example",
+    "ACC13",
+    "TTL13"
+   ],
+   [
+    "14",
+    "mail me@evil.example",
+    "ACC14",
+    "TTL14"
+   ],
+   [
+    "15",
+    "&lt;b&gt; &amp; entity",
+    "ACC15",
+    "TTL15"
+   ],
+   [
+    "16",
+    "<https://evil.example>",
+    "ACC16",
+    "TTL16"
+   ],
+   [
+    "17",
+    "x",
+    "ACC17",
+    "TTL17"
+   ],
+   [
+    "18",
+    "Smith & Jones (Contractor)",
+    "ACC18",
+    "TTL18"
+   ],
+   [
+    "19",
+    "Ann [Finance] Lee",
+    "ACC19",
+    "TTL19"
+   ]
+  ],
+  "paras": [
+   "Here are the test values.",
+   "Your response is collected and can be accessed by Salesforce. Responses are considered feedback and may be used to help improve the user experience."
+  ],
+  "dialogs": [],
+  "evil_requests": [
+   "https://evil.example/x.png"
+  ]
+ },
+ "T-L1": {
+  "n": 5,
+  "text": "Here are the test values.\n\n#\tName\tAccount\tTitle\n1\tPriya Synthwell\tACC01\tTTL01\n2\tZoë \"Zed\" O'Brien-Łukasz 李\tACC02\tTTL02\n3\tEve Linkbreaker](/lightning/r/Contact/003SYN000000003AAA/view)\tACC03\tTTL03\n4\tPay here\tACC04\tTTL04\n5\tNested CEO record\tACC05\tTTL05\n6\tBob) [x](https://evil.example\tACC06\tTTL06\n7\tZed VIP \tACC07\tTTL07\n8\t Img\tACC08\tTTL08\n9\tBold it del code # Hash\tACC09\tTTL09\n10\t[Ana\tPipe\tSplit](/lightning/r/Contact/003SYN000000010AAA/view)\n11\tBack\\slash ] Name\tACC11\tTTL11\n12\tVisit https://evil.example now\tACC12\tTTL12\n13\twww.evil.example\tACC13\tTTL13\n14\tmail me@evil.example\tACC14\tTTL14\n15\t<b> & entity\tACC15\tTTL15\n16\thttps://evil.example\tACC16\tTTL16\n17\tx\tACC17\tTTL17\n18\tSmith & Jones (Contractor)\tACC18\tTTL18\n19\tAnn [Finance] Lee\tACC19\tTTL19",
+  "links": [
+   {
+    "t": "Priya Synthwell",
+    "h": "/lightning/r/Contact/003SYN000000001AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zoë \"Zed\" O'Brien-Łukasz 李",
+    "h": "/lightning/r/Contact/003SYN000000002AAA/view",
+    "target": null
+   },
+   {
+    "t": "Eve ",
+    "h": "https://evil.example/phish",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000004AAA/view",
+    "target": null
+   },
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "Nested ",
+    "h": "/lightning/r/Contact/003SYN000000005AAA/view",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   },
+   {
+    "t": "Bob) [x](https://evil.example",
+    "h": "/lightning/r/Contact/003SYN000000006AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zed VIP ",
+    "h": "/lightning/r/Contact/003SYN000000007AAA/view",
+    "target": null
+   },
+   {
+    "t": " Img",
+    "h": "/lightning/r/Contact/003SYN000000008AAA/view",
+    "target": null
+   },
+   {
+    "t": "Bold it del code # Hash",
+    "h": "/lightning/r/Contact/003SYN000000009AAA/view",
+    "target": null
+   },
+   {
+    "t": "Back\\slash ] Name",
+    "h": "/lightning/r/Contact/003SYN000000011AAA/view",
+    "target": null
+   },
+   {
+    "t": "Visit https://evil.example now",
+    "h": "/lightning/r/Contact/003SYN000000012AAA/view",
+    "target": null
+   },
+   {
+    "t": "www.evil.example",
+    "h": "/lightning/r/Contact/003SYN000000013AAA/view",
+    "target": null
+   },
+   {
+    "t": "mail me@evil.example",
+    "h": "/lightning/r/Contact/003SYN000000014AAA/view",
+    "target": null
+   },
+   {
+    "t": "<b> & entity",
+    "h": "/lightning/r/Contact/003SYN000000015AAA/view",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000016AAA/view",
+    "target": null
+   },
+   {
+    "t": "https://evil.example",
+    "h": "https://evil.example",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000017AAA/view",
+    "target": null
+   },
+   {
+    "t": "x",
+    "h": null,
+    "target": null
+   },
+   {
+    "t": "Smith & Jones (Contractor)",
+    "h": "/lightning/r/Contact/003SYN000000018AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ann [Finance] Lee",
+    "h": "/lightning/r/Contact/003SYN000000019AAA/view",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "fmt": [
+   "B:VIP",
+   "EM:Bold",
+   "EM:it",
+   "DEL:del",
+   "CODE:code",
+   "STRONG:*Why wasn't it helpful?"
+  ],
+  "rows": [
+   [
+    "#",
+    "Name",
+    "Account",
+    "Title"
+   ],
+   [
+    "1",
+    "Priya Synthwell",
+    "ACC01",
+    "TTL01"
+   ],
+   [
+    "2",
+    "Zoë \"Zed\" O'Brien-Łukasz 李",
+    "ACC02",
+    "TTL02"
+   ],
+   [
+    "3",
+    "Eve Linkbreaker](/lightning/r/Contact/003SYN000000003AAA/view)",
+    "ACC03",
+    "TTL03"
+   ],
+   [
+    "4",
+    "Pay here",
+    "ACC04",
+    "TTL04"
+   ],
+   [
+    "5",
+    "Nested CEO record",
+    "ACC05",
+    "TTL05"
+   ],
+   [
+    "6",
+    "Bob) [x](https://evil.example",
+    "ACC06",
+    "TTL06"
+   ],
+   [
+    "7",
+    "Zed VIP ",
+    "ACC07",
+    "TTL07"
+   ],
+   [
+    "8",
+    " Img",
+    "ACC08",
+    "TTL08"
+   ],
+   [
+    "9",
+    "Bold it del code # Hash",
+    "ACC09",
+    "TTL09"
+   ],
+   [
+    "10",
+    "[Ana",
+    "Pipe",
+    "Split](/lightning/r/Contact/003SYN000000010AAA/view)"
+   ],
+   [
+    "11",
+    "Back\\slash ] Name",
+    "ACC11",
+    "TTL11"
+   ],
+   [
+    "12",
+    "Visit https://evil.example now",
+    "ACC12",
+    "TTL12"
+   ],
+   [
+    "13",
+    "www.evil.example",
+    "ACC13",
+    "TTL13"
+   ],
+   [
+    "14",
+    "mail me@evil.example",
+    "ACC14",
+    "TTL14"
+   ],
+   [
+    "15",
+    "<b> & entity",
+    "ACC15",
+    "TTL15"
+   ],
+   [
+    "16",
+    "https://evil.example",
+    "ACC16",
+    "TTL16"
+   ],
+   [
+    "17",
+    "x",
+    "ACC17",
+    "TTL17"
+   ],
+   [
+    "18",
+    "Smith & Jones (Contractor)",
+    "ACC18",
+    "TTL18"
+   ],
+   [
+    "19",
+    "Ann [Finance] Lee",
+    "ACC19",
+    "TTL19"
+   ]
+  ],
+  "paras": [
+   "Here are the test values.",
+   "Your response is collected and can be accessed by Salesforce. Responses are considered feedback and may be used to help improve the user experience."
+  ],
+  "dialogs": [],
+  "evil_requests": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ]
+ },
+ "S-esc": {
+  "n": 7,
+  "text": "I found one matching Contact.\n\nName: Priya Synthwell Account: ACC01\n\nName: Zoë \"Zed\" O'Brien-Łukasz 李 Account: ACC02\n\nName: Eve ](https://evil.example/phish) Linkbreaker Account: ACC03\n\nName: Pay here Account: ACC04\n\nName: Nested CEO record Account: ACC05\n\nName: Bob) [x](https://evil.example Account: ACC06\n\nName: Zed <b>VIP</b> <img src=https://evil.example/x.png> Account: ACC07\n\nName:  Img Account: ACC08\n\nName: *Bold* _it_ ~~del~~ `code` # Hash Account: ACC09\n\nName: Ana | Pipe | Split Account: ACC10\n\nName: Back\\slash \\] Name Account: ACC11\n\nName: Visit https://evil.example now Account: ACC12\n\nName: www.evil.example Account: ACC13\n\nName: mail me@evil.example Account: ACC14\n\nName: &lt;b&gt; &amp; entity Account: ACC15\n\nName: <https://evil.example> Account: ACC16\n\nName: x Account: ACC17\n\nName: Smith & Jones (Contractor) Account: ACC18\n\nName: Ann [Finance] Lee Account: ACC19",
+  "links": [
+   {
+    "t": "Priya Synthwell",
+    "h": "/lightning/r/Contact/003SYN000000001AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zoë \"Zed\" O'Brien-Łukasz 李",
+    "h": "/lightning/r/Contact/003SYN000000002AAA/view",
+    "target": null
+   },
+   {
+    "t": "Eve ](https://evil.example/phish) Linkbreaker",
+    "h": "/lightning/r/Contact/003SYN000000003AAA/view",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000004AAA/view",
+    "target": null
+   },
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "Nested ",
+    "h": "/lightning/r/Contact/003SYN000000005AAA/view",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   },
+   {
+    "t": "Bob) [x](https://evil.example",
+    "h": "/lightning/r/Contact/003SYN000000006AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zed <b>VIP</b> <img src=https://evil.example/x.png>",
+    "h": "/lightning/r/Contact/003SYN000000007AAA/view",
+    "target": null
+   },
+   {
+    "t": " Img",
+    "h": "/lightning/r/Contact/003SYN000000008AAA/view",
+    "target": null
+   },
+   {
+    "t": "*Bold* _it_ ~~del~~ `code` # Hash",
+    "h": "/lightning/r/Contact/003SYN000000009AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ana | Pipe | Split",
+    "h": "/lightning/r/Contact/003SYN000000010AAA/view",
+    "target": null
+   },
+   {
+    "t": "Back\\slash \\] Name",
+    "h": "/lightning/r/Contact/003SYN000000011AAA/view",
+    "target": null
+   },
+   {
+    "t": "Visit https://evil.example now",
+    "h": "/lightning/r/Contact/003SYN000000012AAA/view",
+    "target": null
+   },
+   {
+    "t": "www.evil.example",
+    "h": "/lightning/r/Contact/003SYN000000013AAA/view",
+    "target": null
+   },
+   {
+    "t": "mail me@evil.example",
+    "h": "/lightning/r/Contact/003SYN000000014AAA/view",
+    "target": null
+   },
+   {
+    "t": "&lt;b&gt; &amp; entity",
+    "h": "/lightning/r/Contact/003SYN000000015AAA/view",
+    "target": null
+   },
+   {
+    "t": "<https://evil.example>",
+    "h": "/lightning/r/Contact/003SYN000000016AAA/view",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000017AAA/view",
+    "target": null
+   },
+   {
+    "t": "x",
+    "h": null,
+    "target": null
+   },
+   {
+    "t": "Smith & Jones (Contractor)",
+    "h": "/lightning/r/Contact/003SYN000000018AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ann [Finance] Lee",
+    "h": "/lightning/r/Contact/003SYN000000019AAA/view",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png"
+  ],
+  "fmt": [
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:*Why wasn't it helpful?"
+  ],
+  "rows": [],
+  "paras": [
+   "I found one matching Contact.",
+   "Name: Priya Synthwell Account: ACC01",
+   "Name: Zoë \"Zed\" O'Brien-Łukasz 李 Account: ACC02",
+   "Name: Eve ](https://evil.example/phish) Linkbreaker Account: ACC03",
+   "Name: Pay here Account: ACC04",
+   "Name: Nested CEO record Account: ACC05",
+   "Name: Bob) [x](https://evil.example Account: ACC06",
+   "Name: Zed <b>VIP</b> <img src=https://evil.example/x.png> Account: ACC07",
+   "Name:  Img Account: ACC08",
+   "Name: *Bold* _it_ ~~del~~ `code` # Hash Account: ACC09",
+   "Name: Ana | Pipe | Split Account: ACC10",
+   "Name: Back\\slash \\] Name Account: ACC11",
+   "Name: Visit https://evil.example now Account: ACC12",
+   "Name: www.evil.example Account: ACC13",
+   "Name: mail me@evil.example Account: ACC14",
+   "Name: &lt;b&gt; &amp; entity Account: ACC15",
+   "Name: <https://evil.example> Account: ACC16",
+   "Name: x Account: ACC17",
+   "Name: Smith & Jones (Contractor) Account: ACC18",
+   "Name: Ann [Finance] Lee Account: ACC19",
+   "Your response is collected and can be accessed by Salesforce. Responses are considered feedback and may be used to help improve the user experience."
+  ],
+  "dialogs": [],
+  "evil_requests": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ]
+ },
+ "S-L1": {
+  "n": 9,
+  "text": "I found one matching Contact.\n\nName: Priya Synthwell Account: ACC01\n\nName: Zoë \"Zed\" O'Brien-Łukasz 李 Account: ACC02\n\nName: Eve Linkbreaker](/lightning/r/Contact/003SYN000000003AAA/view) Account: ACC03\n\nName: Pay here Account: ACC04\n\nName: Nested CEO record Account: ACC05\n\nName: Bob) [x](https://evil.example Account: ACC06\n\nName: Zed VIP  Account: ACC07\n\nName:  Img Account: ACC08\n\nName: Bold it del code # Hash Account: ACC09\n\nName: Ana | Pipe | Split Account: ACC10\n\nName: Back\\slash ] Name Account: ACC11\n\nName: Visit https://evil.example now Account: ACC12\n\nName: www.evil.example Account: ACC13\n\nName: mail me@evil.example Account: ACC14\n\nName: <b> & entity Account: ACC15\n\nName: https://evil.example Account: ACC16\n\nName: x Account: ACC17\n\nName: Smith & Jones (Contractor) Account: ACC18\n\nName: Ann [Finance] Lee Account: ACC19",
+  "links": [
+   {
+    "t": "Priya Synthwell",
+    "h": "/lightning/r/Contact/003SYN000000001AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zoë \"Zed\" O'Brien-Łukasz 李",
+    "h": "/lightning/r/Contact/003SYN000000002AAA/view",
+    "target": null
+   },
+   {
+    "t": "Eve ",
+    "h": "https://evil.example/phish",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000004AAA/view",
+    "target": null
+   },
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "Nested ",
+    "h": "/lightning/r/Contact/003SYN000000005AAA/view",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   },
+   {
+    "t": "Bob) [x](https://evil.example",
+    "h": "/lightning/r/Contact/003SYN000000006AAA/view",
+    "target": null
+   },
+   {
+    "t": "Zed VIP ",
+    "h": "/lightning/r/Contact/003SYN000000007AAA/view",
+    "target": null
+   },
+   {
+    "t": " Img",
+    "h": "/lightning/r/Contact/003SYN000000008AAA/view",
+    "target": null
+   },
+   {
+    "t": "Bold it del code # Hash",
+    "h": "/lightning/r/Contact/003SYN000000009AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ana | Pipe | Split",
+    "h": "/lightning/r/Contact/003SYN000000010AAA/view",
+    "target": null
+   },
+   {
+    "t": "Back\\slash ] Name",
+    "h": "/lightning/r/Contact/003SYN000000011AAA/view",
+    "target": null
+   },
+   {
+    "t": "Visit https://evil.example now",
+    "h": "/lightning/r/Contact/003SYN000000012AAA/view",
+    "target": null
+   },
+   {
+    "t": "www.evil.example",
+    "h": "/lightning/r/Contact/003SYN000000013AAA/view",
+    "target": null
+   },
+   {
+    "t": "mail me@evil.example",
+    "h": "/lightning/r/Contact/003SYN000000014AAA/view",
+    "target": null
+   },
+   {
+    "t": "<b> & entity",
+    "h": "/lightning/r/Contact/003SYN000000015AAA/view",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000016AAA/view",
+    "target": null
+   },
+   {
+    "t": "https://evil.example",
+    "h": "https://evil.example",
+    "target": null
+   },
+   {
+    "t": "",
+    "h": "/lightning/r/Contact/003SYN000000017AAA/view",
+    "target": null
+   },
+   {
+    "t": "x",
+    "h": null,
+    "target": null
+   },
+   {
+    "t": "Smith & Jones (Contractor)",
+    "h": "/lightning/r/Contact/003SYN000000018AAA/view",
+    "target": null
+   },
+   {
+    "t": "Ann [Finance] Lee",
+    "h": "/lightning/r/Contact/003SYN000000019AAA/view",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "fmt": [
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "B:VIP",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "EM:Bold",
+   "EM:it",
+   "DEL:del",
+   "CODE:code",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:Name:",
+   "STRONG:Account:",
+   "STRONG:*Why wasn't it helpful?"
+  ],
+  "rows": [],
+  "paras": [
+   "I found one matching Contact.",
+   "Name: Priya Synthwell Account: ACC01",
+   "Name: Zoë \"Zed\" O'Brien-Łukasz 李 Account: ACC02",
+   "Name: Eve Linkbreaker](/lightning/r/Contact/003SYN000000003AAA/view) Account: ACC03",
+   "Name: Pay here Account: ACC04",
+   "Name: Nested CEO record Account: ACC05",
+   "Name: Bob) [x](https://evil.example Account: ACC06",
+   "Name: Zed VIP  Account: ACC07",
+   "Name:  Img Account: ACC08",
+   "Name: Bold it del code # Hash Account: ACC09",
+   "Name: Ana | Pipe | Split Account: ACC10",
+   "Name: Back\\slash ] Name Account: ACC11",
+   "Name: Visit https://evil.example now Account: ACC12",
+   "Name: www.evil.example Account: ACC13",
+   "Name: mail me@evil.example Account: ACC14",
+   "Name: <b> & entity Account: ACC15",
+   "Name: https://evil.example Account: ACC16",
+   "Name: x Account: ACC17",
+   "Name: Smith & Jones (Contractor) Account: ACC18",
+   "Name: Ann [Finance] Lee Account: ACC19",
+   "Your response is collected and can be accessed by Salesforce. Responses are considered feedback and may be used to help improve the user experience."
+  ],
+  "dialogs": [],
+  "evil_requests": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ]
+ }
+}

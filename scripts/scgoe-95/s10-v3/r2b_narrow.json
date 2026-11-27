@@ -1,0 +1,595 @@
+{
+ "label": "r2b_narrow",
+ "mode": "bundle-live",
+ "turns": [
+  "Find contacts with job title Synthetic Engineer",
+  "Only the ones at CRA-TEST Northwind Synthetic"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a21283-8d3a-73ce-9318-5e23ee2e1afc",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a21283-8d36-7f39-9ef3-47cac4b67194",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a21283-8d52-7b3b-adab-a97cd71279f9",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 3,
+   "session": "01a21284-0e18-7d84-8e0c-a75a1e6cefba",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 4,
+   "session": "01a21284-106c-7fd7-a24b-a5c31bb2e54c",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 5,
+   "session": "01a21284-16bc-7321-ae61-22d0b13dda64",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 6,
+   "session": "01a21284-7c24-7076-9456-0d47b770f13c",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 7,
+   "session": "01a21284-86f5-78fd-a395-d24a2f14a7be",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 8,
+   "session": "01a21284-909a-71ec-b1df-e18124fb5855",
+   "turns": [
+    {
+     "user": "Find contacts with job title Synthetic Engineer",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_11_TO_100",
+       "12"
+      ]
+     ],
+     "parallel": false
+    },
+    {
+     "user": "Only the ones at CRA-TEST Northwind Synthetic",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"\",\"criteria_phone\":\"\",\"criteria_account_name\":\"CRA-TEST Northwind Synthetic\",\"criteria_job_title\":\"Synthetic Engineer\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "accountName": "CRA-TEST Northwind Synthetic",
+       "jobTitle": "Synthetic Engineer"
+      }
+     ],
+     "outcomes": [
+      [
+       "LIST_6_TO_10",
+       "8"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

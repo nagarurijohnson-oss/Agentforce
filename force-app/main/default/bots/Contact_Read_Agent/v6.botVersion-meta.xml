@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v6</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hi! I can find Contacts for you by name, email, phone, Account, job title or location, and answer questions about them. I can also answer scholarship policy and process questions from published Knowledge articles.</message>
+                <messageIdentifier>326c2fd2-db7d-47fc-ae9a-ff104faf34e6</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>83015e7c-6189-49a1-8e6a-d9b19464de3e</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>acfde84c-dfb0-419b-826b-894ec9bdea4d</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Something went wrong while searching Contacts. Please try again. If it keeps happening, contact your Salesforce administrator.</message>
+                <messageIdentifier>074f9284-9264-42af-8d8d-46ea6370bafd</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>a348630d-e97b-4bb4-ae9a-c9f735c9528f</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>ac81d082-e119-4762-9340-98163b4014fd</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Rich_Content_Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Error Handler</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>Contact_Read_Agent_v6</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationSystemDialogs>
+        <dialog>Rich_Content_Error_Handling</dialog>
+        <type>ErrorHandling</type>
+    </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>True when the last result needs more details before anything more is shown</description>
+        <developerName>refinement_required</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Refinement Required</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Phone given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_phone</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Phone</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The next topic to be visited</description>
+        <developerName>AgentScriptInternal_next_topic</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Next Topic</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>One field the user asked for in the same message as a new search; empty otherwise</description>
+        <developerName>criteria_requested_field</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Requested Field</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Name given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Account name given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_account_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Account Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Job title given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_job_title</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Job Title</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Phone or mobile number searched for</description>
+        <developerName>criteria_phone</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Phone</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>True only when the last result allows showing the other Contacts</description>
+        <developerName>remaining_available</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Remaining Available</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Id of the Contact the user is asking about, from the last result only</description>
+        <developerName>selected_contact_id</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Selected Contact Id</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>One field asked for in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_requested_field</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Requested Field</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The presentation template&apos;s reply for this turn; cleared after every turn</description>
+        <developerName>last_reply</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Last Reply</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Name searched for in the current search</description>
+        <developerName>criteria_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Mailing state or region searched for</description>
+        <developerName>criteria_state</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria State</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>City given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_city</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In City</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>searchResultJson from the last search, passed unchanged to the presentation template</description>
+        <developerName>last_result_json</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Last Result Json</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Mailing country searched for</description>
+        <developerName>criteria_country</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Country</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The Knowledge answer template&apos;s reply for this turn; cleared after every turn</description>
+        <developerName>kb_reply</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Kb Reply</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The agent instructions</description>
+        <developerName>AgentScriptInternal_agent_instructions</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Agent Instructions</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>new or narrow, set by the action that stored the latest message&apos;s details; emptied at the start of every turn</description>
+        <developerName>in_mode</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Mode</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The scholarship question to answer from Knowledge, including the programme named earlier for a follow-up</description>
+        <developerName>kb_question</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Kb Question</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Email given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_email</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Email</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Email or email domain searched for</description>
+        <developerName>criteria_email</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Email</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Outcome code of the last search</description>
+        <developerName>last_outcome</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Last Outcome</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Job title searched for</description>
+        <developerName>criteria_job_title</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Job Title</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>True after set_question until the Knowledge answer has run; cleared after every turn</description>
+        <developerName>kb_pending</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Kb Pending</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Comma-separated Ids of the Contacts shown last, in table order</description>
+        <developerName>last_result_ids</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Last Result Ids</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Mailing city searched for</description>
+        <developerName>criteria_city</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria City</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>Runtime condition evaluation for if statements</description>
+        <developerName>AgentScriptInternal_condition_1</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Runtime Condition 1</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>State given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_state</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In State</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Country given in the latest message only; emptied at the start of every turn</description>
+        <developerName>in_country</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>In Country</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Account name searched for</description>
+        <developerName>criteria_account_name</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Criteria Account Name</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <description>True after new or narrowed search details are stored until the search has run; cleared after every turn</description>
+        <developerName>search_pending</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Search Pending</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <isScriptCompatibleAgent>true</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>false</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

@@ -1,0 +1,52 @@
+{
+ "conversation": "L1b-single-unique",
+ "turns": [
+  {
+   "n": 3,
+   "text": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+   "links": [
+    {
+     "t": "Avery Testfield",
+     "h": "/lightning/r/Contact/003jV00000Grnt8QAB/view",
+     "target": null,
+     "ctx": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available"
+    },
+    {
+     "t": "analyst1@synthetic.example",
+     "h": "mailto:analyst1@synthetic.example",
+     "target": null,
+     "ctx": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available"
+    }
+   ],
+   "imgs": [],
+   "fmt": [
+    "STRONG:Name:",
+    "STRONG:Account:",
+    "STRONG:Title:",
+    "STRONG:Email:",
+    "STRONG:Phone:",
+    "STRONG:Mobile:",
+    "STRONG:Mailing address:",
+    "STRONG:*Why wasn't it helpful?"
+   ],
+   "headers": [],
+   "rows": [],
+   "utterance": "Find the contact with email analyst1@synthetic.example"
+  }
+ ],
+ "agent_selected": "Contact Read Agent",
+ "navigation": [
+  {
+   "linkText": "Avery Testfield",
+   "href": "/lightning/r/Contact/003jV00000Grnt8QAB/view",
+   "before": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+   "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000Grnt8QAB/view",
+   "newTab": false,
+   "title": "Avery Testfield | Contact | Salesforce"
+  }
+ ],
+ "dialogs": [],
+ "external_requests": [
+  "https://orgfarm-232477b490-dev-ed.develop.my.salesforce-setup.com/setup/SetupDomainRolloutServlet?probing"
+ ]
+}

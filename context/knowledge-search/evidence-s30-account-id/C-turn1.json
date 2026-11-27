@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "ff6be74f-c84a-4656-aa3a-60bc0391cc75",
+        "metrics": {},
+        "feedbackId": "01a21cbc-f621-78a7-a81a-f9f1449cd65c",
+        "planId": "01a21cbc-f621-78a7-a81a-f9f1449cd65c",
+        "isContentSafe": true,
+        "message": "More than 100 Contacts match. Please add more details to narrow the search.  \nYou could add: job title, email, phone, city, state or region, country.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cbc-e4fe-7813-8a11-035bcce6624e"
+  },
+  "warnings": []
+}

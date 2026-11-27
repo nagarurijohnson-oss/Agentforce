@@ -1,0 +1,14 @@
+
+2026-11-26T16:42:10Z
+SECDEPLOY Succeeded 0AfjV000006o0UPSAY 1
+unassign DATA_Knowledge_Read_Only 0PajV000009AhHsSAK 0
+unassign SYS_Knowledge_Default_DataSpace 0PajV000009AdMISA0 0
+unassign EinsteinGPTPromptTemplateUser 0PajV000009Asl8SAC 0
+removed cached session file
+removed cached session file
+SECREADBACK enableAdminLoginAsAnyUser=false
+UAT_PSA ['APP_Contact_Read_Agent', 'APP_Contact_Read_Agent_Panel_Access', 'DATA_Contact_Read_Only', 'X00e1P000000J627QAC']
+UAT_PSL []
+LEFT_TRACE []
+LEFT_DEBUGLEVEL []
+

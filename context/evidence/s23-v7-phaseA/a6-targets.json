@@ -1,0 +1,261 @@
+[
+ {
+  "kind": "contact",
+  "id": "003jV00000Grnt4QAB",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Jordan Samename"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000Grnt5QAB",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Jordan Samename"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000Grnt6QAB",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Sam Doublet"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000Grnt7QAB",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Samantha Doublet"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000Grnt8QAB",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Avery Testfield"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000Grnt9QAB",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Blake Mockford"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntAQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Casey Dummond"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntBQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Coord Sample01"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntCQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Coord Sample02"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntDQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Coord Sample03"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntEQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Coord Sample04"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntFQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Coord Sample05"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntJQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup01"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntKQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup02"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntLQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup03"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntMQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup04"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntNQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup05"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntOQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup06"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntPQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup07"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntQQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Eng Mockup08"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntVQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Zo\u00eb \"Zed\" O'Brien-N\u00fa\u00f1ez [VIP]"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrntWQAR",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Marco Blankfield"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000GrpMXQAZ",
+  "expect": "open",
+  "why": "linked by agent",
+  "name": "Priya Synthwell"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000HCVpSQAX",
+  "expect": "refused",
+  "why": "hidden from UAT (control)",
+  "name": "Zed Hiddenmore"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000HCVpTQAX",
+  "expect": "refused",
+  "why": "hidden from UAT (control)",
+  "name": "Jordan Samename"
+ },
+ {
+  "kind": "contact",
+  "id": "003jV00000HCVpUQAX",
+  "expect": "refused",
+  "why": "hidden from UAT (control)",
+  "name": "Priyanka Shadowell"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIDWQA2",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Need-Based Opportunity Grant \u2013 Eligibility"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIDXQA2",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Merit Excellence Scholarship \u2013 Renewal Requirements"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIDYQA2",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Graduate Research Scholarship \u2013 Renewal Requirements"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIDZQA2",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "STEM Futures Scholarship \u2013 Application Deadline"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIDaQAM",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Arts & Humanities Scholarship \u2013 Application Deadline"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIDbQAM",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "International Student Scholarship \u2013 Required Documents"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIF8QAM",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Scholarship Disbursement and Refund Timing"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIFAQA2",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Federal Work-Study \u2013 Eligibility"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIqDQAU",
+  "expect": "open",
+  "why": "cited by agent",
+  "name": "Athletic Scholarship \u2013 Required Documents"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIFCQA2",
+  "expect": "refused",
+  "why": "Campus_Services category (control)",
+  "name": "Library Fine \u2013 Appeal Process"
+ },
+ {
+  "kind": "article",
+  "id": "ka0jV000000nIFBQA2",
+  "expect": "refused",
+  "why": "Campus_Services category (control)",
+  "name": "Campus Parking Permit \u2013 Renewal"
+ }
+]

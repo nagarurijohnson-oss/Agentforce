@@ -1,0 +1,305 @@
+{
+ "T-esc": {
+  "correct": 15,
+  "of": 19,
+  "other_links": [
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png"
+  ],
+  "failures": [
+   [
+    4,
+    "[Pay here](https://evil.example/pay)",
+    [
+     ""
+    ]
+   ],
+   [
+    5,
+    "Nested [CEO record](/lightning/r/Contact/003jV00000HCVpUQAX/view)",
+    [
+     "Nested"
+    ]
+   ],
+   [
+    8,
+    "![x](https://evil.example/x.png) Img",
+    [
+     "Img"
+    ]
+   ],
+   [
+    17,
+    "[x](javascript:alert(1))",
+    [
+     ""
+    ]
+   ]
+  ]
+ },
+ "T-L1": {
+  "correct": 8,
+  "of": 19,
+  "other_links": [
+   {
+    "t": "Eve ",
+    "h": "https://evil.example/phish",
+    "target": null
+   },
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   },
+   {
+    "t": "https://evil.example",
+    "h": "https://evil.example",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "failures": [
+   [
+    3,
+    "Eve ](https://evil.example/phish) Linkbreaker",
+    []
+   ],
+   [
+    4,
+    "[Pay here](https://evil.example/pay)",
+    [
+     ""
+    ]
+   ],
+   [
+    5,
+    "Nested [CEO record](/lightning/r/Contact/003jV00000HCVpUQAX/view)",
+    [
+     "Nested"
+    ]
+   ],
+   [
+    7,
+    "Zed <b>VIP</b> <img src=https://evil.example/x.png>",
+    [
+     "Zed VIP"
+    ]
+   ],
+   [
+    8,
+    "![x](https://evil.example/x.png) Img",
+    [
+     "Img"
+    ]
+   ],
+   [
+    9,
+    "*Bold* _it_ ~~del~~ `code` # Hash",
+    [
+     "Bold it del code # Hash"
+    ]
+   ],
+   [
+    10,
+    "Ana | Pipe | Split",
+    []
+   ],
+   [
+    11,
+    "Back\\slash \\] Name",
+    [
+     "Back\\slash ] Name"
+    ]
+   ],
+   [
+    15,
+    "&lt;b&gt; &amp; entity",
+    [
+     "<b> & entity"
+    ]
+   ],
+   [
+    16,
+    "<https://evil.example>",
+    [
+     ""
+    ]
+   ],
+   [
+    17,
+    "[x](javascript:alert(1))",
+    [
+     ""
+    ]
+   ]
+  ]
+ },
+ "S-esc": {
+  "correct": 15,
+  "of": 19,
+  "other_links": [
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png"
+  ],
+  "failures": [
+   [
+    4,
+    "[Pay here](https://evil.example/pay)",
+    [
+     ""
+    ]
+   ],
+   [
+    5,
+    "Nested [CEO record](/lightning/r/Contact/003jV00000HCVpUQAX/view)",
+    [
+     "Nested"
+    ]
+   ],
+   [
+    8,
+    "![x](https://evil.example/x.png) Img",
+    [
+     "Img"
+    ]
+   ],
+   [
+    17,
+    "[x](javascript:alert(1))",
+    [
+     ""
+    ]
+   ]
+  ]
+ },
+ "S-L1": {
+  "correct": 9,
+  "of": 19,
+  "other_links": [
+   {
+    "t": "Eve ",
+    "h": "https://evil.example/phish",
+    "target": null
+   },
+   {
+    "t": "Pay here",
+    "h": "https://evil.example/pay",
+    "target": null
+   },
+   {
+    "t": "CEO record",
+    "h": "/lightning/r/Contact/003jV00000HCVpUQAX/view",
+    "target": null
+   },
+   {
+    "t": "https://evil.example",
+    "h": "https://evil.example",
+    "target": null
+   }
+  ],
+  "imgs": [
+   "https://evil.example/x.png",
+   "https://evil.example/x.png"
+  ],
+  "failures": [
+   [
+    3,
+    "Eve ](https://evil.example/phish) Linkbreaker",
+    []
+   ],
+   [
+    4,
+    "[Pay here](https://evil.example/pay)",
+    [
+     ""
+    ]
+   ],
+   [
+    5,
+    "Nested [CEO record](/lightning/r/Contact/003jV00000HCVpUQAX/view)",
+    [
+     "Nested"
+    ]
+   ],
+   [
+    7,
+    "Zed <b>VIP</b> <img src=https://evil.example/x.png>",
+    [
+     "Zed VIP"
+    ]
+   ],
+   [
+    8,
+    "![x](https://evil.example/x.png) Img",
+    [
+     "Img"
+    ]
+   ],
+   [
+    9,
+    "*Bold* _it_ ~~del~~ `code` # Hash",
+    [
+     "Bold it del code # Hash"
+    ]
+   ],
+   [
+    11,
+    "Back\\slash \\] Name",
+    [
+     "Back\\slash ] Name"
+    ]
+   ],
+   [
+    15,
+    "&lt;b&gt; &amp; entity",
+    [
+     "<b> & entity"
+    ]
+   ],
+   [
+    16,
+    "<https://evil.example>",
+    [
+     ""
+    ]
+   ],
+   [
+    17,
+    "[x](javascript:alert(1))",
+    [
+     ""
+    ]
+   ]
+  ]
+ }
+}

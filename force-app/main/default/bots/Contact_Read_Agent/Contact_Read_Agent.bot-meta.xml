@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <agentDSLEnabled>true</agentDSLEnabled>
+    <agentType>AgentforceEmployeeAgent</agentType>
+    <botMlDomain>
+        <label>Contact Read Agent</label>
+        <name>Contact_Read_Agent</name>
+    </botMlDomain>
+    <botSource>None</botSource>
+    <description>SCGOE-95. Contact search for employees (read-only), plus Case creation after explicit confirmation. Runs as the logged-in user, so results respect their sharing, object and field access.</description>
+    <label>Contact Read Agent</label>
+    <logPrivateConversationData>false</logPrivateConversationData>
+    <richContentEnabled>true</richContentEnabled>
+    <sessionTimeout>0</sessionTimeout>
+    <type>InternalCopilot</type>
+</Bot>

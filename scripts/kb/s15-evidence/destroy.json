@@ -1,0 +1,147 @@
+{
+  "status": 1,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-11-26T06:02:02.000Z",
+    "createdBy": "005jV000001p8m9",
+    "createdByName": "John Steve",
+    "createdDate": "2026-11-26T06:01:59.000Z",
+    "details": {
+      "componentFailures": [
+        {
+          "changed": false,
+          "componentType": "Flow",
+          "created": false,
+          "createdDate": "2026-11-26T06:02:02.000Z",
+          "deleted": false,
+          "fileName": "zip/flows/SF_UAT_Knowledge_Answer_Harness.flow",
+          "fullName": "SF_UAT_Knowledge_Answer_Harness",
+          "problem": "insufficient access rights on cross-reference id",
+          "problemType": "Error",
+          "success": false
+        }
+      ],
+      "componentSuccesses": [
+        {
+          "changed": false,
+          "componentType": "PermissionSet",
+          "created": false,
+          "createdDate": "2026-11-26T06:02:00.000Z",
+          "deleted": true,
+          "fileName": "zip/permissionsets/SYS_UAT_DC_Default_DataSpace.permissionset",
+          "fullName": "SYS_UAT_DC_Default_DataSpace",
+          "id": "0PSjV000004iE6dWAE",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "PermissionSet",
+          "created": false,
+          "createdDate": "2026-11-26T06:02:02.000Z",
+          "deleted": true,
+          "fileName": "zip/permissionsets/DATA_Knowledge_UAT_All_Categories.permissionset",
+          "fullName": "DATA_Knowledge_UAT_All_Categories",
+          "id": "0PSjV000004iE6bWAE",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "PermissionSet",
+          "created": false,
+          "createdDate": "2026-11-26T06:02:02.000Z",
+          "deleted": true,
+          "fileName": "zip/permissionsets/DATA_Knowledge_UAT_No_Campus.permissionset",
+          "fullName": "DATA_Knowledge_UAT_No_Campus",
+          "id": "0PSjV000004iE6cWAE",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "PermissionSet",
+          "created": false,
+          "createdDate": "2026-11-26T06:02:02.000Z",
+          "deleted": true,
+          "fileName": "zip/permissionsets/SYS_UAT_KB_Harness.permissionset",
+          "fullName": "SYS_UAT_KB_Harness",
+          "id": "0PSjV000004iE6eWAE",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-11-26T06:02:02.000Z",
+          "deleted": false,
+          "fileName": "zip/package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      }
+    },
+    "done": true,
+    "id": "0AfjV000006nJNpSAM",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-11-26T06:02:02.000Z",
+    "numberComponentErrors": 1,
+    "numberComponentsDeployed": 4,
+    "numberComponentsTotal": 5,
+    "numberFiles": "3",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-11-26T06:01:59.000Z",
+    "status": "Failed",
+    "success": false,
+    "zipSize": 703,
+    "files": [
+      {
+        "error": "insufficient access rights on cross-reference id",
+        "problemType": "Error",
+        "fullName": "SF_UAT_Knowledge_Answer_Harness",
+        "type": "Flow",
+        "state": "Failed",
+        "filePath": "flows/SF_UAT_Knowledge_Answer_Harness.flow"
+      },
+      {
+        "fullName": "DATA_Knowledge_UAT_All_Categories",
+        "type": "PermissionSet",
+        "state": "Deleted",
+        "filePath": "permissionsets/DATA_Knowledge_UAT_All_Categories.permissionset"
+      },
+      {
+        "fullName": "DATA_Knowledge_UAT_No_Campus",
+        "type": "PermissionSet",
+        "state": "Deleted",
+        "filePath": "permissionsets/DATA_Knowledge_UAT_No_Campus.permissionset"
+      },
+      {
+        "fullName": "SYS_UAT_DC_Default_DataSpace",
+        "type": "PermissionSet",
+        "state": "Deleted",
+        "filePath": "permissionsets/SYS_UAT_DC_Default_DataSpace.permissionset"
+      },
+      {
+        "fullName": "SYS_UAT_KB_Harness",
+        "type": "PermissionSet",
+        "state": "Deleted",
+        "filePath": "permissionsets/SYS_UAT_KB_Harness.permissionset"
+      }
+    ],
+    "zipFileCount": 2,
+    "deployUrl": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com//lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfjV000006nJNpSAM%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

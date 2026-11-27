@@ -1,0 +1,47 @@
+{
+ "KT-19#0": {
+  "sid": "01a213ef-2378-7c73-8c55-1121dfdd6674",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "Which one do you mean?\n\nMerit Excellence Scholarship – Renewal Requirements\nGraduate Research Scholarship – Renewal Requirements"
+   ]
+  ]
+ },
+ "KT-19#1": {
+  "sid": "01a213ef-2396-7c55-b270-b7bcb0c092b4",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ]
+  ]
+ },
+ "KT-19#2": {
+  "sid": "01a213ef-2261-7153-9f5a-2f80f1ca4d30",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June; no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ]
+  ]
+ },
+ "KT-19#3": {
+  "sid": "01a213ef-22fa-7518-9dd4-909c67053882",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ]
+  ]
+ },
+ "KT-19#4": {
+  "sid": "01a213ef-74af-7532-a2a0-4e88c30da3a0",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "attributes": {
+   "type": "SetupAuditTrail",
+   "url": "/services/data/v68.0/sobjects/SetupAuditTrail/0YmjV000011jd7NSAQ"
+  },
+  "CreatedDate": "2026-11-26T07:52:14.000+0000",
+  "Action": "changedCatGroupVisibilityUserNode_NoneToCustom",
+  "Section": "Data Categories",
+  "Display": "Changed visibility of Scholarship Programs Data Category Group for DATA_Knowledge_Read_Only from None to Custom: [All Programs > Arts and Humanities, All Programs > Athletic, All Programs > General Financial Aid, All Programs > Graduate Research, All Programs > International Student, All Programs > Merit Excellence, All Programs > Need-Based Opportunity, All Programs > STEM Futures]"
+ },
+ {
+  "attributes": {
+   "type": "SetupAuditTrail",
+   "url": "/services/data/v68.0/sobjects/SetupAuditTrail/0YmjV000011jdqXSAQ"
+  },
+  "CreatedDate": "2026-11-26T07:54:15.000+0000",
+  "Action": "PermSetCreateNoLicense",
+  "Section": "Manage Users",
+  "Display": "Created permission set SYS \u2013 Knowledge Default Data Space: with no license"
+ },
+ {
+  "attributes": {
+   "type": "SetupAuditTrail",
+   "url": "/services/data/v68.0/sobjects/SetupAuditTrail/0YmjV000011jVucSAE"
+  },
+  "CreatedDate": "2026-11-26T07:55:21.000+0000",
+  "Action": "PermSetDataspaceScopeAdded",
+  "Section": "Manage Users",
+  "Display": "Changed permission set SYS \u2013 Knowledge Default Data Space: Data Space default was added"
+ }
+]

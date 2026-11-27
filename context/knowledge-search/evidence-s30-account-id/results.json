@@ -1,0 +1,97 @@
+{
+ "note": "S30 AID-1 draft preview, live read-only actions, admin user; extracted from trace detail (actions)",
+ "search_calls": [
+  {
+   "session": "A",
+   "turn": 3,
+   "inputs": {
+    "accountId": "001jV00000LVFxyQAH"
+   },
+   "outcome": "LIST_11_TO_100",
+   "total": "23"
+  },
+  {
+   "session": "A",
+   "turn": 5,
+   "inputs": {
+    "name": "Marco"
+   },
+   "outcome": "SINGLE_MATCH",
+   "total": "1"
+  },
+  {
+   "session": "B",
+   "turn": 3,
+   "inputs": {
+    "accountId": "001jV00000LVFxz"
+   },
+   "outcome": "LIST_6_TO_10",
+   "total": "8"
+  },
+  {
+   "session": "B",
+   "turn": 5,
+   "inputs": {
+    "accountId": "001jV00000LVFxz",
+    "showRemaining": true
+   },
+   "outcome": "REMAINING_PAGE",
+   "total": "8"
+  },
+  {
+   "session": "C",
+   "turn": 3,
+   "inputs": {
+    "accountId": "001jV00000LhPtV"
+   },
+   "outcome": "TOO_MANY",
+   "total": "more than 100"
+  },
+  {
+   "session": "D",
+   "turn": 3,
+   "inputs": {
+    "contactId": "003jV00000Grnt8QAB"
+   },
+   "outcome": "SINGLE_MATCH",
+   "total": "1"
+  },
+  {
+   "session": "D",
+   "turn": 5,
+   "inputs": {
+    "requestedField": "phone",
+    "contactId": "003jV00000Grnt8QAB"
+   },
+   "outcome": "FIELD_ANSWER",
+   "total": "1"
+  },
+  {
+   "session": "D",
+   "turn": 7,
+   "inputs": {
+    "phone": "2128425500"
+   },
+   "outcome": "DUPLICATE_IDENTIFIER",
+   "total": "4"
+  },
+  {
+   "session": "E",
+   "turn": 3,
+   "inputs": {
+    "accountId": "001jV00000LVFxzQAH"
+   },
+   "outcome": "LIST_6_TO_10",
+   "total": "8"
+  },
+  {
+   "session": "E",
+   "turn": 3,
+   "inputs": {
+    "accountId": "001jV00000LVFxzQAH"
+   },
+   "outcome": "LIST_6_TO_10",
+   "total": "8"
+  }
+ ]
+}

@@ -1,0 +1,2744 @@
+[
+ {
+  "id": "07LjV000003k37eUAA",
+  "t": "2026-11-25T19:44:32.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3XRUAY",
+  "t": "2026-11-25T19:44:50.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3Z3UAI",
+  "t": "2026-11-25T19:44:53.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|5989a0ba1a45aea116211dd056281a2128b1d1-f8bb|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:44:53.6 (956134009)|FLOW_ACTIONCALL_DETAIL|5989a0ba1a45aea116211dd056281a2128b1d1-f8bb|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error whi"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3Z4UAI",
+  "t": "2026-11-25T19:44:54.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3afUAA",
+  "t": "2026-11-25T19:44:56.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k0bFUAQ",
+  "t": "2026-11-25T19:44:57.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1112639f93c8d97fd31a4a039cb81a214100c23-76fb|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:44:58.107 (1107182959)|FLOW_ACTIONCALL_DETAIL|1112639f93c8d97fd31a4a039cb81a214100c23-76fb|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k0bGUAQ",
+  "t": "2026-11-25T19:44:58.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3cHUAQ",
+  "t": "2026-11-25T19:45:00.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003jxYUUAY",
+  "t": "2026-11-25T19:45:01.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1113639f93c8d97fd31a4a039cb81a214100c23-76fa|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:45:01.5 (966435590)|FLOW_ACTIONCALL_DETAIL|1113639f93c8d97fd31a4a039cb81a214100c23-76fa|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error wh"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003jxYVUAY",
+  "t": "2026-11-25T19:45:02.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3dtUAA",
+  "t": "2026-11-25T19:45:05.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3fVUAQ",
+  "t": "2026-11-25T19:45:06.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1356f7150e0b39ded7da191278111a212419c0-3ebf|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:45:07.155 (1155947492)|FLOW_ACTIONCALL_DETAIL|1356f7150e0b39ded7da191278111a212419c0-3ebf|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3fWUAQ",
+  "t": "2026-11-25T19:45:07.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3lxUAA",
+  "t": "2026-11-25T19:45:56.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3nZUAQ",
+  "t": "2026-11-25T19:46:15.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3pBUAQ",
+  "t": "2026-11-25T19:46:17.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1166e8b5752f1133e123392ac92d1a21333496d-48e6|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:46:18.79 (1079494795)|FLOW_ACTIONCALL_DETAIL|1166e8b5752f1133e123392ac92d1a21333496d-48e6|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3pCUAQ",
+  "t": "2026-11-25T19:46:18.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003jxDXUAY",
+  "t": "2026-11-25T19:46:20.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3qnUAA",
+  "t": "2026-11-25T19:46:21.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7386a8440e12175692495d5be9e21a212dea2bc-29a5|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:46:22.159 (1159532692)|FLOW_ACTIONCALL_DETAIL|7386a8440e12175692495d5be9e21a212dea2bc-29a5|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3qoUAA",
+  "t": "2026-11-25T19:46:23.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3sPUAQ",
+  "t": "2026-11-25T19:46:25.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3u1UAA",
+  "t": "2026-11-25T19:46:26.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|6007a0ba1a45aea116211dd056281a2128b1d1-f84e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:46:26.6 (905369000)|FLOW_ACTIONCALL_DETAIL|6007a0ba1a45aea116211dd056281a2128b1d1-f84e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error whi"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3u2UAA",
+  "t": "2026-11-25T19:46:26.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3vdUAA",
+  "t": "2026-11-25T19:46:29.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3xFUAQ",
+  "t": "2026-11-25T19:46:30.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1145639f93c8d97fd31a4a039cb81a214100c23-767f|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:46:31.50 (1050657015)|FLOW_ACTIONCALL_DETAIL|1145639f93c8d97fd31a4a039cb81a214100c23-767f|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3xGUAQ",
+  "t": "2026-11-25T19:46:31.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3yrUAA",
+  "t": "2026-11-25T19:46:33.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k40TUAQ",
+  "t": "2026-11-25T19:46:34.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1167e8b5752f1133e123392ac92d1a21333496d-489c|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:46:34.4 (960514992)|FLOW_ACTIONCALL_DETAIL|1167e8b5752f1133e123392ac92d1a21333496d-489c|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error wh"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k40UUAQ",
+  "t": "2026-11-25T19:46:35.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k425UAA",
+  "t": "2026-11-25T19:46:38.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3sQUAQ",
+  "t": "2026-11-25T19:46:39.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|9363e9ed7ffa89f73db31f1494fd1a212003ed-0b1b|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:46:40.80 (1080086802)|FLOW_ACTIONCALL_DETAIL|9363e9ed7ffa89f73db31f1494fd1a212003ed-0b1b|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error w"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3sRUAQ",
+  "t": "2026-11-25T19:46:40.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k43hUAA",
+  "t": "2026-11-25T19:46:42.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k45JUAQ",
+  "t": "2026-11-25T19:46:44.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|1357f7150e0b39ded7da191278111a212419c0-3e97|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:46:45.71 (1071597874)|FLOW_ACTIONCALL_DETAIL|1357f7150e0b39ded7da191278111a212419c0-3e97|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error w"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k45KUAQ",
+  "t": "2026-11-25T19:46:45.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4A9UAI",
+  "t": "2026-11-25T19:46:47.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k2GRUAY",
+  "t": "2026-11-25T19:46:48.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|4233817a30e90b1a8f9d7528c6951a2134e9261-4e62|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:46:48.6 (890968826)|FLOW_ACTIONCALL_DETAIL|4233817a30e90b1a8f9d7528c6951a2134e9261-4e62|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error wh"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k2GSUAY",
+  "t": "2026-11-25T19:46:49.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003jyCpUAI",
+  "t": "2026-11-25T19:50:17.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4enUAA",
+  "t": "2026-11-25T19:51:27.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4gPUAQ",
+  "t": "2026-11-25T19:51:53.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4jdUAA",
+  "t": "2026-11-25T19:52:19.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4lFUAQ",
+  "t": "2026-11-25T19:53:28.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4oTUAQ",
+  "t": "2026-11-25T19:54:19.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k54bUAA",
+  "t": "2026-11-25T19:55:58.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k59RUAQ",
+  "t": "2026-11-25T19:56:17.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5B3UAI",
+  "t": "2026-11-25T19:56:20.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|96376c2a2a7468197f95326968b31a2118f1f54-2cbd|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:56:21.345 (1345322259)|FLOW_ACTIONCALL_DETAIL|96376c2a2a7468197f95326968b31a2118f1f54-2cbd|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5B4UAI",
+  "t": "2026-11-25T19:56:21.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5CfUAI",
+  "t": "2026-11-25T19:56:23.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5EHUAY",
+  "t": "2026-11-25T19:56:24.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|91233d561cd7ea964ae4e96e8081a21331daaa-4278|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:56:25.131 (1131610007)|FLOW_ACTIONCALL_DETAIL|91233d561cd7ea964ae4e96e8081a21331daaa-4278|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5EIUAY",
+  "t": "2026-11-25T19:56:25.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4YMUAY",
+  "t": "2026-11-25T19:56:27.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k1x4UAA",
+  "t": "2026-11-25T19:56:29.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|23432cf1f03a078477863582fd851a212985f05-136d|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:56:30.223 (1223622927)|FLOW_ACTIONCALL_DETAIL|23432cf1f03a078477863582fd851a212985f05-136d|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k1x5UAA",
+  "t": "2026-11-25T19:56:30.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5FtUAI",
+  "t": "2026-11-25T19:56:32.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5HVUAY",
+  "t": "2026-11-25T19:56:32.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|6374fc9693a7fa95239871d404cb1a21111d4b5-474e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:56:33.126 (1126735435)|FLOW_ACTIONCALL_DETAIL|6374fc9693a7fa95239871d404cb1a21111d4b5-474e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5HWUAY",
+  "t": "2026-11-25T19:56:34.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5J7UAI",
+  "t": "2026-11-25T19:56:36.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5KjUAI",
+  "t": "2026-11-25T19:56:37.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7433a8440e12175692495d5be9e21a212dea2bc-27b0|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:56:38.13 (1013247532)|FLOW_ACTIONCALL_DETAIL|7433a8440e12175692495d5be9e21a212dea2bc-27b0|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5KkUAI",
+  "t": "2026-11-25T19:56:38.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5MLUAY",
+  "t": "2026-11-25T19:56:40.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4wYUAQ",
+  "t": "2026-11-25T19:56:41.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7434a8440e12175692495d5be9e21a212dea2bc-27a6|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:56:42.8 (1008077080)|FLOW_ACTIONCALL_DETAIL|7434a8440e12175692495d5be9e21a212dea2bc-27a6|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error w"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4wZUAQ",
+  "t": "2026-11-25T19:56:42.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5NxUAI",
+  "t": "2026-11-25T19:56:45.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5PZUAY",
+  "t": "2026-11-25T19:56:46.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|43844f53df6a13ecb0292f31a9481a211bba07a-1ff7|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "11:56:46.7 (896590037)|FLOW_ACTIONCALL_DETAIL|43844f53df6a13ecb0292f31a9481a211bba07a-1ff7|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error wh"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5PaUAI",
+  "t": "2026-11-25T19:56:46.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5RBUAY",
+  "t": "2026-11-25T19:56:49.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k1NaUAI",
+  "t": "2026-11-25T19:56:50.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|235029699fd4576aa62522f54851a2116666ba-30ed|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "11:56:50.6 (818136490)|FLOW_ACTIONCALL_DETAIL|235029699fd4576aa62522f54851a2116666ba-30ed|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error whi"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k1NbUAI",
+  "t": "2026-11-25T19:56:51.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5arUAA",
+  "t": "2026-11-25T20:00:19.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5ivUAA",
+  "t": "2026-11-25T20:01:29.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k4DOUAY",
+  "t": "2026-11-25T20:02:19.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5sbUAA",
+  "t": "2026-11-25T20:05:52.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5xRUAQ",
+  "t": "2026-11-25T20:06:11.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5z3UAA",
+  "t": "2026-11-25T20:06:15.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|97633d561cd7ea964ae4e96e8081a21331daaa-4065|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "12:06:16.248 (1248099907)|FLOW_ACTIONCALL_DETAIL|97633d561cd7ea964ae4e96e8081a21331daaa-4065|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5z4UAA",
+  "t": "2026-11-25T20:06:16.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k0ZbUAI",
+  "t": "2026-11-25T20:06:17.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k60fUAA",
+  "t": "2026-11-25T20:06:18.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|8608e47624db710928911dc11af61a212c7f115-2151|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "12:06:19.112 (1112213681)|FLOW_ACTIONCALL_DETAIL|8608e47624db710928911dc11af61a212c7f115-2151|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k60gUAA",
+  "t": "2026-11-25T20:06:19.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k62HUAQ",
+  "t": "2026-11-25T20:06:21.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3R0UAI",
+  "t": "2026-11-25T20:06:22.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|253029699fd4576aa62522f54851a2116666ba-3272|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "12:06:22.4 (789767779)|FLOW_ACTIONCALL_DETAIL|253029699fd4576aa62522f54851a2116666ba-3272|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error whi"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3R1UAI",
+  "t": "2026-11-25T20:06:23.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3R2UAI",
+  "t": "2026-11-25T20:06:26.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k63tUAA",
+  "t": "2026-11-25T20:06:27.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|4313817a30e90b1a8f9d7528c6951a2134e9261-4ad2|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "12:06:27.6 (861473448)|FLOW_ACTIONCALL_DETAIL|4313817a30e90b1a8f9d7528c6951a2134e9261-4ad2|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error wh"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k63uUAA",
+  "t": "2026-11-25T20:06:28.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5RCUAY",
+  "t": "2026-11-25T20:06:30.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k65VUAQ",
+  "t": "2026-11-25T20:06:31.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7540a0ba1a45aea116211dd056281a2128b1d1-f135|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "12:06:31.6 (925713437)|FLOW_ACTIONCALL_DETAIL|7540a0ba1a45aea116211dd056281a2128b1d1-f135|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error whi"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k65WUAQ",
+  "t": "2026-11-25T20:06:32.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k677UAA",
+  "t": "2026-11-25T20:06:35.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k68jUAA",
+  "t": "2026-11-25T20:06:36.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|254029699fd4576aa62522f54851a2116666ba-327c|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "12:06:36.5 (770674266)|FLOW_ACTIONCALL_DETAIL|254029699fd4576aa62522f54851a2116666ba-327c|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error whi"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k68kUAA",
+  "t": "2026-11-25T20:06:36.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k6ALUAY",
+  "t": "2026-11-25T20:06:39.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k6BxUAI",
+  "t": "2026-11-25T20:06:40.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|97733d561cd7ea964ae4e96e8081a21331daaa-4064|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while "
+  ],
+  "dp": [
+   "12:06:41.128 (1128111107)|FLOW_ACTIONCALL_DETAIL|97733d561cd7ea964ae4e96e8081a21331daaa-4064|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error "
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k6ByUAI",
+  "t": "2026-11-25T20:06:41.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5PbUAI",
+  "t": "2026-11-25T20:06:43.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k6DZUAY",
+  "t": "2026-11-25T20:06:44.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|80466830e0a8e17b96bf7a4cbf8e1a20fedbd30-7c7d|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "12:06:45.105 (1105768032)|FLOW_ACTIONCALL_DETAIL|80466830e0a8e17b96bf7a4cbf8e1a20fedbd30-7c7d|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k6DaUAI",
+  "t": "2026-11-25T20:06:46.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k3ikUAA",
+  "t": "2026-11-25T20:10:13.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k5FuUAI",
+  "t": "2026-11-25T20:11:23.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003k6OrUAI",
+  "t": "2026-11-25T20:12:14.000+0000",
+  "op": "/services/data/v68.0/support/functions/172jV00000Ald09",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkMHUAY",
+  "t": "2026-11-26T05:38:14.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkNtUAI",
+  "t": "2026-11-26T05:38:34.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkPVUAY",
+  "t": "2026-11-26T05:38:36.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|6603e8b5752f1133e123392ac92d1a21333496d-3bb3|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "21:38:37.265 (1265787926)|FLOW_ACTIONCALL_DETAIL|6603e8b5752f1133e123392ac92d1a21333496d-3bb3|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkPWUAY",
+  "t": "2026-11-26T05:38:37.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kgiUUAQ",
+  "t": "2026-11-26T05:38:39.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkR7UAI",
+  "t": "2026-11-26T05:38:40.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|68776c2a2a7468197f95326968b31a215624bd5-2a3b|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error while"
+  ],
+  "dp": [
+   "21:38:41.141 (1141258442)|FLOW_ACTIONCALL_DETAIL|68776c2a2a7468197f95326968b31a215624bd5-2a3b|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|false|[UndefinedResolutionError] Error"
+  ],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkR8UAI",
+  "t": "2026-11-26T05:38:41.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkSjUAI",
+  "t": "2026-11-26T05:39:17.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkVxUAI",
+  "t": "2026-11-26T05:39:37.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkXZUAY",
+  "t": "2026-11-26T05:39:38.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|32826830e0a8e17b96bf7a4cbf8e1a214627a18-1f8a|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|32826830e0a8e17b96bf7a4cbf8e1a214627a18-1f8a|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkZBUAY",
+  "t": "2026-11-26T05:39:45.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkanUAA",
+  "t": "2026-11-26T05:39:46.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7832e47624db710928911dc11af61a212c7f115-6646|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7832e47624db710928911dc11af61a212c7f115-6646|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkcPUAQ",
+  "t": "2026-11-26T05:40:16.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kke1UAA",
+  "t": "2026-11-26T05:40:36.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkfdUAA",
+  "t": "2026-11-26T05:40:37.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|89930cd6bbe6da0d3328551c01ed1a2132fdab9-7303|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|89930cd6bbe6da0d3328551c01ed1a2132fdab9-7303|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkhFUAQ",
+  "t": "2026-11-26T05:40:45.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkirUAA",
+  "t": "2026-11-26T05:40:46.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|2505e9ed7ffa89f73db31f1494fd1a215a4579f-52fd|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|2505e9ed7ffa89f73db31f1494fd1a215a4579f-52fd|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkm5UAA",
+  "t": "2026-11-26T05:40:53.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kknhUAA",
+  "t": "2026-11-26T05:40:54.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|5980a0ba1a45aea116211dd056281a2164321fd-7a01|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|5980a0ba1a45aea116211dd056281a2164321fd-7a01|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkqvUAA",
+  "t": "2026-11-26T05:40:58.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|56682cf1f03a078477863582fd851a2164208a3-7a1d|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|56682cf1f03a078477863582fd851a2164208a3-7a1d|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkpJUAQ",
+  "t": "2026-11-26T05:40:58.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kksXUAQ",
+  "t": "2026-11-26T05:41:02.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kfeOUAQ",
+  "t": "2026-11-26T05:41:03.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|32836830e0a8e17b96bf7a4cbf8e1a214627a18-1fe8|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|32836830e0a8e17b96bf7a4cbf8e1a214627a18-1fe8|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003khmcUAA",
+  "t": "2026-11-26T05:41:10.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kku9UAA",
+  "t": "2026-11-26T05:41:12.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7124f7150e0b39ded7da191278111a212419c03-6ed6|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7124f7150e0b39ded7da191278111a212419c03-6ed6|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkvlUAA",
+  "t": "2026-11-26T05:41:19.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkxNUAQ",
+  "t": "2026-11-26T05:41:20.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|2882817a30e90b1a8f9d7528c6951a2134e9261-6042|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|2882817a30e90b1a8f9d7528c6951a2134e9261-6042|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkyzUAA",
+  "t": "2026-11-26T05:41:23.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003khLCUAY",
+  "t": "2026-11-26T05:41:24.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|32856830e0a8e17b96bf7a4cbf8e1a214627a18-1fea|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|32856830e0a8e17b96bf7a4cbf8e1a214627a18-1fea|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kl0bUAA",
+  "t": "2026-11-26T05:41:28.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kl2DUAQ",
+  "t": "2026-11-26T05:41:29.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|5981a0ba1a45aea116211dd056281a2164321fd-79f7|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|5981a0ba1a45aea116211dd056281a2164321fd-79f7|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kfT4UAI",
+  "t": "2026-11-26T05:41:52.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kl3pUAA",
+  "t": "2026-11-26T05:41:53.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|56692cf1f03a078477863582fd851a2164208a3-79c1|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|56692cf1f03a078477863582fd851a2164208a3-79c1|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003khoEUAQ",
+  "t": "2026-11-26T05:42:36.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kl73UAA",
+  "t": "2026-11-26T05:42:56.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kl8fUAA",
+  "t": "2026-11-26T05:42:57.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|30324f53df6a13ecb0292f31a9481a215385b91-31cd|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|30324f53df6a13ecb0292f31a9481a215385b91-31cd|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003khbKUAQ",
+  "t": "2026-11-26T05:43:04.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kggsUAA",
+  "t": "2026-11-26T05:43:05.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|32866830e0a8e17b96bf7a4cbf8e1a214627a18-201f|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|32866830e0a8e17b96bf7a4cbf8e1a214627a18-201f|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klAHUAY",
+  "t": "2026-11-26T05:43:13.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klBtUAI",
+  "t": "2026-11-26T05:43:14.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|6629e8b5752f1133e123392ac92d1a21333496d-3cb5|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|6629e8b5752f1133e123392ac92d1a21333496d-3cb5|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klDVUAY",
+  "t": "2026-11-26T05:43:17.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003keTmUAI",
+  "t": "2026-11-26T05:43:18.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|2885817a30e90b1a8f9d7528c6951a2134e9261-60ac|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|2885817a30e90b1a8f9d7528c6951a2134e9261-60ac|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klF7UAI",
+  "t": "2026-11-26T05:43:22.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klGjUAI",
+  "t": "2026-11-26T05:43:22.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7336a8440e12175692495d5be9e21a212dea2bc-6504|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7336a8440e12175692495d5be9e21a212dea2bc-6504|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klILUAY",
+  "t": "2026-11-26T05:43:26.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klJxUAI",
+  "t": "2026-11-26T05:43:27.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|5984a0ba1a45aea116211dd056281a2164321fd-7990|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|5984a0ba1a45aea116211dd056281a2164321fd-7990|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klLZUAY",
+  "t": "2026-11-26T05:43:30.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klNBUAY",
+  "t": "2026-11-26T05:43:31.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|5985a0ba1a45aea116211dd056281a2164321fd-798f|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|5985a0ba1a45aea116211dd056281a2164321fd-798f|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klOnUAI",
+  "t": "2026-11-26T05:43:35.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klQPUAY",
+  "t": "2026-11-26T05:43:36.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7834e47624db710928911dc11af61a212c7f115-671a|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7834e47624db710928911dc11af61a212c7f115-671a|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kj3eUAA",
+  "t": "2026-11-26T05:43:39.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klS1UAI",
+  "t": "2026-11-26T05:43:40.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|112733d561cd7ea964ae4e96e8081a21331daaa-7236|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|112733d561cd7ea964ae4e96e8081a21331daaa-7236|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klTdUAI",
+  "t": "2026-11-26T05:43:48.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klVFUAY",
+  "t": "2026-11-26T05:43:48.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|68796c2a2a7468197f95326968b31a215624bd5-295e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|68796c2a2a7468197f95326968b31a215624bd5-295e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klWrUAI",
+  "t": "2026-11-26T05:43:52.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klYTUAY",
+  "t": "2026-11-26T05:43:53.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|8022639f93c8d97fd31a4a039cb81a214100c2-3a80|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|8022639f93c8d97fd31a4a039cb81a214100c2-3a80|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kjhyUAA",
+  "t": "2026-11-26T05:43:56.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kla5UAA",
+  "t": "2026-11-26T05:43:57.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7125f7150e0b39ded7da191278111a212419c03-6f50|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7125f7150e0b39ded7da191278111a212419c03-6f50|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klevUAA",
+  "t": "2026-11-26T05:44:37.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kli9UAA",
+  "t": "2026-11-26T05:44:57.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kdpSUAQ",
+  "t": "2026-11-26T05:44:59.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|112833d561cd7ea964ae4e96e8081a21331daaa-7292|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|112833d561cd7ea964ae4e96e8081a21331daaa-7292|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kljlUAA",
+  "t": "2026-11-26T05:45:06.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kllNUAQ",
+  "t": "2026-11-26T05:45:07.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|112933d561cd7ea964ae4e96e8081a21331daaa-7293|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|112933d561cd7ea964ae4e96e8081a21331daaa-7293|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kkkUUAQ",
+  "t": "2026-11-26T05:45:10.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klmzUAA",
+  "t": "2026-11-26T05:45:11.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7835e47624db710928911dc11af61a212c7f115-6736|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7835e47624db710928911dc11af61a212c7f115-6736|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klqDUAQ",
+  "t": "2026-11-26T05:45:15.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klrpUAA",
+  "t": "2026-11-26T05:45:16.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|56712cf1f03a078477863582fd851a2164208a3-793e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|56712cf1f03a078477863582fd851a2164208a3-793e|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kltRUAQ",
+  "t": "2026-11-26T05:45:19.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kg5mUAA",
+  "t": "2026-11-26T05:45:20.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7477d5f463e4082e8a2e58bec4a51a213fb1b65-12aa|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7477d5f463e4082e8a2e58bec4a51a213fb1b65-12aa|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kfMcUAI",
+  "t": "2026-11-26T05:45:24.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klv3UAA",
+  "t": "2026-11-26T05:45:24.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|2597fc9693a7fa95239871d404cb1a215360ec5-392c|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|2597fc9693a7fa95239871d404cb1a215360ec5-392c|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klyHUAQ",
+  "t": "2026-11-26T05:46:07.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003klztUAA",
+  "t": "2026-11-26T05:46:26.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003km1VUAQ",
+  "t": "2026-11-26T05:46:28.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|2598fc9693a7fa95239871d404cb1a215360ec5-38d7|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|2598fc9693a7fa95239871d404cb1a215360ec5-38d7|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003km4jUAA",
+  "t": "2026-11-26T05:46:31.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003km6LUAQ",
+  "t": "2026-11-26T05:46:33.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|32886830e0a8e17b96bf7a4cbf8e1a214627a18-20ec|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|32886830e0a8e17b96bf7a4cbf8e1a214627a18-20ec|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003km7xUAA",
+  "t": "2026-11-26T05:46:40.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003km9ZUAQ",
+  "t": "2026-11-26T05:46:40.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|7338a8440e12175692495d5be9e21a212dea2bc-6594|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|7338a8440e12175692495d5be9e21a212dea2bc-6594|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kmBBUAY",
+  "t": "2026-11-26T05:46:44.000+0000",
+  "op": "/flow/SF_UAT_Knowledge_Answer_Harness",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [],
+  "dp": [],
+  "other_user_ids": []
+ },
+ {
+  "id": "07LjV000003kmCnUAI",
+  "t": "2026-11-26T05:46:45.000+0000",
+  "op": "/aura",
+  "users": [
+   [
+    "005jV000003sYUP",
+    "cra.uat.restricted@00djv000003bvbruaw.example"
+   ]
+  ],
+  "action": [
+   "FLOW_ACTIONCALL_DETAIL|89950cd6bbe6da0d3328551c01ed1a2132fdab9-7408|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|",
+   "FLOW_ACTIONCALL_DETAIL|89950cd6bbe6da0d3328551c01ed1a2132fdab9-7408|Answer_From_Knowledge|Generate Prompt Response|CRA_Knowledge_Answer|true|"
+  ],
+  "dp": [],
+  "other_user_ids": []
+ }
+]

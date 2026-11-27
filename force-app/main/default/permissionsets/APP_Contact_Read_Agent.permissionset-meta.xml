@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>CRA_ContactSearchAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>SCGOE-95 Contact Read Agent app access only: Apex class CRA_ContactSearchAction (S3) and agent access (S5). No object or field access; pair with DATA – Contact – Read Only. Not auto-assigned.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>APP – Contact Read Agent</label>
+</PermissionSet>

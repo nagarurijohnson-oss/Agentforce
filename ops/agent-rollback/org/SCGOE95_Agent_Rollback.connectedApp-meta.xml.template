@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OPS-1 C1: JWT bearer connected app for the rollback integration user only.
+     Deployed by Orchestrate after the certificate (PUBLIC part only) is supplied:
+     the certificate placeholder in the certificate element is replaced with the contents of rollback.crt. Never put the private key here.
+     Least privilege (S28): scope Api only. The JWT bearer flow issues no refresh token, so no RefreshToken scope or policy.
+     Admin-approved users only; pre-authorised through the SYS_Agent_Rollback_Automation permission set (by label). -->
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>johnsteve112345@gmail.com</contactEmail>
+    <description>SCGOE-95 OPS-1: independent sign-in for the Agent rollback GitHub workflow. Pre-authorised for SYS_Agent_Rollback_Automation only.</description>
+    <label>SCGOE95 Agent Rollback</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>__CERTIFICATE_PEM__</certificate>
+        <isAdminApproved>true</isAdminApproved>
+        <scopes>Api</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+    </oauthPolicy>
+    <permissionSetName>SYS – Agent Rollback Automation</permissionSetName>
+</ConnectedApp>

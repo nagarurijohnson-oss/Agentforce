@@ -1,0 +1,23 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21cbc-e4fe-7813-8a11-035bcce6624e",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21cbc-f621-78a7-a81a-f9f1449cd65c",
+        "topic": "contact_search",
+        "userInput": "Who are the contacts at account 001jV00000LhPtV?",
+        "agentResponse": "More than 100 Contacts match. Please add more details to narrow the search.  \nYou could add: job title, email, phone, city, state or region, country.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3359,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

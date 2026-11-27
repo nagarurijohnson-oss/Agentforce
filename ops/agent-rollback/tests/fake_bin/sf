@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""Fake Salesforce CLI for the rollback mock tests. State lives in $FAKE_SF_STATE (JSON).
+State keys: versions {n: status}, login: ok|expired, loginFailures (count before ok),
+queryFailures (count), activateFailures (count), grants [ids], loginAs bool, leak (print a token-like string)."""
+import json, os, sys, re
+path = os.environ['FAKE_SF_STATE']
+s = json.load(open(path))
+a = sys.argv[1:]
+def save(): json.dump(s, open(path, 'w'))
+def out(obj, code=0):
+    if s.get('leak'):
+        obj = dict(obj); obj['accessToken'] = '00DjV000003BVbR!AQEAQFakeTokenValue1234567890abcdef'
+        sys.stderr.write('Authorization: Bearer 00DjV000003BVbR!AQEAQAnotherFake0987654321\n')
+    print(json.dumps(obj)); save(); sys.exit(code)
+def err(msg, name='Error'): out({'status': 1, 'name': name, 'message': msg}, 1)
+cmd = ' '.join(a[:3])
+s.setdefault('log', []).append(cmd)
+if cmd.startswith('org login jwt'):
+    if s.get('login') == 'expired' or s.get('loginFailures', 0) > 0:
+        s['loginFailures'] = max(0, s.get('loginFailures', 0) - 1)
+        err('invalid_grant: expired access/refresh token, user hasn\'t approved this consumer', 'JwtGrantError')
+    out({'status': 0, 'result': {'username': 'rollback@example', 'accessToken': '00DjV000003BVbR!AQEAQSecretFromLogin'}})
+if cmd.startswith('data query'):
+    if s.get('queryFailures', 0) > 0:
+        s['queryFailures'] -= 1; err('INVALID_SESSION_ID: Session expired or invalid', 'INVALID_SESSION_ID')
+    q = a[a.index('--query') + 1]
+    if 'FROM BotVersion' in q:
+        out({'status': 0, 'result': {'records': [{'VersionNumber': int(k), 'Status': v} for k, v in s['versions'].items()]}})
+    m = re.search(r"FROM (\w+) WHERE Id = '(\w+)'", q)
+    if m:
+        out({'status': 0, 'result': {'records': [{'Id': m.group(2)}] if m.group(2) in s.get('grants', []) else []}})
+    out({'status': 0, 'result': {'records': []}})
+if cmd.startswith('agent activate'):
+    if s.get('activateFailures', 0) > 0:
+        s['activateFailures'] -= 1; err('Request failed: 503 Service Unavailable')
+    v = a[a.index('--version') + 1]
+    for k in s['versions']: s['versions'][k] = 'Active' if k == v else 'Inactive'
+    out({'status': 0, 'result': {'version': int(v)}})
+if cmd.startswith('data delete record'):
+    rid = a[a.index('--record-id') + 1]
+    if rid in s.get('grants', []): s['grants'].remove(rid)
+    out({'status': 0, 'result': {'id': rid}})
+if cmd.startswith('project deploy start'):
+    s['loginAs'] = False; out({'status': 0, 'result': {'status': 'Succeeded'}})
+if cmd.startswith('project retrieve start'):
+    d = os.path.join(os.getcwd(), a[a.index('--target-metadata-dir') + 1], 'unpackaged', 'settings')
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, 'Security.settings'), 'w').write(
+        '<SecuritySettings><enableAdminLoginAsAnyUser>%s</enableAdminLoginAsAnyUser></SecuritySettings>' % str(s.get('loginAs', False)).lower())
+    out({'status': 0, 'result': {'status': 'Succeeded'}})
+err('fake sf: unsupported ' + cmd)

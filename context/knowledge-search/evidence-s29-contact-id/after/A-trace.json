@@ -1,0 +1,62 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c7b-5191-7ed9-b78d-6e7e6cf970af",
+        "topic": "contact_search",
+        "userInput": "Show me the contact 003jV00000Grnt8QAB",
+        "agentResponse": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3482,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21c7b-7475-7e62-9487-972e5a22f2e4",
+        "topic": "contact_search",
+        "userInput": "What is the email of 003jV00000HOooH",
+        "agentResponse": "Here is the email for this Contact.\nName: CRA-TEST Mallory\nEmail: mallory_test@synthetic.example",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3197,
+        "error": null
+      },
+      {
+        "turn": 7,
+        "planId": "01a21c7b-973a-7924-b3a0-88470614095b",
+        "topic": "contact_search",
+        "userInput": "Show me contact 001jV00000LVFxyQAH",
+        "agentResponse": "I could not tell which Contact you mean. Please search for them again.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3133,
+        "error": null
+      },
+      {
+        "turn": 9,
+        "planId": "01a21c7b-b587-7f28-8a3d-8e5479d6acac",
+        "topic": "contact_search",
+        "userInput": "Show me contact 003jV00000AAAA1",
+        "agentResponse": "I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: Account name, job title, email, phone, city, state or region, country.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 2743,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

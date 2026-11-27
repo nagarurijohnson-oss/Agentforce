@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "65d999a0-06ed-4041-a006-f7677fb87341",
+        "metrics": {},
+        "feedbackId": "01a21cf2-cb60-728a-9095-4fbd5439d49a",
+        "planId": "01a21cf2-cb60-728a-9095-4fbd5439d49a",
+        "isContentSafe": true,
+        "message": "I can find and show Contacts, and create a Case for a Contact after you confirm it. I can't change or delete records or create anything else. You can make that change in Salesforce yourself.\n\nWould you like me to search for Avery Testfield or another Contact?",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf2-7070-7f01-ab75-555179c1ffa4"
+  },
+  "warnings": []
+}

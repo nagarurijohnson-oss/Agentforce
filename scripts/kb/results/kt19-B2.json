@@ -1,0 +1,82 @@
+{
+ "KT-19b#0": {
+  "sid": "01a213f2-04c4-73d3-9307-fc1dffa84990",
+  "turns": [
+   [
+    "Find contacts named Marco and what GPA do I need to renew the Merit Excellence Scholarship?",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ]
+  ]
+ },
+ "KT-19b#1": {
+  "sid": "01a213f2-043a-7368-a825-dc6776475c4e",
+  "turns": [
+   [
+    "Find contacts named Marco and what GPA do I need to renew the Merit Excellence Scholarship?",
+    "I found one matching Contact.\n\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ]
+  ]
+ },
+ "KT-19c#0": {
+  "sid": "01a213f2-05fc-7167-acdb-153e4436760d",
+  "turns": [
+   [
+    "Look up Marco Blankfield and tell me the STEM scholarship application deadline",
+    "I found one matching Contact.\n\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nThe application deadline for the STEM Futures Scholarship is 15 February at 23:59 local time.\n\nSource: STEM Futures Scholarship – Application Deadline (Article 000001005)"
+   ]
+  ]
+ },
+ "KT-19c#1": {
+  "sid": "01a213f2-0420-74f1-81ee-090affc99dfe",
+  "turns": [
+   [
+    "Look up Marco Blankfield and tell me the STEM scholarship application deadline",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nThe application deadline for the STEM Futures Scholarship is 15 February at 23:59 local time.\n\nSource: STEM Futures Scholarship – Application Deadline (Article 000001005)"
+   ]
+  ]
+ },
+ "KT-19d#0": {
+  "sid": "01a213f2-665e-71e0-8136-b6e1f4deb383",
+  "turns": [
+   [
+    "Find Marco and tell me the renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nWhich one do you mean?\n\nMerit Excellence Scholarship – Renewal Requirements\nGraduate Research Scholarship – Renewal Requirements"
+   ]
+  ]
+ },
+ "KT-19d#1": {
+  "sid": "01a213f2-6d41-707c-a0be-10795a3fd862",
+  "turns": [
+   [
+    "Find Marco and tell me the renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nWhich one do you mean?\n\nMerit Excellence Scholarship – Renewal Requirements\nGraduate Research Scholarship – Renewal Requirements"
+   ]
+  ]
+ },
+ "KT-19e#0": {
+  "sid": "01a213f2-7038-70e7-912c-2ae0659d4944",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June, and no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ],
+   [
+    "what is his title?",
+    "Here is the title for this Contact.\nName: Marco Blankfield\nTitle: Synthetic Auditor"
+   ]
+  ]
+ },
+ "KT-19e#1": {
+  "sid": "01a213f2-71f5-7dc5-9b47-c0336364b4e1",
+  "turns": [
+   [
+    "Find Marco and tell me the merit renewal GPA",
+    "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith | Jones & Co <b>LLC</b>\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, you must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June; no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)"
+   ],
+   [
+    "what is his title?",
+    "Here is the title for this Contact.\nName: Marco Blankfield\nTitle: Synthetic Auditor"
+   ]
+  ]
+ }
+}

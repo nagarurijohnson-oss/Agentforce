@@ -1,0 +1,18 @@
+mixedAfter_0 contact_and_knowledge {'name': 'Marco'}
+     I found one matching Contact.   **Name:** [Marco Blankfield](/lightning/r/Contact/003jV00000GrntWQAR/view)   **Account:*
+mixedAfter_1 contact_and_knowledge {'name': 'Marco'}
+     I found one matching Contact.   **Name:** [Marco Blankfield](/lightning/r/Contact/003jV00000GrntWQAR/view)   **Account:*
+mixedAfter_2 contact_and_knowledge {'name': 'Marco'}
+     I found one matching Contact.   **Name:** [Marco Blankfield](/lightning/r/Contact/003jV00000GrntWQAR/view)   **Account:*
+narrow_0 contact_search {'accountName': 'CRA-TEST Northwind Synthetic', 'jobTitle': 'Synthetic Engineer'}
+     I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?  | #  | Name                      
+narrow_1 contact_search {'accountName': 'CRA-TEST Northwind Synthetic', 'jobTitle': 'Synthetic Engineer'}
+     I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?  | #  | Name                      
+narrow_2 contact_search {'accountName': 'CRA-TEST Northwind Synthetic', 'jobTitle': 'Synthetic Engineer'}
+     I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?  | #  | Name                      
+newAfter_0 contact_search {'email': 'priya.synthwell@synthetic.example'}
+     2 Contacts have this email. Which one do you mean?  | # | Name | Account | Title | Email | Phone | Mobile | |---|------|
+newAfter_1 contact_search {'email': 'priya.synthwell@synthetic.example'}
+     2 Contacts have this email. Which one do you mean?  | # | Name | Account | Title | Email | Phone | Mobile | |---|------|
+newAfter_2 contact_search {'email': 'priya.synthwell@synthetic.example'}
+     2 Contacts have this email. Which one do you mean?  | # | Name | Account | Title | Email | Phone | Mobile | |---|------|

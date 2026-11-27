@@ -1,0 +1,34 @@
+{
+ "DATA_Knowledge_Read_Only": {
+  "id": "0PSjV000004i4dVWAQ",
+  "label": "DATA \u2013 Knowledge \u2013 Read Only",
+  "license": null,
+  "userPerms": [
+   "PermissionsAllowViewKnowledge"
+  ],
+  "objectPerms": [
+   {
+    "SobjectType": "Knowledge__kav",
+    "PermissionsRead": true,
+    "PermissionsCreate": false,
+    "PermissionsEdit": false,
+    "PermissionsDelete": false,
+    "PermissionsViewAllRecords": false,
+    "PermissionsModifyAllRecords": false
+   }
+  ],
+  "fieldPerms": 0,
+  "setupEntityAccess": [],
+  "assignments": 0
+ },
+ "SYS_Knowledge_Default_DataSpace": {
+  "id": "0PSjV000004iF7VWAU",
+  "label": "SYS \u2013 Knowledge Default Data Space",
+  "license": null,
+  "userPerms": [],
+  "objectPerms": [],
+  "fieldPerms": 0,
+  "setupEntityAccess": [],
+  "assignments": 0
+ }
+}

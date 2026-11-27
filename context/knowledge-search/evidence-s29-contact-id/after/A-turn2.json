@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "25e8e8b4-6081-4145-8daf-2d722a2f3028",
+        "metrics": {},
+        "feedbackId": "01a21c7b-7475-7e62-9487-972e5a22f2e4",
+        "planId": "01a21c7b-7475-7e62-9487-972e5a22f2e4",
+        "isContentSafe": true,
+        "message": "Here is the email for this Contact.\nName: CRA-TEST Mallory\nEmail: mallory_test@synthetic.example",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351"
+  },
+  "warnings": []
+}

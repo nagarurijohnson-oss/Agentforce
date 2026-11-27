@@ -1,0 +1,239 @@
+{
+ "phase": "P2",
+ "started": "2026-11-25T20:05:39Z",
+ "login_as": {
+  "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@00djv000003bvbruaw.ex",
+  "url": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home"
+ },
+ "harness": [
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-01",
+   "q": "What GPA do I need to keep the Merit Excellence Scholarship?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-13",
+   "q": "How do I renew my parking permit?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-13",
+   "q": "How do I renew my parking permit?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12L",
+   "q": "How do I appeal a library fine?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12L",
+   "q": "How do I appeal a library fine?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 1,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  },
+  {
+   "key": "KT-12",
+   "q": "How do I appeal?",
+   "run": 2,
+   "user": "cra.uat.restricted@00djv000003bvbruaw.example|005jV000003sYUP",
+   "answer": null,
+   "fault": "[UndefinedResolutionError] Error while executing the following data provider: KA_CRA_Scholarship_Knowledge_1Cx_VbRab635d61, Error: Error occurred while resolving data providers: cannot describe data provider",
+   "kb_links": [],
+   "secs": 4
+  }
+ ],
+ "articles": [
+  {
+   "shown_ok": null,
+   "n": "000001000",
+   "status": "Online",
+   "title": "Need-Based Opportunity Grant – Eligibility",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001001",
+   "status": "Online",
+   "title": "International Student Scholarship – Required Documents",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001002",
+   "status": "Online",
+   "title": "Arts & Humanities Scholarship – Application Deadline",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001003",
+   "status": "Online",
+   "title": "Merit Excellence Scholarship – Eligibility",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001004",
+   "status": "Online",
+   "title": "Merit Excellence Scholarship – Renewal Requirements",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001005",
+   "status": "Online",
+   "title": "STEM Futures Scholarship – Application Deadline",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001006",
+   "status": "Online",
+   "title": "Graduate Research Scholarship – Renewal Requirements",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001007",
+   "status": "Online",
+   "title": "Library Fine – Appeal Process",
+   "shown": false,
+   "error": "Looks like there's a problem."
+  },
+  {
+   "shown_ok": null,
+   "n": "000001008",
+   "status": "Draft",
+   "title": "STEM Futures Scholarship – Deadline Extension",
+   "shown": false,
+   "error": "Looks like there's a problem."
+  },
+  {
+   "shown_ok": null,
+   "n": "000001009",
+   "status": "Online",
+   "title": "Federal Work-Study – Eligibility",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001010",
+   "status": "Online",
+   "title": "Scholarship Appeal Process",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001011",
+   "status": "Online",
+   "title": "Athletic Scholarship – Required Documents",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001012",
+   "status": "Online",
+   "title": "Scholarship Disbursement and Refund Timing",
+   "shown": true,
+   "error": null
+  },
+  {
+   "shown_ok": null,
+   "n": "000001013",
+   "status": "Online",
+   "title": "Campus Parking Permit – Renewal",
+   "shown": false,
+   "error": "Looks like there's a problem."
+  }
+ ],
+ "links": [
+  {
+   "key": "L-A04",
+   "expected_id": "ka0jV000000nIDXQA2",
+   "rendered_links": [
+    {
+     "t": "Merit Excellence Scholarship – Renewal Requirements",
+     "h": "/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view"
+    }
+   ],
+   "href": "/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view",
+   "new_tab": false,
+   "url_after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view",
+   "article_shown": true,
+   "error": null
+  },
+  {
+   "key": "L-A13",
+   "expected_id": "ka0jV000000nIFBQA2",
+   "rendered_links": [
+    {
+     "t": "Campus Parking Permit – Renewal",
+     "h": "/lightning/r/Knowledge__kav/ka0jV000000nIFBQA2/view"
+    }
+   ],
+   "href": "/lightning/r/Knowledge__kav/ka0jV000000nIFBQA2/view",
+   "new_tab": false,
+   "url_after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Knowledge__kav/ka0jV000000nIFBQA2/view",
+   "article_shown": true,
+   "error": "Looks like there's a problem."
+  }
+ ],
+ "external_requests": [],
+ "logout_url": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/",
+ "ended": "2026-11-25T20:13:07Z"
+}

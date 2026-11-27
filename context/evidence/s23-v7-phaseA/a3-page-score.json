@@ -1,0 +1,1002 @@
+[
+ {
+  "id": "v5p_00",
+  "turn": 0,
+  "sid": "01a218a7-a76f-7832-9256-1933beead77f",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                    | Account                        | Title               | Email                 | Phone       | Mobile         |\n|----|-----------------------------------------|--------------------------------|---------------------|-----------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                              | Account                     | Title               | Email                  | Phone      | Mobile        |\n|----|---------------------------------------------------|-----------------------------|---------------------|------------------------|------------|---------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  ",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_00",
+  "turn": 1,
+  "sid": "01a218a7-a76f-7832-9256-1933beead77f",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                      | Account                        | Title               | Email                  | Phone       | Mobile         |\n|----|-------------------------------------------|--------------------------------|---------------------|------------------------|-------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available  |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available  |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                                                 | Account                        | Title               | Email                   | Phone       | Mobile         |\n|----|----------------------------------------------------------------------|--------------------------------|---------------------|-------------------------|-------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view)         | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng6@synthetic.example  | +1 555 0416 | Not ava",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_01",
+  "turn": 0,
+  "sid": "01a218a7-e861-7652-9d5e-aec6f5cd2624",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                              | Account                       | Title               | Email                  | Phone       | Mobile         |\n|----|---------------------------------------------------|-------------------------------|---------------------|------------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                    | Account                        | Title               | Email                  | Phone      | Mobile         |\n|----|-----------------------------------------|--------------------------------|---------------------|------------------------|------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mock",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_01",
+  "turn": 1,
+  "sid": "01a218a7-e861-7652-9d5e-aec6f5cd2624",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                         | Account                        | Title               | Email                   | Phone       | Mobile        |\n|----|----------------------------------------------|--------------------------------|---------------------|-------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthet",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_02",
+  "turn": 0,
+  "sid": "01a218a8-241f-7b10-b340-5035e08bebdb",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                         | Account                     | Title               | Email                  | Phone       | Mobile         |\n|----|----------------------------------------------|-----------------------------|---------------------|------------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                         | Account                       | Title               | Email                  | Phone       | Mobile         |\n|----|----------------------------------------------|-------------------------------|---------------------|------------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  |",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_02",
+  "turn": 1,
+  "sid": "01a218a8-241f-7b10-b340-5035e08bebdb",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                        | Title               | Email                  | Phone       | Mobile        |\n|----|---------------------------------------------------|--------------------------------|---------------------|------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthet",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_03",
+  "turn": 0,
+  "sid": "01a218a8-63a1-7b25-987e-65a12f2c2725",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                             | Account                       | Title               | Email                 | Phone      | Mobile         |\n|----|--------------------------------------------------|-------------------------------|---------------------|-----------------------|------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 1 | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2 | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3 | [Eng Mockup03](/lightning/r/Contact/003jV00",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_03",
+  "turn": 1,
+  "sid": "01a218a8-63a1-7b25-987e-65a12f2c2725",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                      | Account                       | Title               | Email                  | Phone       | Mobile         |\n|----|-------------------------------------------|-------------------------------|---------------------|------------------------|-------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntP",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_04",
+  "turn": 0,
+  "sid": "01a218a8-9ffa-7743-ab5d-87a5fec667ee",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 1 | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2 | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3 | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4 | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5 | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                         | Account                        | Title               | Email                  | Phone       | Mobile         |\n|----|----------------------------------------------|--------------------------------|---------------------|------------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2 ",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_04",
+  "turn": 1,
+  "sid": "01a218a8-9ffa-7743-ab5d-87a5fec667ee",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                       | Title               | Email                  | Phone       | Mobile        |\n|----|---------------------------------------------------|-------------------------------|---------------------|------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                       | Title               | Email                  | Phone       | Mobile         |\n|----|---------------------------------------------------|-------------------------------|---------------------|------------------------|-------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_05",
+  "turn": 0,
+  "sid": "01a218a9-2e77-714a-8ebd-8f92164c4139",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                               | Account                      | Title               | Email                  | Phone      | Mobile         |\n|----|----------------------------------------------------|------------------------------|---------------------|------------------------|------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                             | Account                       | Title               | Email                  | Phone       | Mobile        |\n|----|--------------------------------------------------|-------------------------------|---------------------|------------------------|-------------|---------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available |\n|",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_05",
+  "turn": 1,
+  "sid": "01a218a9-2e77-714a-8ebd-8f92164c4139",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                      | Account                        | Title               | Email                   | Phone       | Mobile         |\n|----|-------------------------------------------|--------------------------------|---------------------|-------------------------|-------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available  |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available  |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                       | Title               | Email                  | Phone       | Mobile        |\n|----|---------------------------------------------------|-------------------------------|---------------------|------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_06",
+  "turn": 0,
+  "sid": "01a218a9-6a8e-741a-88e4-1f9e7b5e49db",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                     | Account                        | Title               | Email                  | Phone       | Mobile         |\n|----|------------------------------------------|--------------------------------|---------------------|------------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                              | Account                        | Title               | Email                  | Phone       | Mobile        |\n|----|---------------------------------------------------|--------------------------------|---------------------|------------------------|-------------|---------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not availabl",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_06",
+  "turn": 1,
+  "sid": "01a218a9-6a8e-741a-88e4-1f9e7b5e49db",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                        | Title               | Email                  | Phone      | Mobile         |\n|----|---------------------------------------------------|--------------------------------|---------------------|------------------------|------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available  |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic  | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available  |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                      | Account                        | Title               | Email                  | Phone       | Mobile         |\n|----|-------------------------------------------|--------------------------------|---------------------|------------------------|-------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000Grn",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_07",
+  "turn": 0,
+  "sid": "01a218a9-a6e8-742a-ab9b-90449242b16b",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                            | Account                       | Title               | Email                  | Phone      | Mobile         |\n|----|------------------------------------------------|-------------------------------|---------------------|------------------------|------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                         | Account                     | Title              | Email                  | Phone       | Mobile         |\n|----|----------------------------------------------|-----------------------------|--------------------|------------------------|-------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng M",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_07",
+  "turn": 1,
+  "sid": "01a218a9-a6e8-742a-ab9b-90449242b16b",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                            | Account                        | Title               | Email                  | Phone      | Mobile         |\n|----|------------------------------------------------|--------------------------------|---------------------|------------------------|------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available  |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available  |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                         | Account                        | Title               | Email                  | Phone       | Mobile        |\n|----|----------------------------------------------|--------------------------------|---------------------|------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_08",
+  "turn": 0,
+  "sid": "01a218a9-eb52-7098-8f80-4daf59181977",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 1 | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2 | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available |\n| 3 | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available |\n| 4 | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available |\n| 5 | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                           | Account                     | Title              | Email                  | Phone      | Mobile        |\n|----|------------------------------------------------|-----------------------------|--------------------|------------------------|------------|---------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available |\n| 2  | [Eng Mo",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_08",
+  "turn": 1,
+  "sid": "01a218a9-eb52-7098-8f80-4daf59181977",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                        | Title               | Email                  | Phone       | Mobile        |\n|----|---------------------------------------------------|--------------------------------|---------------------|------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8  | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng8@synthetic.example | +1 555 0418 | Not available |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                                | Account                        | Title               | Email                   | Phone      | Mobile         |\n|----|-----------------------------------------------------|--------------------------------|---------------------|-------------------------|------------|----------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available  |\n| 7  | [Eng Mockup07](/lightning/r/Co",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ },
+ {
+  "id": "v5p_09",
+  "turn": 0,
+  "sid": "01a218aa-283d-74c5-910c-3d30d1a23638",
+  "topic": null,
+  "admin_topic": null,
+  "acts": null,
+  "admin_acts": null,
+  "contact_failed": null,
+  "kb_failed": null,
+  "errors": [],
+  "links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng1@synthetic.example",
+   "eng2@synthetic.example",
+   "eng3@synthetic.example",
+   "eng4@synthetic.example",
+   "eng5@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntJQAR",
+   "003jV00000GrntKQAR",
+   "003jV00000GrntLQAR",
+   "003jV00000GrntMQAR",
+   "003jV00000GrntNQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                    | Account                        | Title               | Email                   | Phone      | Mobile         |\n|----|-----------------------------------------|--------------------------------|---------------------|-------------------------|------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mockup02](/lightning/r/Contact/003jV00000GrntKQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng2@synthetic.example | +1 555 0412 | Not available  |\n| 3  | [Eng Mockup03](/lightning/r/Contact/003jV00000GrntLQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng3@synthetic.example | +1 555 0413 | Not available  |\n| 4  | [Eng Mockup04](/lightning/r/Contact/003jV00000GrntMQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng4@synthetic.example | +1 555 0414 | Not available  |\n| 5  | [Eng Mockup05](/lightning/r/Contact/003jV00000GrntNQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng5@synthetic.example | +1 555 0415 | Not available  |",
+  "admin_reply": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n| #  | Name                                         | Account                     | Title               | Email                 | Phone      | Mobile         |\n|----|----------------------------------------------|-----------------------------|---------------------|-----------------------|------------|----------------|\n| 1  | [Eng Mockup01](/lightning/r/Contact/003jV00000GrntJQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng1@synthetic.example | +1 555 0411 | Not available  |\n| 2  | [Eng Mo",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntJQAR": true,
+   "003jV00000GrntKQAR": true,
+   "003jV00000GrntLQAR": true,
+   "003jV00000GrntMQAR": true,
+   "003jV00000GrntNQAR": true
+  }
+ },
+ {
+  "id": "v5p_09",
+  "turn": 1,
+  "sid": "01a218aa-283d-74c5-910c-3d30d1a23638",
+  "topic": "contact_page",
+  "admin_topic": "contact_page",
+  "acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "admin_acts": [
+   "search_contacts[out]",
+   "present_results[out]"
+  ],
+  "contact_failed": false,
+  "kb_failed": false,
+  "errors": [],
+  "links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "ka": [],
+  "an": [],
+  "emails": [
+   "eng6@synthetic.example",
+   "eng7@synthetic.example",
+   "eng8@synthetic.example"
+  ],
+  "fixed": [],
+  "generic_error": false,
+  "hidden_text": false,
+  "admin_links": [
+   "003jV00000GrntOQAR",
+   "003jV00000GrntPQAR",
+   "003jV00000GrntQQAR"
+  ],
+  "admin_ka": [],
+  "admin_an": [],
+  "reply": "Here are the other 3 matching Contacts.\n\n| # | Name | Account | Title | Email | Phone | Mobile |\n|---|------|---------|-------|-------|-------|--------|\n| 6 | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7 | [Eng Mockup07](/lightning/r/Contact/003jV00000GrntPQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available |\n| 8 | [Eng Mockup08](/lightning/r/Contact/003jV00000GrntQQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available |",
+  "admin_reply": "Here are the other 3 matching Contacts.\n\n| #  | Name                                              | Account                       | Title               | Email                  | Phone       | Mobile        |\n|----|---------------------------------------------------|-------------------------------|---------------------|------------------------|-------------|---------------|\n| 6  | [Eng Mockup06](/lightning/r/Contact/003jV00000GrntOQAR/view) | CRA-TEST Northwind Synthetic | Synthetic Engineer  | eng6@synthetic.example | +1 555 0416 | Not available |\n| 7  | [Eng Mockup07](/lightning/r/Contact/00",
+  "flags": [],
+  "diff": [],
+  "link_access": {
+   "003jV00000GrntOQAR": true,
+   "003jV00000GrntPQAR": true,
+   "003jV00000GrntQQAR": true
+  }
+ }
+]

@@ -1,0 +1,12 @@
+{
+  "status": 0,
+  "result": {
+    "success": true,
+    "botDeveloperName": "Contact_Read_Agent",
+    "summary": {
+      "retrieved": 3,
+      "deployed": 3
+    }
+  },
+  "warnings": []
+}

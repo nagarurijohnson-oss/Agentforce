@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "7671c7af-d58d-4111-8bd8-a37067dbbcf1",
+        "metrics": {},
+        "feedbackId": "01a21cbd-f205-71be-b55e-c3ffc91de1d8",
+        "planId": "01a21cbd-f205-71be-b55e-c3ffc91de1d8",
+        "isContentSafe": true,
+        "message": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n# Name Account Title Email Phone Mobile\n1 Eng Mockup09 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng9@synthetic.example +1 555 0419 Not available\n2 Eng Mockup10 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng10@synthetic.example +1 555 0420 Not available\n3 Eng Mockup11 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng11@synthetic.example +1 555 0421 Not available\n4 Eng Mockup12 CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Engineer eng12@synthetic.example +1 555 0422 Not available\n5 Jordan Samename CRA-TEST Smith ｜ Jones ＆ Co ‹b›LLC‹/b› Synthetic Partner jordan.samename.b@synthetic.example +1 555 0112 Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June; no application is required.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cbd-e413-7950-9b5f-5f5933963922"
+  },
+  "warnings": []
+}

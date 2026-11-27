@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "failRate": "0%",
+    "failing": 0,
+    "hostname": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/",
+    "orgId": "00DjV000003BVbRUAW",
+    "outcome": "Passed",
+    "passRate": "100%",
+    "passing": 102,
+    "skipped": 0,
+    "testRunId": "707jV00000CWnd1",
+    "testStartTime": "2026-11-25T13:12:20.000Z",
+    "testsRan": 102,
+    "userId": "005jV000001p8m9QAA",
+    "username": "johnsteve112345.c028eac59faf@agentforce.com",
+    "commandTime": "113 ms",
+    "testExecutionTime": "33041 ms",
+    "testTotalTime": "36149 ms",
+    "orgWideCoverage": "96%",
+    "testRunCoverage": "99%"
+  },
+  "coverage": [
+    {
+      "name": "CRA_ContactSearchService",
+      "coveredPercent": 100
+    },
+    {
+      "name": "CRA_ContactSearchResult",
+      "coveredPercent": 100
+    },
+    {
+      "name": "CRA_ContactSearchAction",
+      "coveredPercent": 100
+    },
+    {
+      "name": "CRA_ContactSearchCriteria",
+      "coveredPercent": 100
+    },
+    {
+      "name": "CRA_FieldAccess",
+      "coveredPercent": 100
+    }
+  ]
+}

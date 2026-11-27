@@ -1,0 +1,114 @@
+{
+ "label": "r10_hostile",
+ "mode": "published",
+ "turns": [
+  "Find the contact with email zed.obrien@synthetic.example"
+ ],
+ "runs": [
+  {
+   "run": 0,
+   "session": "01a2128f-31a8-72ba-981f-1a50ad4f2a11",
+   "turns": [
+    {
+     "user": "Find the contact with email zed.obrien@synthetic.example",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"zed.obrien@synthetic.example\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "email": "zed.obrien@synthetic.example"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 1,
+   "session": "01a2128f-322f-7b69-a28a-33a21bfb2afd",
+   "turns": [
+    {
+     "user": "Find the contact with email zed.obrien@synthetic.example",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"zed.obrien@synthetic.example\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "email": "zed.obrien@synthetic.example"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  },
+  {
+   "run": 2,
+   "session": "01a2128f-325e-700e-8f5a-b4b31948bc70",
+   "turns": [
+    {
+     "user": "Find the contact with email zed.obrien@synthetic.example",
+     "calls": [
+      [
+       [
+        "go_contact_search",
+        "{}"
+       ]
+      ],
+      [
+       [
+        "set_criteria",
+        "{\"criteria_name\":\"\",\"criteria_email\":\"zed.obrien@synthetic.example\",\"criteria_phone\":\"\",\"criteria_account_name\":\"\",\"criteria_job_title\":\"\",\"criteria_city\":\"\",\"criteria_state\":\"\",\"criteria_country\":\"\",\"criteria_requested_field\":\"\"}"
+       ]
+      ]
+     ],
+     "search_inputs": [
+      {
+       "email": "zed.obrien@synthetic.example"
+      }
+     ],
+     "outcomes": [
+      [
+       "SINGLE_MATCH",
+       "1"
+      ]
+     ],
+     "parallel": false
+    }
+   ]
+  }
+ ]
+}

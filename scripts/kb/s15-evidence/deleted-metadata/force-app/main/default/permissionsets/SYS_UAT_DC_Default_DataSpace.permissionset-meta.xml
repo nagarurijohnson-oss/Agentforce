@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>TEMPORARY UAT ONLY (SCGOE-95 F-1). Holds only the association with the default Data Cloud data space (set in Setup) so CRA UAT Restricted can run the Knowledge retriever. No user, object or field permissions. Deleted after testing.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SYS – UAT Default Data Space</label>
+</PermissionSet>

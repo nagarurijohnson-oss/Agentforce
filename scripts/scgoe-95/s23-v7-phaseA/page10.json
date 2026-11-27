@@ -1,0 +1,264 @@
+{
+ "tests": [
+  {
+   "id": "v5p_00",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_01",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_02",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_03",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_04",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_05",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_06",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_07",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_08",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  },
+  {
+   "id": "v5p_09",
+   "steps": [
+    {
+     "type": "agent.create_session",
+     "id": "cs"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t1",
+     "session_id": "{cs.session_id}",
+     "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+    },
+    {
+     "type": "agent.send_message",
+     "id": "t2",
+     "session_id": "{cs.session_id}",
+     "utterance": "Yes, show me the other 3"
+    },
+    {
+     "type": "agent.get_state",
+     "id": "g2",
+     "session_id": "{cs.session_id}"
+    }
+   ]
+  }
+ ]
+}

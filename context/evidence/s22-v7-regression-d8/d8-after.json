@@ -1,0 +1,2 @@
+{"uat_sets": ["APP_Contact_Read_Agent", "APP_Contact_Read_Agent_Panel_Access", "DATA_Contact_Read_Only", "X00e1P000000J627QAC"], "uat_psl": [], "psl_used": {"UsedLicenses": 1, "TotalLicenses": 5000}, "ptu_assignees": 0, "versions": [[1, "Inactive"], [2, "Inactive"], [3, "Active"], [4, "Inactive"], [5, "Inactive"], [6, "Inactive"], [7, "Inactive"]], "ela": [[1, "Active"]], "contacts": 157, "trace": 0}
+DIFF vs before: none

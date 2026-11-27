@@ -1,0 +1,162 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": true,
+    "completedDate": "2026-11-27T12:33:16.000Z",
+    "createdBy": "005jV000001p8m9",
+    "createdByName": "John Steve",
+    "createdDate": "2026-11-27T12:33:03.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-11-27T12:33:08.000Z",
+          "deleted": false,
+          "fileName": "classes/CRA_CaseCreateFlowSecurityTest.cls",
+          "fullName": "CRA_CaseCreateFlowSecurityTest",
+          "id": "01pjV000005HrzVQAS",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-11-27T12:33:08.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "failures": [
+          {
+            "id": "01pjV000005HrzVQAS",
+            "message": "System.AssertException: Assertion Failed: Draft must be refused without Case.AccountId Edit: Expected: NO_PERMISSION, Actual: DRAFT_READY",
+            "methodName": "accountLinkNeedsAccountIdEdit",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "packageName": "CRA_CaseCreateFlowSecurityTest",
+            "stackTrace": "Class.CRA_CaseCreateFlowSecurityTest.accountLinkNeedsAccountIdEdit: line 178, column 1",
+            "time": 3270,
+            "type": "Class"
+          },
+          {
+            "id": "01pjV000005HrzVQAS",
+            "message": "System.AssertException: Assertion Failed: Draft must be refused without Case Create: Expected: NO_PERMISSION, Actual: DRAFT_READY",
+            "methodName": "customPermissionWithoutCaseAccessIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "packageName": "CRA_CaseCreateFlowSecurityTest",
+            "stackTrace": "Class.CRA_CaseCreateFlowSecurityTest.customPermissionWithoutCaseAccessIsDenied: line 137, column 1",
+            "time": 1616,
+            "type": "Class"
+          },
+          {
+            "id": "01pjV000005HrzVQAS",
+            "message": "System.AssertException: Assertion Failed: Create must be refused without Edit on Case.Priority: Expected: NO_PERMISSION, Actual: CREATED",
+            "methodName": "missingFieldEditIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "packageName": "CRA_CaseCreateFlowSecurityTest",
+            "stackTrace": "Class.CRA_CaseCreateFlowSecurityTest.missingFieldEditIsDenied: line 155, column 1",
+            "time": 1640,
+            "type": "Class"
+          }
+        ],
+        "flowCoverage": [
+          {
+            "elementsNotCovered": [
+              "set_not_found",
+              "set_invalid",
+              "set_created_no_number",
+              "set_failed",
+              "set_no_permission"
+            ],
+            "flowId": "301jV00000Lxps2",
+            "flowName": "SUB_Case_Create_Confirmed",
+            "flowNamespace": null,
+            "numElements": 16,
+            "numElementsNotCovered": 5,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "set_not_found",
+              "set_failed",
+              "set_no_permission",
+              "set_invalid"
+            ],
+            "flowId": "301jV00000Lxps3",
+            "flowName": "SUB_Case_Draft_Validate",
+            "flowNamespace": null,
+            "numElements": 11,
+            "numElementsNotCovered": 4,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "get_my_leave_records"
+            ],
+            "flowId": "301jV00000CVoMb",
+            "flowName": "SUB_Get_My_Leave_Records",
+            "flowNamespace": null,
+            "numElements": 1,
+            "numElementsNotCovered": 1,
+            "processType": "AutoLaunchedFlow"
+          }
+        ],
+        "numFailures": 3,
+        "numTestsRun": 4,
+        "successes": [
+          {
+            "id": "01pjV000005HrzVQAS",
+            "methodName": "authorizedUserCreatesExactlyOneCase",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 1173
+          }
+        ],
+        "totalTime": 7739,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "flowCoverageWarnings": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0AfjV000006pHwDSAU",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-11-27T12:33:16.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 1,
+    "numberComponentsTotal": 1,
+    "numberFiles": "4",
+    "numberTestErrors": 3,
+    "numberTestsCompleted": 1,
+    "numberTestsTotal": 4,
+    "rollbackOnError": true,
+    "runTestsEnabled": true,
+    "startDate": "2026-11-27T12:33:07.000Z",
+    "status": "Failed",
+    "success": false,
+    "zipSize": "12604",
+    "files": [
+      {
+        "fullName": "CRA_CaseCreateFlowSecurityTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/classes/CRA_CaseCreateFlowSecurityTest.cls"
+      },
+      {
+        "fullName": "CRA_CaseCreateFlowSecurityTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/classes/CRA_CaseCreateFlowSecurityTest.cls-meta.xml"
+      }
+    ]
+  },
+  "warnings": []
+}

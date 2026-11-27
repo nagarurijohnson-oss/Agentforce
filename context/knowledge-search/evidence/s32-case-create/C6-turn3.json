@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "1498427e-33d8-42d1-a590-d29eadcf54d4",
+        "metrics": {},
+        "feedbackId": "01a21cf4-0ee5-72c9-b500-6e9e83ffebff",
+        "planId": "01a21cf4-0ee5-72c9-b500-6e9e83ffebff",
+        "isContentSafe": true,
+        "message": "There's no Case draft waiting for confirmation, so I didn't create anything. Tell me what the Case is about and I'll show you a new draft first.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21cf3-c8a7-7746-8c71-ab90d62db58a"
+  },
+  "warnings": []
+}
