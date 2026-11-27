@@ -307,3 +307,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Connected-app template: scope Api only, schema order; check-only without certificate `0AfjV000006p4CbSAI`. Certificate not received, deploy pending.
 - L-1: `CRA_ContactSearchActionTest` 35/35, 100% of 166 lines (run `707jV00000ChBON`). No activation, no assignment, no business-record change.
 - Record: `knowledge-search/session-kb-s28-org-verification.md`.
+
+## S29 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): Contact record Id search (ID-1)
+- Root cause: Agent Script bound `contactId = ""` and had no input for a typed Id. Apex already supported 15/18-character Contact Ids in user mode; unchanged.
+- Fix: `in_contact_id` / `criteria_contact_id` variables, three new-search actions, two search bindings, instructions. `sf agent validate` passes.
+- Draft preview with live read-only actions, 6 of 6 pass (18-char, 15-char field ask, Account Id rejected, no-match, name regression, combined Contact Id + Knowledge). Traces error-free.
+- Not published, deployed or activated. v3 Active, v7 Inactive. Next: approval to publish v8 inactive; Account Id search needs Lal's scope approval.
+- Record: `context/knowledge-search/session-kb-s29-contact-id-search.md`.

@@ -1,0 +1,36 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c6f-ed05-7e99-ab29-0b65600b6352",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c6f-fd26-7039-b398-5d63800da09b",
+        "topic": "contact_search",
+        "userInput": "Show me the Contact with Id 003jV00000Grnt8QAB",
+        "agentResponse": "Please tell me something to search by, such as a name, email, phone number, Account, job title or location.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 2036,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21c70-1711-7269-81f9-3b8995cdf472",
+        "topic": "contact_search",
+        "userInput": "Which Contacts belong to Account 001jV00000LVFxyQAH?",
+        "agentResponse": "I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: job title, email, phone, city, state or region, country.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 2714,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

@@ -10,6 +10,7 @@
 
 - **Knowledge requirements:** each one is traced to existing evidence (S15–S24) in `knowledge-search/session-kb-s27-requirements-trace.md`. All are met **on v7 (Inactive)**. Users on v3 still have Contact search only.
 - **Account ID search:** not in the approved scope (R2 says Account name), so not built. **Please confirm** (decision 6).
+- **Contact record Id search (S29):** a typed Contact Id (15 or 18 characters) was ignored. Fixed in the Agent Script only, no Apex change; 6 of 6 targeted preview turns pass. It reaches users only when published as a new version (`knowledge-search/session-kb-s29-contact-id-search.md`). **Please approve** publishing it as inactive v8, or holding it for the release version (decision 8).
 - **OPS-1:** the GitHub environment now exists, but it only lets `main` use its secrets, so an armed `rollback-arm/*` run would fail. The rule is in the runbook. The certificate has not arrived yet, so the connected app is not deployed and live T1/T2/T5 have not run.
 - **Permission note:** the rollback permission set includes Customize Application, needed to activate agent versions. Decision 7.
 
@@ -79,6 +80,7 @@ release candidate with Knowledge answers, is published but Inactive.
 | 4 | A6: release timing, which waits until L-1 and OPS-1 are closed |
 | 5 | Name the on-call person for any future activation window (OPS-1, C5) |
 | 6 | Confirm Account ID search stays out of scope (R2 says Account name; `decisions/2026-11-27-account-id-search-out-of-scope.md`) |
+| 8 | Contact Id search fix (S29): publish as inactive v8 now, or hold for the release version |
 | 7 | Accept Customize Application on `SYS_Agent_Rollback_Automation` (needed to activate agent versions) or ask for an alternative |
 
 ## Release prerequisites

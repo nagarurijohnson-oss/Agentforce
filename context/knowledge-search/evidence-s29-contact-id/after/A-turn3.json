@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "id": "4be4aa15-f81e-4f15-82f5-cac6d5d7282e",
+        "metrics": {},
+        "feedbackId": "01a21c7b-973a-7924-b3a0-88470614095b",
+        "planId": "01a21c7b-973a-7924-b3a0-88470614095b",
+        "isContentSafe": true,
+        "message": "I could not tell which Contact you mean. Please search for them again.",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351"
+  },
+  "warnings": []
+}

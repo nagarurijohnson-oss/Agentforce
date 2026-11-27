@@ -1,0 +1,75 @@
+[
+ {
+  "session": "A",
+  "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351",
+  "utterance": "Show me the contact 003jV00000Grnt8QAB",
+  "topic": "contact_search",
+  "actions": [
+   "search_contacts",
+   "present_results"
+  ],
+  "error": null,
+  "reply": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available"
+ },
+ {
+  "session": "A",
+  "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351",
+  "utterance": "What is the email of 003jV00000HOooH",
+  "topic": "contact_search",
+  "actions": [
+   "search_contacts",
+   "present_results"
+  ],
+  "error": null,
+  "reply": "Here is the email for this Contact.\nName: CRA-TEST Mallory\nEmail: mallory_test@synthetic.example"
+ },
+ {
+  "session": "A",
+  "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351",
+  "utterance": "Show me contact 001jV00000LVFxyQAH",
+  "topic": "contact_search",
+  "actions": [
+   "search_contacts",
+   "present_results"
+  ],
+  "error": null,
+  "reply": "I could not tell which Contact you mean. Please search for them again."
+ },
+ {
+  "session": "A",
+  "sessionId": "01a21c7b-3bfb-7e01-9da7-6ca9e4ca9351",
+  "utterance": "Show me contact 003jV00000AAAA1",
+  "topic": "contact_search",
+  "actions": [
+   "search_contacts",
+   "present_results"
+  ],
+  "error": null,
+  "reply": "I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: Account name, job title, email, phone, city, state or region, country."
+ },
+ {
+  "session": "B",
+  "sessionId": "01a21c7b-e761-7457-9722-464e563b433f",
+  "utterance": "Find Marco",
+  "topic": "contact_search",
+  "actions": [
+   "search_contacts",
+   "present_results"
+  ],
+  "error": null,
+  "reply": "I found one matching Contact.\nName: Marco Blankfield\nAccount: CRA-TEST Smith \uff5c Jones \uff06 Co \u2039b\u203aLLC\u2039/b\u203a\nTitle: Synthetic Auditor\nEmail: Not available\nPhone: Not available\nMobile: Not available\nMailing address: Not available"
+ },
+ {
+  "session": "B",
+  "sessionId": "01a21c7b-e761-7457-9722-464e563b433f",
+  "utterance": "Find contact 003jV00000Grnt8QAB and tell me the renewal GPA for the Merit Scholarship",
+  "topic": "contact_and_knowledge",
+  "actions": [
+   "search_contacts",
+   "present_results",
+   "answer_from_knowledge"
+  ],
+  "error": null,
+  "reply": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June; no application is required.\n\nSource: Merit Excellence Scholarship \u2013 Renewal Requirements (Article 000001004)"
+ }
+]

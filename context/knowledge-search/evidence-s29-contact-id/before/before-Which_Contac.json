@@ -1,0 +1,21 @@
+{
+  "status": 0,
+  "result": {
+    "messages": [
+      {
+        "type": "Inform",
+        "feedbackId": "01a21c70-1711-7269-81f9-3b8995cdf472",
+        "isContentSafe": true,
+        "message": "I could not find any Contacts that match your search. Try checking the spelling, using fewer details, or searching by a different detail. You could also try searching by: job title, email, phone, city, state or region, country.",
+        "id": "dd53625f-b35e-4e42-b37f-644f2007bfee",
+        "metrics": {},
+        "planId": "01a21c70-1711-7269-81f9-3b8995cdf472",
+        "result": [],
+        "citedReferences": []
+      }
+    ],
+    "agentApiName": "Contact_Read_Agent",
+    "sessionId": "01a21c6f-ed05-7e99-ab29-0b65600b6352"
+  },
+  "warnings": []
+}
