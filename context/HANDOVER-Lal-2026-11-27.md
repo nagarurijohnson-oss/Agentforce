@@ -1,3 +1,10 @@
+## Update — 27 Nov (S27)
+
+- **Knowledge requirements:** each one is traced to existing evidence (S15–S24) in `knowledge-search/session-kb-s27-requirements-trace.md`. All are met **on v7 (Inactive)**. Users on v3 still have Contact search only.
+- **Account ID search:** not in the approved scope (R2 says Account name), so not built. **Please confirm** (decision 6).
+- **OPS-1:** the GitHub environment now exists, but it only lets `main` use its secrets, so an armed `rollback-arm/*` run would fail. The rule is in the runbook. The certificate has not arrived yet, so the connected app is not deployed and live T1/T2/T5 have not run.
+- **Permission note:** the rollback permission set includes Customize Application, needed to activate agent versions. Decision 7.
+
 ## Update — 27 Nov (S26)
 
 - **L-1 verified live** on v3 with a synthetic Contact holding a Markdown link, a `javascript:` link, backticks, bold, a heading, strike-through and underscores: 4/4 replies clean, the record keeps its original text, the name link is the relative Salesforce record path, and planner traces show the real topic and actions ran. Still to do: the panel check P-1 to P-5 (it includes whether the panel auto-links a bare URL).
@@ -62,6 +69,8 @@ release candidate with Knowledge answers, is published but Inactive.
 | 3 | D-8b and D-9: accept or fix |
 | 4 | A6: release timing, which waits until L-1 and OPS-1 are closed |
 | 5 | Name the on-call person for any future activation window (OPS-1, C5) |
+| 6 | Confirm Account ID search stays out of scope (R2 says Account name; `decisions/2026-11-27-account-id-search-out-of-scope.md`) |
+| 7 | Accept Customize Application on `SYS_Agent_Rollback_Automation` (needed to activate agent versions) or ask for an alternative |
 
 ## Release prerequisites
 

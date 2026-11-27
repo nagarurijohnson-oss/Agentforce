@@ -38,6 +38,10 @@ Evidence: `context/evidence/s25-ops1-rollback/mock-tests.txt`.
 3. **In GitHub** → repository Settings → Environments → New environment `agent-rollback` → add secrets:
    `SF_JWT_KEY` = the whole contents of `rollback.key` · `SF_CLIENT_ID` = the consumer key ·
    `SF_USERNAME` = `agent.rollback.max.00djv000003bvbr@example.com` · `SF_INSTANCE_URL` = `https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com`.
+   **Deployment branches (required):** the environment must allow `main` **and** `rollback-arm/*`
+   (Settings → Environments → agent-rollback → Deployment branches and tags → Selected branches → Add rule `rollback-arm/*`).
+   Found 2026-11-27 (S27): the environment was created allowing `main` only, so an armed push run on a
+   `rollback-arm/<id>` branch would be refused the secrets and the rollback would not run.
    Optional: add yourself as a required reviewer only for manual runs — not for push runs, or an armed window would wait for approval.
 4. Delete `rollback.key` from your machine once the secret is saved. Calendar the certificate expiry (365 days).
 5. Name the on-call person and the escalation contact (GitHub logins; both must watch the repository).

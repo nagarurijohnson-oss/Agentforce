@@ -292,3 +292,10 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Synthetic Contact `003jV00000HOooHQAT` CRA-TEST Mallory created (approved), Title then changed on that record only. Agent API on published v3: 2 sessions, 4 turns, all clean (links, `javascript:`, backticks, bold, heading, strike, underscores); traces show `contact_search` → `search_contacts` → `present_results`, no errors. Evidence `evidence/s26-l1-live/`.
 - OPS-1: rollback user and permission set verified minimal. Connected app not deployed (no certificate). GitHub: no `agent-rollback` environment, no installed workflow, secrets not readable by the token. T1/T2/T5 not run.
 - Record: `knowledge-search/session-kb-s26-l1-live-ops1-status.md` (manual steps, panel plan P-1 to P-5).
+
+## S27 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): requirements trace, OPS-1 environment check
+
+- Read back: v3 Active, v7 Inactive, Employee_Leave_Assistant untouched; 14 articles (13 Online, 1 Draft); library and templates present.
+- Knowledge requirements traced to existing evidence; Account ID search judged out of scope (decision record).
+- OPS-1: environment `agent-rollback` exists but deployment branches = `main` only (defect; runbook step 3 corrected). No certificate, connected app or installed workflow; live T1/T2/T5 not run.
+- No org change, no test run, no activation. Record: `knowledge-search/session-kb-s27-requirements-trace.md`.

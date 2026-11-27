@@ -1,7 +1,7 @@
 # SCGOE-95 Contact Read Agent + Knowledge Article Search — final release review (2026-11-27)
 
 **Branch:** `feature/kb-knowledge-search-build` · **Evidence baseline:** commit `412eb69` (S24)
-**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S26): L-1 fixed and verified live against links, `javascript:` links, backticks, bold, headings, strike and underscores (4/4 clean, traced), with one panel check left; OPS-1 org side verified, GitHub environment, secrets and workflow not yet set up, so live T1/T2/T5 not run.
+**Org:** MAX Developer Edition `00DjV000003BVbRUAW` · **Release status: NOT approved.** Update 2026-11-27 (S26): L-1 fixed and verified live against links, `javascript:` links, backticks, bold, headings, strike and underscores (4/4 clean, traced), with one panel check left; OPS-1 org side verified, GitHub environment, secrets and workflow not yet set up, so live T1/T2/T5 not run. Update S27: GitHub environment `agent-rollback` created but limited to `main` (armed `rollback-arm/*` runs would get no secrets — rule to add); certificate still not received, so no connected app; Knowledge requirements traced to evidence; Account ID search confirmed out of scope (`knowledge-search/session-kb-s27-requirements-trace.md`).
 Everything below was established in earlier sessions; no test suite was re-run for this review.
 
 ## 1. What is built
@@ -91,6 +91,7 @@ Run from the repository root with `--target-org <alias>`. Validate each step che
 | D-8b | Medium, accepted (pending Lal) | Missing data space set gives a platform error, not the fixed message | Accepted 2026-11-27: the permission design plus an assignment check is the control (`decisions/2026-11-27-d8b-d9-accepted-residual-risk.md`) |
 | D-9 | Low, accepted (pending Lal) | "show the other 3" after a failed display says "no other Contacts" | Accepted 2026-11-27; fix in any future agent version |
 | P-1 | Low, platform | Addresses and emails are auto-linked; occasional stray backslash next to them | Accept |
+| Scope | Decision | Account ID search not in R2; not built (`decisions/2026-11-27-account-id-search-out-of-scope.md`) | Lal to confirm |
 | A5, A6 | Approval | Who gets Knowledge answers; activation timing | Lal |
 
 ## 7. Not done in this review
