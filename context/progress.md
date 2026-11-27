@@ -314,3 +314,8 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Draft preview with live read-only actions, 6 of 6 pass (18-char, 15-char field ask, Account Id rejected, no-match, name regression, combined Contact Id + Knowledge). Traces error-free.
 - Not published, deployed or activated. v3 Active, v7 Inactive. Next: approval to publish v8 inactive; Account Id search needs Lal's scope approval.
 - Record: `context/knowledge-search/session-kb-s29-contact-id-search.md`.
+
+## S29b — 2026-11-27 (AGENTFORCE_BUILD 27f29662): v8 reviewed, corrected, tested, published Inactive
+- Review of v7→v8: 7/7 PASS. Correction: a Contact Id must contain a letter; digits-only values are phone numbers (`3c7337f`, 6 lines).
+- Targeted draft-preview turns with live read-only actions: 10/10 PASS, inputs confirmed in action traces, no errors. D-10 (Low, pre-existing): combined route searches twice.
+- `sf agent publish authoring-bundle`: v8 Inactive; v3 Active, v7 Inactive, Employee_Leave_Assistant v1 unchanged; org bundle byte-identical to repo. Nothing activated, no Apex, permission or record change.

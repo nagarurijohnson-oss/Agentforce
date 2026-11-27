@@ -1,0 +1,61 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c93-28d2-78f5-8356-0a5db75358fe",
+    "format": "detail",
+    "dimension": "actions",
+    "detail": [
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c93-39d0-72eb-a0a5-10c6960a1426",
+        "action": "search_contacts",
+        "input": "{\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"\",\"jobTitle\":\"\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"location\":\"\",\"contactId\":\"003jV00000Grnt8QAB\",\"requestedField\":\"\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000Grnt8QAB\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}]\",\"criteriaSummary\":\"Selected Contact: yes\",\"outcomeCode\":\"SINGLE_MATCH\",\"refinementRequired\":false,\"remainingCount\":0,\"resultContactIds\":\"003jV00000Grnt8QAB\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000Grnt8QAB\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Avery Testfield](/lightning/r/Contact/003jV00000Grnt8QAB/view)\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000Grnt8QAB\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\",\"shownCount\":1,\"similarNameCount\":0,\"singleContactId\":\"003jV00000Grnt8QAB\",\"totalMatchesLabel\":\"1\",\"userMessage\":\"I found one matching Contact.\",\"__tool_idx__\":\"e4bf667d\",\"__supports_result_display__\":false}",
+        "latencyMs": 386,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c93-39d0-72eb-a0a5-10c6960a1426",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000Grnt8QAB\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Avery Testfield](/lightning/r/Contact/003jV00000Grnt8QAB/view)\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000Grnt8QAB\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"3822ee82-e85d-4d5b-ab8e-a02c77d7574f\",\"promptResponse\":\"I found one matching Contact.  \\n**Name:** [Avery Testfield](/lightning/r/Contact/003jV00000Grnt8QAB/view)  \\n**Account:** CRA-TEST Northwind Synthetic  \\n**Title:** Synthetic Analyst  \\n**Email:** analyst1@synthetic.example  \\n**Phone:** +1 555 0210  \\n**Mobile:** Not available  \\n**Mailing address:** Not available  \",\"__tool_idx__\":\"d3dd825a\",\"__supports_result_display__\":false}",
+        "latencyMs": 2755,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c93-39d0-72eb-a0a5-10c6960a1426",
+        "action": "search_contacts",
+        "input": "{\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"\",\"jobTitle\":\"\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"location\":\"\",\"contactId\":\"003jV00000Grnt8QAB\",\"requestedField\":\"\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000Grnt8QAB\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}]\",\"criteriaSummary\":\"Selected Contact: yes\",\"outcomeCode\":\"SINGLE_MATCH\",\"refinementRequired\":false,\"remainingCount\":0,\"resultContactIds\":\"003jV00000Grnt8QAB\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000Grnt8QAB\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Avery Testfield](/lightning/r/Contact/003jV00000Grnt8QAB/view)\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000Grnt8QAB\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\",\"shownCount\":1,\"similarNameCount\":0,\"singleContactId\":\"003jV00000Grnt8QAB\",\"totalMatchesLabel\":\"1\",\"userMessage\":\"I found one matching Contact.\",\"__tool_idx__\":\"291e3ac2\",\"__supports_result_display__\":false}",
+        "latencyMs": 223,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c93-39d0-72eb-a0a5-10c6960a1426",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000Grnt8QAB\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Avery Testfield](/lightning/r/Contact/003jV00000Grnt8QAB/view)\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000Grnt8QAB\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0210\\\",\\\"name\\\":\\\"Avery Testfield\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"analyst1@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000Grnt8QAB/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"67c257e4-0a03-481e-b494-9db19e766c5e\",\"promptResponse\":\"I found one matching Contact.  \\n**Name:** [Avery Testfield](/lightning/r/Contact/003jV00000Grnt8QAB/view)  \\n**Account:** CRA-TEST Northwind Synthetic  \\n**Title:** Synthetic Analyst  \\n**Email:** analyst1@synthetic.example  \\n**Phone:** +1 555 0210  \\n**Mobile:** Not available  \\n**Mailing address:** Not available  \",\"__tool_idx__\":\"90bd5aad\",\"__supports_result_display__\":false}",
+        "latencyMs": 2869,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c93-39d0-72eb-a0a5-10c6960a1426",
+        "action": "answer_from_knowledge",
+        "input": "{\"Input:question\":\"What is the renewal GPA for the Merit Scholarship?\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"chatcmpl-EonayEjav3f2YtEOLNglhMQZVYZ29\",\"promptResponse\":\"To renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June without requiring an application.\\n\\nSource: [Merit Excellence Scholarship – Renewal Requirements](/lightning/r/Knowledge__kav/ka0jV000000nIDXQA2/view) (Article 000001004)\",\"__tool_idx__\":\"a5827316\",\"__supports_result_display__\":false}",
+        "latencyMs": 4008,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

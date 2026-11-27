@@ -1,0 +1,91 @@
+{
+  "required" : [ ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "accountName" : {
+      "title" : "Account Name",
+      "description" : "Account name, or part of it",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "city" : {
+      "title" : "City",
+      "description" : "Mailing city",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "contactId" : {
+      "title" : "Contact Id",
+      "description" : "Id of one Contact: from the last result, or a Contact record Id the user typed (15 or 18 letters and digits with at least one letter; never a digits-only value, which is a phone number)",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "country" : {
+      "title" : "Country",
+      "description" : "Mailing country",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "email" : {
+      "title" : "Email",
+      "description" : "Full email address, @domain, or part of an email",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "jobTitle" : {
+      "title" : "Job Title",
+      "description" : "Job title, or part of it",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "location" : {
+      "title" : "Location",
+      "description" : "City, state or country when the user does not say which",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "name" : {
+      "title" : "Name",
+      "description" : "Full or partial Contact name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "phone" : {
+      "title" : "Phone",
+      "description" : "Phone or mobile number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "requestedField" : {
+      "title" : "Requested Field",
+      "description" : "One field the user asks for: account, title, email, phone, mobile or mailing address",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "showRemaining" : {
+      "title" : "Show Remaining",
+      "description" : "True only to show the other Contacts of the last result",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "stateOrRegion" : {
+      "title" : "State Or Region",
+      "description" : "Mailing state or region",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

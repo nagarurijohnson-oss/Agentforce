@@ -1,0 +1,36 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c90-f914-759f-8dfc-05bbd8023a92",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c91-0a2e-77d7-be5b-c4683eb78efb",
+        "topic": "contact_search",
+        "userInput": "Show me contact 003jV00000GrntAQAR",
+        "agentResponse": "I found one matching Contact.\nName: Casey Dummond\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst3@synthetic.example\nPhone: +1 555 0212\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 2829,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21c91-28a2-7ca0-b427-fd8d0a2ec32e",
+        "topic": "contact_search",
+        "userInput": "What is her phone?",
+        "agentResponse": "Here is the phone for this Contact.\nName: Casey Dummond\nPhone: +1 555 0212\nMobile: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3622,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

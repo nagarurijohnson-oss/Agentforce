@@ -1,0 +1,36 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c8f-c12a-7526-a47d-c88249df8811",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c8f-d292-7a54-acd8-8dbd09055259",
+        "topic": "contact_search",
+        "userInput": "Show me the contact 003jV00000Grnt8QAB",
+        "agentResponse": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3613,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21c8f-f874-7d9d-a23e-0f360c2f9495",
+        "topic": "contact_search",
+        "userInput": "What is the email of 003jV00000HOooH",
+        "agentResponse": "Here is the email for this Contact.\nName: CRA-TEST Mallory\nEmail: mallory_test@synthetic.example",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 2493,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

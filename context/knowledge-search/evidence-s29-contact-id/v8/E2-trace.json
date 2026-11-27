@@ -1,0 +1,26 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c93-28d2-78f5-8356-0a5db75358fe",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c93-39d0-72eb-a0a5-10c6960a1426",
+        "topic": "contact_and_knowledge",
+        "userInput": "Find contact 003jV00000Grnt8QAB and tell me the renewal GPA for the Merit Scholarship",
+        "agentResponse": "I found one matching Contact.\nName: Avery Testfield\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst1@synthetic.example\nPhone: +1 555 0210\nMobile: Not available\nMailing address: Not available\n\nTo renew the Merit Excellence Scholarship each year, recipients must maintain a cumulative GPA of 3.3 or higher and complete at least 24 credits in the academic year. Renewal is reviewed automatically in June without requiring an application.\n\nSource: Merit Excellence Scholarship – Renewal Requirements (Article 000001004)",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results",
+          "search_contacts",
+          "present_results",
+          "answer_from_knowledge"
+        ],
+        "latencyMs": 10241,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

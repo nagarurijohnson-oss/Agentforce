@@ -1,0 +1,51 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c90-f914-759f-8dfc-05bbd8023a92",
+    "format": "detail",
+    "dimension": "actions",
+    "detail": [
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c91-0a2e-77d7-be5b-c4683eb78efb",
+        "action": "search_contacts",
+        "input": "{\"name\":\"\",\"email\":\"\",\"phone\":\"\",\"accountName\":\"\",\"jobTitle\":\"\",\"city\":\"\",\"stateOrRegion\":\"\",\"country\":\"\",\"location\":\"\",\"contactId\":\"003jV00000GrntAQAR\",\"requestedField\":\"\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0212\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntAQAR\\\",\\\"email\\\":\\\"analyst3@synthetic.example\\\",\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}]\",\"criteriaSummary\":\"Selected Contact: yes\",\"outcomeCode\":\"SINGLE_MATCH\",\"refinementRequired\":false,\"remainingCount\":0,\"resultContactIds\":\"003jV00000GrntAQAR\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000GrntAQAR\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0212\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Casey Dummond](/lightning/r/Contact/003jV00000GrntAQAR/view)\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntAQAR\\\",\\\"email\\\":\\\"analyst3@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0212\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"analyst3@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\",\"shownCount\":1,\"similarNameCount\":0,\"singleContactId\":\"003jV00000GrntAQAR\",\"totalMatchesLabel\":\"1\",\"userMessage\":\"I found one matching Contact.\",\"__tool_idx__\":\"6630fe8d\",\"__supports_result_display__\":false}",
+        "latencyMs": 281,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 3,
+        "planId": "01a21c91-0a2e-77d7-be5b-c4683eb78efb",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"I found one matching Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000GrntAQAR\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"SINGLE_MATCH\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0212\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Casey Dummond](/lightning/r/Contact/003jV00000GrntAQAR/view)\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntAQAR\\\",\\\"email\\\":\\\"analyst3@synthetic.example\\\",\\\"display\\\":{\\\"title\\\":\\\"Synthetic Analyst\\\",\\\"phone\\\":\\\"+1 555 0212\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"mobilePhone\\\":\\\"Not available\\\",\\\"mailingAddress\\\":\\\"Not available\\\",\\\"email\\\":\\\"analyst3@synthetic.example\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"accountName\\\":\\\"CRA-TEST Northwind Synthetic\\\"}],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"8de06249-def3-4ccb-b7a1-1a6ee2a2578a\",\"promptResponse\":\"I found one matching Contact.  \\n**Name:** [Casey Dummond](/lightning/r/Contact/003jV00000GrntAQAR/view)  \\n**Account:** CRA-TEST Northwind Synthetic  \\n**Title:** Synthetic Analyst  \\n**Email:** analyst3@synthetic.example  \\n**Phone:** +1 555 0212  \\n**Mobile:** Not available  \\n**Mailing address:** Not available  \",\"__tool_idx__\":\"0227a3d8\",\"__supports_result_display__\":false}",
+        "latencyMs": 2548,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 5,
+        "planId": "01a21c91-28a2-7ca0-b427-fd8d0a2ec32e",
+        "action": "search_contacts",
+        "input": "{\"requestedField\":\"phone\",\"contactId\":\"003jV00000GrntAQAR\",\"showRemaining\":false}",
+        "output": "{\"__action_execution_status__\":\"success\",\"canShowRemaining\":false,\"contactsJson\":\"[{\\\"phone\\\":\\\"+1 555 0212\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntAQAR\\\",\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntAQAR/view\\\"}]\",\"criteriaSummary\":\"Selected Contact: yes\",\"outcomeCode\":\"FIELD_ANSWER\",\"refinementRequired\":false,\"remainingCount\":0,\"requestedFieldLabel\":\"Phone\",\"resultContactIds\":\"003jV00000GrntAQAR\",\"searchResultJson\":\"{\\\"userMessage\\\":\\\"Here is the phone for this Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000GrntAQAR\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"requestedFieldLabel\\\":\\\"Phone\\\",\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"FIELD_ANSWER\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"phone\\\":\\\"+1 555 0212\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Casey Dummond](/lightning/r/Contact/003jV00000GrntAQAR/view)\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntAQAR\\\",\\\"display\\\":{\\\"phone\\\":\\\"+1 555 0212\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"mobilePhone\\\":\\\"Not available\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000GrntAQAR/view\\\"}],\\\"canShowRemaining\\\":false}\",\"shownCount\":1,\"similarNameCount\":0,\"singleContactId\":\"003jV00000GrntAQAR\",\"totalMatchesLabel\":\"1\",\"userMessage\":\"Here is the phone for this Contact.\",\"__tool_idx__\":\"58f8a3a6\",\"__supports_result_display__\":false}",
+        "latencyMs": 404,
+        "error": null
+      },
+      {
+        "dimension": "actions",
+        "turn": 5,
+        "planId": "01a21c91-28a2-7ca0-b427-fd8d0a2ec32e",
+        "action": "present_results",
+        "input": "{\"Input:searchResultJson\":\"{\\\"userMessage\\\":\\\"Here is the phone for this Contact.\\\",\\\"totalMatchesLabel\\\":\\\"1\\\",\\\"singleContactId\\\":\\\"003jV00000GrntAQAR\\\",\\\"similarNameCount\\\":0,\\\"shownCount\\\":1,\\\"requestedFieldLabel\\\":\\\"Phone\\\",\\\"remainingCount\\\":0,\\\"refinementRequired\\\":false,\\\"payloadVersion\\\":4,\\\"outcomeCode\\\":\\\"FIELD_ANSWER\\\",\\\"criteriaSummary\\\":\\\"Selected Contact: yes\\\",\\\"contacts\\\":[{\\\"phone\\\":\\\"+1 555 0212\\\",\\\"nameLinkable\\\":true,\\\"nameLink\\\":\\\"[Casey Dummond](/lightning/r/Contact/003jV00000GrntAQAR/view)\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"n\\\":1,\\\"mobilePhone\\\":\\\"Not available\\\",\\\"id\\\":\\\"003jV00000GrntAQAR\\\",\\\"display\\\":{\\\"phone\\\":\\\"+1 555 0212\\\",\\\"name\\\":\\\"Casey Dummond\\\",\\\"mobilePhone\\\":\\\"Not available\\\"},\\\"contactUrl\\\":\\\"https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com/lightning/r/Contact/003jV00000GrntAQAR/view\\\",\\\"contactPath\\\":\\\"/lightning/r/Contact/003jV00000GrntAQAR/view\\\"}],\\\"canShowRemaining\\\":false}\"}",
+        "output": "{\"__action_execution_status__\":\"success\",\"generationId\":\"98e7ab40-8049-4751-ad7e-ff0ff694b389\",\"promptResponse\":\"**Here is the phone for this Contact.**  \\n**Name:** [Casey Dummond](/lightning/r/Contact/003jV00000GrntAQAR/view)  \\n**Phone:** +1 555 0212  \\n**Mobile:** Not available  \",\"__tool_idx__\":\"941bb285\",\"__supports_result_display__\":false}",
+        "latencyMs": 3218,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

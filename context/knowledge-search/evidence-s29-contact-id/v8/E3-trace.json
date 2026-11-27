@@ -1,0 +1,26 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c93-8d9a-74fa-81cc-2bcd029c3eaf",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c93-9e9f-7fc5-89a3-bcc0cf9a911d",
+        "topic": "contact_and_knowledge",
+        "userInput": "Show me contact 003jV00000GrntAQAR and what documents are needed for the Merit Scholarship renewal",
+        "agentResponse": "I found one matching Contact.\n\nName: Casey Dummond\nAccount: CRA-TEST Northwind Synthetic\nTitle: Synthetic Analyst\nEmail: analyst3@synthetic.example\nPhone: +1 555 0212\nMobile: Not available\nMailing address: Not available\n\nNo published Knowledge article covers that.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results",
+          "search_contacts",
+          "present_results",
+          "answer_from_knowledge"
+        ],
+        "latencyMs": 9881,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}

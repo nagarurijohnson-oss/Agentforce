@@ -1,0 +1,36 @@
+{
+  "status": 0,
+  "result": {
+    "sessionId": "01a21c90-2aa0-7cb0-8ce2-ec6737bdad3d",
+    "format": "summary",
+    "turns": [
+      {
+        "turn": 3,
+        "planId": "01a21c90-3b76-7772-adc8-913d3846c97c",
+        "topic": "contact_search",
+        "userInput": "Find the contact with phone 2128425500",
+        "agentResponse": "4 Contacts have this phone. Which one do you mean?\n\n# Name Account Title Email Phone Mobile\n1 Arthur Song United Oil ＆ Gas Corp. CEO asong@uog.com (212) 842-5500 (212) 842-4535\n2 Avi Green United Oil ＆ Gas Corp. CFO agreen@uog.com (212) 842-5500 (212) 842-2383\n3 Lauren Boyle United Oil ＆ Gas Corp. SVP, Technology lboyle@uog.com (212) 842-5500 (212) 842-5611\n4 Stella Pavlova United Oil ＆ Gas Corp. SVP, Production spavlova@uog.com (212) 842-5500 (212) 842-5501\n\nYou can also tell me one of these details instead: Account name, job title, email, city, state or region, country.",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3521,
+        "error": null
+      },
+      {
+        "turn": 5,
+        "planId": "01a21c90-620b-7b3a-99e1-d1458f7619eb",
+        "topic": "contact_search",
+        "userInput": "Who has phone number 000441914956203",
+        "agentResponse": "I found one matching Contact.\nName: Ashley James\nAccount: United Oil ＆ Gas, UK\nTitle: VP, Finance\nEmail: ajames@uog.com\nPhone: +44 191 4956203\nMobile: +44 191 3456234\nMailing address: Kings Park, 17th Avenue, Team Valley Trading Estate,, Gateshead, Tyne and Wear NE26 3HS, United Kingdom",
+        "actionsExecuted": [
+          "search_contacts",
+          "present_results"
+        ],
+        "latencyMs": 3267,
+        "error": null
+      }
+    ]
+  },
+  "warnings": []
+}
