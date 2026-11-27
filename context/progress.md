@@ -339,3 +339,9 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Lal's exception recorded (Case creation only). Deployed `CRA_Case_Create`, `DATA_Case_Create`, `SUB_Case_Draft_Validate`, `SUB_Case_Create_Confirmed`; `case_create` subagent in Agent Script.
 - `DATA_Case_Create` assigned to admin John Steve for tests, then removed (0 assignments). Tests C1–C6 + R1 pass, traces error-free; 1 synthetic Case 00001026; F-1 fixed.
 - v10 published Inactive; v3 Active; Employee_Leave_Assistant unchanged; published script = repo. Record: `knowledge-search/session-kb-s32-case-create-v10.md`. Not release-ready.
+
+## S33 — 2026-11-27 (AGENTFORCE_BUILD 27f29662): Case Flow security correction
+
+- S33-F1: Case Flows (system mode with sharing) gated only on `CRA_Case_Create`; proven bypassable by test (old Flows created a Case for a user without Priority Edit). Latent: 0 holders.
+- Fix: new `SUB_Case_Create_Access_Check` (reads active assignments' Object/Field permissions, fails closed); both Case Flows v2 call it. Test-only class `CRA_CaseCreateFlowSecurityTest` 4/4 (validate `0AfjV000006pI13SAE`, deploy `0AfjV000006pI7VSAU`).
+- Agent smoke on v10 script: refusal via the new check, no errors, Cases 27. v3 Active, v10 Inactive, no version published, no assignment. Panel/restricted agent run still open. Record: `knowledge-search/session-kb-s33-case-security.md`.

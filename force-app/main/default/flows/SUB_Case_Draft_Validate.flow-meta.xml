@@ -198,7 +198,7 @@
                 </rightValue>
             </conditions>
         <connector>
-            <targetReference>Are_Fields_Valid</targetReference>
+            <targetReference>Check_Case_Access</targetReference>
         </connector>
             <label>Yes</label>
         </rules>
@@ -273,12 +273,62 @@
                 </rightValue>
             </conditions>
         <connector>
-            <targetReference>Get_Account</targetReference>
+            <targetReference>Can_Link_Account</targetReference>
         </connector>
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>SCGOE-95 CASE-1. Read-only: checks a Case draft for Contact_Read_Agent and returns the summary to show before the user confirms. Gate: CRA_Case_Create custom permission. Runs in system context with sharing, so a Contact or Account the user cannot see is not found. Validates Subject 1-255, Description 1-32000, Origin Phone/Email/Web, Priority High/Medium/Low (default Medium). Markup characters in displayed values are replaced by look-alikes (L-1). No DML. Update message v1: initial version.</description>
+    <decisions>
+        <name>Has_Object_And_Field_Access</name>
+        <label>Has Case Object And Field Access?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_No_Permission</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Has_Object_And_Field_Access_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varB_CanCreateCase</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Are_Fields_Valid</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Can_Link_Account</name>
+        <label>Can Link Account?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_No_Permission</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Can_Link_Account_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varB_CanLinkAccount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>SCGOE-95 CASE-1. Read-only: checks a Case draft for Contact_Read_Agent and returns the summary to show before the user confirms. Gate: CRA_Case_Create custom permission. Runs in system context with sharing, so a Contact or Account the user cannot see is not found. Validates Subject 1-255, Description 1-32000, Origin Phone/Email/Web, Priority High/Medium/Low (default Medium). Markup characters in displayed values are replaced by look-alikes (L-1). No DML. Update message v1: initial version. Update message v2 (S33): also requires Case Create, Contact Read and Edit on the Case fields (and Account Read plus Case.AccountId Edit when the Contact has an Account), read through SUB_Case_Create_Access_Check.</description>
     <environments>Default</environments>
     <formulas>
         <description>True only for users granted the CRA_Case_Create custom permission (permission set DATA_Case_Create)</description>
@@ -411,6 +461,24 @@
         </connector>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Check_Case_Access</name>
+        <label>Check Case Access</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Has_Object_And_Field_Access</targetReference>
+        </connector>
+        <flowName>SUB_Case_Create_Access_Check</flowName>
+        <outputAssignments>
+            <assignToReference>varB_CanCreateCase</assignToReference>
+            <name>varB_CanCreateCase</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varB_CanLinkAccount</assignToReference>
+            <name>varB_CanLinkAccount</name>
+        </outputAssignments>
+    </subflows>
     <textTemplates>
         <name>textT_DraftSummary</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
@@ -523,5 +591,25 @@ Reply Confirm to create this Case, or Cancel to stop. Any other reply cancels it
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varB_CanCreateCase</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varB_CanLinkAccount</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
     </variables>
 </Flow>

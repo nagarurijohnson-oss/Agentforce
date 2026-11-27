@@ -1,7 +1,13 @@
+## Update — 27 Nov (S33, Case security)
+
+- **Found and fixed:** the Case Flows checked only the `CRA_Case_Create` custom permission. A test proved that a user with that permission but no Edit on Case Priority still got a Case created. No real user was exposed (nobody holds it). The Flows now also check Case Create, Contact Read and Edit on every Case field they set, through a new read-only Flow `SUB_Case_Create_Access_Check`. No production Apex.
+- **Proof:** 4 restricted-user Flow tests (synthetic users, rolled back) fail on the old Flows and pass on the new ones; agent smoke test refuses correctly; Cases unchanged at 27.
+- **Still open:** the restricted-user agent run and the Confirm/Cancel look in the panel (script P-1–P-6) need a v10 window you approve. Your decisions: C-5 (who gets `DATA_Case_Create`) and residual risks R-1–R-4. Record: `knowledge-search/session-kb-s33-case-security.md`.
+
 ## Update — 27 Nov (S32)
 
 - **Case creation built, as you directed**, inside Contact_Read_Agent, and published as **v10 Inactive**. The agent shows the full Case draft, creates it only on an explicit Confirm, and treats Cancel or any unclear reply as cancel. A repeated Confirm or the same Case within 10 minutes creates nothing. It returns the real Case Number and record link. Tests C1–C6 and the regression session R1 pass; one synthetic Case (00001026) was created.
-- **Your decisions:** who gets `DATA_Case_Create` (nobody holds it now), and whether you accept that the Case Flows run in system mode with sharing, so the custom permission, not the Flow, controls Case create and field access. Details: `knowledge-search/session-kb-s32-case-create-v10.md` §3.
+- **Your decisions:** who gets `DATA_Case_Create` (nobody holds it now), and (superseded by S33) the system-mode risk — the Flows now enforce Case create and field access themselves. Details: `knowledge-search/session-kb-s32-case-create-v10.md` §3.
 - **Not release-ready:** OPS-1 and the restricted-user Lightning panel check (now on v10, including the Case confirmation look) are still open.
 
 ## Update — 27 Nov (S31)

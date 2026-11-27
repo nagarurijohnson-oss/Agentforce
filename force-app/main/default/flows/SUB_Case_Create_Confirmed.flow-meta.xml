@@ -245,7 +245,7 @@
                 </rightValue>
             </conditions>
         <connector>
-            <targetReference>Are_Fields_Valid</targetReference>
+            <targetReference>Check_Case_Access</targetReference>
         </connector>
             <label>Yes</label>
         </rules>
@@ -295,7 +295,7 @@
                 </rightValue>
             </conditions>
         <connector>
-            <targetReference>Get_Recent_Duplicate</targetReference>
+            <targetReference>Can_Link_Account</targetReference>
         </connector>
             <label>Yes</label>
         </rules>
@@ -350,7 +350,64 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>SCGOE-95 CASE-1. The only write in Contact_Read_Agent: creates one Case after the user confirmed the draft. Gate: CRA_Case_Create custom permission. Runs in system context with sharing, so a Contact the user cannot see is not found. Re-checks the draft rules, then refuses a duplicate (same user, Contact and Subject in the last 10 minutes), then creates the Case (Status New, Account from the Contact) with a fault path, and returns the real Case Number and record link. Update message v1: initial version.</description>
+    <decisions>
+        <name>Has_Object_And_Field_Access</name>
+        <label>Has Case Object And Field Access?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_No_Permission</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Has_Object_And_Field_Access_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varB_CanCreateCase</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Are_Fields_Valid</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Can_Link_Account</name>
+        <label>No Account Or Can Link Account?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_No_Permission</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Can_Link_Account_Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Contact.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varB_CanLinkAccount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Recent_Duplicate</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>SCGOE-95 CASE-1. The only write in Contact_Read_Agent: creates one Case after the user confirmed the draft. Gate: CRA_Case_Create custom permission. Runs in system context with sharing, so a Contact the user cannot see is not found. Re-checks the draft rules, then refuses a duplicate (same user, Contact and Subject in the last 10 minutes), then creates the Case (Status New, Account from the Contact) with a fault path, and returns the real Case Number and record link. Update message v1: initial version. Update message v2 (S33): also requires Case Create, Contact Read and Edit on the fields it sets (and Account Read plus Case.AccountId Edit when the Contact has an Account), read through SUB_Case_Create_Access_Check, because system mode does not apply them.</description>
     <environments>Default</environments>
     <formulas>
         <description>True only for users granted the CRA_Case_Create custom permission (permission set DATA_Case_Create)</description>
@@ -568,6 +625,24 @@
         </connector>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Check_Case_Access</name>
+        <label>Check Case Access</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Has_Object_And_Field_Access</targetReference>
+        </connector>
+        <flowName>SUB_Case_Create_Access_Check</flowName>
+        <outputAssignments>
+            <assignToReference>varB_CanCreateCase</assignToReference>
+            <name>varB_CanCreateCase</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varB_CanLinkAccount</assignToReference>
+            <name>varB_CanLinkAccount</name>
+        </outputAssignments>
+    </subflows>
     <textTemplates>
         <name>textT_Created</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
@@ -658,5 +733,25 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varB_CanCreateCase</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varB_CanLinkAccount</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
     </variables>
 </Flow>

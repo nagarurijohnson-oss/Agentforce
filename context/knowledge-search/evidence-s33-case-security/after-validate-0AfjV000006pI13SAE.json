@@ -1,0 +1,252 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": true,
+    "completedDate": "2026-11-27T12:34:24.000Z",
+    "createdBy": "005jV000001p8m9",
+    "createdByName": "John Steve",
+    "createdDate": "2026-11-27T12:33:45.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": false,
+          "columnNumber": 0,
+          "componentType": "Flow",
+          "created": false,
+          "createdDate": "2026-11-27T12:33:53.000Z",
+          "deleted": false,
+          "fileName": "flows/SUB_Case_Create_Access_Check.flow",
+          "fullName": "SUB_Case_Create_Access_Check",
+          "lineNumber": 0,
+          "problem": "Your \"SUB_Case_Create_Access_Check\" flow is configured to run in System Mode with Sharing. This system context grants all running users the permission to view and edit all data in your org. Running a flow in System Mode with Sharing can lead to unsafe data access. Learn about data safety when running flows in system context in Salesforce Help: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_context_data_safety_system_context.htm&type=5",
+          "problemType": "Info",
+          "success": true
+        },
+        {
+          "changed": false,
+          "columnNumber": 0,
+          "componentType": "Flow",
+          "created": false,
+          "createdDate": "2026-11-27T12:34:03.000Z",
+          "deleted": false,
+          "fileName": "flows/SUB_Case_Create_Confirmed.flow",
+          "fullName": "SUB_Case_Create_Confirmed",
+          "lineNumber": 0,
+          "problem": "Your \"SUB_Case_Create_Confirmed\" flow is configured to run in System Mode with Sharing. This system context grants all running users the permission to view and edit all data in your org. Running a flow in System Mode with Sharing can lead to unsafe data access. Learn about data safety when running flows in system context in Salesforce Help: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_context_data_safety_system_context.htm&type=5",
+          "problemType": "Info",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Flow",
+          "created": false,
+          "createdDate": "2026-11-27T12:34:03.000Z",
+          "deleted": false,
+          "fileName": "flows/SUB_Case_Create_Confirmed.flow",
+          "fullName": "SUB_Case_Create_Confirmed",
+          "id": "301jV00000LxdsWQAR",
+          "success": true
+        },
+        {
+          "changed": false,
+          "columnNumber": 0,
+          "componentType": "Flow",
+          "created": false,
+          "createdDate": "2026-11-27T12:34:03.000Z",
+          "deleted": false,
+          "fileName": "flows/SUB_Case_Draft_Validate.flow",
+          "fullName": "SUB_Case_Draft_Validate",
+          "lineNumber": 0,
+          "problem": "Your \"SUB_Case_Draft_Validate\" flow is configured to run in System Mode with Sharing. This system context grants all running users the permission to view and edit all data in your org. Running a flow in System Mode with Sharing can lead to unsafe data access. Learn about data safety when running flows in system context in Salesforce Help: https://help.salesforce.com/s/articleView?id=sf.flow_distribute_context_data_safety_system_context.htm&type=5",
+          "problemType": "Info",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Flow",
+          "created": false,
+          "createdDate": "2026-11-27T12:34:04.000Z",
+          "deleted": false,
+          "fileName": "flows/SUB_Case_Draft_Validate.flow",
+          "fullName": "SUB_Case_Draft_Validate",
+          "id": "301jV00000LxdsXQAR",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-11-27T12:34:05.000Z",
+          "deleted": false,
+          "fileName": "classes/CRA_CaseCreateFlowSecurityTest.cls",
+          "fullName": "CRA_CaseCreateFlowSecurityTest",
+          "id": "01pjV000005Hs4LQAS",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Flow",
+          "created": true,
+          "createdDate": "2026-11-27T12:34:05.000Z",
+          "deleted": false,
+          "fileName": "flows/SUB_Case_Create_Access_Check.flow",
+          "fullName": "SUB_Case_Create_Access_Check",
+          "id": "301jV00000LxdsYQAR",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-11-27T12:34:05.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "flowCoverage": [
+          {
+            "elementsNotCovered": [
+              "set_denied"
+            ],
+            "flowId": "301jV00000LxdsY",
+            "flowName": "SUB_Case_Create_Access_Check",
+            "flowNamespace": null,
+            "numElements": 12,
+            "numElementsNotCovered": 1,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "set_not_found",
+              "set_invalid",
+              "set_created_no_number",
+              "set_failed"
+            ],
+            "flowId": "301jV00000LxdsW",
+            "flowName": "SUB_Case_Create_Confirmed",
+            "flowNamespace": null,
+            "numElements": 19,
+            "numElementsNotCovered": 4,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "set_not_found",
+              "set_invalid",
+              "set_failed"
+            ],
+            "flowId": "301jV00000LxdsX",
+            "flowName": "SUB_Case_Draft_Validate",
+            "flowNamespace": null,
+            "numElements": 14,
+            "numElementsNotCovered": 3,
+            "processType": "AutoLaunchedFlow"
+          },
+          {
+            "elementsNotCovered": [
+              "get_my_leave_records"
+            ],
+            "flowId": "301jV00000CVoMb",
+            "flowName": "SUB_Get_My_Leave_Records",
+            "flowNamespace": null,
+            "numElements": 1,
+            "numElementsNotCovered": 1,
+            "processType": "AutoLaunchedFlow"
+          }
+        ],
+        "numFailures": 0,
+        "numTestsRun": 4,
+        "successes": [
+          {
+            "id": "01pjV000005Hs4LQAS",
+            "methodName": "accountLinkNeedsAccountIdEdit",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 6960
+          },
+          {
+            "id": "01pjV000005Hs4LQAS",
+            "methodName": "authorizedUserCreatesExactlyOneCase",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 3533
+          },
+          {
+            "id": "01pjV000005Hs4LQAS",
+            "methodName": "customPermissionWithoutCaseAccessIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 4519
+          },
+          {
+            "id": "01pjV000005Hs4LQAS",
+            "methodName": "missingFieldEditIsDenied",
+            "name": "CRA_CaseCreateFlowSecurityTest",
+            "namespace": null,
+            "time": 3314
+          }
+        ],
+        "totalTime": 18398,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverageWarnings": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0AfjV000006pI13SAE",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-11-27T12:34:24.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 4,
+    "numberComponentsTotal": 4,
+    "numberFiles": "8",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 4,
+    "numberTestsTotal": 4,
+    "rollbackOnError": true,
+    "runTestsEnabled": true,
+    "startDate": "2026-11-27T12:33:47.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": "85426",
+    "files": [
+      {
+        "fullName": "CRA_CaseCreateFlowSecurityTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/classes/CRA_CaseCreateFlowSecurityTest.cls"
+      },
+      {
+        "fullName": "CRA_CaseCreateFlowSecurityTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/classes/CRA_CaseCreateFlowSecurityTest.cls-meta.xml"
+      },
+      {
+        "fullName": "SUB_Case_Create_Access_Check",
+        "type": "Flow",
+        "state": "Created",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/flows/SUB_Case_Create_Access_Check.flow-meta.xml"
+      },
+      {
+        "fullName": "SUB_Case_Create_Confirmed",
+        "type": "Flow",
+        "state": "Changed",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/flows/SUB_Case_Create_Confirmed.flow-meta.xml"
+      },
+      {
+        "fullName": "SUB_Case_Draft_Validate",
+        "type": "Flow",
+        "state": "Changed",
+        "filePath": "/tmp/agentforce_build-27f29662-843c-4287-9eac-ee732ff5807a/work/Agentforce/force-app/main/default/flows/SUB_Case_Draft_Validate.flow-meta.xml"
+      }
+    ],
+    "deployUrl": "https://orgfarm-232477b490-dev-ed.develop.my.salesforce.com//lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfjV000006pI13SAE%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

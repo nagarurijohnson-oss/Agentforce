@@ -56,6 +56,12 @@ confirmed it is to be recorded as Lal's formal exception to the read-only rule *
 - **Unchanged:** Contact and Knowledge search stay read-only; every other write is still refused; no business user gets
   Case Create; no version is activated.
 
+## Amendment (S33, 2026-11-27)
+
+The custom-permission-only gate was proven insufficient (S33-F1). Both Case Flows now also require the user's Case Create,
+Contact Read and field Edit permissions, read by `SUB_Case_Create_Access_Check` (Flow-native, fails closed). The write
+mechanism stays an autolaunched Flow in system mode with sharing. Record: `knowledge-search/session-kb-s33-case-security.md`.
+
 ## Result (S32)
 
 Built, tested (C1–C6, R1 all pass; one synthetic Case 00001026) and published as **v10 Inactive**. Record: `knowledge-search/session-kb-s32-case-create-v10.md`.
