@@ -1,0 +1,66 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001DVS1SAO"
+        },
+        "VersionNumber": 1,
+        "Status": "Inactive"
+      },
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001DZtpSAG"
+        },
+        "VersionNumber": 2,
+        "Status": "Inactive"
+      },
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001Dh1lSAC"
+        },
+        "VersionNumber": 3,
+        "Status": "Active"
+      },
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001DhubSAC"
+        },
+        "VersionNumber": 4,
+        "Status": "Inactive"
+      },
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001DjRlSAK"
+        },
+        "VersionNumber": 5,
+        "Status": "Inactive"
+      },
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001DjefSAC"
+        },
+        "VersionNumber": 6,
+        "Status": "Inactive"
+      },
+      {
+        "attributes": {
+          "type": "BotVersion",
+          "url": "/services/data/v68.0/sobjects/BotVersion/0X9jV000001DkAvSAK"
+        },
+        "VersionNumber": 7,
+        "Status": "Inactive"
+      }
+    ],
+    "totalSize": 7,
+    "done": true
+  },
+  "warnings": []
+}

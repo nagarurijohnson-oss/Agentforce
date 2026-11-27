@@ -1,0 +1,26 @@
+[
+ {
+  "id": "P07R_PAGE1",
+  "area": "Pagination",
+  "turns": [
+   "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic",
+   "Yes, show me the other 3"
+  ],
+  "nav": [
+   "Eng Mockup08",
+   "Eng Mockup01"
+  ]
+ },
+ {
+  "id": "P10R_NARROW",
+  "area": "Filtering / new search",
+  "turns": [
+   "Show me the contacts at CRA-TEST Northwind Synthetic",
+   "Only the Synthetic Engineers",
+   "Find the contact with email priya.synthwell@synthetic.example"
+  ],
+  "nav": [
+   "Priya Synthwell"
+  ]
+ }
+]

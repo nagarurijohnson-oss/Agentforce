@@ -263,3 +263,11 @@ Report: `context/session-kb-s17-release-permissions.md`.
 - Restored immediately after testing; after-snapshot identical to the baseline. v3 Active, v7 Inactive.
 - Open: L-1 (High), permission sign-off (Lal), Phase B panel window, D-8b and D-9 decisions, PR review, release approval.
 - Report: `session-kb-s23-v7-phaseA.md`.
+
+## S24 — Phase B Lightning panel window on v7 (2026-11-26 to 27)
+- Panel: 14 conversations / 25 turns as CRA UAT Restricted, paired with 14 Agent API sessions: 0 flags; 86 links all internal; 18 linked Contacts all readable; hidden records, Department and Birthdate never shown; edit/publish declined; field instruction not followed; pagination and narrowing correct.
+- **L-1 reproduced in the real panel** (3 of 3 hostile single-Contact replies, "LLC" bold; relay drops escaping). Open, High, release blocker.
+- **OPS-1 (High, new):** rollback watchdog failed 3 times at 19:14Z (`'result'`, error text not captured); v7 Active 17:47:26Z to 05:22:52Z (11 h 35 min, approved 90 min). Elevated access on about 13 h 37 min. No activation window until rollback is redesigned and tested (ADR in `decisions/2026-11-27-…`).
+- D-8b and D-9 not tested (skipped by decision).
+- Restored 2026-11-27 07:04Z and read back, identical to baseline: v3 Active / v7 Inactive, Log in as off, 4 sets and licence removed, saved sign-in deleted, `SYS_Lightning_Experience_User` deployed and unassigned.
+- Report: `session-kb-s24-v7-phaseB.md`. Incident: `knowledge-search/incident-2026-11-26-v7-window-overrun.md`.

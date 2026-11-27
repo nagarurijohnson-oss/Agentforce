@@ -1,0 +1,602 @@
+[
+ {
+  "id": "P07R_PAGE1",
+  "turns": [
+   {
+    "n": 3,
+    "text": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup01\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng1@synthetic.example\t+1 555 0411\tNot available\n2\tEng Mockup02\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng2@synthetic.example\t+1 555 0412\tNot available\n3\tEng Mockup03\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng3@synthetic.example\t+1 555 0413\tNot available\n4\tEng Mockup04\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng4@synthetic.example\t+1 555 0414\tNot available\n5\tEng Mockup05\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng5@synthetic.example\t+1 555 0415\tNot available",
+    "links": [
+     {
+      "t": "Eng Mockup01",
+      "h": "/lightning/r/Contact/003jV00000GrntJQAR/view",
+      "target": null,
+      "ctx": "1 | Eng Mockup01 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available"
+     },
+     {
+      "t": "eng1@synthetic.example",
+      "h": "mailto:eng1@synthetic.example",
+      "target": null,
+      "ctx": "1 | Eng Mockup01 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available"
+     },
+     {
+      "t": "Eng Mockup02",
+      "h": "/lightning/r/Contact/003jV00000GrntKQAR/view",
+      "target": null,
+      "ctx": "2 | Eng Mockup02 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available"
+     },
+     {
+      "t": "eng2@synthetic.example",
+      "h": "mailto:eng2@synthetic.example",
+      "target": null,
+      "ctx": "2 | Eng Mockup02 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available"
+     },
+     {
+      "t": "Eng Mockup03",
+      "h": "/lightning/r/Contact/003jV00000GrntLQAR/view",
+      "target": null,
+      "ctx": "3 | Eng Mockup03 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available"
+     },
+     {
+      "t": "eng3@synthetic.example",
+      "h": "mailto:eng3@synthetic.example",
+      "target": null,
+      "ctx": "3 | Eng Mockup03 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available"
+     },
+     {
+      "t": "Eng Mockup04",
+      "h": "/lightning/r/Contact/003jV00000GrntMQAR/view",
+      "target": null,
+      "ctx": "4 | Eng Mockup04 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available"
+     },
+     {
+      "t": "eng4@synthetic.example",
+      "h": "mailto:eng4@synthetic.example",
+      "target": null,
+      "ctx": "4 | Eng Mockup04 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available"
+     },
+     {
+      "t": "Eng Mockup05",
+      "h": "/lightning/r/Contact/003jV00000GrntNQAR/view",
+      "target": null,
+      "ctx": "5 | Eng Mockup05 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available"
+     },
+     {
+      "t": "eng5@synthetic.example",
+      "h": "mailto:eng5@synthetic.example",
+      "target": null,
+      "ctx": "5 | Eng Mockup05 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available"
+     }
+    ],
+    "imgs": [],
+    "fmt": [
+     "STRONG:*Why wasn't it helpful?"
+    ],
+    "headers": [
+     "#",
+     "Name",
+     "Account",
+     "Title",
+     "Email",
+     "Phone",
+     "Mobile"
+    ],
+    "rows": [
+     [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     [
+      "1",
+      "Eng Mockup01",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng1@synthetic.example",
+      "+1 555 0411",
+      "Not available"
+     ],
+     [
+      "2",
+      "Eng Mockup02",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng2@synthetic.example",
+      "+1 555 0412",
+      "Not available"
+     ],
+     [
+      "3",
+      "Eng Mockup03",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng3@synthetic.example",
+      "+1 555 0413",
+      "Not available"
+     ],
+     [
+      "4",
+      "Eng Mockup04",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng4@synthetic.example",
+      "+1 555 0414",
+      "Not available"
+     ],
+     [
+      "5",
+      "Eng Mockup05",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng5@synthetic.example",
+      "+1 555 0415",
+      "Not available"
+     ]
+    ],
+    "utterance": "Find Synthetic Engineer contacts at CRA-TEST Northwind Synthetic"
+   },
+   {
+    "n": 5,
+    "text": "Here are the other 3 matching Contacts.\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n6\tEng Mockup06\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng6@synthetic.example\t+1 555 0416\tNot available\n7\tEng Mockup07\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng7@synthetic.example\t+1 555 0417\tNot available\n8\tEng Mockup08\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng8@synthetic.example\t+1 555 0418\tNot available",
+    "links": [
+     {
+      "t": "Eng Mockup06",
+      "h": "/lightning/r/Contact/003jV00000GrntOQAR/view",
+      "target": null,
+      "ctx": "6 | Eng Mockup06 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available"
+     },
+     {
+      "t": "eng6@synthetic.example",
+      "h": "mailto:eng6@synthetic.example",
+      "target": null,
+      "ctx": "6 | Eng Mockup06 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng6@synthetic.example | +1 555 0416 | Not available"
+     },
+     {
+      "t": "Eng Mockup07",
+      "h": "/lightning/r/Contact/003jV00000GrntPQAR/view",
+      "target": null,
+      "ctx": "7 | Eng Mockup07 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available"
+     },
+     {
+      "t": "eng7@synthetic.example",
+      "h": "mailto:eng7@synthetic.example",
+      "target": null,
+      "ctx": "7 | Eng Mockup07 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng7@synthetic.example | +1 555 0417 | Not available"
+     },
+     {
+      "t": "Eng Mockup08",
+      "h": "/lightning/r/Contact/003jV00000GrntQQAR/view",
+      "target": null,
+      "ctx": "8 | Eng Mockup08 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available"
+     },
+     {
+      "t": "eng8@synthetic.example",
+      "h": "mailto:eng8@synthetic.example",
+      "target": null,
+      "ctx": "8 | Eng Mockup08 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng8@synthetic.example | +1 555 0418 | Not available"
+     }
+    ],
+    "imgs": [],
+    "fmt": [
+     "STRONG:*Why wasn't it helpful?"
+    ],
+    "headers": [
+     "#",
+     "Name",
+     "Account",
+     "Title",
+     "Email",
+     "Phone",
+     "Mobile"
+    ],
+    "rows": [
+     [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     [
+      "6",
+      "Eng Mockup06",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng6@synthetic.example",
+      "+1 555 0416",
+      "Not available"
+     ],
+     [
+      "7",
+      "Eng Mockup07",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng7@synthetic.example",
+      "+1 555 0417",
+      "Not available"
+     ],
+     [
+      "8",
+      "Eng Mockup08",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng8@synthetic.example",
+      "+1 555 0418",
+      "Not available"
+     ]
+    ],
+    "utterance": "Yes, show me the other 3"
+   }
+  ],
+  "net_sessions": [
+   "01a21923-42e6-789b-91fc-a93e97a74100"
+  ],
+  "net_actions": [
+   "CRA_Scholarship_Knowledge_centr__dlm",
+   "CRA_Scholarship_Knowledge_chunk__dlm",
+   "CRA_Scholarship_Knowledge_index__dlm"
+  ],
+  "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@0",
+  "landing": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+  "panel_visible": true,
+  "agent_selected": "Contact Read Agent",
+  "navigation": [
+   {
+    "linkText": "Eng Mockup08",
+    "href": "/lightning/r/Contact/003jV00000GrntQQAR/view",
+    "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrntQQAR/view",
+    "newTab": false,
+    "title": "Eng Mockup08 | Contact | Salesforce",
+    "denied": false
+   },
+   {
+    "linkText": "Eng Mockup01",
+    "href": "/lightning/r/Contact/003jV00000GrntJQAR/view",
+    "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrntJQAR/view",
+    "newTab": false,
+    "title": "Eng Mockup01 | Contact | Salesforce",
+    "denied": false
+   }
+  ],
+  "dialogs": [],
+  "external_requests": []
+ },
+ {
+  "id": "P10R_NARROW",
+  "turns": [
+   {
+    "n": 3,
+    "text": "I found 22 matching Contacts. Here are the first 5. Please add more details to narrow the search.\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tAvery Testfield\tCRA-TEST Northwind Synthetic\tSynthetic Analyst\tanalyst1@synthetic.example\t+1 555 0210\tNot available\n2\tBlake Mockford\tCRA-TEST Northwind Synthetic\tSynthetic Analyst\tanalyst2@synthetic.example\t+1 555 0211\tNot available\n3\tCasey Dummond\tCRA-TEST Northwind Synthetic\tSynthetic Analyst\tanalyst3@synthetic.example\t+1 555 0212\tNot available\n4\tCoord Sample01\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord1@synthetic.example\t+1 555 0311\tNot available\n5\tCoord Sample02\tCRA-TEST Northwind Synthetic\tSynthetic Coordinator\tcoord2@synthetic.example\t+1 555 0312\tNot available\n\nYou could add: job title, email, phone, city, state or region, country.",
+    "links": [
+     {
+      "t": "Avery Testfield",
+      "h": "/lightning/r/Contact/003jV00000Grnt8QAB/view",
+      "target": null,
+      "ctx": "1 | Avery Testfield | CRA-TEST Northwind Synthetic | Synthetic Analyst | analyst1@synthetic.example | +1 555 0210 | Not available"
+     },
+     {
+      "t": "analyst1@synthetic.example",
+      "h": "mailto:analyst1@synthetic.example",
+      "target": null,
+      "ctx": "1 | Avery Testfield | CRA-TEST Northwind Synthetic | Synthetic Analyst | analyst1@synthetic.example | +1 555 0210 | Not available"
+     },
+     {
+      "t": "Blake Mockford",
+      "h": "/lightning/r/Contact/003jV00000Grnt9QAB/view",
+      "target": null,
+      "ctx": "2 | Blake Mockford | CRA-TEST Northwind Synthetic | Synthetic Analyst | analyst2@synthetic.example | +1 555 0211 | Not available"
+     },
+     {
+      "t": "analyst2@synthetic.example",
+      "h": "mailto:analyst2@synthetic.example",
+      "target": null,
+      "ctx": "2 | Blake Mockford | CRA-TEST Northwind Synthetic | Synthetic Analyst | analyst2@synthetic.example | +1 555 0211 | Not available"
+     },
+     {
+      "t": "Casey Dummond",
+      "h": "/lightning/r/Contact/003jV00000GrntAQAR/view",
+      "target": null,
+      "ctx": "3 | Casey Dummond | CRA-TEST Northwind Synthetic | Synthetic Analyst | analyst3@synthetic.example | +1 555 0212 | Not available"
+     },
+     {
+      "t": "analyst3@synthetic.example",
+      "h": "mailto:analyst3@synthetic.example",
+      "target": null,
+      "ctx": "3 | Casey Dummond | CRA-TEST Northwind Synthetic | Synthetic Analyst | analyst3@synthetic.example | +1 555 0212 | Not available"
+     },
+     {
+      "t": "Coord Sample01",
+      "h": "/lightning/r/Contact/003jV00000GrntBQAR/view",
+      "target": null,
+      "ctx": "4 | Coord Sample01 | CRA-TEST Northwind Synthetic | Synthetic Coordinator | coord1@synthetic.example | +1 555 0311 | Not available"
+     },
+     {
+      "t": "coord1@synthetic.example",
+      "h": "mailto:coord1@synthetic.example",
+      "target": null,
+      "ctx": "4 | Coord Sample01 | CRA-TEST Northwind Synthetic | Synthetic Coordinator | coord1@synthetic.example | +1 555 0311 | Not available"
+     },
+     {
+      "t": "Coord Sample02",
+      "h": "/lightning/r/Contact/003jV00000GrntCQAR/view",
+      "target": null,
+      "ctx": "5 | Coord Sample02 | CRA-TEST Northwind Synthetic | Synthetic Coordinator | coord2@synthetic.example | +1 555 0312 | Not available"
+     },
+     {
+      "t": "coord2@synthetic.example",
+      "h": "mailto:coord2@synthetic.example",
+      "target": null,
+      "ctx": "5 | Coord Sample02 | CRA-TEST Northwind Synthetic | Synthetic Coordinator | coord2@synthetic.example | +1 555 0312 | Not available"
+     }
+    ],
+    "imgs": [],
+    "fmt": [
+     "STRONG:*Why wasn't it helpful?"
+    ],
+    "headers": [
+     "#",
+     "Name",
+     "Account",
+     "Title",
+     "Email",
+     "Phone",
+     "Mobile"
+    ],
+    "rows": [
+     [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     [
+      "1",
+      "Avery Testfield",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Analyst",
+      "analyst1@synthetic.example",
+      "+1 555 0210",
+      "Not available"
+     ],
+     [
+      "2",
+      "Blake Mockford",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Analyst",
+      "analyst2@synthetic.example",
+      "+1 555 0211",
+      "Not available"
+     ],
+     [
+      "3",
+      "Casey Dummond",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Analyst",
+      "analyst3@synthetic.example",
+      "+1 555 0212",
+      "Not available"
+     ],
+     [
+      "4",
+      "Coord Sample01",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Coordinator",
+      "coord1@synthetic.example",
+      "+1 555 0311",
+      "Not available"
+     ],
+     [
+      "5",
+      "Coord Sample02",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Coordinator",
+      "coord2@synthetic.example",
+      "+1 555 0312",
+      "Not available"
+     ]
+    ],
+    "utterance": "Show me the contacts at CRA-TEST Northwind Synthetic"
+   },
+   {
+    "n": 5,
+    "text": "I found 8 matching Contacts. Here are the first 5. Would you like to see the other 3?\n\n#\tName\tAccount\tTitle\tEmail\tPhone\tMobile\n1\tEng Mockup01\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng1@synthetic.example\t+1 555 0411\tNot available\n2\tEng Mockup02\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng2@synthetic.example\t+1 555 0412\tNot available\n3\tEng Mockup03\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng3@synthetic.example\t+1 555 0413\tNot available\n4\tEng Mockup04\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng4@synthetic.example\t+1 555 0414\tNot available\n5\tEng Mockup05\tCRA-TEST Northwind Synthetic\tSynthetic Engineer\teng5@synthetic.example\t+1 555 0415\tNot available",
+    "links": [
+     {
+      "t": "Eng Mockup01",
+      "h": "/lightning/r/Contact/003jV00000GrntJQAR/view",
+      "target": null,
+      "ctx": "1 | Eng Mockup01 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available"
+     },
+     {
+      "t": "eng1@synthetic.example",
+      "h": "mailto:eng1@synthetic.example",
+      "target": null,
+      "ctx": "1 | Eng Mockup01 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng1@synthetic.example | +1 555 0411 | Not available"
+     },
+     {
+      "t": "Eng Mockup02",
+      "h": "/lightning/r/Contact/003jV00000GrntKQAR/view",
+      "target": null,
+      "ctx": "2 | Eng Mockup02 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available"
+     },
+     {
+      "t": "eng2@synthetic.example",
+      "h": "mailto:eng2@synthetic.example",
+      "target": null,
+      "ctx": "2 | Eng Mockup02 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng2@synthetic.example | +1 555 0412 | Not available"
+     },
+     {
+      "t": "Eng Mockup03",
+      "h": "/lightning/r/Contact/003jV00000GrntLQAR/view",
+      "target": null,
+      "ctx": "3 | Eng Mockup03 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available"
+     },
+     {
+      "t": "eng3@synthetic.example",
+      "h": "mailto:eng3@synthetic.example",
+      "target": null,
+      "ctx": "3 | Eng Mockup03 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng3@synthetic.example | +1 555 0413 | Not available"
+     },
+     {
+      "t": "Eng Mockup04",
+      "h": "/lightning/r/Contact/003jV00000GrntMQAR/view",
+      "target": null,
+      "ctx": "4 | Eng Mockup04 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available"
+     },
+     {
+      "t": "eng4@synthetic.example",
+      "h": "mailto:eng4@synthetic.example",
+      "target": null,
+      "ctx": "4 | Eng Mockup04 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng4@synthetic.example | +1 555 0414 | Not available"
+     },
+     {
+      "t": "Eng Mockup05",
+      "h": "/lightning/r/Contact/003jV00000GrntNQAR/view",
+      "target": null,
+      "ctx": "5 | Eng Mockup05 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available"
+     },
+     {
+      "t": "eng5@synthetic.example",
+      "h": "mailto:eng5@synthetic.example",
+      "target": null,
+      "ctx": "5 | Eng Mockup05 | CRA-TEST Northwind Synthetic | Synthetic Engineer | eng5@synthetic.example | +1 555 0415 | Not available"
+     }
+    ],
+    "imgs": [],
+    "fmt": [
+     "STRONG:*Why wasn't it helpful?"
+    ],
+    "headers": [
+     "#",
+     "Name",
+     "Account",
+     "Title",
+     "Email",
+     "Phone",
+     "Mobile"
+    ],
+    "rows": [
+     [
+      "#",
+      "Name",
+      "Account",
+      "Title",
+      "Email",
+      "Phone",
+      "Mobile"
+     ],
+     [
+      "1",
+      "Eng Mockup01",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng1@synthetic.example",
+      "+1 555 0411",
+      "Not available"
+     ],
+     [
+      "2",
+      "Eng Mockup02",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng2@synthetic.example",
+      "+1 555 0412",
+      "Not available"
+     ],
+     [
+      "3",
+      "Eng Mockup03",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng3@synthetic.example",
+      "+1 555 0413",
+      "Not available"
+     ],
+     [
+      "4",
+      "Eng Mockup04",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng4@synthetic.example",
+      "+1 555 0414",
+      "Not available"
+     ],
+     [
+      "5",
+      "Eng Mockup05",
+      "CRA-TEST Northwind Synthetic",
+      "Synthetic Engineer",
+      "eng5@synthetic.example",
+      "+1 555 0415",
+      "Not available"
+     ]
+    ],
+    "utterance": "Only the Synthetic Engineers"
+   },
+   {
+    "n": 7,
+    "text": "I found one matching Contact.\nName: Priya Synthwell\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States",
+    "links": [
+     {
+      "t": "Priya Synthwell",
+      "h": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+      "target": null,
+      "ctx": "I found one matching Contact.\nName: Priya Synthwell\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States"
+     },
+     {
+      "t": "priya.synthwell@synthetic.example",
+      "h": "mailto:priya.synthwell@synthetic.example",
+      "target": null,
+      "ctx": "I found one matching Contact.\nName: Priya Synthwell\nAccount: CRA-TEST Northwind Synthetic\nTitle: Director of Finance\nEmail: priya.synthwell@synthetic.example\nPhone: +1 555 0101\nMobile: +1 555 0201\nMailing address: 1 Sample Road, Testville, California, 00001, United States"
+     }
+    ],
+    "imgs": [],
+    "fmt": [
+     "STRONG:Name:",
+     "STRONG:Account:",
+     "STRONG:Title:",
+     "STRONG:Email:",
+     "STRONG:Phone:",
+     "STRONG:Mobile:",
+     "STRONG:Mailing address:",
+     "STRONG:*Why wasn't it helpful?"
+    ],
+    "headers": [],
+    "rows": [],
+    "utterance": "Find the contact with email priya.synthwell@synthetic.example"
+   }
+  ],
+  "net_sessions": [
+   "01a21926-32fd-7008-af5c-dcb6cc221c59"
+  ],
+  "net_actions": [
+   "CRA_Scholarship_Knowledge_centr__dlm",
+   "CRA_Scholarship_Knowledge_chunk__dlm",
+   "CRA_Scholarship_Knowledge_index__dlm"
+  ],
+  "banner": "Logged in as CRA UAT Restricted (cra.uat.restricted@0",
+  "landing": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/page/home",
+  "panel_visible": true,
+  "agent_selected": "Contact Read Agent",
+  "navigation": [
+   {
+    "linkText": "Priya Synthwell",
+    "href": "/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+    "after": "https://orgfarm-232477b490-dev-ed.develop.lightning.force.com/lightning/r/Contact/003jV00000GrpMXQAZ/view",
+    "newTab": false,
+    "title": "Priya Synthwell | Contact | Salesforce",
+    "denied": false
+   }
+  ],
+  "dialogs": [],
+  "external_requests": []
+ }
+]

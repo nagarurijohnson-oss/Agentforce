@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants only Lightning Experience User, for test users whose profile lacks it (Minimum Access), so they can open the Agentforce panel. No object, field or Apex access. SCGOE-95 Phase B (F-3); test users only, temporary.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SYS – Lightning Experience User</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+</PermissionSet>
